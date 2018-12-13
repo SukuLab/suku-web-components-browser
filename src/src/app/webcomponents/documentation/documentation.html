@@ -1,0 +1,100 @@
+<form [formGroup]="parentForm">
+  <div class="col-sm-12 bgWhite p-0 doc">
+    <div id="outerDiv" class="col-sm-12">
+      <div class="col-sm-12 text-center">
+        <img src="../../../assets/img/Suku_Logo_white.png" alt="Suku Logo" height="40%" width="40%">
+        <div class="mb-5 pb-5">
+          <suku-heading size="25" weight="500" color="white">DOCUMENTATION</suku-heading>
+          <br />
+        </div>
+      </div>
+      <div id="innerDiv" class="box-color-shadow-rect col-sm-10 offset-sm-1">
+        <div class="col-sm-12 m-2 p-3">
+          <div class="row">
+            <div class="col button-row text-center m-3">
+              <span [ngClass]="{'activeClass': selectedItem == item}" (click)="btnSelected($event, item)" *ngFor="let item of subMenuList">
+                <button color="primary" mat-raised-button>{{item.name}}</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 p-5">
+      <div class="row main-div-box">
+        <div class="col-sm-2 mt-4 pl-lg-4 p-sm-0">
+          <span class="py-3 px-2 sticky-top flex-grow-1">
+            <ul id="side">
+              <li [ngClass]="{'activeComponent': selectedTitle == title }" (click)="titleActive($event, title)" *ngFor="let title of webCompTitleList;let i=index">
+                {{title.name}}
+              </li>
+            </ul>
+          </span>
+        </div>
+        <div class="col-sm-10 p-4 pl-5 pr-5">
+          <!-- doc content inject here -->
+          <span *ngFor="let content of CompDocSource;let j=index">
+            <span *ngIf="selectedTitle?.id == content?.id">
+              <div class="col-sm-12 mt-5">
+                <strong class="borBottom">{{content.title}}</strong>
+                <p class="mt-5">{{content.description}}</p>
+              </div>
+              <div class="col-sm-12 p-3">
+                <table mat-table [dataSource]="content?.properties[j]?.data" class="mat-elevation-z8">
+                  <!-- Properties Column -->
+                  <ng-container matColumnDef="Properties">
+                    <th mat-header-cell *matHeaderCellDef> Properties </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Properties}} <mark class="m-1">{{element.Type}}</mark>
+                    </td>
+                  </ng-container>
+                  <!-- Description Column -->
+                  <ng-container matColumnDef="Description">
+                    <th mat-header-cell *matHeaderCellDef> Description </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Description}} </td>
+                  </ng-container>
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+              </div>
+              <div class="col-sm-12 p-3">
+                <!-- sample webcomp code inject here -->
+                <p class="docs-markdown-p">For example:</p>
+                <div class="col p-0" [innerHTML]="content.mockSample"></div>
+              </div>
+              <!-- terminal code-->
+              <div class="col-sm-12 p-0" *ngIf="content?.try">
+                <div class="col-sm-12 pb-4 pt-4" id="terminal">
+                  <p class="docs-markdown-p">Try Now:</p>
+                  <div class="col-sm-12 p-0 mb-3 pb-2">
+                    <div class="bg-terminal">
+                      <span class="text-area text-white pl-2">
+                        ><textarea type="text" class="text-area col-sm-12" (keyup)="executeCode()" id="code" rows="3"></textarea>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12" *ngIf="dataLength">
+                  <div class="col-sm-12 box-color-shadow-rect pb-4 pt-4">
+                    <p class="docs-markdown-p">Output: </p>
+                    <div class="border-top-box"></div>
+                    <br />
+                    <div class="col-sm-12 m-2" [innerHTML]="dataDom">
+                    </div>
+                    <br />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </span>
+          </span>
+          <!-- terminal code end-->
+            <span>
+              <suku-card-line></suku-card-line>
+            </span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<!-- <a id="progress">In development **</a> -->

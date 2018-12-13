@@ -1,0 +1,955 @@
+:root {
+  --main-color: #a7bf2e;
+}
+
+/* @import url("") all; */
+/* var(--main-color):#a7bf2e; */
+/*////font style*/
+@import url("fontawesome-all.min.css") all;
+@import url("fa-brands.min.css") all;
+@import url("fa-light.min.css") all;
+@import url("fa-regular.min.css") all;
+@import url("fa-solid.min.css") all;
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans');
+
+@font-face {
+  font-family: 'proxima_novalight';
+  src: url('../webfonts/proximanova-light-webfont.eot');
+  src: url('../webfonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../webfonts/proximanova-light-webfont.woff2') format('woff2'),
+    url('../webfonts/proximanova-light-webfont.woff') format('woff'),
+    url('../webfonts/proximanova-light-webfont.ttf') format('truetype'),
+    url('../webfonts/proximanova-light-webfont.svg#proxima_novalight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_nova_regular';
+  src: url('../webfonts/proximanova-regular-webfont.eot');
+  src: url('../webfonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../webfonts/proximanova-regular-webfont.woff2') format('woff2'),
+    url('../webfonts/proximanova-regular-webfont.woff') format('woff'),
+    url('../webfonts/proximanova-regular-webfont.ttf') format('truetype'),
+    url('../webfonts/proximanova-regular-webfont.svg#proxima_nova_regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novabold';
+  src: url('../webfonts/proximanova-bold-webfont.eot');
+  src: url('../webfonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../webfonts/proximanova-bold-webfont.woff2') format('woff2'),
+    url('../webfonts/proximanova-bold-webfont.woff') format('woff'),
+    url('../webfonts/proximanova-bold-webfont.ttf') format('truetype'),
+    url('../webfonts/proximanova-bold-webfont.svg#proxima_novabold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro-Regular';
+  src: url('../webfonts/AvenirNextLTPro-Regular.eot');
+  src: url('../webfonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../webfonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
+    url('../webfonts/AvenirNextLTPro-Regular.woff') format('woff'),
+    url('../webfonts/AvenirNextLTPro-Regular.ttf') format('truetype'),
+    url('../webfonts/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'avenirnextbold';
+  src: url('../webfonts/avenirnextbold.eot');
+  src: url('../webfonts/avenirnextbold.eot') format('embedded-opentype'),
+    url('../webfonts/avenirnextbold.woff2') format('woff2'),
+    url('../webfonts/avenirnextbold.woff') format('woff'),
+    url('../webfonts/avenirnextbold.ttf') format('truetype'),
+    url('../webfonts/avenirnextbold.svg#avenirnextbold') format('svg');
+}
+
+@font-face {
+  font-family: 'abelregular';
+  src: url('../webfonts/abel-regular-webfont.woff2') format('woff2'),
+    url('../webfonts/abel-regular-webfont.woff') format('woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EncodeSans';
+  src: url('../webfonts/EncodeSansExpanded-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+/*
+Copy the following codes in custom-style.css in src folder
+*/
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../webfonts/Poppins/Poppins-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../webfonts/Poppins/Poppins-Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../webfonts/Poppins/Poppins-Regular.otf") format("opentype"),
+    /* Open Type Font */
+    url("../webfonts/Poppins/Poppins-Regular.svg") format("svg"),
+    /* Legacy iOS */
+    url("../webfonts/Poppins/Poppins-Regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../webfonts/Poppins/Poppins-Regular.woff") format("woff"),
+    /* Modern Browsers */
+    url("../webfonts/Poppins/Poppins-Regular.woff2") format("woff2");
+  /* Modern Browsers */
+  letter-spacing: -0.2px;
+}
+
+@font-face {
+  font-family: "PoppinsBold";
+  src: url("../webfonts/Poppins/Poppins-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("../webfonts/Poppins/Poppins-Bold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../webfonts/Poppins/Poppins-Bold.otf") format("opentype"),
+    /* Open Type Font */
+    url("../webfonts/Poppins/Poppins-Bold.svg") format("svg"),
+    /* Legacy iOS */
+    url("../webfonts/Poppins/Poppins-Bold.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../webfonts/Poppins/Poppins-Bold.woff") format("woff"),
+    /* Modern Browsers */
+    url("../webfonts/Poppins/Poppins-Bold.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../webfonts/Poppins/Poppins-Italic.eot");
+  /* IE9 Compat Modes */
+  src: url("../webfonts/Poppins/Poppins-Italic.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../webfonts/Poppins/Poppins-Italic.otf") format("opentype"),
+    /* Open Type Font */
+    url("../webfonts/Poppins/Poppins-Italic.svg") format("svg"),
+    /* Legacy iOS */
+    url("../webfonts/Poppins/Poppins-Italic.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../webfonts/Poppins/Poppins-Italic.woff") format("woff"),
+    /* Modern Browsers */
+    url("../webfonts/Poppins/Poppins-Italic.woff2") format("woff2");
+  /* Modern Browsers */
+  font-style: italic;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../webfonts/Poppins/Poppins-BoldItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../webfonts/Poppins/Poppins-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../webfonts/Poppins/Poppins-BoldItalic.otf") format("opentype"),
+    /* Open Type Font */
+    url("../webfonts/Poppins/Poppins-BoldItalic.svg") format("svg"),
+    /* Legacy iOS */
+    url("../webfonts/Poppins/Poppins-BoldItalic.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../webfonts/Poppins/Poppins-BoldItalic.woff") format("woff"),
+    /* Modern Browsers */
+    url("../webfonts/Poppins/Poppins-BoldItalic.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: bold;
+  font-style: italic;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../webfonts/Roboto/Roboto-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../webfonts/Roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../webfonts/Roboto/Roboto-Regular.otf") format("opentype"),
+    /* Open Type Font */
+    url("../webfonts/Roboto/Roboto-Regular.svg") format("svg"),
+    /* Legacy iOS */
+    url("../webfonts/Roboto/Roboto-Regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../webfonts/Roboto/Roboto-Regular.woff") format("woff"),
+    /* Modern Browsers */
+    url("../webfonts/Roboto/Roboto-Regular.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("/assets/fonts/Roboto/Roboto-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("/assets/fonts/Roboto/Roboto-Bold.otf") format("opentype"),
+    /* Open Type Font */
+    url("/assets/fonts/Roboto/Roboto-Bold.svg") format("svg"),
+    /* Legacy iOS */
+    url("/assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("/assets/fonts/Roboto/Roboto-Bold.woff") format("woff"),
+    /* Modern Browsers */
+    url("/assets/fonts/Roboto/Roboto-Bold.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Roboto-Italic";
+  src: url("../webfonts/Roboto/Roboto-Italic.eot");
+  /* IE9 Compat Modes */
+  src: url("../webfonts/Roboto/Roboto-Italic.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../webfonts/Roboto/Roboto-Italic.otf") format("opentype"),
+    /* Open Type Font */
+    url("../webfonts/Roboto/Roboto-Italic.svg") format("svg"),
+    /* Legacy iOS */
+    url("../webfonts/Roboto/Roboto-Italic.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../webfonts/Roboto/Roboto-Italic.woff") format("woff"),
+    /* Modern Browsers */
+    url("../webfonts/Roboto/Roboto-Italic.woff2") format("woff2");
+  /* Modern Browsers */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../webfonts/Roboto/Roboto-BoldItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../webfonts/Roboto/Roboto-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../webfonts/Roboto/Roboto-BoldItalic.otf") format("opentype"),
+    /* Open Type Font */
+    url("../webfonts/Roboto/Roboto-BoldItalic.svg") format("svg"),
+    /* Legacy iOS */
+    url("../webfonts/Roboto/Roboto-BoldItalic.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../webfonts/Roboto/Roboto-BoldItalic.woff") format("woff"),
+    /* Modern Browsers */
+    url("../webfonts/Roboto/Roboto-BoldItalic.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "EncodeSans";
+  src: url("../webfonts/Encode-Sans/EncodeSans-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../webfonts/Encode-Sans/EncodeSans-Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../webfonts/Encode-Sans/EncodeSans-Regular.otf") format("opentype"),
+    /* Open Type Font */
+    url("../webfonts/Encode-Sans/EncodeSans-Regular.svg") format("svg"),
+    /* Legacy iOS */
+    url("../webfonts/Encode-Sans/EncodeSans-Regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../webfonts/Encode-Sans/EncodeSans-Regular.woff") format("woff"),
+    /* Modern Browsers */
+    url("../webfonts/Encode-Sans/EncodeSans-Regular.woff2") format("woff2");
+  /* Modern Browsers */
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "EncodeSans-Bold";
+  src: url("../webfonts/Encode-Sans/EncodeSans-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("../webfonts/Encode-Sans/EncodeSans-Bold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../webfonts/Encode-Sans/EncodeSans-Bold.otf") format("opentype"),
+    /* Open Type Font */
+    url("../webfonts/Encode-Sans/EncodeSans-Bold.svg") format("svg"),
+    /* Legacy iOS */
+    url("../webfonts/Encode-Sans/EncodeSans-Bold.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../webfonts/Encode-Sans/EncodeSans-Bold.woff") format("woff"),
+    /* Modern Browsers */
+    url("../webfonts/Encode-Sans/EncodeSans-Bold.woff2") format("woff2");
+  /* Modern Browsers */
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* label{
+  font-family: 'AvenirNextLTPro-Regular', Arial !important;
+  letter-spacing: 0.15px;
+  font-weight:500;
+} */
+body {
+  font-family: 'Poppins-Regular', Arial !important;
+}
+
+.pop {
+  font-family: 'Poppins-Regular', Arial !important;
+  letter-spacing: 0.15px;
+  text-align: justify;
+  font-family: 'Poppins-Regular';
+  font-style: normal;
+  /* font-stretch: normal;
+  line-height: normal;*/
+  letter-spacing: -0.2px;
+  font-style: unset;
+  font-stretch: condensed;
+  line-height: initial;
+  letter-spacing: initial;
+}
+
+/*progress bar styles start*/
+.layer {
+  font-family: 'Poppins-Regular', sans-serif !important;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.progressTxt{
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #b6b6b6;
+}
+.progressTxtConfirm3{
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #b6b6b6;
+}
+.progressBoldTxt{
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #1c1c1c;
+  color: var(--black);
+}
+
+hr {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  border: 0 !important;
+  border-top: 2px solid rgba(0,0,0,.1) !important;
+}
+.confirmTxt {
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #1c1c1c;
+  color: var(--black);
+}
+
+.Progress2Term {
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  /* text-align: center; */
+  color: #b6b6b6;
+}
+.ml33{
+  margin-left: 33px;
+}
+
+.Progresscircle {
+  width: 50px;
+  height: 50px;
+  color: white;
+  background: rgb(3, 17, 3);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.circleIp {
+  width: 50px !important;
+  height: 50px;
+  color: white;
+  background: var(--main-color);
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  font-family: 'Poppins-Regular';
+}
+
+ 
+.circle{
+  width: 50px;
+  height: 50px;
+  color: white;
+  background: #031103;
+  border-radius: 50%;
+}
+
+.circleNC {
+  width: 50px !important;
+  height: 50px !important;
+  color: white;
+  background: #757575;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  font-family: 'Poppins-Regular';
+}
+.circleCompleted {
+  width: 50px !important;
+  height: 50px !important;
+  color: white;
+  background-color: #1c1c1c;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  font-family: 'Poppins-Regular';
+}
+.circleP {
+  background-color: gray;  
+  width: 50px !important;
+  height: 50px !important;
+  background: gray;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+.tableMar{
+  margin-top: 1%;
+  margin-bottom: 4%;
+}
+.tickSign{
+  color: #d8fc40;
+}
+.trMar{
+  padding-top: 3%;
+}
+/*progress bar styles end*/
+.header tr th .robo {
+  font-family: 'Poppins', sans-serif;
+}
+
+body a h4 h3 h2 label table thead {
+  font-family: 'Poppins', Arial !important;
+}
+
+/*.btn, .btn-info ,.btn-info,.btn-default {
+  font-family: 'EncodeSans', sans-serif !important;
+  }*/
+.progress1 .progress1 progress1--large {
+  font-family: 'AvenirNextLTPro-Regular';
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #b6b6b6;
+}
+
+/*color: #1c1c1c;*/
+.Rectangle-2 {
+  border-radius: 0 0 41px 41px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.05);
+}
+
+.progress1 {
+  font-family: 'AvenirNextLTPro-Regular' !important;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  color: #ced3d4;
+}
+
+.progress1>li {
+  position: sticky;
+  display: table-cell;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.progress1>li:before {
+  content: attr(data-step);
+  display: block;
+  margin: 0 auto;
+  background: rgb(226, 226, 226);
+  width: 3em;
+  height: 3em;
+  color: grey;
+  margin-bottom: 0.25em;
+  line-height: 3em;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1000;
+}
+
+.progress1>li:after {
+  content: '';
+  position: absolute;
+  display: block;
+  background: rgb(235, 235, 238);
+  width: 100%;
+  height: 0.5em;
+  top: 1.25em;
+  left: 50%;
+  margin-left: 1.5em\9;
+  z-index: -1;
+}
+
+.progress1 {
+  font-family: 'EncodeSans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.1px;
+  text-align: center;
+}
+
+.progress1>li:last-child:after {
+  display: none;
+}
+
+.progress1>li.is-complete {
+  color: #3498DB;
+}
+
+.progress1>li.is-complete:before,
+.progress1>li.is-complete:after {
+  color: #FFF;
+  background: #3498DB;
+}
+
+.progress1>li.is-active {
+  color: #3498DB;
+}
+
+.progress1>li.is-active:before {
+  color: #FFF;
+  background: #3498DB;
+}
+
+/**
+  * Needed for IE8
+  */
+.progress1__last:after {
+  display: none !important;
+}
+
+/**
+  * Size Extensions
+  */
+.progress1--medium {
+  font-size: 1.5em;
+}
+
+.progress1--large {
+  font-size: 1.2em;
+}
+
+/**
+  * Some Generic Stylings
+  */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.progress1 {
+  margin-bottom: 0.5em;
+}
+
+/*Check out bar css */
+.progress1 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  color: #ced3d4;
+}
+
+.progress1>li {
+  position: sticky;
+  display: table-cell;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.progress1>li:before {
+  content: attr(data-step);
+  display: block;
+  margin: 0 auto;
+  background: rgb(226, 226, 226);
+  width: 3em;
+  height: 3em;
+  color: grey;
+  margin-bottom: 0.25em;
+  line-height: 3em;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1000;
+}
+
+.progress1>li:after {
+  content: '';
+  position: absolute;
+  display: block;
+  background: rgb(235, 235, 238);
+  width: 100%;
+  height: 0.5em;
+  top: 1.25em;
+  left: 50%;
+  margin-left: 1.5em\9;
+  z-index: -1;
+}
+
+.progress1>li:last-child:after {
+  display: none;
+}
+
+.progress1>li.is-complete {
+  color: #3498DB;
+}
+
+.progress1>li.is-complete:before,
+.progress1>li.is-complete:after {
+  color: #FFF;
+  background: #3498DB;
+}
+
+.progress1>li.is-active {
+  color: #3498DB;
+}
+
+.progress1>li.is-active:before {
+  color: #FFF;
+  background: #3498DB;
+}
+
+/**
+  * Needed for IE8
+  */
+.progress1__last:after {
+  display: none !important;
+}
+
+/**
+  * Size Extensions
+  */
+.progress1--medium {
+  font-size: 1.5em;
+}
+
+.progress1--large {
+  font-size: 1.2em;
+}
+
+/**
+  * Some Generic Stylings
+  */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.progress1 {
+  margin-bottom: 0.5em;
+}
+
+/* /////////////Check out bar css end */
+/*/////////header style*/
+.header-main {
+  width: 100%;
+  float: left;
+  background: #010101 url(../img/bg-11_login.png) repeat-x top center;
+  background-size: auto 102px;
+  position: relative;
+  z-index: 500;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+.header-bg {
+  width: 100%;
+  float: left;
+  background: url(../img/marketing-header@2x.jpg) repeat-x top center;
+  background-size: auto 102px;
+  position: relative;
+  z-index: 500;
+}
+
+/*.btn{
+ font-family: EncodeSans;   
+ font-size: 14px;
+ font-weight: 600;
+ letter-spacing: -0.2px;
+ text-align: center;
+ }*/
+.mat-button {
+  color: var(--main-color) !important;
+}
+
+/* heading styles    */
+.heading {
+  font-family: 'Poppins-Regular';
+  font-size: 24px;
+  letter-spacing: -0.4px;
+}
+.pop{
+  font-family: 'Poppins-Regular';
+}
+
+.subHeadone {
+  font-family: 'Poppins-Regular';
+  font-size: 17px;
+  letter-spacing: -0.2px;
+  font-weight: bold;
+}
+
+.subHeadTwo {
+  font-family: EncodeSans;
+  font-size: 17px;
+  letter-spacing: 0.1px;
+  font-weight: bold;
+}
+
+.sublabel {
+  font-family: EncodeSans;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+}
+
+.info {
+  font-family: EncodeSans;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+}
+
+.mat-input-element {
+  /* height: 24px !important; */
+  font-family: 'Poppins-Regular', sans-serif !important;
+  font-size: 17px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: normal !important;
+  letter-spacing: 0.1px !important;
+  /* color: rgba(117, 117, 117, 0.67) !important; */
+}
+.mat-select{
+  font-family: 'Poppins-Regular', sans-serif !important;
+  font-size: 17px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: normal !important;
+  letter-spacing: 0.1px !important;
+}
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  font-family: 'Encode Sans', sans-serif !important;
+  font-size: 17px !important;
+}
+
+.mat-form-field-subscript-wrapper {
+  font-family: 'Encode Sans', sans-serif !important;
+}
+.subFont{
+  font-family: 'Encode Sans', sans-serif !important;
+  font-size: 16px;
+}
+summary{
+  font-family: 'Encode Sans', sans-serif !important;
+  font-size: 16px;
+}
+.errFont{
+  font-family: 'Encode Sans', sans-serif !important;
+  font-size: 12px;
+}
+.errFont14{
+  font-family: 'Encode Sans', sans-serif !important;
+  font-size: 14px;
+}
+.btn-default,
+.btn-default:hover,
+.btn-default:active,
+.btn-default:active:focus,
+.btn-default:visited,
+.btn-default:focus {
+  border: solid 2px #757575;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: black;
+}
+
+
+.btn-info{
+  color: #fff;
+  border:solid 2px var(--main-color) !important;
+}
+
+.flexCol {
+  display: flex;
+  flex-flow: column;
+}
+
+.btn-info.disabled, .btn-info:disabled {
+  color: #fff;
+  background-color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+.btn-info.focus, .btn-info:focus {
+  box-shadow: 0 0 0 0.2rem rgba(23,162,184,.0) !important;
+}
+.btn.focus, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.0)!important;
+}
+.btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active, .show>.btn-info.dropdown-toggle {
+  color: #fff;
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active, .show>.btn-info.dropdown-toggle {
+  color: #fff;
+  background-color: var(--main-color)!important;
+  border-color: var(--main-color)!important;
+}
+tr:hover {
+  background-color: #f8f7f700;
+}
+
+.header-main {
+  width: 100%;
+  float: left;
+  background: #010101 url(../img/bg-11.jpg) repeat-x top center;
+  background-size: auto 102px;
+  position: relative;
+  z-index: 500;
+}
+
+/* =============== Progress bar styles ================== */
+
+.ml24{
+  margin-left: 0px;
+}
+.pl15{
+  padding-left: 0px;
+}
+.ml20{
+  margin-left: 20px;
+}
+.ml33{
+  margin-left: 0px;
+}
+.font9{
+  font-size: 9px !important;
+}
+.font6{
+  font-size: 6px !important;
+}
+
+@media(min-width:480px){
+  .ml24{
+    margin-left: 20px;
+  }
+  .pl15{
+    padding-left: 15px;
+  }
+  .ml20{
+    margin-left: 20px;
+  }
+  .font9{
+    font-size: 12px !important;
+  }
+  .font6{
+    font-size: 12px !important;
+  }
+  .ml33{
+    margin-left: 33px;
+}
+}
+
+.Sell {
+	font-family: Poppins;
+	font-size: 20px;
+	letter-spacing: -0.4px;	
+  }
+  .txtShapeColr{
+	color: rgba(182, 182, 182, 0.79);
+  }
+  
+  hr {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    border: 0 !important;
+    border-top: 2px solid rgba(0,0,0,.1) !important;
+}
+.font9{
+  font-size: 9px;
+}

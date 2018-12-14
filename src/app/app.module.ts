@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DocumentationComponent } from './webcomponents/documentation/documentation';
 import { WebComponents } from './webcomponents/webmodule';
 import { WebComponentsServices } from './webcomponents/documentation/service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatModule } from './shared/mat.module';
 @NgModule({
@@ -19,6 +20,7 @@ import { MatModule } from './shared/mat.module';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     MatModule
   ],
   providers: [

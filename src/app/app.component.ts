@@ -14,7 +14,6 @@ import {
 	SukuNotificationBoxComponent,
 	SukuPrimaryButtonComponent,
 	SukuProgressBarComponent,
-	SukuProgressCompletedComponent,
 	SukuRadioButtonComponent,
 	SukuSecondaryButtonComponent,
 	SukuSubHeadingComponent,
@@ -33,7 +32,9 @@ import {
 	SukuStarBadgeComponent,
 	SukuCardTitleComponent,
   SukuInputComponent,
-  SukuResponseComponent
+  SukuResponseComponent,
+  SukuDefaultButtonComponent,
+  DynamicFormComponent
 } from './webcomponents/webcomponent';
 import { createCustomElement } from '@angular/elements';
 @Component({
@@ -56,7 +57,7 @@ export class AppComponent implements OnInit {
 		});
 		customElements.define('suku-dashboard-profile', sukuUserProfile);
 		const sukuNotificationBox = createCustomElement(SukuNotificationBoxComponent, { 	injector : this.injector });
-		customElements.define('suku-notification-box', sukuNotificationBox);
+		customElements.define('suku-notification-widget', sukuNotificationBox);
 		const sukuHomeHeading = createCustomElement(SukuHomeHeadingComponent, {
       injector : this.injector
 		});
@@ -75,7 +76,7 @@ export class AppComponent implements OnInit {
       injector : this.injector
 		});
 		customElements.define('suku-primary-button', SukuPrimaryButton);
-		const SukuDefaultButton = createCustomElement(SukuPrimaryButtonComponent, {
+		const SukuDefaultButton = createCustomElement(SukuDefaultButtonComponent, {
       injector : this.injector
 		});
 		customElements.define('suku-default-button', SukuDefaultButton);
@@ -89,8 +90,6 @@ export class AppComponent implements OnInit {
       injector : this.injector
 		});
 		customElements.define('suku-select-input', SukuSelectInput);
-		const SukuProgressCompleted = createCustomElement(SukuProgressCompletedComponent, { injector : this.injector });
-		customElements.define('suku-progress-completed', SukuProgressCompleted);
 		const SukuProgressBar = createCustomElement(SukuProgressBarComponent, {
       injector : this.injector
 		});
@@ -169,5 +168,9 @@ export class AppComponent implements OnInit {
       injector : this.injector
 		});
 		customElements.define('suku-response', SukuResponse);
+		// const SukuDynamicInput = createCustomElement(DynamicFormComponent, {
+      // injector : this.injector
+		// });
+		// customElements.define('dynamic-form', SukuDynamicInput);
   }
 }

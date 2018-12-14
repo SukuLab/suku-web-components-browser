@@ -16,7 +16,6 @@ import {
     SukuNotificationBoxComponent,
     SukuPrimaryButtonComponent,
     SukuProgressBarComponent,
-    SukuProgressCompletedComponent,
     SukuRadioButtonComponent,
     SukuSecondaryButtonComponent,
     SukuSubHeadingComponent,
@@ -37,7 +36,8 @@ import {
     SukuHeadingNestComponent,
     SukuSubNestHeadingComponent,
     SukuInputComponent,
-    SukuResponseComponent
+    SukuResponseComponent,
+    DynamicFormComponent
 } from './webcomponent';
 
 export const WebComponents = [
@@ -52,7 +52,6 @@ export const WebComponents = [
     SukuInfoButtonComponent,
     SukuPrimaryButtonComponent,
     SukuDefaultButtonComponent,
-    SukuProgressCompletedComponent,
     SukuProgressBarComponent,
     SukuMailWidgetComponent,
     SukuPhoneWidgetComponent,
@@ -79,8 +78,8 @@ export const WebComponents = [
     SukuCardListComponent,
     SukuSubNestHeadingComponent,
     SukuInputComponent,
-    SukuResponseComponent
+    SukuResponseComponent,
+    DynamicFormComponent
 ];
-
 
 

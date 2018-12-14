@@ -44,13 +44,13 @@
                   <!-- Properties Column -->
                   <ng-container matColumnDef="Properties">
                     <th mat-header-cell *matHeaderCellDef> Properties </th>
-                    <td mat-cell *matCellDef="let element"> {{element.Properties}} <mark class="m-1">{{element.Type}}</mark>
+                    <td mat-cell *matCellDef="let element"> {{element.properties}} <mark class="m-1">{{element.type}}</mark>
                     </td>
                   </ng-container>
                   <!-- Description Column -->
                   <ng-container matColumnDef="Description">
                     <th mat-header-cell *matHeaderCellDef> Description </th>
-                    <td mat-cell *matCellDef="let element"> {{element.Description}} </td>
+                    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
                   </ng-container>
                   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
@@ -88,10 +88,15 @@
             </span>
           </span>
           <!-- terminal code end-->
-            <span>
-              <suku-card-line></suku-card-line>
-            </span>
-
+          <!-- test code start -->
+            <!-- <span>
+              <suku-input-control></suku-input-control>
+              <suku-dynamic-input [dataObject]="person" (action)="change(value)"></suku-dynamic-input>
+              <strong>Input Value</strong>
+              <pre>{{ parentForm.value | json }}</pre>
+              <strong>Input is valid:</strong> {{parentForm.valid}}
+              </span> -->
+            <!-- test code end -->
         </div>
       </div>
     </div>

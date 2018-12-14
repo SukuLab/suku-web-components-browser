@@ -721,6 +721,11 @@ fieldset[disabled] .btn-info.focus {
   color: #ffffff !important;
 }
 
+.default-btn:hover {
+ text-decoration-line: underline !important;
+ cursor: pointer !important;
+}
+
 .secondary-btn {
   font-family: 'Encode Sans', sans-serif;
   font-size: 14px;

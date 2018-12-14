@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { WebComponentsServices } from './service';
-
+import { person } from './service';
 @Component({
 	selector: 'app-documentation',
 	templateUrl: 'documentation.html',
@@ -23,9 +23,12 @@ export class DocumentationComponent implements OnInit {
 	selectedTitle: any;
 	displayedColumns: string[] = [ 'Properties', 'Description' ];
 	dataSource;
-  CompDocSource;
+	CompDocSource;
+	person;
+	value;
 	constructor(private fb: FormBuilder, private domSanitizer: DomSanitizer, private services: WebComponentsServices) {
-  }
+		this.person = person;
+	}
 
 	ngOnInit() {
 		this.parentForm = this.fb.group({
@@ -37,7 +40,7 @@ export class DocumentationComponent implements OnInit {
 			fromDate: null,
 			tillDate: null,
 			statusTypess: this.fb.array([]),
-			firstName: [ '' ]
+			firstName: ''
 		});
 		this.parentForm.valueChanges.subscribe((v) => console.log('data', v));
 		this.subMenuList = [
@@ -51,9 +54,9 @@ export class DocumentationComponent implements OnInit {
 			}
 		];
 		console.log('data', this.services.webcomponentList());
-    this.webCompTitleList = this.services.webcomponentList();
-    this.dataSource = this.services.Properties_DATA;
-    this.CompDocSource = this.services.Content_DATA;
+		this.webCompTitleList = this.services.webcomponentList();
+		this.dataSource = this.services.Properties_DATA;
+		this.CompDocSource = this.services.Content_DATA;
 	}
 	executeCode() {
 		this.data = (<HTMLInputElement>document.getElementById('code')).value;
@@ -71,7 +74,10 @@ export class DocumentationComponent implements OnInit {
 	}
 
 	titleActive(event, newValue) {
-    this.selectedTitle = newValue;
-    this.dataDom = '';
+		this.selectedTitle = newValue;
+		this.dataDom = '';
+	}
+	change(value) {
+		console.log("value", value);
 	}
 }

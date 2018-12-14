@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output, ChangeDetectionStrategy, ElementRef, ViewChild } from '@angular/core';
-import { FormGroup, AbstractControl } from '@angular/forms';
+import { FormGroup, AbstractControl, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+/* text components start */
 
-// text-components start
 @Component({
 	selector: 'suku-heading',
 	template: `<h1 [style.font-size.px]="size" [class]="customclass" [style.font-weight]="weight" [style.color]="color" id="{{id}}">
@@ -20,7 +21,7 @@ export class SukuHeadingComponent {
 @Component({
 	selector: 'suku-sub-heading',
 	template: `
-  <h2 [style.font-size.px]="size" [class]="customClass" id="{{id}}" [style.font-weight]="weight" [style.color]="color">
+  <h2 [style.font-size.px]="size" [class]="customclass" id="{{id}}" [style.font-weight]="weight" [style.color]="color">
   <ng-content></ng-content>
   </h2>`,
 	styleUrls: [ './webcomponents.scss' ]
@@ -30,13 +31,50 @@ export class SukuSubHeadingComponent {
 	@Input() size;
 	@Input() color;
 	@Input() weight;
-	@Input() customClass = '';
+	@Input() customclass = '';
 }
 
-// for rendering in innerhtml
+
+@Component({
+	selector: 'suku-home-heading',
+	template: `
+  <h3 [style.font-size.px]="size" [style.color]="color" id="{{id}}" [class]="customclass" [style.font-weight]="weight">
+  <ng-content></ng-content>
+  </h3>`,
+	styleUrls: [ './webcomponents.scss' ]
+})
+export class SukuHomeHeadingComponent {
+  @Input() id = 'homeHeading';
+	@Input() size;
+  @Input() color;
+  @Input() weight;
+	@Input() customclass;
+}
+
+@Component({
+	selector: 'suku-home-italic-heading',
+	template: `
+  <h5 [style.font-size.px]="size" [style.color]="color" id="{{id}}" [class]="customclass" [style.font-weight]="weight">
+  <ng-content></ng-content>
+  </h5>`,
+	styleUrls: [ './webcomponents.scss' ]
+})
+export class SukuHomeItalicHeadingComponent {
+  @Input() id = 'homeItalicHeading';
+	@Input() size;
+	@Input() color;
+	@Input() weight;
+	@Input() customclass;
+}
+
+/* text component end */
+
+
+
+/* for rendering in innerhtml  */
 @Component({
 	selector: 'suku-nest-heading',
-	template: `<h1 [style.font-size.px]="size" [class]="customClass" [style.font-weight]="weight" [style.color]="color" id="{{id}}">
+	template: `<h1 [style.font-size.px]="size" [class]="customclass" [style.font-weight]="weight" [style.color]="color" id="{{id}}">
   {{name}}
   </h1>`,
 	styleUrls: [ './webcomponents.scss' ]
@@ -47,13 +85,13 @@ export class SukuHeadingNestComponent {
 	@Input() size;
 	@Input() color;
 	@Input() weight;
-	@Input() customClass = '';
+	@Input() customclass = '';
 }
 
 @Component({
 	selector: 'suku-sub-nest-heading',
 	template: `
-  <h2 [style.font-size.px]="size" [class]="customClass" id="{{id}}" [style.font-weight]="weight" [style.color]="color">
+  <h2 [style.font-size.px]="size" class="customclass" id="{{id}}" [style.font-weight]="weight" [style.color]="color">
   {{name}}
   </h2>`,
 	styleUrls: [ './webcomponents.scss' ]
@@ -64,38 +102,12 @@ export class SukuSubNestHeadingComponent {
 	@Input() size;
 	@Input() color;
 	@Input() weight;
-	@Input() customClass = '';
+	@Input() customclass;
 }
+/* for rendering in innerhtml end */
 
-@Component({
-	selector: 'suku-home-heading',
-	template: `
-  <h3 [style.font-size.px]="size" [style.color]="color">
-  <ng-content></ng-content>
-  </h3>`,
-	styleUrls: [ './webcomponents.scss' ]
-})
-export class SukuHomeHeadingComponent {
-	@Input() name;
-	@Input() size;
-	@Input() color;
-}
 
-@Component({
-	selector: 'suku-home-italic-heading',
-	template: `
-  <h5 [style.font-size.px]="size" [style.color]="color" [class]="customClass" [style.font-weight]="weight">
-  <ng-content></ng-content>
-  </h5>`,
-	styleUrls: [ './webcomponents.scss' ]
-})
-export class SukuHomeItalicHeadingComponent {
-	@Input() name;
-	@Input() size;
-	@Input() color;
-	@Input() weight;
-	@Input() customClass;
-}
+
 
 @Component({
 	selector: 'suku-card-title',
@@ -107,14 +119,14 @@ export class SukuHomeItalicHeadingComponent {
 	styleUrls: [ './webcomponents.scss' ]
 })
 export class SukuCardTitleComponent {
-	@Input() cardTitle = 'INTEREST NAME';
-	@Input() cardTitleSize = '12';
-	@Input() cardTitleWeight = '400';
-	@Input() cardTitleColor = '#b6b6b6';
-	@Input() cardContent = 'Spring Cases';
-	@Input() cardContentSize = '17';
-	@Input() cardContentWeight = '700';
-	@Input() cardContentColor = '#1d1d1d';
+	@Input('card-title') cardTitle = 'INTEREST NAME';
+	@Input('card-title-size') cardTitleSize = '12';
+	@Input('card-title-weight') cardTitleWeight = '400';
+	@Input('card-title-color') cardTitleColor = '#b6b6b6';
+	@Input('card-content') cardContent = 'Spring Cases';
+	@Input('card-content-size') cardContentSize = '17';
+	@Input('card-content-weight') cardContentWeight = '700';
+	@Input('card-content-color') cardContentColor = '#1d1d1d';
 }
 
 @Component({
@@ -137,6 +149,107 @@ export class SukuCardListComponent {
 	@Input() cardContentColor = '#1d1d1d';
 }
 
+  @Component({
+    selector: 'suku-add-widget',
+    template: `
+    <a (click)="action.emit()">
+      <span><img src="{{image}}"  width="33px" height="33px">
+      <span [style.font-size.px]="size" [style.color]="color"
+      [class]="customclass" [style.font-weight]="weight">
+      <ng-content></ng-content>
+      </span>
+      </span>
+    </a>
+  `,
+    styleUrls: [ './webcomponents.scss' ]
+  })
+  export class SukuAddWidgetComponent {
+    @Input() image = '../../assets/images/plus-icon-gold.png';
+    @Input() size;
+    @Input() color;
+    @Input() weight;
+    @Input() customclass = 'ml-2 add-widget mt-1';
+    @Output() action = new EventEmitter();
+  }
+
+
+// assets-components start
+@Component({
+	selector: 'suku-mail-widget',
+	template: `
+  <span class="row">
+  <img src="../../../assets/images/mail-light.svg">
+  <suku-sub-nest-heading name="{{name}}" size="{{size}}" color="{{color}}" weight="{{weight}}" class="{{customclass}} c-pointer" >
+  </suku-sub-nest-heading>
+  </span>`,
+	styleUrls: [ './webcomponents.scss' ]
+})
+export class SukuMailWidgetComponent {
+	@Input() name = 'dconway@vairog.com';
+	@Input() size = '14';
+	@Input() color = '#3e3e3e';
+	@Input() weight = '500';
+	@Input() customclass = 'pt-1 pl-2';
+}
+
+@Component({
+	selector: 'suku-phone-widget',
+	template: `
+  <span class="row">
+  <img src="../../assets/images/phone-light.png" height="20px" class="mt-1">
+  <suku-sub-nest-heading name="{{number}}" size="{{size}}" color="{{color}}" weight="{{weight}}" class="{{customclass}} c-pointer" >
+  </suku-sub-nest-heading>
+  </span>`,
+	styleUrls: [ './webcomponents.scss' ]
+})
+export class SukuPhoneWidgetComponent {
+	@Input() number = '4806069863';
+	@Input() size = '14';
+	@Input() color = '#3e3e3e';
+	@Input() weight = '500';
+	@Input() customclass = 'pl-2';
+}
+
+@Component({
+	selector: 'suku-address-widget',
+	template: `
+  <span class="row">
+  <img src="../../../assets/images/map-pin.svg">
+  <suku-sub-nest-heading name="{{name}}" size="{{size}}" color="{{color}}" weight="{{weight}}" class="{{customclass}} c-pointer" >
+  </suku-sub-nest-heading>
+  </span>`,
+	styleUrls: [ './webcomponents.scss' ]
+})
+export class SukuAddressWidgetComponent {
+	@Input() name = '9315 NW 112TH AVE';
+	@Input() size = '14';
+	@Input() color = '#3e3e3e';
+	@Input() weight = '500';
+	@Input() customclass = 'pt-1 pl-2';
+}
+
+@Component({
+	selector: 'suku-inline-dropdown',
+	template: `
+  <span class="row" (click)="action.emit()">
+  <suku-sub-nest-heading size="{{size}}" name="{{name}}" weight="{{weight}}" class="{{customclass}}" color="{{color}}">
+    </suku-sub-nest-heading>
+    <i class="fa fa-chevron-circle-down f10" style="color:#a7bf2e"></i>
+</span>`,
+	styleUrls: [ './webcomponents.scss' ]
+})
+export class SukuInlineDropDownComponent {
+	@Input() name = 'View Details';
+	@Input() size = '14';
+	@Input() color = '#757575';
+	@Input() weight = '600';
+	@Input() customclass = 'pr-2 c-pointer';
+	@Output() action = new EventEmitter();
+}
+
+// assets-components end
+
+
 @Component({
 	selector: 'suku-link',
 	template: `
@@ -146,7 +259,6 @@ export class SukuCardListComponent {
 	styleUrls: [ './webcomponents.scss' ]
 })
 export class SukuLinkComponent {
-	@Input() name = 'Clear all';
 	@Input() size;
 	@Input() color;
 	@Input() weight;
@@ -154,27 +266,6 @@ export class SukuLinkComponent {
 	@Output() action = new EventEmitter();
 }
 
-@Component({
-	selector: 'suku-add-widget',
-	template: `
-  <a (click)="action.emit()">
-  <span><img src="{{image}}"  width="33px" height="33px">
-    <span [style.font-size.px]="size" [style.color]="color"
-    [class]="customClass" [style.font-weight]="weight">{{name}}</span>
-    </span>
-  </a>
-`,
-	styleUrls: [ './webcomponents.scss' ]
-})
-export class SukuAddWidgetComponent {
-	@Input() name = 'ADD INTEREST';
-	@Input() image = '../../assets/images/plus-icon-gold.png';
-	@Input() size;
-	@Input() color;
-	@Input() weight;
-	@Input() customClass = 'ml-2 add-widget mt-1';
-	@Output() action = new EventEmitter();
-}
 
 @Component({
 	selector: 'suku-select-input',
@@ -222,82 +313,6 @@ export class SukuSelectInputComponent {
 }
 // text-components end
 
-// assets-components start
-@Component({
-	selector: 'suku-mail-widget',
-	template: `
-  <span class="row">
-  <img src="../../../assets/images/mail-light.svg">
-  <suku-sub-nest-heading name="{{name}}" size="{{size}}" color="{{color}}" weight="{{weight}}" class="{{customClass}} c-pointer" >
-  </suku-sub-nest-heading>
-  </span>`,
-	styleUrls: [ './webcomponents.scss' ]
-})
-export class SukuMailWidgetComponent {
-	@Input() name = 'dconway@vairog.com';
-	@Input() size = '14';
-	@Input() color = '#3e3e3e';
-	@Input() weight = '500';
-	@Input() customClass = 'pt-1 pl-2';
-}
-
-@Component({
-	selector: 'suku-phone-widget',
-	template: `
-  <span class="row">
-  <img src="../../assets/images/phone-light.png" height="20px" class="mt-1">
-  <suku-sub-nest-heading name="{{number}}" size="{{size}}" color="{{color}}" weight="{{weight}}" class="{{customClass}} c-pointer" >
-  </suku-sub-nest-heading>
-  </span>`,
-	styleUrls: [ './webcomponents.scss' ]
-})
-export class SukuPhoneWidgetComponent {
-	@Input() number = '4806069863';
-	@Input() size = '14';
-	@Input() color = '#3e3e3e';
-	@Input() weight = '500';
-	@Input() customClass = 'pl-2';
-}
-
-@Component({
-	selector: 'suku-address-widget',
-	template: `
-  <span class="row">
-  <img src="../../../assets/images/map-pin.svg">
-  <suku-sub-nest-heading name="{{name}}" size="{{size}}" color="{{color}}" weight="{{weight}}" class="{{customClass}} c-pointer" >
-  </suku-sub-nest-heading>
-  </span>`,
-	styleUrls: [ './webcomponents.scss' ]
-})
-export class SukuAddressWidgetComponent {
-	@Input() name = '9315 NW 112TH AVE';
-	@Input() size = '14';
-	@Input() color = '#3e3e3e';
-	@Input() weight = '500';
-	@Input() customClass = 'pt-1 pl-2';
-}
-
-@Component({
-	selector: 'suku-inline-dropdown',
-	template: `
-  <span class="row" (click)="action.emit()">
-  <suku-sub-nest-heading size="{{size}}" name="{{name}}" weight="{{weight}}" class="{{customClass}}" color="{{color}}">
-    </suku-sub-nest-heading>
-    <i class="fa fa-chevron-circle-down f10" style="color:#a7bf2e"></i>
-</span>`,
-	styleUrls: [ './webcomponents.scss' ]
-})
-export class SukuInlineDropDownComponent {
-	@Input() name = 'View Details';
-	@Input() size = '14';
-	@Input() color = '#757575';
-	@Input() weight = '600';
-	@Input() customClass = 'pr-2 c-pointer';
-	@Output() action = new EventEmitter();
-}
-
-// assets-components end
-
 @Component({
 	selector: 'suku-home-widget',
 	template: `
@@ -328,18 +343,18 @@ export class SukuHomeWidgetComponent {
     </div>
     <div class="bLine form-group"></div>
     <div class="col-sm-12 col-md-12"  id="newSellList">
-      <div class="row pointer">
+      <div class="row c-pointer ">
         <div class="p-3 col mb-1" >
         <img src="{{icon}}" alt="icon" height="33px" width="33px">
-        <span class="create-interest-listing c-pointer pL-4 pt-3" (click)="createNewList.emit(1)">{{titleOne || 'CREATE NEW LISTING'}} </span>
+        <span class="create-interest-listing pl-2 pt-3" (click)="createNewList.emit(1)">{{titleOne || 'CREATE NEW LISTING'}} </span>
         </div>
       </div>
     </div>
     <div class="col-sm-12 col-md-12 form-group"  id="newBuyInterest">
-      <div class="row pointer">
+      <div class="row c-pointer ">
         <div class="p-3 col mb-2" >
         <img src="{{icon}}" alt="icon" height="33px" width="33px">
-        <span class="create-interest-listing c-pointer pL-4 pt-3 mB-170">{{titleTwo || 'CREATE NEW INTEREST'}}</span>
+        <span class="create-interest-listing pl-2 pt-3">{{titleTwo || 'CREATE NEW INTEREST'}}</span>
         </div>
         </div>
     </div>
@@ -348,20 +363,20 @@ export class SukuHomeWidgetComponent {
 	styleUrls: [ './webcomponents.scss' ]
 })
 export class SukuDashboardProfileComponent {
-	@Input() userName;
+	@Input('user-name') userName;
 	@Input() image = '../../assets/images/browser.png';
 	@Input() icon = '../../assets/images/plus-icon.png';
-	@Input() titleOne;
-	@Input() titleTwo;
-	@Output() createNewList = new EventEmitter();
-	@Output() clearBuyInterestStorage = new EventEmitter();
+	@Input('title-one') titleOne;
+	@Input('title-two') titleTwo;
+	@Output('action-one') createNewList = new EventEmitter();
+	@Output('action-two') clearBuyInterestStorage = new EventEmitter();
 	test(i) {
 		alert(i);
 	}
 }
 
 @Component({
-	selector: 'suku-notification-box',
+	selector: 'suku-notification-widget',
 	template: `
     <div class="col p-0 box pointer text-center removeDecoration">
       <div class="pt-3 pb-2 mb-3">
@@ -457,21 +472,21 @@ export class SukuFiltersComponent {
 @Component({
 	selector: 'suku-info-button',
 	template: `
-  <button class="btn btn-info btn-lg btn-block" id="{{id}}" (click)="trigger.emit()">
-    {{name}}
-   </button>`,
+  <button class="btn btn-info btn-lg btn-block" id="{{id}}" (click)="action.emit()">
+    <ng-content></ng-content>
+  </button>`,
 	styleUrls: [ './webcomponents.scss' ]
 })
 export class SukuInfoButtonComponent {
 	@Input() name;
 	@Input() id;
-	@Output() trigger = new EventEmitter();
+	@Output() action = new EventEmitter();
 }
 
 @Component({
 	selector: 'suku-primary-button',
 	template: `
-  <button class="btn-p btn-primary" id="{{id}}" (click)="trigger.emit()">
+  <button class="btn-p btn-primary" id="{{id}}" (click)="action.emit()">
     <ng-content></ng-content>
    </button>`,
 	styleUrls: [ './webcomponents.scss' ]
@@ -479,13 +494,13 @@ export class SukuInfoButtonComponent {
 export class SukuPrimaryButtonComponent {
 	@Input() name;
 	@Input() id;
-	@Output() trigger = new EventEmitter();
+	@Output() action = new EventEmitter();
 }
 
 @Component({
 	selector: 'suku-secondary-button',
 	template: `
-  <a class="secondary-btn" id="{{id}}" (click)="trigger.emit()">
+  <a class="secondary-btn" id="{{id}}" (click)="action.emit()">
   <ng-content></ng-content>
    </a>`,
 	styleUrls: [ './webcomponents.scss' ]
@@ -493,21 +508,20 @@ export class SukuPrimaryButtonComponent {
 export class SukuSecondaryButtonComponent {
 	@Input() name;
 	@Input() id;
-	@Output() trigger = new EventEmitter();
+	@Output() action = new EventEmitter();
 }
 
 @Component({
 	selector: 'suku-default-button',
 	template: `
-  <a class="default-btn" id="{{id}}" (click)="trigger.emit()">
+  <a class="default-btn" id="{{id}}" (click)="action.emit()">
     <ng-content></ng-content>
-   </a>`,
+  </a>`,
 	styleUrls: [ './webcomponents.scss' ]
 })
 export class SukuDefaultButtonComponent {
-	@Input() name;
-	@Input() id;
-	@Output() trigger = new EventEmitter();
+	@Input() id = "default";
+	@Output() action = new EventEmitter();
 }
 
 @Component({
@@ -572,55 +586,34 @@ export class SukuDefaultButtonComponent {
 	styleUrls: [ './webcomponents.scss' ]
 })
 export class SukuProgressBarComponent {
-	@Input() progressStyleOne = 'progressCompleted';
-	@Input() progressStyleTwo = 'progressActive';
-	@Input() progressStyleThree = 'progressUpcoming';
-	@Input() progressStyleFour = 'progressUpcoming';
-	@Input() progressStyleFive = 'progressUpcoming';
-	@Input() headingOne = 'first heading';
-	@Input() headingTwo = 'second heading';
-	@Input() headingThree = 'third heading';
-	@Input() headingFour = 'fourth heading';
-	@Input() headingFive = 'fifth heading';
-	@Input() headingOneId = 'firstHeading';
-	@Input() headingTwoId = 'secondHeading';
-	@Input() headingThreeId = 'thirdHeading';
-	@Input() headingFourId = 'fourthHeading';
-	@Input() headingFiveId = 'fifthHeading';
-	@Input() max;
+	@Input('progress-style-one') progressStyleOne = 'progressCompleted';
+	@Input('progress-style-two') progressStyleTwo = 'progressActive';
+	@Input('progress-style-three') progressStyleThree = 'progressUpcoming';
+	@Input('progress-style-four') progressStyleFour = 'progressUpcoming';
+	@Input('progress-style-five') progressStyleFive = 'progressUpcoming';
+	@Input('first-heading') headingOne = 'first heading';
+	@Input('second-heading') headingTwo = 'second heading';
+	@Input('third-heading') headingThree = 'third heading';
+	@Input('fourth-heading') headingFour = 'fourth heading';
+	@Input('fifth-heading') headingFive = 'fifth heading';
+	@Input('first-heading-id') headingOneId = 'firstHeading';
+	@Input('second-heading-id') headingTwoId = 'secondHeading';
+	@Input('third-heading-id') headingThreeId = 'thirdHeading';
+	@Input('fourth-heading-id') headingFourId = 'fourthHeading';
+	@Input('fifth-heading-id') headingFiveId = 'fifthHeading';
 }
-
-@Component({
-	selector: 'suku-progress-completed',
-	template: `
-    <div class="row">
-    <div class="col-sm-2">
-    <div class="progressCompleted">
-    </div>
-    {{headingOne}}
-    </div>
-    </div>
-    `,
-	styleUrls: [ './webcomponents.scss' ]
-})
-export class SukuProgressCompletedComponent {
-	@Input() progressStyleOne = 'progressCompleted';
-	@Input() headingOne = 'Completed';
-}
-
 
 @Component({
 	selector: 'suku-checkbox',
 	template: `
-  <div [formGroup]="parentForm">
-  <input type="email" id="email" [formControlName]="'email'" >
-  </div>
+  <mat-checkbox id="{{id}}">
+  <ng-content></ng-content>
+  </mat-checkbox>
     `,
 	styleUrls: [ './webcomponents.scss' ]
 })
 export class SukuCheckboxComponent {
-	@Input() parentForm: string;
-	@Input() name;
+  @Input() id;
 }
 
 @Component({
@@ -660,174 +653,12 @@ export class SukuStarBadgeComponent {
 	@Input() value = 1;
 }
 
-@Component({
-	selector: 'suku-search-input',
-	template: `
-  <div id="search_container" class="col-sm-3 p-0 d-flex">
-    <input type="text" id="search" class="stretch" value>
-    <img src="{{icon}}" [class]="customClass" width="8%" height="10%">
-   </div>
-    `,
-	styleUrls: [ './webcomponents.scss' ]
-})
-export class SukuSearchInputComponent {
-	@Input() formRadio: FormGroup;
-	@Input() icon = '../../assets/images/search-icon.svg';
-	@Input() customClass = 'float-right m-2 mr-3 c-pointer';
-}
-
-@Component({
-	selector: 'suku-bid-info',
-	template: `
-  <span class="row">
-    <span class="m-2 mr-3">
-      <suku-nest-heading name="{{bids}}" color="{{bidColor}}" size="{{bidSize}}" weight="{{bidWeight}}">
-      </suku-nest-heading>
-      <suku-sub-nest-heading name="{{bidHeading}}" color="{{bidHeadingColor}}" size="{{bidHeadingSize}}"
-       weight="{{bidHeadingWeight}}">
-        </suku-sub-nest-heading>
-    </span>
-    <span class="m-2 mr-3">
-      <suku-nest-heading name="{{percent}}" color="{{percentColor}}" size="{{percentSize}}" weight="{{percentWeight}}">
-      </suku-nest-heading>
-      <suku-sub-nest-heading name="{{percentHeading}}" color="{{percentHeadingColor}}" size="{{percentHeadingSize}}"
-       weight="{{percentHeadingWeight}}">
-        </suku-sub-nest-heading>
-    </span>
-  </span>
-    `,
-	styleUrls: [ './webcomponents.scss' ]
-})
-export class SukuBidInfoComponent {
-	@Input() bids = '374';
-	@Input() bidSize = '17';
-	@Input() bidColor = 'black';
-	@Input() bidWeight = '600';
-	@Input() bidHeading = 'bids';
-	@Input() bidHeadingSize = '14';
-	@Input() bidHeadingColor = 'black';
-	@Input() bidHeadingWeight = '500';
-
-	@Input() percent = '10%';
-	@Input() percentSize = '17';
-	@Input() percentColor = 'black';
-	@Input() percentWeight = '600';
-	@Input() percentHeading = 'fulfill';
-	@Input() percentHeadingSize = '14';
-	@Input() percentHeadingColor = 'black';
-	@Input() percentHeadingWeight = '500';
-}
-
-@Component({
-	selector: 'suku-nav-submenu',
-	template: `
-  <div class="header-main">
-  <div class="sub-menu-bar navBarRes" *ngIf="true">
-    <div class="container">
-      <div class="sub-menu">
-        <nav>
-          <ul class="mt-3" id="subMenu">
-            <li [ngClass]="{'active': selectedItem == item}" (click)="subMenuSelected($event, item)" *ngFor="let item of subMenuList">
-              <a>{{ item.name }}</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
-</div>
-    `,
-	styleUrls: [ './webcomponents.scss' ]
-})
-export class SukuNavSubmenuComponent {
-	subMenuList = [];
-	selectedItem: any;
-	constructor() {
-		this.subMenuList = [
-			{
-				name: 'Listings & Bids',
-				id: 1
-			},
-			{
-				name: 'Negotiations',
-				id: 2
-			},
-			{
-				name: 'Purchase Orders',
-				id: 3
-			},
-			{
-				name: 'Transactions',
-				id: 4
-			}
-		];
-	}
-	subMenuSelected(event, newValue) {
-		console.log(newValue);
-		this.selectedItem = newValue;
-	}
-}
-
-@Component({
-	selector: 'suku-card-line',
-  template: `
-  <span *ngFor="let data of _items;let i=index">
-  <div class="col p-0">
-  <div class="row card-line-bg p-3 m-3 c-pointer" [style.background-color]="data?.bgColor">
-    <div class="col-sm-1 mt-1 pt-1">
-      <img [class]="data?.customClass" src="{{data?.image || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9SapkQj0Aefd_ufiiGrDR-dNd32O0yqgGW3g-AMGGSFaOQP-k6g'}}" alt="card-img" width="49px" height="49px">
-    </div>
-    <div class="col-sm-1" *ngIf="data?.msgStatus=='read'">
-      <img [class]="data?.customIconClass || 'text-center mt-3' " src="{{data?.chatReadIcon || '../../../assets/img/msg_read.png'}}" alt="card-img" width="40px" height="42px">
-    </div>
-    <div class="col-sm-1" *ngIf="data?.msgStatus=='unRead'">
-      <img [class]="data?.customIconClass || 'text-center mt-3' " src="{{data?.chatUnreadIcon || '../../../assets/img/msg_unread.png'}}" alt="card-img" width="40px" height="42px">
-    </div>
-    <div class="col-sm-1" *ngIf=" (data?.msgStatus !='unRead' && data?.msgStatus !='read') ">
-      <a [class]="data?.customIconClass || 'text-center mt-3' " ></a>
-    </div>
-    <div class="col-sm-6 pt-3">
-      <suku-sub-nest-heading size="{{data?.titleOneSize || '14' }}" weight="{{data?.titleOneWeight || '600' }}" color="{{data?.titleOneColor || 'black'}}" name="{{data?.titleOne || 'Title One'}}"></suku-sub-nest-heading>
-      <suku-sub-nest-heading size="{{data?.contentOneSize || '14' }}" weight="{{data?.contentOneWeight || '500'}}" color="{{data?.contentOneColor || '#3e3e3e'}}" name="{{data?.contentOne || '10 SUKU'}}"></suku-sub-nest-heading>
-    </div>
-    <div class="col-sm-2 pt-3">
-        <suku-sub-nest-heading size="{{data?.subTitleTwoSize || '12'}}" weight="{{data?.subTitleTwoWeight || '500'}}" color="{{data?.subTitleTwoColor || '#b6b6b6'}}" name="{{data?.subTitleTwo || 'SOLD BY'}}"></suku-sub-nest-heading>
-        <suku-sub-nest-heading size="{{data?.contentTwoSize || '14'}}" weight="{{data?.contentTwoWeight || '500'}}" color="{{data?.contentTwoColor || '#3e3e3e'}}" name="{{data?.contentTwo || 'John Smith'}}"></suku-sub-nest-heading>
-    </div>
-    <div class="col-sm-2 pt-3">
-        <suku-sub-nest-heading size="{{data?.subTitleThreeSize || '12' }}" weight="{{data?.subTitleThreeWeight || '500'}}" color="{{data?.subTitleThreeColor || '#b6b6b6'}}" name="{{data?.subTitleThree || 'EXPIRY DATE'}}"></suku-sub-nest-heading>
-        <suku-sub-nest-heading size="{{data?.contentThreeSize || '14'}}" weight="{{data?.contentThreeWeight || '500'}}" color="{{data?.contentThreeColor || '#3e3e3e'}}" name="{{data?.contentThree || '28 Nov 2018'}}"></suku-sub-nest-heading>
-      </div>
-  </div>
-</div>
-</span>
-    `,
-  styleUrls: [ './webcomponents.scss' ],
-  changeDetection: ChangeDetectionStrategy.OnPush
-})
-export class SukuCardLineComponent implements OnInit {
-  _items;
-   get items() {
-    return this._items
-  }
-
-  @Input()
-  set items(items) {
-    console.log('prev value: ', this._items);
-    console.log('got name: ', items);
-    this._items = items;
-  }
-    ngOnInit() {
-    console.log('on init');
-    console.log(this._items);
-  }
-}
 
 @Component({
 	selector: 'suku-rating-star',
 	template: `
-  <span (change)="rating.emit(ratingValue)">
-  <div [innerHTML]="myHTML" [class]="customClass" ratingValue=""></div>
+  <span (change)="action.emit(ratingValue)">
+  <div [innerHTML]="myHTML" [class]="customclass" ratingValue=""></div>
   </span>
     `,
 	styleUrls: [ './webcomponents.scss' ]
@@ -835,9 +666,9 @@ export class SukuCardLineComponent implements OnInit {
 export class SukuRatingComponent {
 	myHTML;
 	_rate = 0;
-	@Output() rating = new EventEmitter();
-	@Input() customClass;
-	@Input()
+	@Output() action = new EventEmitter();
+	@Input() customclass;
+	@Input('rating-value')
 	set ratingValue(ratingValue: number) {
 		this._rate = ratingValue;
 		console.log('', this._rate);
@@ -981,9 +812,9 @@ export class SukuRatingLineItemComponent {
 	@Input() weight = 500;
 	@Input() color = '#757575';
 	@Input() users = 'USER L | 5/28';
-	@Input() commentSize = 14;
-	@Input() commentWeight = 500;
-	@Input() commentColor = '#3e3e3e';
+	@Input('comment-size') commentSize = 14;
+	@Input('comment-weight') commentWeight = 500;
+	@Input('comment-color') commentColor = '#3e3e3e';
 	@Input()
 	comment = 'Rating content can run up to a few paragraphs.Rating content can run up to a few paragraphs.Rating content can run up to a few paragraphs.Rating content can run up to.';
 	@Output() rating = new EventEmitter();
@@ -1107,18 +938,182 @@ export class SukuRatingLineItemComponent {
 	}
 }
 
+
+@Component({
+	selector: 'suku-search-input',
+	template: `
+  <div id="search_container" class="col-sm-3 p-0 d-flex">
+    <input type="text" id="search" class="stretch" value>
+    <img src="{{icon}}" [class]="customClass" width="8%" height="10%">
+   </div>
+    `,
+	styleUrls: [ './webcomponents.scss' ]
+})
+export class SukuSearchInputComponent {
+	@Input() formRadio: FormGroup;
+	@Input() icon = '../../assets/images/search-icon.svg';
+	@Input() customClass = 'float-right m-2 mr-3 c-pointer';
+}
+
+@Component({
+	selector: 'suku-bid-info',
+	template: `
+  <span class="row">
+    <span class="m-2 mr-3">
+      <suku-nest-heading name="{{bids}}" color="{{bidColor}}" size="{{bidSize}}" weight="{{bidWeight}}">
+      </suku-nest-heading>
+      <suku-sub-nest-heading name="{{bidHeading}}" color="{{bidHeadingColor}}" size="{{bidHeadingSize}}"
+       weight="{{bidHeadingWeight}}">
+        </suku-sub-nest-heading>
+    </span>
+    <span class="m-2 mr-3">
+      <suku-nest-heading name="{{percent}}" color="{{percentColor}}" size="{{percentSize}}" weight="{{percentWeight}}">
+      </suku-nest-heading>
+      <suku-sub-nest-heading name="{{percentHeading}}" color="{{percentHeadingColor}}" size="{{percentHeadingSize}}"
+       weight="{{percentHeadingWeight}}">
+        </suku-sub-nest-heading>
+    </span>
+  </span>
+    `,
+	styleUrls: [ './webcomponents.scss' ]
+})
+export class SukuBidInfoComponent {
+	@Input() bids = '374';
+	@Input('bid-size') bidSize = '17';
+	@Input('bid-color') bidColor = 'black';
+	@Input('bid-weight') bidWeight = '600';
+	@Input('bid-heading') bidHeading = 'bids';
+	@Input('bid-heding-size') bidHeadingSize = '14';
+	@Input('bid-heading-color') bidHeadingColor = 'black';
+	@Input('bid-heading-weight') bidHeadingWeight = '500';
+
+	@Input() percent = '10%';
+	@Input('percentage-size') percentSize = '17';
+	@Input('percentage-color') percentColor = 'black';
+	@Input('percentage-weight') percentWeight = '600';
+	@Input('percentage-heading') percentHeading = 'fulfill';
+	@Input('percentage-heading-size') percentHeadingSize = '14';
+	@Input('percentage-heading-color') percentHeadingColor = 'black';
+	@Input('percentage-heading-weight') percentHeadingWeight = '500';
+}
+
+@Component({
+	selector: 'suku-nav-submenu',
+	template: `
+  <div class="header-main">
+  <div class="sub-menu-bar navBarRes" *ngIf="true">
+    <div class="container">
+      <div class="sub-menu">
+        <nav>
+          <ul class="mt-3" id="subMenu">
+            <li [ngClass]="{'active': selectedItem == item}" (click)="subMenuSelected($event, item)" *ngFor="let item of subMenuList">
+              <a>{{ item.name }}</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+    `,
+	styleUrls: [ './webcomponents.scss' ]
+})
+export class SukuNavSubmenuComponent {
+	subMenuList = [];
+	selectedItem: any;
+	constructor() {
+		this.subMenuList = [
+			{
+				name: 'Listings & Bids',
+				id: 1
+			},
+			{
+				name: 'Negotiations',
+				id: 2
+			},
+			{
+				name: 'Purchase Orders',
+				id: 3
+			},
+			{
+				name: 'Transactions',
+				id: 4
+			}
+		];
+	}
+	subMenuSelected(event, newValue) {
+		console.log(newValue);
+		this.selectedItem = newValue;
+	}
+}
+
+@Component({
+	selector: 'suku-card-line',
+  template: `
+  <span *ngFor="let data of _items;let i=index">
+  <div class="col p-0">
+  <div class="row card-line-bg p-3 m-3 c-pointer" [style.background-color]="data?.bgColor">
+    <div class="col-sm-1 mt-1 pt-1">
+      <img [class]="data?.customClass" src="{{data?.image || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9SapkQj0Aefd_ufiiGrDR-dNd32O0yqgGW3g-AMGGSFaOQP-k6g'}}" alt="card-img" width="49px" height="49px">
+    </div>
+    <div class="col-sm-1" *ngIf="data?.msgStatus=='read'">
+      <img [class]="data?.customIconClass || 'text-center mt-3' " src="{{data?.chatReadIcon || '../../../assets/img/msg_read.png'}}" alt="card-img" width="40px" height="42px">
+    </div>
+    <div class="col-sm-1" *ngIf="data?.msgStatus=='unRead'">
+      <img [class]="data?.customIconClass || 'text-center mt-3' " src="{{data?.chatUnreadIcon || '../../../assets/img/msg_unread.png'}}" alt="card-img" width="40px" height="42px">
+    </div>
+    <div class="col-sm-1" *ngIf=" (data?.msgStatus !='unRead' && data?.msgStatus !='read') ">
+      <a [class]="data?.customIconClass || 'text-center mt-3' " ></a>
+    </div>
+    <div class="col-sm-6 pt-3">
+      <suku-sub-nest-heading size="{{data?.titleOneSize || '14' }}" weight="{{data?.titleOneWeight || '600' }}" color="{{data?.titleOneColor || 'black'}}" name="{{data?.titleOne || 'Title One'}}"></suku-sub-nest-heading>
+      <suku-sub-nest-heading size="{{data?.contentOneSize || '14' }}" weight="{{data?.contentOneWeight || '500'}}" color="{{data?.contentOneColor || '#3e3e3e'}}" name="{{data?.contentOne || '10 SUKU'}}"></suku-sub-nest-heading>
+    </div>
+    <div class="col-sm-2 pt-3">
+        <suku-sub-nest-heading size="{{data?.subTitleTwoSize || '12'}}" weight="{{data?.subTitleTwoWeight || '500'}}" color="{{data?.subTitleTwoColor || '#b6b6b6'}}" name="{{data?.subTitleTwo || 'SOLD BY'}}"></suku-sub-nest-heading>
+        <suku-sub-nest-heading size="{{data?.contentTwoSize || '14'}}" weight="{{data?.contentTwoWeight || '500'}}" color="{{data?.contentTwoColor || '#3e3e3e'}}" name="{{data?.contentTwo || 'John Smith'}}"></suku-sub-nest-heading>
+    </div>
+    <div class="col-sm-2 pt-3">
+        <suku-sub-nest-heading size="{{data?.subTitleThreeSize || '12' }}" weight="{{data?.subTitleThreeWeight || '500'}}" color="{{data?.subTitleThreeColor || '#b6b6b6'}}" name="{{data?.subTitleThree || 'EXPIRY DATE'}}"></suku-sub-nest-heading>
+        <suku-sub-nest-heading size="{{data?.contentThreeSize || '14'}}" weight="{{data?.contentThreeWeight || '500'}}" color="{{data?.contentThreeColor || '#3e3e3e'}}" name="{{data?.contentThree || '28 Nov 2018'}}"></suku-sub-nest-heading>
+      </div>
+  </div>
+</div>
+</span>
+    `,
+  styleUrls: [ './webcomponents.scss' ],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class SukuCardLineComponent implements OnInit {
+  _items;
+   get items() {
+    return this._items
+  }
+
+  @Input()
+  set items(items) {
+    console.log('prev value: ', this._items);
+    console.log('got name: ', items);
+    this._items = items;
+  }
+    ngOnInit() {
+    console.log('on init');
+    console.log(this._items);
+  }
+}
+
 @Component({
 	selector: 'suku-bid-tag',
 	template: `
   <div class="col-sm-4 p-4 suku-big-tag pl-5">
   <span class="row pr-3 pl-3">
-    <suku-nest-heading size="{{prizeSize}}" weight="{{prizeWeight}}" color="{{prizeColor}}" name="{{prize}}" customClass="{{prizeCustomClass}}"></suku-nest-heading>
+    <suku-nest-heading size="{{prizeSize}}" weight="{{prizeWeight}}" color="{{prizeColor}}" name="{{prize}}" customclass="{{prizeCustomClass}}"></suku-nest-heading>
     <suku-sub-nest-heading size="{{unitSize}}" weight="{{unitWeight}}" name="{{unit}}" customClass="{{unitCustomClass}}"></suku-sub-nest-heading>
   </span>
   <span>
-    <suku-nest-heading size="{{qSize}}" color="{{qColor}}" weight="{{qWeight}}" name="{{qContent}}" customClass="{{qCustomClass}}">
+    <suku-nest-heading size="{{qSize}}" color="{{qColor}}" weight="{{qWeight}}" name="{{qContent}}" customclass="{{qCustomClass}}">
     </suku-nest-heading>
-    <suku-nest-heading  size="{{pSize}}" color="{{pColor}}" weight="{{pWeight}}" name="{{pContent}}" customClass="{{pCustomClass}}">
+    <suku-nest-heading  size="{{pSize}}" color="{{pColor}}" weight="{{pWeight}}" name="{{pContent}}" customclass="{{pCustomClass}}">
     </suku-nest-heading>
   </span>
 </div>
@@ -1127,25 +1122,25 @@ export class SukuRatingLineItemComponent {
 })
 export class SukuBidTagComponent {
 	@Input() prize = '$100';
-	@Input() prizeSize = '50';
-	@Input() prizeWeight = '500';
-	@Input() prizeColor = 'white';
-	@Input() prizeCustomClass = 'mb-0 mt-1';
+	@Input('prize-size') prizeSize = '50';
+	@Input('prize-weight') prizeWeight = '500';
+	@Input('prize-color') prizeColor = 'white';
+	@Input('prize-customclass') prizeCustomClass = 'mb-0 mt-1';
 	@Input() unit = '/ BOX';
-	@Input() unitSize = '16';
-	@Input() unitWeight = '500';
-	@Input() unitColor = 'white';
-	@Input() unitCustomClass = 'mt-5 pt-3 mb-0 ml-3';
-	@Input() qContent = '100 cases / box: 200 boxes';
-	@Input() qSize = '15';
-	@Input() qWeight = '500';
-	@Input() qColor = 'white';
-	@Input() qCustomClass = 'mt-1';
-	@Input() pContent = '$40,000 total (80,000 SUKU)';
-	@Input() pSize = '15';
-	@Input() pWeight = '500';
-	@Input() pColor = 'white';
-	@Input() pCustomClass = 'mt-1 pb-4';
+	@Input('unit-size') unitSize = '16';
+	@Input('unit-weight') unitWeight = '500';
+	@Input('unit-color') unitColor = 'white';
+	@Input('unit-customclass') unitCustomClass = 'mt-5 pt-3 mb-0 ml-3';
+	@Input('q-content') qContent = '100 cases / box: 200 boxes';
+	@Input('q-size') qSize = '15';
+	@Input('q-weight') qWeight = '500';
+	@Input('q-color') qColor = 'white';
+	@Input('q-customclass') qCustomClass = 'mt-1';
+	@Input('p-content') pContent = '$40,000 total (80,000 SUKU)';
+	@Input('p-size') pSize = '15';
+	@Input('p-weight') pWeight = '500';
+	@Input('p-color') pColor = 'white';
+	@Input('p-customclass') pCustomClass = 'mt-1 pb-4';
 }
 
 @Component({
@@ -1242,21 +1237,21 @@ export class SukuMatchChipComponent {
 })
 export class SukuProfileWidgetComponent {
 	@Input() image = '../../assets/images/browser.png';
-	@Input() userName = 'Vairog';
-	@Input() nameweight = '400';
-	@Input() namecustomclass = 'mb-0 mt-1 pl-1';
-	@Input() namesize = '33.4';
-	@Input() namecolor = '';
-	@Input() accounttype = 'Manufacturer';
-	@Input() accountweight = '400';
-	@Input() accountcustomclass = 'pl-2';
-	@Input() accountsize = '17';
-	@Input() accountcolor = '';
-	@Input() ratingvalue = '5';
-	@Input() ratingcustomclass = 'pl-2 mb-2 pt-3';
-	@Input() ratedetails = 'based on 14 rating';
-	@Input() ratingweight = '400';
-	@Input() rdcustomclass = 'pl-2';
+	@Input('user-name') userName = 'Vairog';
+	@Input('name-weight') nameweight = '400';
+	@Input('name-customclass') namecustomclass = 'mb-0 mt-1 pl-1';
+	@Input('name-size') namesize = '33.4';
+	@Input('name-color') namecolor = '';
+	@Input('account-type') accounttype = 'Manufacturer';
+	@Input('account-weight') accountweight = '400';
+	@Input('account-customclass') accountcustomclass = 'pl-2';
+	@Input('account-size') accountsize = '17';
+	@Input('account-color') accountcolor = '';
+	@Input('rating-value') ratingvalue = '5';
+	@Input('rating-customclass') ratingcustomclass = 'pl-2 mb-2 pt-3';
+	@Input('rate-details') ratedetails = 'based on 14 rating';
+	@Input('rating-weight') ratingweight = '400';
+	@Input('rd-customclass') rdcustomclass = 'pl-2';
 }
 
 @Component({
@@ -1264,15 +1259,93 @@ export class SukuProfileWidgetComponent {
 	template: `
   <div class="input-container">
   <mat-form-field>
-    <input matInput placeholder="label" [formControl]="control" name="label">
+    <input matInput placeholder="firstName" color="primary" type="text">
   </mat-form-field>
 </div>
       `
 })
 export class SukuInputComponent {
-	@Input() control: AbstractControl;
-	@Input() label: string;
+	// @Input() control: AbstractControl;
+  // @Input() label: string;
 }
+
+
+
+
+/* test components */
+
+@Component({
+  selector: 'suku-dynamic-input',
+  template: `
+    <form novalidate  [formGroup]="parentForm">
+      <div *ngFor="let prop of objectProps">
+        <label [attr.for]="prop">{{prop.label}}</label>
+
+        <div [ngSwitch]="prop.type">
+        <mat-form-field>
+          <input matInput placeholder="suku input" (keyup)="push()" *ngSwitchCase="'text'"
+            [formControlName]="prop.key"
+            [id]="prop.key" [type]="prop.type">
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+    <hr />
+  `,
+  styles: [
+    `
+    .error { color: red; }
+    `
+  ]
+})
+export class DynamicFormComponent implements OnInit {
+  @Input() dataObject;
+  parentForm: FormGroup;
+  objectProps;
+  @Output() action = new EventEmitter;
+  constructor() {
+  }
+  push() {
+    const value = JSON.parse(this.parentForm.value);
+    console.log("value", value);
+    this.action.emit(value);
+  }
+  ngOnInit() {
+    // remap the API to be suitable for iterating over it
+    this.objectProps = Object.keys(this.dataObject)
+        .map(prop => {
+          return Object.assign({}, { key: prop} , this.dataObject[prop]);
+        });
+
+    // setup the form
+    const formGroup = {};
+    for (const prop of Object.keys(this.dataObject)) {
+      formGroup[prop] = new FormControl(this.dataObject[prop].value || '', this.mapValidators(this.dataObject[prop].validation));
+    }
+
+    this.parentForm = new FormGroup(formGroup);
+  }
+
+  private mapValidators(validators) {
+    const formValidators = [];
+
+    if (validators) {
+      for (const validation of Object.keys(validators)) {
+        if (validation === 'required') {
+          formValidators.push(Validators.required);
+        } else if (validation === 'min') {
+          formValidators.push(Validators.min(validators[validation]));
+        }
+      }
+    }
+
+    return formValidators;
+  }
+}
+
+/* test components */
+
+
 
 @Component({
 	selector: 'suku-response',

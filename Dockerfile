@@ -1,5 +1,5 @@
 FROM node:9.11.1 as build-stage
-COPY /Suku /app
+COPY ./ /app
 WORKDIR /app
 RUN npx npm i typescript@">=3.1.1 <3.2"
 RUN npx npm i @angular/cli

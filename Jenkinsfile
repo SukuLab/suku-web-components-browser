@@ -1,12 +1,12 @@
-/*void setBuildStatus(String message, String state) {
+void setBuildStatus(String message, String state) {
   step([
       $class: "GitHubCommitStatusSetter",
-      reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://github.com/SukuLab/suku-chatservice.git"],
+      reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://github.com/SukuLab/suku-web-components-infra.git"],
       contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "ci/jenkins/build-status"],
       errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
       statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
   ]);
-}*/
+}
 
 pipeline {
     agent { label "build" }
@@ -42,12 +42,12 @@ pipeline {
             }
         }
 
-        /*stage("env cleanup"){
+        stage("env cleanup"){
             steps {
-                //sh returnStatus: true, script: 'docker rm -f sukuwebcomponents'
+                sh returnStatus: true, script: 'docker rm -f sukuwebcomponents'
 
             }
-        }*/
+        }
 
         stage("Launch service"){
             steps {
@@ -71,9 +71,9 @@ pipeline {
         stage("Tag and push") {
             steps {
                 withDockerRegistry(credentialsId: 'b9421aa7-cd71-48d1-9a11-3c9410fd3e45', url: '') {
-                    //sh "docker tag ${SUKU_DOCKER_REGISTRY}/sukumarketplaceui:ci_${GIT_COMMIT} ${SUKU_DOCKER_REGISTRY}/sukumarketplaceui:${VERSION}"
-                    //sh "docker push ${SUKU_DOCKER_REGISTRY}/sukumarketplaceui:${VERSION}"
-                    sh "docker push ${SUKU_DOCKER_REGISTRY}/sukumarketplaceui:ci_${GIT_COMMIT}"
+                    //sh "docker tag ${SUKU_DOCKER_REGISTRY}/sukuwebcomponents:ci_${GIT_COMMIT} ${SUKU_DOCKER_REGISTRY}/sukuwebcomponents:${VERSION}"
+                    //sh "docker push ${SUKU_DOCKER_REGISTRY}/sukuwebcomponents:${VERSION}"
+                    sh "docker push ${SUKU_DOCKER_REGISTRY}/sukuwebcomponents:ci_${GIT_COMMIT}"
 
                 }
             }
@@ -90,7 +90,7 @@ pipeline {
          */
     }
 
-    /*post {
+    post {
 
         success {
              setBuildStatus("Build succeeded", "SUCCESS");
@@ -100,12 +100,12 @@ pipeline {
              setBuildStatus("Build failed", "FAILURE");
         }
 
-        success {
+        /*success {
              slackSend (color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
         }
 
         failure {
              slackSend (color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-        }
-    }*/
+        }*/
+    }
 }

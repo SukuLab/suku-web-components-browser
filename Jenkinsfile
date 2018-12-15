@@ -42,12 +42,12 @@ pipeline {
             }
         }
 
-        stage("env cleanup"){
+        /*stage("env cleanup"){
             steps {
                 //sh returnStatus: true, script: 'docker rm -f sukuwebcomponents'
 
             }
-        }
+        }*/
 
         stage("Launch service"){
             steps {

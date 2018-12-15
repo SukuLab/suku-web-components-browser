@@ -7,7 +7,7 @@ RUN npm install
 RUN npm run prod
 
 FROM nginx:1.15.6
-COPY --from=build-stage /app/dist/suku-web-components-infra/ /usr/share/nginx/html
+COPY --from=build-stage /app/dist/suku-doc/ /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 ENTRYPOINT ["nginx", "-g", "daemon off;"]

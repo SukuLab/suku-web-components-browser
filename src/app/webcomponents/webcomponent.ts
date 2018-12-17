@@ -91,7 +91,7 @@ export class SukuHeadingNestComponent {
 @Component({
 	selector: 'suku-sub-nest-heading',
 	template: `
-  <h2 [style.font-size.px]="size" class="customclass" id="{{id}}" [style.font-weight]="weight" [style.color]="color">
+  <h2 [style.font-size.px]="size" [class]="customclass" id="{{id}}" [style.font-weight]="weight" [style.color]="color">
   {{name}}
   </h2>`,
 	styleUrls: [ './webcomponents.scss' ]
@@ -197,7 +197,7 @@ export class SukuMailWidgetComponent {
 	template: `
   <span class="row">
   <img src="../../assets/images/phone-light.png" height="20px" class="mt-1">
-  <suku-sub-nest-heading name="{{number}}" size="{{size}}" color="{{color}}" weight="{{weight}}" class="{{customclass}} c-pointer" >
+  <suku-sub-nest-heading name="{{number}}" size="{{size}}" color="{{color}}" weight="{{weight}}" class="{{customclass}}" >
   </suku-sub-nest-heading>
   </span>`,
 	styleUrls: [ './webcomponents.scss' ]
@@ -207,7 +207,7 @@ export class SukuPhoneWidgetComponent {
 	@Input() size = '14';
 	@Input() color = '#3e3e3e';
 	@Input() weight = '500';
-	@Input() customclass = 'pl-2';
+	@Input() customclass = 'pl-2 pt-1 c-pointer';
 }
 
 @Component({
@@ -231,7 +231,7 @@ export class SukuAddressWidgetComponent {
 @Component({
 	selector: 'suku-inline-dropdown',
 	template: `
-  <span class="row" (click)="action.emit()">
+  <span class="row c-pointer" (click)="action.emit()">
   <suku-sub-nest-heading size="{{size}}" name="{{name}}" weight="{{weight}}" class="{{customclass}}" color="{{color}}">
     </suku-sub-nest-heading>
     <i class="fa fa-chevron-circle-down f10" style="color:#a7bf2e"></i>
@@ -317,7 +317,7 @@ export class SukuSelectInputComponent {
 	selector: 'suku-home-widget',
 	template: `
    <div class="col widget" [style.background-color]="bgColor" [style.color]="color" (click)="routerLink.emit()">
-  <label class="pt-2 pb-2 c-pointer" id="{{id}}">{{name}}</label>
+  <label class="pt-2 pb-2 c-pointer" id="{{id}}"><ng-content></ng-content></label>
    </div>`,
 	styleUrls: [ './webcomponents.scss' ]
 })
@@ -643,7 +643,7 @@ export class SukuRadioButtonComponent {
 	template: `
   <div class="star">
   <img src="../../../assets/images/star_2.svg" alt="star-image" id="star-image">
-  <h2 class="star-txt text-center" id="value">{{value}}</h2>
+  <h2 class="star-txt text-center" id="value"><ng-content></ng-content></h2>
   </div>
     `,
 	styleUrls: [ './webcomponents.scss' ]
@@ -1007,7 +1007,7 @@ export class SukuBidInfoComponent {
         <nav>
           <ul class="mt-3" id="subMenu">
             <li [ngClass]="{'active': selectedItem == item}" (click)="subMenuSelected($event, item)" *ngFor="let item of subMenuList">
-              <a>{{ item.name }}</a>
+              <a class="c-pointer">{{ item.name }}</a>
             </li>
           </ul>
         </nav>
@@ -1097,6 +1097,9 @@ export class SukuCardLineComponent implements OnInit {
     this._items = items;
   }
     ngOnInit() {
+      this._items = [{
+        'titleOne': 'title one'
+      }]
     console.log('on init');
     console.log(this._items);
   }
@@ -1108,7 +1111,7 @@ export class SukuCardLineComponent implements OnInit {
   <div class="col-sm-4 p-4 suku-big-tag pl-5">
   <span class="row pr-3 pl-3">
     <suku-nest-heading size="{{prizeSize}}" weight="{{prizeWeight}}" color="{{prizeColor}}" name="{{prize}}" customclass="{{prizeCustomClass}}"></suku-nest-heading>
-    <suku-sub-nest-heading size="{{unitSize}}" weight="{{unitWeight}}" name="{{unit}}" customClass="{{unitCustomClass}}"></suku-sub-nest-heading>
+    <suku-sub-nest-heading size="{{unitSize}}" weight="{{unitWeight}}" name="{{unit}}" customclass="{{unitCustomClass}}"></suku-sub-nest-heading>
   </span>
   <span>
     <suku-nest-heading size="{{qSize}}" color="{{qColor}}" weight="{{qWeight}}" name="{{qContent}}" customclass="{{qCustomClass}}">

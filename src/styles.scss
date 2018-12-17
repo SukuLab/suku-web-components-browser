@@ -1,6 +1,118 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+@font-face {
+  font-family: 'Poppins';
+  src:url('./assets/fonts/poppins/Poppins.ttf.woff') format('woff'),
+      url('./assets/fonts/poppins/Poppins.ttf.svg#Poppins') format('svg'),
+      url('./assets/fonts/poppins/Poppins.ttf.eot'),
+      url('./assets/fonts/poppins/Poppins.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* encode-sans-regular - latin */
+@font-face {
+  font-family: 'Encode Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/encode-sans/encode-sans-v2-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Encode Sans Regular'), local('EncodeSans-Regular'),
+       url('./assets/fonts/encode-sans/encode-sans-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./assets/fonts/encode-sans/encode-sans-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./assets/fonts/encode-sans/encode-sans-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./assets/fonts/encode-sans/encode-sans-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./assets/fonts/encode-sans/encode-sans-v2-latin-regular.svg#EncodeSans') format('svg'); /* Legacy iOS */
+}
+
+/* encode-sans-semi-condensed-regular - latin */
+@font-face {
+  font-family: 'Encode Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/encode-sans-condensed/encode-sans-semi-condensed-v3-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Encode Sans Semi Condensed Regular'), local('EncodeSansSemiCondensed-Regular'),
+       url('./assets/fonts/encode-sans-condensed/encode-sans-semi-condensed-v3-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./assets/fonts/encode-sans-condensed/encode-sans-semi-condensed-v3-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./assets/fonts/encode-sans-condensed/encode-sans-semi-condensed-v3-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./assets/fonts/encode-sans-condensed/encode-sans-semi-condensed-v3-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./assets/fonts/encode-sans-condensed/encode-sans-semi-condensed-v3-latin-regular.svg#EncodeSansSemiCondensed') format('svg'); /* Legacy iOS */
+}
+
+/* abel-regular */
+@font-face {
+  font-family: 'abelregular';
+  src: url('./assets/fonts/abel/abel-regular-webfont.woff2') format('woff2'),
+    url('./assets/fonts/abel/abel-regular-webfont.woff') format('woff');
+  font-style: normal;
+}
+
+/* proxima_novabold */
+
+  // @font-face {
+  //   font-family: 'proxima_novabold';
+  //   src: url('./assets/fonts/proxima-nova/proximanova-bold-webfont.eot');
+  //   src: url('./assets/fonts/proxima-nova/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  //     url('./assets/fonts/proxima-nova/proximanova-bold-webfont.woff2') format('woff2'),
+  //     url('./assets/fonts/proxima-nova/proximanova-bold-webfont.woff') format('woff'),
+  //     url('./assets/fonts/proxima-nova/proximanova-bold-webfont.ttf') format('truetype'),
+  //     url('./assets/fonts/proxima-nova/proximanova-bold-webfont.svg#proxima_novabold') format('svg');
+  //   font-weight: normal;
+  //   font-style: normal;
+  // }
+
+  // @font-face {
+  //   font-family: 'proxima_novabold';
+  //   src: url('../webfonts/proximanova-bold-webfont.eot');
+  //   src: url('../webfonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  //     url('../webfonts/proximanova-bold-webfont.woff2') format('woff2'),
+  //     url('../webfonts/proximanova-bold-webfont.woff') format('woff'),
+  //     url('../webfonts/proximanova-bold-webfont.ttf') format('truetype'),
+  //     url('../webfonts/proximanova-bold-webfont.svg#proxima_novabold') format('svg');
+  //   font-weight: normal;
+  //   font-style: normal;
+  // }
+  
+/* AvenirNextLTPro-Regular */
+
+// @font-face {
+//   font-family: 'AvenirNextLTPro-Regular';
+//   src: url('./assets/fonts/avenirNext/AvenirNextLTPro-Regular.eot');
+//   src: url('./assets/fonts/avenirNext/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+//     url('./assets/fonts/avenirNext/AvenirNextLTPro-Regular.woff2') format('woff2'),
+//     url('./assets/fonts/avenirNext/AvenirNextLTPro-Regular.woff') format('woff'),
+//     url('./assets/fonts/avenirNext/AvenirNextLTPro-Regular.ttf') format('truetype'),
+//     url('./assets/fonts/avenirNext/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'AvenirNextLTPro-Regular';
+//   src: url('../webfonts/AvenirNextLTPro-Regular.eot');
+//   src: url('../webfonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+//     url('../webfonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
+//     url('../webfonts/AvenirNextLTPro-Regular.woff') format('woff'),
+//     url('../webfonts/AvenirNextLTPro-Regular.ttf') format('truetype'),
+//     url('../webfonts/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+
+
+// @font-face {
+//   font-family: 'avenirnextbold';
+//   src: url('../webfonts/avenirnextbold.eot');
+//   src: url('../webfonts/avenirnextbold.eot') format('embedded-opentype'),
+//     url('../webfonts/avenirnextbold.woff2') format('woff2'),
+//     url('../webfonts/avenirnextbold.woff') format('woff'),
+//     url('../webfonts/avenirnextbold.ttf') format('truetype'),
+//     url('../webfonts/avenirnextbold.svg#avenirnextbold') format('svg');
+// }
+
+
+
 .loaderImg {
   display: flex;
   align-items: center;
@@ -10,6 +122,7 @@
 .justCenter {
   justify-content: center;
 }
+
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -626,10 +739,6 @@ body {
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
-}
-
-::-webkit-scrollbar:vertical {
-  width: 6px !important;
 }
 
 ::-webkit-scrollbar-track {

@@ -10,6 +10,11 @@ const routes: Routes = [
 		path: '',
 		redirectTo: '/documentation',
 		pathMatch: 'full'
+	},
+  {
+		path: '404',
+		redirectTo: '/documentation',
+		pathMatch: 'full'
 	}
 ];
 @NgModule({

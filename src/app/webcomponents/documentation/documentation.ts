@@ -26,6 +26,8 @@ export class DocumentationComponent implements OnInit {
 	CompDocSource;
 	person;
 	value;
+	bids;
+	selectedBid: any;
 	constructor(private fb: FormBuilder, private domSanitizer: DomSanitizer, private services: WebComponentsServices) {
 		this.person = person;
 	}
@@ -57,6 +59,32 @@ export class DocumentationComponent implements OnInit {
 		this.webCompTitleList = this.services.webcomponentList();
 		this.dataSource = this.services.Properties_DATA;
 		this.CompDocSource = this.services.Content_DATA;
+		this.bids = [
+			{
+				bidderName: 'First name',
+				addressLineOne: '#13 Cherry St',
+				addressLineTwo: 'Near Malibu Country Club',
+				street: 'Aurora, CO 80011',
+				country: 'United States',
+				id: 1
+			},
+			{
+				bidderName: 'First name',
+				addressLineOne: '#13 Cherry St',
+				addressLineTwo: 'Near Malibu Country Club',
+				street: 'Aurora, CO 80011',
+				country: 'United States',
+				id: 2
+			},
+			{
+				bidderName: 'First name',
+				addressLineOne: '#13 Cherry St',
+				addressLineTwo: 'Near Malibu Country Club',
+				street: 'Aurora, CO 80011',
+				country: 'United States',
+				id: 3
+			}
+		]
 	}
 	executeCode() {
 		this.data = (<HTMLInputElement>document.getElementById('code')).value;

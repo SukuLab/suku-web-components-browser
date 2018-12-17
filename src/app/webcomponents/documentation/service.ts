@@ -76,7 +76,7 @@ export class WebComponentsServices {
 					type: '[string]',
 					description: 'it represents the below username.'
 				},
-				{ properties: 'nameweight', type: '[number]', description: 'weight corresponds to the font size.' },
+				{ properties: 'name-weight', type: '[number]', description: 'weight corresponds to the font size.' },
 				{
 					properties: 'name-customclass ',
 					type: '[string]',
@@ -141,19 +141,19 @@ export class WebComponentsServices {
 						'The user are the end-users who can be buyer or seller.'
 				},
 				{
-					properties: 'commentsize',
+					properties: 'comment-size',
 					type: '[string]',
 					description:
 						'The comment-size describes how large or small the user shares his feedback about the product and transactions.'
 				},
 				{
-					properties: 'commentweight',
+					properties: 'comment-weight',
 					type: '[string]',
 					description:
 						' The comment-weight corresponds to the font size of the comment-size.'
 				},
 				{
-					properties: 'commentcolor',
+					properties: 'comment-color',
 					type: '[string]',
 					description:
 						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
@@ -198,7 +198,7 @@ export class WebComponentsServices {
 				{
 					properties: 'name',
 					type: '[string]',
-					description: 'it represents the maid id of a user. Example: username@mail.com'
+					description: 'it represents the mail id of a user. Example: username@mail.com'
 				},
 				{
 					properties: 'size',
@@ -208,7 +208,7 @@ export class WebComponentsServices {
 				{
 					properties: 'weight',
 					type: '[number]',
-					description: 'weight corresponds to the font size.'
+					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'color ',
@@ -289,12 +289,12 @@ export class WebComponentsServices {
 				{
 					properties: 'percent-weight',
 					type: '[number]',
-					description: 'weight corresponds to the font size.'
+					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'percent-heading',
 					type: '[string]',
-					description: 'Allows determine exactly which demand sources are participating.'
+					description: 'It allows the users to determine exactly which demand sources are participating.'
 				},
 				{
 					properties: 'percent-heading-size',
@@ -386,7 +386,7 @@ export class WebComponentsServices {
 				{
 					properties: 'percent-heading',
 					type: '[number]',
-					description: 'Allows determine exactly which demand sources are participating.'
+					description: 'It allows the users to determine exactly which demand sources are participating.'
 				},
 				{
 					properties: 'percent-heading-size',
@@ -403,7 +403,7 @@ export class WebComponentsServices {
 					properties: 'percent-heading-weight',
 					type: '[string]',
 					description:
-						'weight corresponds to the font size.'
+						'Weight corresponds to the font size.'
 				}
 
 			]
@@ -429,7 +429,7 @@ export class WebComponentsServices {
 					properties: 'msg-status',
 					type: '[string]',
 					description:
-						' A status message can tell other users the current status.'
+						' It conveys the current status of the message'
 				},
 				{
 					properties: 'customclass',
@@ -478,7 +478,7 @@ export class WebComponentsServices {
 				{
 					properties: 'content-one',
 					type: '[string]',
-					description: 'Allows determine exactly which demand sources are participating.'
+					description: 'It allows the users to determine exactly which demand sources are participating.'
 				},
 				{
 					properties: 'content-one-color',
@@ -500,7 +500,7 @@ export class WebComponentsServices {
 				{
 					properties: 'sub-title-two',
 					type: '[string]',
-					description: 'Allows determine exactly which demand sources are participating.'
+					description: 'It allows the users to determine exactly which demand sources are participating.'
 				},
 				{
 					properties: 'sub-title-two-color',
@@ -522,7 +522,7 @@ export class WebComponentsServices {
 				{
 					properties: 'sub-title-three',
 					type: '[number]',
-					description: 'Allows determine exactly which demand sources are participating.'
+					description: 'It allows the users to determine exactly which demand sources are participating.'
 				},
 				{
 					properties: 'sub-title-three-color',
@@ -563,7 +563,7 @@ export class WebComponentsServices {
 					properties: 'content-three-size',
 					type: '[number]',
 					description:
-						'weight corresponds to the font size.'
+						'Weight corresponds to the font size.'
 				}
 
 			]
@@ -573,7 +573,7 @@ export class WebComponentsServices {
 				{
 					properties: 'user-name',
 					type: '[string]',
-					description: ' it represents the below username.'
+					description: ' It represents the below username.'
 				},
 				{
 					properties: 'image',
@@ -583,13 +583,13 @@ export class WebComponentsServices {
 				{
 					properties: 'icon',
 					type: '[string]',
-					description: ' Icons help users quickly identify the type of file represented by the icon.'
+					description: ' It helps the user quickly identify the type of file represented by the icon.'
 				},
 				{
 					properties: 'title-one ',
 					type: '[string]',
 					description:
-						'Title0one contains descriptive keywords to clearly and accurately convey the contents.'
+						'Titleone contains descriptive keywords to clearly and accurately convey the contents.'
 				},
 				{
 					properties: 'title-two',
@@ -598,10 +598,16 @@ export class WebComponentsServices {
 						'If you need to support more than one instance of title  at a time .'
 				},
 				{
-					properties: 'create-new-listing',
-					type: '[string]',
+					properties: 'action-one',
+					type: '[output]',
 					description:
-						'Create new listing navigates the user to start a new listing for his product.'
+						'It helps the user to perform the required action.'
+				},
+				{
+					properties: 'action-two',
+					type: '[output]',
+					description:
+						'It helps the user to perform the required action.'
 				},
 			]
 		},
@@ -610,17 +616,17 @@ export class WebComponentsServices {
 				{
 					properties: 'name',
 					type: '[string]',
-					description: ' it represents the below username.'
+					description: ' it represents the below submenu name.'
 				},
 				{
 					properties: 'id',
 					type: '[number]',
-					description: ' If you need to support more than one instance of notification  at a time.'
+					description: ' If you need to support more than one instance of submenu at a time.'
 				},
 				{
 					properties: 'submenulist',
-					type: '[number]',
-					description: ' [object]=[{name,id}].'
+					type: '[array]',
+					description: ' [object]={name,id}.'
 				},
 			]
 		},
@@ -654,29 +660,29 @@ export class WebComponentsServices {
 					' It represents the progress as upcoming .'
 			},
 			{
-				properties: 'heading-one',
+				properties: 'first-heading',
 				type: '[string]',
 				description:
 					'it represents the below contents.'
 			},
 			{
-				properties: 'heading-two',
+				properties: 'second-heading',
 				type: '[string]',
 				description: ' it represents the below contents.'
 			},
 			{
-				properties: 'heading-three',
+				properties: 'third-heading',
 				type: '[string]',
 				description: 'it represents the below contents.'
 			},
 			{
-				properties: 'heading-four',
+				properties: 'fourth-heading',
 				type: '[string]',
 				description:
 					'it represents the below contents.'
 			},
 			{
-				properties: 'heading-five',
+				properties: 'fifth-heading',
 				type: '[string]',
 				description:
 					'it represents the below contents.'
@@ -708,13 +714,7 @@ export class WebComponentsServices {
 				type: '[string]',
 				description:
 					'If you need to support more than one instance of title  at a time .'
-			},
-			{
-				properties: 'max',
-				type: '[string]',
-				description:
-					' it is the maximum length of the progress bar.'
-			},
+			}
 		]
 	},
 	{
@@ -722,7 +722,7 @@ export class WebComponentsServices {
 			{
 				properties: 'name',
 				type: '[string]',
-				description: 'it represents the maid id of a user. Example: username@mail.com'
+				description: 'It represents the mail id of a user. Example: username@mail.com'
 			},
 			{
 				properties: 'size',
@@ -732,7 +732,7 @@ export class WebComponentsServices {
 			{
 				properties: 'weight',
 				type: '[number]',
-				description: 'weight corresponds to the font size.'
+				description: 'Weight corresponds to the font size.'
 			},
 			{
 				properties: 'color ',
@@ -753,7 +753,7 @@ export class WebComponentsServices {
 			{
 				properties: 'name',
 				type: '[string]',
-				description: 'it represents the maid id of a user. Example: username@mail.com'
+				description: 'it represents the mail id of a user. Example: username@mail.com'
 			},
 			{
 				properties: 'size',
@@ -779,9 +779,9 @@ export class WebComponentsServices {
 			},
 			{
 				properties: 'action',
-				type: '[string]',
+				type: '[output]',
 				description:
-					' The response when the link is navigated to the required page or content.'
+					'It helps the user to perform the required action.'
 			}
 		]
 	},
@@ -790,7 +790,7 @@ export class WebComponentsServices {
 			{
 				properties: 'name',
 				type: '[string]',
-				description: 'it represents the maid id of a user. Example: username@mail.com'
+				description: 'it represents the mail id of a user. Example: username@mail.com'
 			},
 			{
 				properties: 'size',
@@ -874,7 +874,7 @@ export class WebComponentsServices {
 			{
 				properties: 'weight',
 				type: '[number]',
-				description: 'weight corresponds to the font size.'
+				description: 'Weight corresponds to the font size.'
 			},
 			{
 				properties: 'color ',
@@ -952,9 +952,9 @@ export class WebComponentsServices {
 			},
 			{
 				properties: 'action',
-				type: '[string]',
+				type: '[output]',
 				description:
-					' It expands the contents below.'
+					' It performs required actions.'
 			}
 		]
 	},
@@ -963,7 +963,7 @@ export class WebComponentsServices {
 			{
 				properties: 'name',
 				type: '[string]',
-				description: 'it represents the contents below.'
+				description: 'It represents the contents below.'
 			},
 			{
 				properties: 'id',
@@ -984,59 +984,39 @@ export class WebComponentsServices {
 			},
 			{
 				properties: 'routerlink',
-				type: '[string]',
+				type: '[output]',
 				description:
-					' routerlink is giving the user feedback about which route bach to the home page.'
+					'It helps the user to perform the required action.'
 			}
 		]
 	},
 	{
 		data: [
-			{
-				properties: 'heading',
-				type: '[string]',
-				description: 'heading is the title or topic of a document.'
-			},
-			{
-				properties: 'sub-heading',
-				type: '[string]',
-				description: 'subheading is any of the headings under which each of the main divisions of a subject may be subdivided.'
-			},
 			{
 				properties: 'status-types-dynamic ',
-				type: '[string]',
+				type: '[array]',
 				description:
 					' statustypes dynamic are used for fields that can take predefined values, such as check-boxes.'
-			},
-		]
-	},
-	{
-		data: [
-			{
-				properties: 'name',
-				type: '[string]',
-				description: 'it guides the end user to select the required optiion.'
-			},
-			{
-				properties: 'id',
-				type: '[number]',
-				description: 'If you need to support more than one instance of title  at a time.'
-			},
-			{
-				properties: 'action',
-				type: '[string]',
-				description:
-					' It expands the contents below.'
 			}
 		]
 	},
 	{
 		data: [
 			{
-				properties: 'name',
-				type: '[string]',
-				description: 'They are assigned with general names to be idetical.'
+				properties: 'id',
+				type: '[number]',
+				description: 'If you need to support more than one instance of title  at a time.'
 			},
+			{
+				properties: 'action',
+				type: '[output]',
+				description:
+					'It helps the user to perform the required action.'
+			}
+		]
+	},
+	{
+		data: [
 			{
 				properties: 'id',
 				type: '[number]',
@@ -1044,7 +1024,7 @@ export class WebComponentsServices {
 			},
 			{
 				properties: 'action',
-				type: '[string]',
+				type: '[output]',
 				description:
 					' It helps the user to perform the required action.'
 			}
@@ -1053,18 +1033,13 @@ export class WebComponentsServices {
 	{
 		data: [
 			{
-				properties: 'name',
-				type: '[string]',
-				description: 'They are used instead if primary buttons.'
-			},
-			{
 				properties: 'id',
 				type: '[number]',
 				description: 'If you need to support more than one instance of title  at a time.'
 			},
 			{
 				properties: 'action',
-				type: '[string]',
+				type: '[output]',
 				description:
 					' It helps the user to perform the required action.'
 			}
@@ -1073,18 +1048,13 @@ export class WebComponentsServices {
 	{
 		data: [
 			{
-				properties: 'name',
-				type: '[string]',
-				description: 'They are used instead if primary buttons and secondary buttons.'
-			},
-			{
 				properties: 'id',
 				type: '[number]',
 				description: 'If you need to support more than one instance of title  at a time.'
 			},
 			{
 				properties: 'action',
-				type: '[string]',
+				type: '[output]',
 				description:
 					' It helps the user to perform the required action.'
 			}
@@ -1288,7 +1258,7 @@ export class WebComponentsServices {
 			id: 2
 		},
 		{
-			title: 'suku-profile-widget',
+			title: 'Suku-profile-widget',
 			description: `suku-profile-widget represents the user profile in brief which consists of name, account-type and ratings.`,
 			properties: this.Properties_DATA,
 			mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1298,17 +1268,17 @@ export class WebComponentsServices {
 			id: 3
 		},
 		{
-		title: 'suku-rating-widget',
+		title: 'Suku-rating-widget',
 		description: ` suku-rating-widget that consists of suku-rating-star and comments reasoning the star.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-rating-widget</span>  <span class="na">comment-size=</span><span class="s">"16"</span> <span class="na">coment-color=</span><span class="s">"red"</span> <span class="hljs-name">&gt;&lt;/suku-rating-widget&gt;</span>
+		<span class="hljs-name">&lt;suku-rating-widget</span>  <span class="na">comment-size=</span><span class="s">"16"</span> <span class="na">comment-color=</span><span class="s">"#f2f2f2"</span> <span class="hljs-name">&gt;&lt;/suku-rating-widget&gt;</span>
 				   </code></pre>`,
 		try: true,
 		id: 4
 	},
 	{
-		title: 'notification',
+		title: 'Suku-notification',
 		description: `  suku-notification-widget is to notify the number of notification that shows on the widget.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1320,7 +1290,7 @@ export class WebComponentsServices {
 	},
 
 	{
-		title: 'mail-widget',
+		title: 'Suku-mail-widget',
 		description: `  suku-mail-widget can be a message that may contain text, files, images, or other
 		attachments sent through a network to a specified individual or group of individuals`,
 		properties: this.Properties_DATA,
@@ -1331,7 +1301,7 @@ export class WebComponentsServices {
 		id: 6
 	},
 	{
-		title: 'bid-info',
+		title: 'Suku-bid-info',
 		description: `suku-bid-info shows the number of bids and the percentage fulfilled in a numerical form.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1341,28 +1311,29 @@ export class WebComponentsServices {
 		id: 8
 	},
 	{
-		title: 'match-chip',
+		title: 'Suku-match-chip',
 		description: `suku-match-chip shows the user all the matching product that is available with its Title-card and expiry-date.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-match-chip</span> <span class="na">list-name=</span><span class="s">"Super Computer"</span> <span class="na">prize=</span><span class="s">"10 SUKU"</span> <span class="na">bid-heading=</span><span class="s">"bids"</span>  <span class="na">sell=</span><span class="s">"seller"</span><span class="na">sell-v=</span><span class="s">"John Smith"</span>   <span class="hljs-name">&gt;&lt;/suku-match-chip&gt;</span>
-				   </code></pre>`,
+		<span class="hljs-name">&lt;suku-match-chip</span> <span class="na">list-name=</span><span class="s">"Super Computer"</span> <span class="na">prize=</span><span class="s">"10 SUKU"</span> <span class="na">bid-heading=</span><span class="s">"bids"</span>  <span class="na">sell=</span><span class="s">"seller"</span><span class="na">sell-v=</span><span class="s">"John Smith"</span><span class="hljs-name">&gt;
+		&lt;/suku-match-chip&gt;</span></code></pre>`,
 		try: true,
 		id: 9
 	},
 	{
-		title: 'card-line',
+		title: 'Suku-card-line',
 		description: `suku-match-chip shows the user all the matching product that is available with its Title-card and expiry-date.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-card-line</span> <span class="na">list-name=</span><span class="s">"Super Computer"</span> <span class="na">prize=</span><span class="s">"10 SUKU"</span> <span class="na">bid-heading=</span><span class="s">"bids"</span>  <span class="na">sell=</span><span class="s">"seller"</span><span class="na">sell-v=</span><span class="s">"John Smith"</span>   <span class="hljs-name">&gt;&lt;/suku-card-line&gt;</span>
+		<span class="hljs-name">&lt;suku-card-line</span> <span class="na">title-one=</span><span class="s">"Super Computer"</span> <span class="na">msg-status =</span><span class="s">"read"</span> <span class="na">bg-color =</span><span class="s">"#ffffff"</span><span class="hljs-name">&gt;
+		&lt;/suku-card-line&gt;</span>
 				   </code></pre>`,
 		try: true,
 		id: 10
 	},
 	{
-		title: 'suku-dashboard-profile',
-		description: `Suku-Dashboard-Profile shows the profile of a user either buyer or seller with various functionalities like: creating new listing or new interest, etc.The user can also view the review matches, negotiate purchase and many other functions.`,
+		title: 'Suku-dashboard-profile',
+		description: `Suku-Dashboard-Profile shows the profile of a user either buyer or seller with various functionalities like, creating new listing or new interest, etc.The user can also view the review matches, negotiate purchase and many other functions.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-dashboard-profile</span> <span class="na">user-name=</span><span class="s">"Emery"</span> <span class="na">title-one=</span><span class="s">"CREATE NEW LISTING"</span><span class="na">title-two=</span><span class="s">"CREATE NEW INTEREST"</span><span class="hljs-name">&gt;&lt;/suku-dashboard-profile&gt;</span>
@@ -1371,7 +1342,7 @@ export class WebComponentsServices {
 		id: 11
 	},
 	{
-		title: 'suku-sub-menu',
+		title: 'Suku-sub-menu',
 		description: ` suku-nav-submenu guides user to navigate sub-menus under main menu. For example:"BUY" is a main-menu and under it "Interests and Matches" are the sub-menus.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1381,7 +1352,7 @@ export class WebComponentsServices {
 		id: 12
 	},
 	{
-		title: 'suku-progress-bar',
+		title: 'Suku-progress-bar',
 		description: `   suku-progress-bar implies the steps to follow one after another. Also emphasizes which step the user is in.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1391,7 +1362,7 @@ export class WebComponentsServices {
 		id: 13
 	},
 	{
-		title: 'suku-home-italic-heading',
+		title: 'Suku-home-italic-heading',
 		description: `   suku home italic heading elements marks text to be displayed as italic.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1401,7 +1372,7 @@ export class WebComponentsServices {
 		id: 14
 	},
 	{
-		title: 'suku-link',
+		title: 'Suku-link',
 		description: ` The link can redirect the user to the required content in detail.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1411,7 +1382,7 @@ export class WebComponentsServices {
 		id: 15
 	},
 	{
-	title: 'add-widget',
+	title: 'Suku-add-widget',
 	description: `suku-add-widget guides the end users to create a new listing or interest.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1421,7 +1392,7 @@ export class WebComponentsServices {
 	id: 16
 },
 {
-	title: 'suku-select-input',
+	title: 'Suku-select-input',
 	description: `suku-input-control makes convenient to input the accurate information. For example: mail placeholder may contain @ symbol.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1431,7 +1402,7 @@ export class WebComponentsServices {
 	id: 17
 },
 {
-	title: 'suku-phone-widget',
+	title: 'Suku-phone-widget',
 	description: ` suku-phone-widget represents the contact information of a user.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1441,7 +1412,7 @@ export class WebComponentsServices {
 	id: 18
 },
 {
-	title: 'suku-address-widget',
+	title: 'Suku-address-widget',
 	description: ` The suku-address-widget element identifies address information of buyer and seller for tracking purpose.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1451,7 +1422,7 @@ export class WebComponentsServices {
 	id: 19
 },
 {
-	title: 'suku-inline-dropdown',
+	title: 'Suku-inline-dropdown',
 	description: ` suku-inline-dropdown represents multiple selection options in a box.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1461,7 +1432,7 @@ export class WebComponentsServices {
 	id: 20
 },
 {
-	title: 'suku-home-widget',
+	title: 'Suku-home-widget',
 	description: ` suku-Home-widget is a link to redirect user to the homepage.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1471,7 +1442,7 @@ export class WebComponentsServices {
 	id: 21
 },
 {
-	title: 'suku-filter',
+	title: 'Suku-filter',
 	description: ` suku-filters guides to filter the list of user requirements. It can be either active or inactive,etc.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1481,7 +1452,7 @@ export class WebComponentsServices {
 	id: 22
 },
 {
-	title: 'info-button',
+	title: 'Suku-info-button',
 	description: ` suku-info-button is a clickable navigators that lets user perform an action and get response according to it. For example: "Apply Filters" are the info-buttons..`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1491,7 +1462,7 @@ export class WebComponentsServices {
 	id: 23
 },
 {
-	title: 'primary-button',
+	title: 'Suku-primary-button',
 	description: `  primary buttons are mostly used by the user.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1501,7 +1472,7 @@ export class WebComponentsServices {
 	id: 24
 },
 {
-	title: 'secondary-button',
+	title: 'Suku-secondary-button',
 	description: ` secondary buttons tends to be less used by the user.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1511,7 +1482,7 @@ export class WebComponentsServices {
 	id: 25
 },
 {
-	title: 'default-button',
+	title: 'Suku-default-button',
 	description: `  suku-default-button represents the general default buttons that are clickable navigators and lets user perform an action and get response according to it.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1521,7 +1492,7 @@ export class WebComponentsServices {
 	id: 26
 },
 {
-	title: 'star-badge',
+	title: 'Suku-star-badge',
 	description: ` star-badge idicates the users identity or the brand they represent.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1531,7 +1502,7 @@ export class WebComponentsServices {
 	id: 27
 },
 {
-	title: 'search-input',
+	title: 'Suku-search-input',
 	description: `search box  matches  the items in its database and returns the search results.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1541,7 +1512,7 @@ export class WebComponentsServices {
 	id: 28
 },
 {
-	title: 'bid-tag',
+	title: 'Suku-bid-tag',
 	description: `  suku-bid-tag shows the detail about the bid with number of items and price.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
@@ -1551,7 +1522,7 @@ export class WebComponentsServices {
 	id: 29
 },
 {
-	title: 'rating-star',
+	title: 'Suku-rating-star',
 	description: `suku-rating-star shows the users feedback about the product,etc.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">

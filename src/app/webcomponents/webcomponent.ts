@@ -1050,32 +1050,32 @@ export class SukuNavSubmenuComponent {
 @Component({
 	selector: 'suku-card-line',
   template: `
-  <span *ngFor="let data of _items;let i=index">
+  <span>
   <div class="col p-0">
-  <div class="row card-line-bg p-3 m-3 c-pointer" [style.background-color]="data?.bgColor">
+  <div class="row card-line-bg p-3 m-3 c-pointer" [style.background-color]=" bgColor">
     <div class="col-sm-1 mt-1 pt-1">
-      <img [class]="data?.customClass" src="{{data?.image || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9SapkQj0Aefd_ufiiGrDR-dNd32O0yqgGW3g-AMGGSFaOQP-k6g'}}" alt="card-img" width="49px" height="49px">
+      <img [class]="customClass" src="{{ image || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9SapkQj0Aefd_ufiiGrDR-dNd32O0yqgGW3g-AMGGSFaOQP-k6g'}}" alt="card-img" width="49px" height="49px">
     </div>
-    <div class="col-sm-1" *ngIf="data?.msgStatus=='read'">
-      <img [class]="data?.customIconClass || 'text-center mt-3' " src="{{data?.chatReadIcon || '../../../assets/img/msg_read.png'}}" alt="card-img" width="40px" height="42px">
+    <div class="col-sm-1" *ngIf="msgStatus=='read'">
+      <img [class]="customIconClass || 'text-center mt-3' " src="{{ chatReadIcon || '../../../assets/img/msg_read.png'}}" alt="card-img" width="40px" height="42px">
     </div>
-    <div class="col-sm-1" *ngIf="data?.msgStatus=='unRead'">
-      <img [class]="data?.customIconClass || 'text-center mt-3' " src="{{data?.chatUnreadIcon || '../../../assets/img/msg_unread.png'}}" alt="card-img" width="40px" height="42px">
+    <div class="col-sm-1" *ngIf="msgStatus=='unRead'">
+      <img [class]="customIconClass || 'text-center mt-3' " src="{{ chatUnreadIcon || '../../../assets/img/msg_unread.png'}}" alt="card-img" width="40px" height="42px">
     </div>
-    <div class="col-sm-1" *ngIf=" (data?.msgStatus !='unRead' && data?.msgStatus !='read') ">
-      <a [class]="data?.customIconClass || 'text-center mt-3' " ></a>
+    <div class="col-sm-1" *ngIf="( msgStatus !='unRead' &&  msgStatus !='read') ">
+      <a [class]="customIconClass || 'text-center mt-3' " ></a>
     </div>
     <div class="col-sm-6 pt-3">
-      <suku-sub-nest-heading size="{{data?.titleOneSize || '14' }}" weight="{{data?.titleOneWeight || '600' }}" color="{{data?.titleOneColor || 'black'}}" name="{{data?.titleOne || 'Title One'}}"></suku-sub-nest-heading>
-      <suku-sub-nest-heading size="{{data?.contentOneSize || '14' }}" weight="{{data?.contentOneWeight || '500'}}" color="{{data?.contentOneColor || '#3e3e3e'}}" name="{{data?.contentOne || '10 SUKU'}}"></suku-sub-nest-heading>
+      <suku-sub-nest-heading size="{{ titleOneSize || '14' }}" weight="{{ titleOneWeight || '600' }}" color="{{ titleOneColor || 'black'}}" name="{{ titleOne || 'Title One'}}"></suku-sub-nest-heading>
+      <suku-sub-nest-heading size="{{ contentOneSize || '14' }}" weight="{{ contentOneWeight || '500'}}" color="{{ contentOneColor || '#3e3e3e'}}" name="{{ contentOne || '10 SUKU'}}"></suku-sub-nest-heading>
     </div>
     <div class="col-sm-2 pt-3">
-        <suku-sub-nest-heading size="{{data?.subTitleTwoSize || '12'}}" weight="{{data?.subTitleTwoWeight || '500'}}" color="{{data?.subTitleTwoColor || '#b6b6b6'}}" name="{{data?.subTitleTwo || 'SOLD BY'}}"></suku-sub-nest-heading>
-        <suku-sub-nest-heading size="{{data?.contentTwoSize || '14'}}" weight="{{data?.contentTwoWeight || '500'}}" color="{{data?.contentTwoColor || '#3e3e3e'}}" name="{{data?.contentTwo || 'John Smith'}}"></suku-sub-nest-heading>
+        <suku-sub-nest-heading size="{{ subTitleTwoSize || '12'}}" weight="{{ subTitleTwoWeight || '500'}}" color="{{ subTitleTwoColor || '#b6b6b6'}}" name="{{ subTitleTwo || 'SOLD BY'}}"></suku-sub-nest-heading>
+        <suku-sub-nest-heading size="{{ contentTwoSize || '14'}}" weight="{{ contentTwoWeight || '500'}}" color="{{ contentTwoColor || '#3e3e3e'}}" name="{{ contentTwo || 'John Smith'}}"></suku-sub-nest-heading>
     </div>
     <div class="col-sm-2 pt-3">
-        <suku-sub-nest-heading size="{{data?.subTitleThreeSize || '12' }}" weight="{{data?.subTitleThreeWeight || '500'}}" color="{{data?.subTitleThreeColor || '#b6b6b6'}}" name="{{data?.subTitleThree || 'EXPIRY DATE'}}"></suku-sub-nest-heading>
-        <suku-sub-nest-heading size="{{data?.contentThreeSize || '14'}}" weight="{{data?.contentThreeWeight || '500'}}" color="{{data?.contentThreeColor || '#3e3e3e'}}" name="{{data?.contentThree || '28 Nov 2018'}}"></suku-sub-nest-heading>
+        <suku-sub-nest-heading size="{{ subTitleThreeSize || '12' }}" weight="{{ subTitleThreeWeight || '500'}}" color="{{ subTitleThreeColor || '#b6b6b6'}}" name="{{ subTitleThree || 'EXPIRY DATE'}}"></suku-sub-nest-heading>
+        <suku-sub-nest-heading size="{{ contentThreeSize || '14'}}" weight="{{ contentThreeWeight || '500'}}" color="{{ contentThreeColor || '#3e3e3e'}}" name="{{ contentThree || '28 Nov 2018'}}"></suku-sub-nest-heading>
       </div>
   </div>
 </div>
@@ -1084,25 +1084,42 @@ export class SukuNavSubmenuComponent {
   styleUrls: [ './webcomponents.scss' ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SukuCardLineComponent implements OnInit {
-  _items;
-   get items() {
-    return this._items
-  }
+export class SukuCardLineComponent {
+  @Input() image = "";
+  @Input() customClass = "";
+  @Input() bgColor = "card-line-bg";
+  @Input() msgStatus = "read";
 
-  @Input()
-  set items(items) {
-    console.log('prev value: ', this._items);
-    console.log('got name: ', items);
-    this._items = items;
-  }
-    ngOnInit() {
-      this._items = [{
-        'titleOne': 'title one'
-      }]
-    console.log('on init');
-    console.log(this._items);
-  }
+  @Input() chatReadIcon = "";
+  @Input() chatUnreadIcon = "";
+  @Input() customIconClass = "";
+
+  @Input() titleOne = "Title One";
+  @Input() titleOneColor = "black";
+  @Input() titleOneWeight = "600";
+  @Input() titleOneSize = "14";
+  @Input() contentOne = "10 SUKU";
+  @Input() contentOneColor = "#3e3e3e";
+  @Input() contentOneWeight = "500";
+  @Input() contentOneSize = "14";
+
+  @Input() subTitleTwo = "SOLD BY";
+  @Input() subTitleTwoColor = "#b6b6b6";
+  @Input() subTitleTwoWeight = "500";
+  @Input() subTitleTwoSize = "12";
+  @Input() contentTwo = "John Smith";
+  @Input() contentTwoColor = "#3e3e3e";
+  @Input() contentTwoWeight = "500";
+  @Input() contentTwoSize = "14";
+
+  @Input() subTitleThree = "EXPIRY DATE";
+  @Input() subTitleThreeColor = "#b6b6b6";
+  @Input() subTitleThreeWeight = "500";
+  @Input() subTitleThreeSize = "12";
+  @Input() contentThree = "28 Nov 2018";
+  @Input() contentThreeColor = "#3e3e3e";
+  @Input() contentThreeWeight = "500";
+  @Input() contentThreeSize = "14";
 }
 
 @Component({

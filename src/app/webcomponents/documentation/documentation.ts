@@ -8,6 +8,7 @@ import { person } from './service';
 	templateUrl: 'documentation.html',
 	styleUrls: [ './documentation.scss' ]
 })
+
 export class DocumentationComponent implements OnInit {
 	data: any;
 	dataDom;
@@ -28,7 +29,9 @@ export class DocumentationComponent implements OnInit {
 	value;
 	bids;
 	selectedBid: any;
-	constructor(private fb: FormBuilder, private domSanitizer: DomSanitizer, private services: WebComponentsServices) {
+	constructor(private fb: FormBuilder,
+		private domSanitizer: DomSanitizer,
+		private services: WebComponentsServices) {
 		this.person = person;
 	}
 
@@ -55,45 +58,15 @@ export class DocumentationComponent implements OnInit {
 				id: 2
 			}
 		];
-		console.log('data', this.services.webcomponentList());
 		this.webCompTitleList = this.services.webcomponentList();
 		this.dataSource = this.services.Properties_DATA;
 		this.CompDocSource = this.services.Content_DATA;
-		this.bids = [
-			{
-				bidderName: 'First name',
-				addressLineOne: '#13 Cherry St',
-				addressLineTwo: 'Near Malibu Country Club',
-				street: 'Aurora, CO 80011',
-				country: 'United States',
-				id: 1
-			},
-			{
-				bidderName: 'First name',
-				addressLineOne: '#13 Cherry St',
-				addressLineTwo: 'Near Malibu Country Club',
-				street: 'Aurora, CO 80011',
-				country: 'United States',
-				id: 2
-			},
-			{
-				bidderName: 'First name',
-				addressLineOne: '#13 Cherry St',
-				addressLineTwo: 'Near Malibu Country Club',
-				street: 'Aurora, CO 80011',
-				country: 'United States',
-				id: 3
-			}
-		]
 	}
+
 	executeCode() {
 		this.data = (<HTMLInputElement>document.getElementById('code')).value;
 		this.dataLength = this.data.length;
 		this.dataDom = this.domSanitizer.bypassSecurityTrustHtml(this.data);
-	}
-
-	checkV(e) {
-		console.log('checkbox', e);
 	}
 
 	btnSelected(event, newValue) {
@@ -105,6 +78,7 @@ export class DocumentationComponent implements OnInit {
 		this.selectedTitle = newValue;
 		this.dataDom = '';
 	}
+
 	change(value) {
 		console.log("value", value);
 	}

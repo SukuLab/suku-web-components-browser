@@ -14,7 +14,7 @@ import { MatModule } from './shared/mat.module';
     AppComponent,
     DocumentationComponent,
     WebComponents
-  ],
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

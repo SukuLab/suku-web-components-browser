@@ -31,7 +31,7 @@ pipeline {
         stage("static code analysis"){
             steps {
                 withSonarQubeEnv('sonarqube') {
-                    sh '/opt/sonar/bin/sonar-scanner -Dsonar.projectKey=suku-web-components-infra -Dsonar.sources=./src/app -Dsonar.exclusions=**/**/assets/**'
+                    sh '/opt/sonar/bin/sonar-scanner -Dsonar.projectKey=suku-web-components -Dsonar.sources=./src/app -Dsonar.exclusions=**/**/assets/**'
                 }
             }
         }

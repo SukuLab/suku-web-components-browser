@@ -888,6 +888,13 @@ tr#txt {
   letter-spacing: -0.01px;
   color: #3e3e3e;
   text-transform: uppercase;
+  height: 33px;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: none !important;
+  box-shadow: none !important;
 }
 
 

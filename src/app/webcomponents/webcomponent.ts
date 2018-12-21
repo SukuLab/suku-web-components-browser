@@ -106,9 +106,6 @@ export class SukuSubNestHeadingComponent {
 }
 /* for rendering in innerhtml end */
 
-
-
-
 @Component({
 	selector: 'suku-card-title',
 	template: `
@@ -149,7 +146,7 @@ export class SukuCardListComponent {
 	@Input() cardContentColor = '#1d1d1d';
 }
 
-  @Component({
+@Component({
     selector: 'suku-add-widget',
     template: `
     <a (click)="action.emit()">
@@ -246,9 +243,7 @@ export class SukuInlineDropDownComponent {
 	@Input() customclass = 'pr-2 c-pointer';
 	@Output() action = new EventEmitter();
 }
-
 // assets-components end
-
 
 @Component({
 	selector: 'suku-link',
@@ -552,14 +547,14 @@ export class SukuDefaultButtonComponent {
     </td>
     <td class="{{progressStyleFour}} text-center">
     <i *ngIf="(progressStyleFour == 'progressCompleted')" class="fa fa-check tickSign"></i>
-    <span *ngIf="!(progressStyleFour == 'progressCompleted')">3</span>
+    <span *ngIf="!(progressStyleFour == 'progressCompleted')">4</span>
   </td>
     <td>
       <hr class="hrLine">
     </td>
     <td class="{{progressStyleFive}} text-center">
     <i *ngIf="(progressStyleFive == 'progressCompleted')" class="fa fa-check tickSign"></i>
-    <span *ngIf="!(progressStyleFive == 'progressCompleted')">3</span>
+    <span *ngIf="!(progressStyleFive == 'progressCompleted')">5</span>
   </td>
   </tr>
 </table>
@@ -616,6 +611,7 @@ export class SukuCheckboxComponent {
   @Input() id;
 }
 
+
 @Component({
 	selector: 'suku-radio-button',
 	template: `
@@ -637,6 +633,7 @@ export class SukuRadioButtonComponent {
 	@Input() checked = 'true';
 	@Input() color = 'primary';
 }
+
 
 @Component({
 	selector: 'suku-star-badge',
@@ -803,7 +800,6 @@ export class SukuRatingComponent {
     </div>
   </div>
 </div>
-
     `,
 	styleUrls: [ './webcomponents.scss' ]
 })
@@ -937,7 +933,6 @@ export class SukuRatingLineItemComponent {
 		}
 	}
 }
-
 
 @Component({
 	selector: 'suku-search-input',

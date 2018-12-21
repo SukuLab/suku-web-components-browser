@@ -31,13 +31,13 @@ export class WebComponentsServices {
 				{
 					properties: 'weight',
 					type: '[number]',
-					description: 'weight corresponds to the font size.'
+					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'color ',
 					type: '[string]',
 					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'customclass',
@@ -54,12 +54,12 @@ export class WebComponentsServices {
 					type: '[number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
-				{ properties: 'weight', type: '[number]', description: 'weight corresponds to the font size.' },
+				{ properties: 'weight', type: '[number]', description: 'Weight corresponds to the font size.' },
 				{
 					properties: 'color ',
 					type: '[string]',
 					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'customclass',
@@ -76,7 +76,7 @@ export class WebComponentsServices {
 					type: '[string]',
 					description: 'it represents the below username.'
 				},
-				{ properties: 'name-weight', type: '[number]', description: 'weight corresponds to the font size.' },
+				{ properties: 'name-weight', type: '[number]', description: 'Weight corresponds to the font size.' },
 				{
 					properties: 'name-customclass ',
 					type: '[string]',
@@ -92,7 +92,7 @@ export class WebComponentsServices {
 					properties: 'name-color',
 					type: '[string]',
 					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'account-type',
@@ -107,7 +107,7 @@ export class WebComponentsServices {
 				{
 					properties: 'account-weight',
 					type: '[number]',
-					description: 'weight corresponds to the font size'
+					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'account-customclass',
@@ -126,13 +126,13 @@ export class WebComponentsServices {
 				{
 					properties: 'weight',
 					type: '[number]',
-					description: 'weight corresponds to the font size.'
+					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'color ',
 					type: '[string]',
 					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'users',
@@ -156,7 +156,7 @@ export class WebComponentsServices {
 					properties: 'comment-color',
 					type: '[string]',
 					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'comment',
@@ -214,7 +214,7 @@ export class WebComponentsServices {
 					properties: 'color ',
 					type: '[string]',
 					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'customclass',
@@ -239,13 +239,13 @@ export class WebComponentsServices {
 				{
 					properties: 'bid-weight',
 					type: '[number]',
-					description: 'weight corresponds to the font size.'
+					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'bid-color ',
 					type: '[string]',
 					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'bid-heading',
@@ -261,15 +261,15 @@ export class WebComponentsServices {
 				{
 					properties: 'bid-heading-color',
 					type: '[string]',
-					description: 'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					description: 'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'bid-heading-weight',
 					type: '[number]',
-					description: 'weight corresponds to the font size.'
+					description: 'Weight corresponds to the font size.'
 				},
 				{
-					properties: 'percent ',
+					properties: 'percent',
 					type: '[string]',
 					description:
 						'To determine the strength of a bid.'
@@ -284,7 +284,7 @@ export class WebComponentsServices {
 					properties: 'percent-color',
 					type: '[string]',
 					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'percent-weight',
@@ -294,7 +294,7 @@ export class WebComponentsServices {
 				{
 					properties: 'percent-heading',
 					type: '[string]',
-					description: 'It allows the users to determine exactly which demand sources are participating.'
+					description: 'It allows to determine exactly which demand sources are participating.'
 				},
 				{
 					properties: 'percent-heading-size',
@@ -305,13 +305,13 @@ export class WebComponentsServices {
 					properties: 'percent-heading-color ',
 					type: '[string]',
 					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'percent-heading-weight',
 					type: '[number]',
 					description:
-						'weight corresponds to the font size.'
+						'Weight corresponds to the font size.'
 				}
 
 			]
@@ -331,13 +331,13 @@ export class WebComponentsServices {
 				{
 					properties: 'bid-weight',
 					type: '[number]',
-					description: 'weight corresponds to the font size.'
+					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'bid-color ',
 					type: '[string]',
 					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'bid-heading',
@@ -353,12 +353,12 @@ export class WebComponentsServices {
 				{
 					properties: 'bid-heading-color',
 					type: '[number]',
-					description: 'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					description: 'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'bid-heading-weight',
 					type: '[number]',
-					description: 'weight corresponds to the font size.'
+					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'percent ',
@@ -376,17 +376,17 @@ export class WebComponentsServices {
 					properties: 'percent-color',
 					type: '[string]',
 					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'percent-weight',
 					type: '[number]',
-					description: 'weight corresponds to the font size.'
+					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'percent-heading',
 					type: '[number]',
-					description: 'It allows the users to determine exactly which demand sources are participating.'
+					description: 'It allows to determine exactly which demand sources are participating.'
 				},
 				{
 					properties: 'percent-heading-size',
@@ -397,7 +397,7 @@ export class WebComponentsServices {
 					properties: 'percent-heading-color ',
 					type: '[string]',
 					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'percent-heading-weight',
@@ -429,13 +429,12 @@ export class WebComponentsServices {
 					properties: 'msg-status',
 					type: '[string]',
 					description:
-						' It conveys the current status of the message'
+						' It conveys the current status of the message.'
 				},
 				{
 					properties: 'customclass',
 					type: '[string]',
-					description:
-						' Bid-heading is also sometimes referred to as advance bidding or pre-bidding to end users.'
+					description: 'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'custom-icon-class',
@@ -445,35 +444,28 @@ export class WebComponentsServices {
 				{
 					properties: 'bg-color',
 					type: '[string]',
-					description: 'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
-				},
-				{
-					properties: 'interest',
-					type: '[number]',
-					description: 'weight corresponds to the font size.'
+					description: 'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'title-one ',
 					type: '[string]',
-					description:
-						'To determine the strength of a bid.'
+					description: 'It displays list name.'
 				},
 				{
 					properties: 'title-one-color',
 					type: '[string]',
-					description:
-						'Corresponds to the value of font-size which is passed to the directive.'
+					description: 'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'title-one-weight',
 					type: '[number]',
-					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'title-one-size',
 					type: '[number]',
-					description: 'weight corresponds to the font size.'
+					description: 'Corresponds to the value of font-size which is passed to the directive.'
+
 				},
 				{
 					properties: 'content-one',
@@ -483,87 +475,80 @@ export class WebComponentsServices {
 				{
 					properties: 'content-one-color',
 					type: '[string]',
-					description: 'Corresponds to the value of font-size which is passed to the directive.'
+					description: 'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'content-one-weight',
 					type: '[string]',
-					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'content-one-size',
 					type: '[number]',
-					description:
-						'weight corresponds to the font size.'
+					description: 'Corresponds to the value of font-size which is passed to the directive.'
+
 				},
 				{
 					properties: 'sub-title-two',
 					type: '[string]',
-					description: 'It allows the users to determine exactly which demand sources are participating.'
+					description: 'It displays seller name.'
 				},
 				{
 					properties: 'sub-title-two-color',
 					type: '[string]',
-					description: 'Corresponds to the value of font-size which is passed to the directive.'
+					description: 'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'sub-title-two-weight',
 					type: '[number]',
 					description:
-						'weight corresponds to the font size.'
+						'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'sub-title-two-size',
 					type: '[number]',
-					description:
-						'weight corresponds to the font size.'
+					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'sub-title-three',
 					type: '[number]',
-					description: 'It allows the users to determine exactly which demand sources are participating.'
+					description: 'It displays the date status.'
 				},
 				{
 					properties: 'sub-title-three-color',
 					type: '[string]',
-					description: 'Corresponds to the value of font-size which is passed to the directive.'
+					description: 'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'sub-title-three-weight',
 					type: '[number]',
-					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					description: 'Weight corresponds to the font size.'
 				},
 				{
-					properties: 'sub-title-three-color',
+					properties: 'sub-title-three-size',
 					type: '[string]',
-					description:
-						'weight corresponds to the font size.'
+					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'content-three',
 					type: '[string]',
-					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					description: 'It displays date.'
 				},
 				{
 					properties: 'content-three-color',
 					type: '[string]',
-					description:
-						'weight corresponds to the font size.'
+					description: 'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
+
 				},
 				{
 					properties: 'content-three-weight',
 					type: '[number]',
-					description:
-						'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'content-three-size',
 					type: '[number]',
-					description:
-						'Weight corresponds to the font size.'
+					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				}
 
 			]
@@ -663,7 +648,7 @@ export class WebComponentsServices {
 				properties: 'first-heading',
 				type: '[string]',
 				description:
-					'it represents the below contents.'
+					'It represents the below contents.'
 			},
 			{
 				properties: 'second-heading',
@@ -720,11 +705,6 @@ export class WebComponentsServices {
 	{
 		data: [
 			{
-				properties: 'name',
-				type: '[string]',
-				description: 'It represents the mail id of a user. Example: username@mail.com'
-			},
-			{
 				properties: 'size',
 				type: '[number]',
 				description: 'Corresponds to the value of font-size which is passed to the directive.'
@@ -738,7 +718,7 @@ export class WebComponentsServices {
 				properties: 'color ',
 				type: '[string]',
 				description:
-					'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 			},
 			{
 				properties: 'customclass',
@@ -750,11 +730,6 @@ export class WebComponentsServices {
 	},
 	{
 		data: [
-			{
-				properties: 'name',
-				type: '[string]',
-				description: 'it represents the mail id of a user. Example: username@mail.com'
-			},
 			{
 				properties: 'size',
 				type: '[number]',
@@ -769,7 +744,7 @@ export class WebComponentsServices {
 				properties: 'color ',
 				type: '[string]',
 				description:
-					'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 			},
 			{
 				properties: 'customclass',
@@ -788,11 +763,6 @@ export class WebComponentsServices {
 	{
 		data: [
 			{
-				properties: 'name',
-				type: '[string]',
-				description: 'it represents the mail id of a user. Example: username@mail.com'
-			},
-			{
 				properties: 'size',
 				type: '[number]',
 				description: 'Corresponds to the value of font-size which is passed to the directive.'
@@ -800,13 +770,13 @@ export class WebComponentsServices {
 			{
 				properties: 'weight',
 				type: '[number]',
-				description: 'weight corresponds to the font size.'
+				description: 'Weight corresponds to the font size.'
 			},
 			{
 				properties: 'color ',
 				type: '[string]',
 				description:
-					'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 			},
 			{
 				properties: 'customclass',
@@ -837,13 +807,13 @@ export class WebComponentsServices {
 			{
 				properties: 'weight',
 				type: '[number]',
-				description: 'weight corresponds to the font size.'
+				description: 'Weight corresponds to the font size.'
 			},
 			{
 				properties: 'color ',
 				type: '[string]',
 				description:
-					'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 			},
 			{
 				properties: 'customclass',
@@ -880,7 +850,7 @@ export class WebComponentsServices {
 				properties: 'color ',
 				type: '[string]',
 				description:
-					'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 			},
 			{
 				properties: 'customclass',
@@ -905,13 +875,13 @@ export class WebComponentsServices {
 			{
 				properties: 'weight',
 				type: '[number]',
-				description: 'weight corresponds to the font size.'
+				description: 'Weight corresponds to the font size.'
 			},
 			{
 				properties: 'color ',
 				type: '[string]',
 				description:
-					'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 			},
 			{
 				properties: 'customclass',
@@ -936,13 +906,13 @@ export class WebComponentsServices {
 			{
 				properties: 'weight',
 				type: '[number]',
-				description: 'weight corresponds to the font size.'
+				description: 'Weight corresponds to the font size.'
 			},
 			{
 				properties: 'color ',
 				type: '[string]',
 				description:
-					'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 			},
 			{
 				properties: 'customclass',
@@ -974,7 +944,7 @@ export class WebComponentsServices {
 				properties: 'color ',
 				type: '[string]',
 				description:
-					'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+					'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 			},
 			{
 				properties: 'bgcolor',
@@ -1110,12 +1080,12 @@ export class WebComponentsServices {
 				properties: 'prize-weight',
 				type: '[number]',
 				description:
-					'weight corresponds to the font size.'
+					'Weight corresponds to the font size.'
 			},
 			{
 				properties: 'prize-color',
 				type: '[string]',
-				description: 'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value..'
+				description: 'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value..'
 			},
 			{
 				properties: 'prize-customclass',
@@ -1137,12 +1107,12 @@ export class WebComponentsServices {
 				properties: 'unit-weight',
 				type: '[number]',
 				description:
-					'weight corresponds to the font size.'
+					'Weight corresponds to the font size.'
 			},
 			{
 				properties: 'unit-color',
 				type: '[string]',
-				description: 'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value.'
+				description: 'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 			},
 			{
 				properties: 'unit-customclass',
@@ -1164,12 +1134,12 @@ export class WebComponentsServices {
 				properties: 'q-weight',
 				type: '[number]',
 				description:
-					'weight corresponds to the font size.'
+					'Weight corresponds to the font size.'
 			},
 			{
 				properties: 'q-color',
 				type: '[string]',
-				description: 'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value..'
+				description: 'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value..'
 			},
 			{
 				properties: 'q-customclass',
@@ -1191,12 +1161,12 @@ export class WebComponentsServices {
 				properties: 'p-weight',
 				type: '[number]',
 				description:
-					'weight corresponds to the font size.'
+					'Weight corresponds to the font size.'
 			},
 			{
 				properties: 'p-color',
 				type: '[string]',
-				description: 'The color data type represents a color in the sRGB color space. color may also include an alpha-channel transparency value..'
+				description: 'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value..'
 			},
 			{
 				properties: 'p-customclass',
@@ -1272,7 +1242,7 @@ export class WebComponentsServices {
 		description: ` suku-rating-widget that consists of suku-rating-star and comments reasoning the star.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-rating-widget</span>  <span class="na">comment-size=</span><span class="s">"16"</span> <span class="na">comment-color=</span><span class="s">"#f2f2f2"</span> <span class="hljs-name">&gt;&lt;/suku-rating-widget&gt;</span>
+		<span class="hljs-name">&lt;suku-rating-widget</span>  <span class="na">comment-size=</span><span class="s">"16"</span> <span class="na">comment-color=</span><span class="s">"#b6b6b6"</span> <span class="hljs-name">&gt;&lt;/suku-rating-widget&gt;</span>
 				   </code></pre>`,
 		try: true,
 		id: 4
@@ -1295,7 +1265,7 @@ export class WebComponentsServices {
 		attachments sent through a network to a specified individual or group of individuals`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-mail-widget</span> <span class="na">name=</span><span class="s">"dconway@vairog.com"</span> <span class="na">size=</span><span class="s">"14"</span> <span class="na">color=</span><span class="s">"#3e3e3e"</span> <span class="hljs-name">&gt;&lt;/suku-mail-widget&gt;</span>
+		<span class="hljs-name">&lt;suku-mail-widget</span> <span class="na">name=</span><span class="s">"dconway@vairog.com"</span> <span class="na">size=</span><span class="s">"14"</span> <span class="na">color=</span><span class="s">"#3e3e3e"</span><span class="hljs-name">&gt;&lt;/suku-mail-widget&gt;</span>
 				   </code></pre>`,
 		try: true,
 		id: 6
@@ -1305,7 +1275,7 @@ export class WebComponentsServices {
 		description: `suku-bid-info shows the number of bids and the percentage fulfilled in a numerical form.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-bid-info</span> <span class="na">bids=</span><span class="s">"374"</span> <span class="na">percent=</span><span class="s">"10%"</span> <span class="na">bid-heading=</span><span class="s">"bids"</span>  <span class="na">percent-heading=</span><span class="s">"fulfill"</span>  <span class="hljs-name">&gt;&lt;/suku-bid-info&gt;</span>
+		<span class="hljs-name">&lt;suku-bid-info</span> <span class="na">bids=</span><span class="s">"374"</span> <span class="na">percent=</span><span class="s">"10%"</span> <span class="na">bid-heading=</span><span class="s">"bids"</span>  <span class="na">percent-heading=</span><span class="s">"fulfill"</span><span class="hljs-name">&gt;&lt;/suku-bid-info&gt;</span>
 				   </code></pre>`,
 		try: true,
 		id: 8
@@ -1325,8 +1295,7 @@ export class WebComponentsServices {
 		description: `suku-match-chip shows the user all the matching product that is available with its Title-card and expiry-date.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-card-line</span> <span class="na">title-one=</span><span class="s">"Super Computer"</span> <span class="na">msg-status =</span><span class="s">"read"</span> <span class="na">bg-color =</span><span class="s">"#ffffff"</span><span class="hljs-name">&gt;
-		&lt;/suku-card-line&gt;</span>
+		<span class="hljs-name">&lt;suku-card-line</span> <span class="na">title-one=</span><span class="s">"Super Computer"</span> <span class="na">msg-status =</span><span class="s">"read"</span> <span class="na">bg-color =</span><span class="s">"#ffffff"</span><span class="hljs-name">&gt;&lt;/suku-card-line&gt;</span>
 				   </code></pre>`,
 		try: true,
 		id: 10
@@ -1336,8 +1305,8 @@ export class WebComponentsServices {
 		description: `Suku-Dashboard-Profile shows the profile of a user either buyer or seller with various functionalities like, creating new listing or new interest, etc.The user can also view the review matches, negotiate purchase and many other functions.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-dashboard-profile</span> <span class="na">user-name=</span><span class="s">"Emery"</span> <span class="na">title-one=</span><span class="s">"CREATE NEW LISTING"</span><span class="na">title-two=</span><span class="s">"CREATE NEW INTEREST"</span><span class="hljs-name">&gt;&lt;/suku-dashboard-profile&gt;</span>
-				   </code></pre>`,
+		<span class="hljs-name">&lt;suku-dashboard-profile</span> <span class="na">user-name=</span><span class="s">"Emery"</span> <span class="na">title-one=</span><span class="s">"CREATE NEW LISTING"</span><span class="hljs-name">&gt;
+		&lt;/suku-dashboard-profile&gt;</span></code></pre>`,
 		try: true,
 		id: 11
 	},
@@ -1376,7 +1345,7 @@ export class WebComponentsServices {
 		description: ` The link can redirect the user to the required content in detail.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-tag">&lt;<span class="hljs-name">suku-link</span><span class="na">size=</span><span class="s">"16"</span>  &gt;<span class="hljs-attr"> ADD NEW LISTING</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-link</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">suku-link</span><span class="na"> size=</span><span class="s">"14"</span>&gt;<span class="hljs-attr"> suku-link </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-link</span>&gt;</span>
 				   </code></pre>`,
 		try: true,
 		id: 15
@@ -1436,7 +1405,7 @@ export class WebComponentsServices {
 	description: ` suku-Home-widget is a link to redirect user to the homepage.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-home-widget</span> <span class="na">size=</span><span class="s">"16"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-home-widget</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">suku-home-widget</span> <span class="na">size=</span><span class="s">"16"</span> &gt;<span class="hljs-attr">home widget</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-home-widget</span>&gt;</span>
 			   </code></pre>`,
 	try: true,
 	id: 21
@@ -1503,7 +1472,7 @@ export class WebComponentsServices {
 },
 {
 	title: 'Suku-search-input',
-	description: `search box  matches  the items in its database and returns the search results.`,
+	description: `search box  matches  the items in the database and returns the search results.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-search-input</span>&gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-search-input</span>&gt;</span>
@@ -1516,7 +1485,7 @@ export class WebComponentsServices {
 	description: `  suku-bid-tag shows the detail about the bid with number of items and price.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-bid-tag</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-bid-tag</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">suku-bid-tag prize="$100"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-bid-tag</span>&gt;</span>
 			   </code></pre>`,
 	try: true,
 	id: 29

@@ -1,1 +1,1 @@
-# suku-web-components-infra
+# suku-web-components-browser

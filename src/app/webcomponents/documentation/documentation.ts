@@ -82,4 +82,5 @@ export class DocumentationComponent implements OnInit {
 	change(value) {
 		console.log("value", value);
 	}
+
 }

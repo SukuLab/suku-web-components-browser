@@ -481,12 +481,6 @@ h5 {
   color: white;
 }
 
-.btn-primary:click {
-  border: solid 2px #a7bf2e;
-  border-radius: 10px 20px 15px 20px;
-  background-color: #a7bf2e !important;
-  color: white;
-}
 
 .btn-primary:active {
   border: solid 2px #a7bf2e;
@@ -706,7 +700,7 @@ fieldset[disabled] .btn-info.focus {
   letter-spacing: -0.3px;
   color: #1d1d1d;
   text-decoration: underline;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 
@@ -753,11 +747,10 @@ fieldset[disabled] .btn-info.focus {
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
-  font-family: 'Poppins-Regular';
+  font-family: 'Poppins', sans-serif;
 }
 
 .circleP {
-  background-color: gray;
   width: 50px !important;
   height: 50px !important;
   background-color: gray;
@@ -860,7 +853,6 @@ tr#txt {
   position: relative;
   border: 1px solid #ebedee;
   border-radius: 33px;
-  position: absolute;
   top: 0;
   left: 0;
   z-index: 10;

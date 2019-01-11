@@ -319,93 +319,173 @@ export class WebComponentsServices {
 		{
 			data: [
 				{
-					properties: 'bid',
+					properties: 'image',
 					type: '[number]',
-					description: 'A bid is an offer made by an investor, trader or dealer to buy a product.'
+					description: '	An image is a picture that has been created or copied and stored in electronic form.'
 				},
 				{
-					properties: 'bid-size',
+					properties: 'match',
+					type: '[number]',
+					description: 'Corresponds to the match for users listing and interest.'
+				},
+				{
+					properties: 'list-name-size',
 					type: '[number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
-					properties: 'bid-weight',
-					type: '[number]',
-					description: 'Weight corresponds to the font size.'
-				},
-				{
-					properties: 'bid-color ',
+					properties: 'list-color ',
 					type: '[string]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
-					properties: 'bid-heading',
+					properties: 'list-weight',
 					type: '[string]',
 					description:
-						' Bid-heading is also sometimes referred to as advance bidding or pre-bidding to end users.'
+						'Weight corresponds to the font size.'
 				},
 				{
-					properties: 'bid-heading-size',
+					properties: 'list-name',
+					type: '[number]',
+					description: 'Corresponds to the name for each list.'
+				},
+				{
+					properties: 'prize',
+					type: '[number]',
+					description: 'Corresponds to the value given to the matched listing of the product.'
+				},
+				{
+					properties: 'prize-size',
 					type: '[number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
-					properties: 'bid-heading-color',
+					properties: 'prize-weight ',
+					type: '[string]',
+					description:
+						'Weight corresponds to the font size.'
+				},
+				{
+					properties: 'prize-color',
+					type: '[string]',
+					description:
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
+				},
+				{
+					properties: 'prize-customclass',
+					type: '[string]',
+					description:
+						'The class attribute specifies one or more classnames for an element and mostly used to point to a class in a style sheet.'
+				},
+				{
+					properties: 'date',
+					type: '[number]',
+					description: 'Date corresponds to listing expiry date.'
+				},
+				{
+					properties: 'date-size',
+					type: '[number]',
+					description: 'Corresponds to the value of font-size which is passed to the directive.'
+				},
+				{
+					properties: 'date-weight',
+					type: '[number]',
+					description: 'Weight corresponds to the font size.'
+				},
+				{
+					properties: 'date-color ',
+					type: '[string]',
+					description:
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
+				},
+				{
+					properties: 'date-customclass',
+					type: '[string]',
+					description:
+						'The class attribute specifies one or more classnames for an element and mostly used to point to a class in a style sheet.'
+				},
+				{
+					properties: 'dateV',
+					type: '[number]',
+					description: 'The dateV corresponds to the date value of listing a product.'
+				},
+				{
+					properties: 'dateV-size',
+					type: '[number]',
+					description: 'Corresponds to the value of font-size which is passed to the directive.'
+				},
+				{
+					properties: 'dateV-color',
 					type: '[number]',
 					description: 'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
-					properties: 'bid-heading-weight',
-					type: '[number]',
-					description: 'Weight corresponds to the font size.'
-				},
-				{
-					properties: 'percent ',
+					properties: 'dateV-weight',
 					type: '[string]',
 					description:
-						'To determine the strength of a bid.'
+						'Weight corresponds to the font size.'
 				},
 				{
-					properties: 'percent-size',
+					properties: 'dateV-costomclass',
 					type: '[string]',
 					description:
-						'Corresponds to the value of font-size which is passed to the directive.'
+						'The class attribute specifies one or more classnames for an element and mostly used to point to a class in a style sheet.'
 				},
 				{
-					properties: 'percent-color',
-					type: '[string]',
-					description:
-						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
-				},
-				{
-					properties: 'percent-weight',
+					properties: 'sell',
 					type: '[number]',
-					description: 'Weight corresponds to the font size.'
+					description: 'The seller details who sell the product.'
 				},
 				{
-					properties: 'percent-heading',
-					type: '[number]',
-					description: 'It allows to determine exactly which demand sources are participating.'
-				},
-				{
-					properties: 'percent-heading-size',
+					properties: 'sell-size',
 					type: '[number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
-					properties: 'percent-heading-color ',
+					properties: 'sell-weight',
+					type: '[number]',
+					description: 'Weight corresponds to the font size.'
+				},
+				{
+					properties: 'sell-color ',
 					type: '[string]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
-					properties: 'percent-heading-weight',
+					properties: 'sell-customclass',
 					type: '[string]',
 					description:
-						'Weight corresponds to the font size.'
+						'The class attribute specifies one or more classnames for an element and mostly used to point to a class in a style sheet.'
+				},
+				{
+					properties: 'sell-v',
+					type: '[string]',
+					description:
+						'Corresponds to the seller value name.'
+				},
+				{
+					properties: 'sell-v-size',
+					type: '[number]',
+					description: 'Corresponds to the value of font-size which is passed to the directive.'
+				},
+				{
+					properties: 'sell-v-weight',
+					type: '[number]',
+					description: 'Weight corresponds to the font size.'
+				},
+				{
+					properties: 'sell-v-color',
+					type: '[number]',
+					description: 'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
+				},
+				{
+					properties: 'sell-v-customclass ',
+					type: '[string]',
+					description:
+						'The class attribute specifies one or more classnames for an element and mostly used to point to a class in a style sheet.'
 				}
-
 			]
 		},
 		{

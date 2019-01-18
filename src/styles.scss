@@ -713,3 +713,23 @@ pre {
   padding-top: 12px;
 }
 
+.node text {
+  font-size: 16px;
+  font-family: 'Encode Sans', sans-serif !important;
+  fill: rgb(170, 170, 170);
+}
+
+.link {
+  fill: none !important;
+  stroke: rgb(194, 193, 193) !important;
+  stroke-width: 2px !important;
+}
+
+.tree {
+  width:100%;
+  overflow-x: scroll !important;
+  direction: rtl !important;
+}
+ svg {
+  overflow-x: scroll !important;
+ }

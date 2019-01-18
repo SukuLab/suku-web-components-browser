@@ -779,6 +779,12 @@ export class WebComponentsServices {
 				type: '[string]',
 				description:
 					'If you need to support more than one instance of title  at a time .'
+			},
+			{
+				properties: 'Custom CSS',
+				type: '[string]',
+				description:
+					'ProgressCompleted- "progressCompleted", ProgressActive-"progressActive", ProgressUpcoming-"progressUpcoming".'
 			}
 		]
 	},
@@ -1275,6 +1281,20 @@ export class WebComponentsServices {
 			},
 		]
 	},
+	{
+		data: [
+			{
+				properties: 'tree-data',
+				type: '[Array]',
+				description: 'It holds the parent/child JSON Data of the products.'
+			},
+			// {
+			// 	properties: 'sample',
+			// 	type: '[JSON]',
+			// 	description: '',
+			// },
+		]
+	},
 	];
 
 	public Content_DATA: WebCompContent[] = [
@@ -1580,16 +1600,16 @@ export class WebComponentsServices {
 	try: true,
 	id: 30
 },
-// {
-// 	title: 'card-line',
-// 	description: ` suku-card-line is a container that consists of required elements. For example the container consists of Mailbox, Title-card, Title-content,etc.`,
-// 	properties: this.Properties_DATA,
-// 	mockSample: `<pre><code class="language-html f14" data-lang="html">
-// 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-add-widget</span> <span class="na">size=</span><span class="s">"16"</span> &gt;<span class="hljs-attr">ADD NEW LISTING</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-add-widget</span>&gt;</span>
-// 			   </code></pre>`,
-// 	try: true,
-// 	id: 31
-// },
+{
+	title: 'Suku-tree',
+	description: ` It represent the products in a parent/child hierarchy.`,
+	properties: this.Properties_DATA,
+	mockSample: `<pre><code class="language-html f14" data-lang="html">
+	<span class="hljs-tag">&lt;<span class="hljs-name">suku-tree</span>&gt;</span><span class="hljs-tag"> &lt;/<span class="hljs-name">suku-tree</span>&gt;</span>
+			   </code></pre>`,
+	try: true,
+	id: 31
+}
 	];
 
 	public webcomponentList() {
@@ -1714,10 +1734,10 @@ export class WebComponentsServices {
 				name: 'rating-star',
 				id: 30
 			},
-			// {
-			// 	name: 'card-line',
-			// 	id: 31
-			// }
+			{
+				name: 'suku-tree',
+				id: 31
+			}
 		];
 	}
 }

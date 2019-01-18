@@ -8,7 +8,6 @@ import { person } from './service';
 	templateUrl: 'documentation.html',
 	styleUrls: [ './documentation.scss' ]
 })
-
 export class DocumentationComponent implements OnInit {
 	data: any;
 	dataDom;
@@ -29,9 +28,8 @@ export class DocumentationComponent implements OnInit {
 	value;
 	bids;
 	selectedBid: any;
-	constructor(private fb: FormBuilder,
-		private domSanitizer: DomSanitizer,
-		private services: WebComponentsServices) {
+	copied: any;
+	constructor(private fb: FormBuilder, private domSanitizer: DomSanitizer, private services: WebComponentsServices) {
 		this.person = person;
 	}
 
@@ -79,8 +77,16 @@ export class DocumentationComponent implements OnInit {
 		this.dataDom = '';
 	}
 
-	change(value) {
-		console.log("value", value);
+	copySample() {
+		const copyText = <HTMLInputElement>document.getElementById('sampleCode');
+		console.log(copyText);
+		copyText.select();
+		document.execCommand('copy');
+		(<HTMLInputElement>document.getElementById('copied')).classList.add('copied');
+		setTimeout(() => {
+			console.log('executed');
+			(<HTMLInputElement>document.getElementById('copied')).classList.remove('copied');
+		}, 1500);
+		this.copied = !this.copied;
 	}
-
 }

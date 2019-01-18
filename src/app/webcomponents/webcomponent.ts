@@ -1,7 +1,18 @@
-import { Component, EventEmitter, Input, OnInit, Output, ChangeDetectionStrategy, ElementRef, ViewChild } from '@angular/core';
+import {
+	Component,
+	EventEmitter,
+	Input,
+	OnInit,
+	Output,
+	ChangeDetectionStrategy,
+	ElementRef,
+	ViewChild,
+	ViewEncapsulation
+} from '@angular/core';
 import { FormGroup, AbstractControl, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 /* text components start */
+import * as d3 from 'd3';
 
 @Component({
 	selector: 'suku-heading',
@@ -34,7 +45,6 @@ export class SukuSubHeadingComponent {
 	@Input() customclass = '';
 }
 
-
 @Component({
 	selector: 'suku-home-heading',
 	template: `
@@ -44,10 +54,10 @@ export class SukuSubHeadingComponent {
 	styleUrls: [ './webcomponents.scss' ]
 })
 export class SukuHomeHeadingComponent {
-  @Input() id = 'homeHeading';
+	@Input() id = 'homeHeading';
 	@Input() size;
-  @Input() color;
-  @Input() weight;
+	@Input() color;
+	@Input() weight;
 	@Input() customclass;
 }
 
@@ -60,7 +70,7 @@ export class SukuHomeHeadingComponent {
 	styleUrls: [ './webcomponents.scss' ]
 })
 export class SukuHomeItalicHeadingComponent {
-  @Input() id = 'homeItalicHeading';
+	@Input() id = 'homeItalicHeading';
 	@Input() size;
 	@Input() color;
 	@Input() weight;
@@ -68,8 +78,6 @@ export class SukuHomeItalicHeadingComponent {
 }
 
 /* text component end */
-
-
 
 /* for rendering in innerhtml  */
 @Component({
@@ -147,8 +155,8 @@ export class SukuCardListComponent {
 }
 
 @Component({
-    selector: 'suku-add-widget',
-    template: `
+	selector: 'suku-add-widget',
+	template: `
     <a (click)="action.emit()">
       <span><img src="{{image}}"  width="33px" height="33px">
       <span [style.font-size.px]="size" [style.color]="color"
@@ -158,17 +166,16 @@ export class SukuCardListComponent {
       </span>
     </a>
   `,
-    styleUrls: [ './webcomponents.scss' ]
-  })
-  export class SukuAddWidgetComponent {
-    @Input() image = '../../assets/images/plus-icon-gold.png';
-    @Input() size;
-    @Input() color;
-    @Input() weight;
-    @Input() customclass = 'ml-2 add-widget mt-1';
-    @Output() action = new EventEmitter();
-  }
-
+	styleUrls: [ './webcomponents.scss' ]
+})
+export class SukuAddWidgetComponent {
+	@Input() image = '../../assets/images/plus-icon-gold.png';
+	@Input() size;
+	@Input() color;
+	@Input() weight;
+	@Input() customclass = 'ml-2 add-widget mt-1';
+	@Output() action = new EventEmitter();
+}
 
 // assets-components start
 @Component({
@@ -261,7 +268,6 @@ export class SukuLinkComponent {
 	@Output() action = new EventEmitter();
 }
 
-
 @Component({
 	selector: 'suku-select-input',
 	template: `
@@ -285,8 +291,8 @@ export class SukuSelectInputComponent {
 	@Input() customClass;
 	@Output() sort = new EventEmitter();
 	@Input() options;
-  constructor() {
-    this.options = [
+	constructor() {
+		this.options = [
 			{
 				name: 'Matches-Low to High',
 				value: 4
@@ -304,7 +310,7 @@ export class SukuSelectInputComponent {
 				value: 0
 			}
 		];
-  }
+	}
 }
 // text-components end
 
@@ -515,7 +521,7 @@ export class SukuSecondaryButtonComponent {
 	styleUrls: [ './webcomponents.scss' ]
 })
 export class SukuDefaultButtonComponent {
-	@Input() id = "default";
+	@Input() id = 'default';
 	@Output() action = new EventEmitter();
 }
 
@@ -608,9 +614,8 @@ export class SukuProgressBarComponent {
 	styleUrls: [ './webcomponents.scss' ]
 })
 export class SukuCheckboxComponent {
-  @Input() id;
+	@Input() id;
 }
-
 
 @Component({
 	selector: 'suku-radio-button',
@@ -634,7 +639,6 @@ export class SukuRadioButtonComponent {
 	@Input() color = 'primary';
 }
 
-
 @Component({
 	selector: 'suku-star-badge',
 	template: `
@@ -649,7 +653,6 @@ export class SukuStarBadgeComponent {
 	@Input() icon = '../../../assets/images/star_2.svg';
 	@Input() value = 1;
 }
-
 
 @Component({
 	selector: 'suku-rating-star',
@@ -1044,7 +1047,7 @@ export class SukuNavSubmenuComponent {
 
 @Component({
 	selector: 'suku-card-line',
-  template: `
+	template: `
   <span>
   <div class="col p-0">
   <div class="row card-line-bg p-3 m-3 c-pointer" [style.background-color]=" bgColor">
@@ -1076,45 +1079,45 @@ export class SukuNavSubmenuComponent {
 </div>
 </span>
     `,
-  styleUrls: [ './webcomponents.scss' ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+	styleUrls: [ './webcomponents.scss' ],
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SukuCardLineComponent {
-  @Input() image = "";
-  @Input() customClass = "";
-  @Input() bgColor = "card-line-bg";
-  @Input() msgStatus = "read";
+	@Input() image = '';
+	@Input() customClass = '';
+	@Input() bgColor = 'card-line-bg';
+	@Input() msgStatus = 'read';
 
-  @Input() chatReadIcon = "";
-  @Input() chatUnreadIcon = "";
-  @Input() customIconClass = "";
+	@Input() chatReadIcon = '';
+	@Input() chatUnreadIcon = '';
+	@Input() customIconClass = '';
 
-  @Input() titleOne = "Title One";
-  @Input() titleOneColor = "black";
-  @Input() titleOneWeight = "600";
-  @Input() titleOneSize = "14";
-  @Input() contentOne = "10 SUKU";
-  @Input() contentOneColor = "#3e3e3e";
-  @Input() contentOneWeight = "500";
-  @Input() contentOneSize = "14";
+	@Input() titleOne = 'Title One';
+	@Input() titleOneColor = 'black';
+	@Input() titleOneWeight = '600';
+	@Input() titleOneSize = '14';
+	@Input() contentOne = '10 SUKU';
+	@Input() contentOneColor = '#3e3e3e';
+	@Input() contentOneWeight = '500';
+	@Input() contentOneSize = '14';
 
-  @Input() subTitleTwo = "SOLD BY";
-  @Input() subTitleTwoColor = "#b6b6b6";
-  @Input() subTitleTwoWeight = "500";
-  @Input() subTitleTwoSize = "12";
-  @Input() contentTwo = "John Smith";
-  @Input() contentTwoColor = "#3e3e3e";
-  @Input() contentTwoWeight = "500";
-  @Input() contentTwoSize = "14";
+	@Input() subTitleTwo = 'SOLD BY';
+	@Input() subTitleTwoColor = '#b6b6b6';
+	@Input() subTitleTwoWeight = '500';
+	@Input() subTitleTwoSize = '12';
+	@Input() contentTwo = 'John Smith';
+	@Input() contentTwoColor = '#3e3e3e';
+	@Input() contentTwoWeight = '500';
+	@Input() contentTwoSize = '14';
 
-  @Input() subTitleThree = "EXPIRY DATE";
-  @Input() subTitleThreeColor = "#b6b6b6";
-  @Input() subTitleThreeWeight = "500";
-  @Input() subTitleThreeSize = "12";
-  @Input() contentThree = "28 Nov 2018";
-  @Input() contentThreeColor = "#3e3e3e";
-  @Input() contentThreeWeight = "500";
-  @Input() contentThreeSize = "14";
+	@Input() subTitleThree = 'EXPIRY DATE';
+	@Input() subTitleThreeColor = '#b6b6b6';
+	@Input() subTitleThreeWeight = '500';
+	@Input() subTitleThreeSize = '12';
+	@Input() contentThree = '28 Nov 2018';
+	@Input() contentThreeColor = '#3e3e3e';
+	@Input() contentThreeWeight = '500';
+	@Input() contentThreeSize = '14';
 }
 
 @Component({
@@ -1281,17 +1284,14 @@ export class SukuProfileWidgetComponent {
 })
 export class SukuInputComponent {
 	// @Input() control: AbstractControl;
-  // @Input() label: string;
+	// @Input() label: string;
 }
-
-
-
 
 /* test components */
 
 @Component({
-  selector: 'suku-dynamic-input',
-  template: `
+	selector: 'suku-dynamic-input',
+	template: `
     <form novalidate  [formGroup]="parentForm">
       <div *ngFor="let prop of objectProps">
         <label [attr.for]="prop">{{prop.label}}</label>
@@ -1307,60 +1307,59 @@ export class SukuInputComponent {
     </form>
     <hr />
   `,
-  styles: [
-    `
+	styles: [
+		`
     .error { color: red; }
     `
-  ]
+	]
 })
 export class DynamicFormComponent implements OnInit {
-  @Input() dataObject;
-  parentForm: FormGroup;
-  objectProps;
-  @Output() action = new EventEmitter;
-  constructor() {
-  }
-  push() {
-    const value = JSON.parse(this.parentForm.value);
-    console.log("value", value);
-    this.action.emit(value);
-  }
-  ngOnInit() {
-    // remap the API to be suitable for iterating over it
-    this.objectProps = Object.keys(this.dataObject)
-        .map(prop => {
-          return Object.assign({}, { key: prop} , this.dataObject[prop]);
-        });
+	@Input() dataObject;
+	parentForm: FormGroup;
+	objectProps;
+	@Output() action = new EventEmitter();
+	constructor() {}
+	push() {
+		const value = JSON.parse(this.parentForm.value);
+		console.log('value', value);
+		this.action.emit(value);
+	}
+	ngOnInit() {
+		// remap the API to be suitable for iterating over it
+		this.objectProps = Object.keys(this.dataObject).map((prop) => {
+			return Object.assign({}, { key: prop }, this.dataObject[prop]);
+		});
 
-    // setup the form
-    const formGroup = {};
-    for (const prop of Object.keys(this.dataObject)) {
-      formGroup[prop] = new FormControl(this.dataObject[prop].value || '', this.mapValidators(this.dataObject[prop].validation));
-    }
+		// setup the form
+		const formGroup = {};
+		for (const prop of Object.keys(this.dataObject)) {
+			formGroup[prop] = new FormControl(
+				this.dataObject[prop].value || '',
+				this.mapValidators(this.dataObject[prop].validation)
+			);
+		}
 
-    this.parentForm = new FormGroup(formGroup);
-  }
+		this.parentForm = new FormGroup(formGroup);
+	}
 
-  private mapValidators(validators) {
-    const formValidators = [];
+	private mapValidators(validators) {
+		const formValidators = [];
 
-    if (validators) {
-      for (const validation of Object.keys(validators)) {
-        if (validation === 'required') {
-          formValidators.push(Validators.required);
-        } else if (validation === 'min') {
-          formValidators.push(Validators.min(validators[validation]));
-        }
-      }
-    }
+		if (validators) {
+			for (const validation of Object.keys(validators)) {
+				if (validation === 'required') {
+					formValidators.push(Validators.required);
+				} else if (validation === 'min') {
+					formValidators.push(Validators.min(validators[validation]));
+				}
+			}
+		}
 
-    return formValidators;
-  }
+		return formValidators;
+	}
 }
 
 /* test components */
-
-
 
 @Component({
 	selector: 'suku-response',
@@ -1380,3 +1379,288 @@ export class SukuResponseComponent {
 	@Input() bgColor = '';
 }
 
+@Component({
+	selector: 'suku-tree',
+	template: `<div class="tree"></div>`,
+	styleUrls: [ './webcomponents.scss' ],
+	encapsulation: ViewEncapsulation.Emulated
+})
+export class SukuTreeComponent implements OnInit {
+	@Input('tree-data') treeDataFromApi: Array<string>;
+	// trace tree
+	tree;
+	root;
+	i;
+	svg;
+	boxWidth = 180;
+	boxHeight = 55;
+	margin = {
+		top: 50,
+		right: 5,
+		bottom: 50,
+		left: 5
+	};
+	width = 1060 - this.margin.left - this.margin.right;
+	height = 510 - this.margin.top - this.margin.bottom;
+	data: any;
+	testd: number;
+	childCount: number = 0;
+
+	ngOnInit() {
+		this.constructTree();
+	}
+
+	constructTree() {
+		// const treeData = (this.treeDataFromApi);
+		const treeData = [
+			{
+				uid: '1000',
+				product: {
+					id: '1000',
+					name: 'item Ax1000',
+					description: 'item A'
+				},
+				links: [
+					{
+						_id: '5c388e4f3bd185b35410bcd4',
+						uid: '1002',
+						type: 'composedOf'
+					},
+					{
+						_id: '5c388e4f3bd185b35410bcd3',
+						uid: '1003',
+						type: 'composedOf'
+					}
+				],
+				timestamp: '2019-01-11T12:38:15.895Z',
+				childrens: [
+					{
+						uid: '1002',
+						product: {
+							id: '1002',
+							name: 'item Bx1002',
+							description: 'item B'
+						},
+						links: [
+							{
+								_id: '5c388e833bd185b35410bcd6',
+								uid: '1001',
+								type: 'usedIn'
+							}
+						],
+						timestamp: '2019-01-11T12:38:15.895Z',
+						childrens: []
+					},
+					{
+						uid: '1003',
+						product: {
+							id: '1003',
+							name: 'item Cx1003',
+							description: 'item C'
+						},
+						links: [
+							{
+								_id: '5c388ee13bd185b35410bcda',
+								uid: '1001',
+								type: 'usedIn'
+							},
+							{
+								_id: '5c388ee13bd185b35410bcd9',
+								uid: '1004',
+								type: 'composedOf'
+							},
+							{
+								_id: '5c388ee13bd185b35410bcd8',
+								uid: '1005',
+								type: 'composedOf'
+							}
+						],
+						timestamp: '2019-01-11T12:38:15.895Z',
+						childrens: [
+							{
+								uid: '1004',
+								product: {
+									id: '1004',
+									name: 'item Dx1004',
+									description: 'item D'
+								},
+								links: [
+									{
+										_id: '5c388f8c3bd185b35410bce0',
+										uid: '1003',
+										type: 'usedIn'
+									},
+									{
+										_id: '5c388f8c3bd185b35410bcdf',
+										uid: '1006',
+										type: 'composedOf'
+									},
+									{
+										_id: '5c388f8c3bd185b35410bcde',
+										uid: '1007',
+										type: 'composedOf'
+									}
+								],
+								timestamp: '2019-01-11T12:38:15.895Z',
+								childrens: []
+							},
+							{
+								uid: '1005',
+								product: {
+									id: '1005',
+									name: 'item Ex1005',
+									description: 'item E'
+								},
+								links: [
+									{
+										_id: '5c388f333bd185b35410bcdc',
+										uid: '1003',
+										type: 'usedIn'
+									}
+								],
+								timestamp: '2019-01-11T12:38:15.895Z',
+								childrens: [
+									{
+										uid: '1005',
+										product: {
+											id: '1005',
+											name: 'item Ex1006',
+											description: 'item E'
+										},
+										links: [
+											{
+												_id: '5c388f333bd185b35410bcdc',
+												uid: '1003',
+												type: 'usedIn'
+											}
+										],
+										timestamp: '2019-01-11T12:38:15.895Z',
+										childrens: []
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		];
+		this.i = 0;
+		this.testd = 0;
+		if (treeData) {
+			this.tree = d3.layout
+				.tree()
+				.separation((a, b) => (a.parent === b.parent ? 5 : 5.25))
+				.children((d) => {
+					return d.childrens;
+				})
+				.size([ this.height, this.width ]);
+
+			this.svg = d3
+				.select('.tree')
+				.append('svg')
+				.attr('width', this.width + this.margin.right + this.margin.left)
+				.attr('height', this.height + this.margin.top + this.margin.bottom)
+				.append('g')
+				.attr('transform', 'translate(' + this.margin.left + ',' + this.margin.top + ')');
+
+			this.root = treeData[0];
+			this.drawTree();
+		}
+	}
+
+	drawTree() {
+		const nodes = this.tree.nodes(this.root).reverse();
+		const links = this.tree.links(nodes);
+
+		nodes.forEach((d) => {
+			d.y = this.width - 109 - d.depth * 270; // reverse tree
+		});
+
+		const node = this.svg.selectAll('g.node').data(nodes, (d) => {
+			return d.id || (d.id = ++this.i); // assign id to nodes
+		});
+
+		const nodeEnter = node.enter().append('g').attr('class', 'node').attr('transform', (d) => {
+			return 'translate(' + d.y + ',' + d.x + ')'; // append g with class attr
+		});
+
+		// append line into svg
+		node
+			.append('line')
+			.style('stroke', (d) => {
+				if (d.level === 1) {
+					return '#6f3bda';
+				}
+				if (d.level === 2) {
+					return '#3fdbef';
+				}
+				if (d.level === 3) {
+					return '#b8ce2b';
+				} else {
+					return '#3fdbef';
+				}
+			})
+			.attr('x1', -(this.boxWidth / 2))
+			.attr('y1', -(this.boxHeight / 2))
+			.attr('x2', -(this.boxWidth / 2))
+			.attr('y2', this.boxHeight / 2)
+			.attr('stroke-width', '10');
+
+		// append rect into svg
+		node
+			.append('rect')
+			.attr({
+				x: -(this.boxWidth / 2),
+				y: -(this.boxHeight / 2),
+				width: this.boxWidth,
+				height: this.boxHeight
+			})
+			.attr('fill', 'white')
+			.attr('stroke-width', '.07')
+			.attr('stroke', 'black');
+
+		node
+			.append('text')
+			.attr('x', (d) => {
+				return -(this.boxWidth / 20);
+			})
+			.attr('y', (d) => {
+				return this.boxWidth / 60;
+			})
+			.style('text-anchor', 'middle')
+			.text((d) => {
+				return d.product.name;
+			});
+
+		const link = this.svg.selectAll('path.link').data(links, (d) => {
+			this.data = d;
+			return d.target.id;
+		});
+
+		// append link into svg
+		link
+			.enter()
+			.insert('path', 'g')
+			.attr('class', 'link')
+			.attr('stroke', '#000')
+			.attr('shape-rendering', 'crispEdges')
+			.attr('d', (d) => {
+				const sourceX = d.source.x,
+					sourceY = d.source.y + this.boxWidth / 2,
+					targetX = d.target.x,
+					targetY = d.target.y - this.boxWidth / 2;
+				return (
+					'M' +
+					sourceY +
+					',' +
+					sourceX +
+					'H' +
+					(sourceY + (targetY - sourceY) / 2) +
+					'V' +
+					targetX +
+					'H' +
+					targetY
+				);
+			});
+	}
+}

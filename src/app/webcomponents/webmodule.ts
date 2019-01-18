@@ -37,6 +37,7 @@ import {
     SukuSubNestHeadingComponent,
     SukuInputComponent,
     SukuResponseComponent,
+    SukuTreeComponent,
     DynamicFormComponent
 } from './webcomponent';
 
@@ -79,6 +80,7 @@ export const WebComponents = [
     SukuSubNestHeadingComponent,
     SukuInputComponent,
     SukuResponseComponent,
+    SukuTreeComponent,
     DynamicFormComponent
 ];
 

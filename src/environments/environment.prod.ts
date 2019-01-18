@@ -1,4 +1,4 @@
 export const environment = {
   production: true
 };
-console.log("v-1.1");
+console.log("v-1.2");

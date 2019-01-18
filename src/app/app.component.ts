@@ -34,6 +34,7 @@ import {
   SukuInputComponent,
   SukuResponseComponent,
   SukuDefaultButtonComponent,
+  SukuTreeComponent,
   DynamicFormComponent
 } from './webcomponents/webcomponent';
 import { createCustomElement } from '@angular/elements';
@@ -168,6 +169,10 @@ export class AppComponent implements OnInit {
       injector : this.injector
 		});
 		customElements.define('suku-response', SukuResponse);
+		const SukuTree = createCustomElement(SukuTreeComponent, {
+      injector : this.injector
+		});
+		customElements.define('suku-tree', SukuTree);
 		// const SukuDynamicInput = createCustomElement(DynamicFormComponent, {
       // injector : this.injector
 		// });

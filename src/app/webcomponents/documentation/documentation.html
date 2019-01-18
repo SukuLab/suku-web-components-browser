@@ -60,7 +60,11 @@
                 <!-- sample webcomp code inject here -->
                 <p class="docs-markdown-p">For example:</p>
                 <div class="col p-0" id ="mockSample" [innerHTML]="content.mockSample"></div>
+                <span id="copied">
+                <!-- <input class="mockSample" id="sampleCode" (click)="copySample()"  value="<suku-heading> hello </suku-heading>"  readonly="true"/> -->
+                </span>
               </div>
+              
               <!-- terminal code-->
               <div class="col-sm-12 p-0" *ngIf="content?.try">
                 <div class="col-sm-12 pb-4 pt-4" id="terminal">
@@ -88,17 +92,6 @@
             </span>
           </span>
           <!-- terminal code end-->
-          <!-- test code start -->
-          <!-- <span>
-              <suku-input-control></suku-input-control>
-              <suku-dynamic-input [dataObject]="person" (action)="change(value)"></suku-dynamic-input>
-              <strong>Input Value</strong>
-              <pre>{{ parentForm.value | json }}</pre>
-              <strong>Input is valid:</strong> {{parentForm.valid}}
-              </span> -->
-          <!-- test code end -->
-          <!-- <p class="fontStyle">Hello admin</p>
-            <p class="fontStyleEncode">Hello encoded admin</p> -->
         </div>
       </div>
     </div>

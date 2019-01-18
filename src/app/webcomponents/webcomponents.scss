@@ -1117,3 +1117,25 @@ input#search {
   border: 2px solid #f2f2f2;
   border-radius: 10px 18px 18px 16px;
 }
+
+// tree css
+.node text {
+  font-size: 16px;
+  font-family: 'Encode Sans', sans-serif !important;
+  fill: rgb(170, 170, 170);
+}
+
+.link {
+  fill: none !important;
+  stroke: rgb(194, 193, 193) !important;
+  stroke-width: 2px !important;
+}
+
+.tree {
+  width:100%;
+  overflow-x: scroll !important;
+  direction: rtl !important;
+}
+ svg {
+  overflow-x: scroll !important;
+ }

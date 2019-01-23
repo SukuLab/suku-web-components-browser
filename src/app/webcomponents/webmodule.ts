@@ -38,7 +38,9 @@ import {
     SukuInputComponent,
     SukuResponseComponent,
     SukuTreeComponent,
-    DynamicFormComponent
+    DynamicFormComponent,
+    SukuTrackProgressBarComponent,
+    SukuTrackTraceProductSearchComponent
 } from './webcomponent';
 
 export const WebComponents = [
@@ -81,7 +83,9 @@ export const WebComponents = [
     SukuInputComponent,
     SukuResponseComponent,
     SukuTreeComponent,
-    DynamicFormComponent
+    DynamicFormComponent,
+    SukuTrackProgressBarComponent,
+    SukuTrackTraceProductSearchComponent
 ];
 
 

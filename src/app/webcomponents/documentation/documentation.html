@@ -59,12 +59,21 @@
               <div class="col-sm-12 p-3">
                 <!-- sample webcomp code inject here -->
                 <p class="docs-markdown-p">For example:</p>
-                <div class="col p-0" id ="mockSample" [innerHTML]="content.mockSample"></div>
+                <p class="col text-left p-0 link">Click to copy</p>
+                <!-- <div class="col p-0" id ="mockSample" [innerHTML]="content.mockSample"></div> -->
                 <span id="copied">
-                <!-- <input class="mockSample" id="sampleCode" (click)="copySample()"  value="<suku-heading> hello </suku-heading>"  readonly="true"/> -->
+                  <input class="mockSample" id="sampleCode" (click)="copySample()" value="{{content.codeSample}}"
+                    readonly="true" />
                 </span>
               </div>
-              
+              <div class="col-sm-12 p-3">
+                <!-- sample json inject here -->
+                <!-- <p class="docs-markdown-p">Sample JSON:</p> -->
+                <div class="col p-0 mt-1" *ngIf="content.id == 33">
+                  <div class="link text-left mb-3 c-pointer" (click)="collapseFuc()">Click to {{ collapse ? 'hide json sample' : 'show json sample' }}</div>
+                  <div *ngIf="collapse" class="col p-0" id ="jsonSample" [innerHTML]="content.jsonSample"></div>
+                </div>
+              </div>
               <!-- terminal code-->
               <div class="col-sm-12 p-0" *ngIf="content?.try">
                 <div class="col-sm-12 pb-4 pt-4" id="terminal">
@@ -88,6 +97,13 @@
                     <br />
                   </div>
                 </div>
+                <div class="col">
+                  <!--  test code  --> 
+                  <!-- <ace-editor #editor [style.height.px]="dynamicHeight" (keyup)='getValue()'>
+                  </ace-editor>
+                  <button (click)='getValue()'>get value</button>
+                  <p (click)='dynamicHeightFunc()' class="col display-3 text-left p-0 link">click to increase height.</p> -->
+                </div>
               </div>
             </span>
           </span>
@@ -97,4 +113,5 @@
     </div>
   </div>
 </form>
+
 <!-- <a id="progress">In development **</a> -->

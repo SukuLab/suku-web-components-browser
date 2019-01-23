@@ -13,6 +13,8 @@ export interface WebCompContent {
 	description: string;
 	properties: any;
 	mockSample: any;
+	codeSample: any;
+	jsonSample: any;
 	try: boolean;
 	id: number;
 }
@@ -1284,6 +1286,127 @@ export class WebComponentsServices {
 	{
 		data: [
 			{
+				properties: 'progress-style-one',
+				type: '[string]',
+				description: 'It shows the progress in completed state.'
+			},
+			{
+				properties: 'progress-style-two',
+				type: '[string]',
+				description: 'It shows the progress as active.'
+			},
+			{
+				properties: 'progress-style-three',
+				type: '[string]',
+				description:
+					' It shows the progress as upcoming.'
+			},
+			{
+				properties: 'heading-one',
+				type: '[string]',
+				description: 'It represents the different categories of tracking.'
+			},
+			{
+				properties: 'heading-two',
+				type: '[string]',
+				description: 'It represents the different categories of tracking.'
+			},
+			{
+				properties: 'heading-three',
+				type: '[string]',
+				description:
+					'It represents the different categories of tracking.'
+			},
+			{
+				properties: 'custom-heading-one-class',
+				type: '[string]',
+				description: 'It differentiates the categories with the color indications.'
+			},
+			{
+				properties: 'custom-heading-two-class',
+				type: '[string]',
+				description: 'It differentiates the categories with the color indications.'
+			},
+			{
+				properties: 'custom-heading-three-class',
+				type: '[string]',
+				description:
+					' It differentiates the categories with the color indications.'
+			},
+		]
+	},
+	{
+		data: [
+			{
+				properties: 'head-name',
+				type: '[string]',
+				description: 'It corresponds to product title.'
+			},
+			{
+				properties: 'sub-head-name',
+				type: '[string]',
+				description: 'It corresponds to product sub-title.'
+			},
+			{
+				properties: 'name',
+				type: '[Input]',
+				description: 'It corresponds to type of search in the widget.'
+			},
+			{
+				properties: 'control',
+				type: '[Input]',
+				description: 'It holds the formcontrolname in the widget.'
+			},
+			{
+				properties: '[form]',
+				type: '[Input]',
+				description: 'It holds the formgroup name.'
+			},
+			{
+				properties: 'searchFun',
+				type: '[Output]',
+				description: 'It prompts the user to find the required product.'
+			},
+			{
+				properties: 'selectproducts',
+				type: '[Output]',
+				description: 'It prompts the user to find the product.'
+			},
+			{
+				properties: 'searchByProduct',
+				type: '[Output]',
+				description: 'Users can locate product by searching for specific words or phrases.'
+			},
+			{
+				properties: 'traceproduct',
+				type: '[Output]',
+				description: 'traceproduct refers to the capability for tracing products along the distribution chain on a batch number.'
+			},
+			{
+				properties: 'disabledBtn',
+				type: '[Output]',
+				description: 'It corresponds to the button which is disableds before the details is filled.'
+			},
+			{
+				properties: 'productdetails',
+				type: '[Output]',
+				description: 'It shows the complete track details of the product required.'
+			},
+			{
+				properties: 'result',
+				type: '[Output]',
+				description: 'It is a short summary of the search, links to more detailed analysis.'
+			},
+			{
+				properties: 'visible',
+				type: '[Output]',
+				description: 'Corresponds to the products allowed to be visible in the tracking.'
+			},
+		]
+	},
+	{
+		data: [
+			{
 				properties: 'tree-data',
 				type: '[Array]',
 				description: 'It holds the parent/child JSON Data of the products.'
@@ -1309,7 +1432,9 @@ export class WebComponentsServices {
     		<span class="hljs-tag">&lt;<span class="hljs-name">suku-heading color="#a7be2f" size="50"</span>&gt;<span class="hljs-attr"> You just modified suku-heading </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-heading</span>&gt;</span>
     		</code>
     		</pre>
-    		`,
+			`,
+			codeSample: '<suku-heading> You just created suku-heading </suku-heading>',
+			jsonSample: '',
 			try: true,
 			id: 1
 		},
@@ -1323,7 +1448,9 @@ export class WebComponentsServices {
     		<span class="hljs-tag">&lt;<span class="hljs-name">suku-sub-heading</span>&gt;<span class="hljs-attr"> You just created suku-sub-heading </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-sub-heading</span>&gt;</span>
         	<span class="hljs-tag">&lt;<span class="hljs-name">suku-sub-heading color="#a7be2f" size="50"</span>&gt;<span class="hljs-attr"> You just modified suku-sub-heading </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-sub-heading</span>&gt;</span>
     		</code>
-    		</pre>`,
+			</pre>`,
+			codeSample: '<suku-sub-heading> You just created suku-sub-heading </suku-sub-heading>',
+			jsonSample: '',
 			try: true,
 			id: 2
 		},
@@ -1333,7 +1460,9 @@ export class WebComponentsServices {
 			properties: this.Properties_DATA,
 			mockSample: `<pre><code class="language-html f14" data-lang="html">
     		<span class="hljs-name">&lt;suku-profile-widget</span>  <span class="na">user-name=</span><span class="s">"Vairog"</span> <span class="na">account-type=</span><span class="s">"Manufacturer"</span><span class="hljs-name">&gt;&lt;/suku-profile-widget&gt;</span>
-                       </code></pre>`,
+					   </code></pre>`,
+		   codeSample: '<suku-profile-widget  user-name="Vairog" account-type="Manufacturer"></suku-profile-widget>',
+			jsonSample: '',
 			try: true,
 			id: 3
 		},
@@ -1344,7 +1473,9 @@ export class WebComponentsServices {
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-rating-widget</span>  <span class="na">comment-size=</span><span class="s">"16"</span> <span class="na">comment-color=</span><span class="s">"#b6b6b6"</span> <span class="hljs-name">&gt;&lt;/suku-rating-widget&gt;</span>
 				   </code></pre>`,
-		try: true,
+	    codeSample: '<suku-rating-widget  comment-size="16" comment-color="#b6b6b6" ></suku-rating-widget>',
+	    jsonSample: '',
+	   try: true,
 		id: 4
 	},
 	{
@@ -1355,6 +1486,8 @@ export class WebComponentsServices {
 		<span class="hljs-name">&lt;suku-notification-widget</span>  <span class="na">id=</span><span class="s">"notification"</span> <span class="na">notification-title=</span><span class="s">"review bids"</span> <span class="na">notification-value=</span><span class="s">"0"</span><span class="hljs-name">&gt;
 		&lt;/suku-notification-widget&gt;</span>
 				   </code></pre>`,
+	    codeSample: '<suku-notification-widget  id="notification" notification-title="review bids" notification-value="0"></suku-notification-widget>',
+		jsonSample: '',
 		try: true,
 		id: 5
 	},
@@ -1367,6 +1500,8 @@ export class WebComponentsServices {
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-mail-widget</span> <span class="na">name=</span><span class="s">"dconway@vairog.com"</span> <span class="na">size=</span><span class="s">"14"</span> <span class="na">color=</span><span class="s">"#3e3e3e"</span><span class="hljs-name">&gt;&lt;/suku-mail-widget&gt;</span>
 				   </code></pre>`,
+		codeSample: '<suku-mail-widget name="dconway@vairog.com" size="14" color="#3e3e3e"></suku-mail-widget>',
+		jsonSample: '',
 		try: true,
 		id: 6
 	},
@@ -1377,7 +1512,9 @@ export class WebComponentsServices {
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-bid-info</span> <span class="na">bids=</span><span class="s">"374"</span> <span class="na">percent=</span><span class="s">"10%"</span> <span class="na">bid-heading=</span><span class="s">"bids"</span>  <span class="na">percent-heading=</span><span class="s">"fulfill"</span><span class="hljs-name">&gt;&lt;/suku-bid-info&gt;</span>
 				   </code></pre>`,
-		try: true,
+	   codeSample: '<suku-bid-info bids="374" percent="10%" bid-heading="bids"  percent-heading="fulfill"></suku-bid-info>',
+	   jsonSample: '',
+	   try: true,
 		id: 8
 	},
 	{
@@ -1387,6 +1524,8 @@ export class WebComponentsServices {
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-match-chip</span> <span class="na">list-name=</span><span class="s">"Super Computer"</span> <span class="na">prize=</span><span class="s">"10 SUKU"</span> <span class="na">bid-heading=</span><span class="s">"bids"</span>  <span class="na">sell=</span><span class="s">"seller"</span><span class="na">sell-v=</span><span class="s">"John Smith"</span><span class="hljs-name">&gt;
 		&lt;/suku-match-chip&gt;</span></code></pre>`,
+		codeSample: '<suku-match-chip list-name="Super Computer" prize="10 SUKU" bid-heading="bids"  sell="seller"sell-v="John Smith"></suku-match-chip>',
+		jsonSample: '',
 		try: true,
 		id: 9
 	},
@@ -1397,7 +1536,9 @@ export class WebComponentsServices {
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-card-line</span> <span class="na">title-one=</span><span class="s">"Super Computer"</span> <span class="na">msg-status =</span><span class="s">"read"</span> <span class="na">bg-color =</span><span class="s">"#ffffff"</span><span class="hljs-name">&gt;&lt;/suku-card-line&gt;</span>
 				   </code></pre>`,
-		try: true,
+	    codeSample: '<suku-card-line title-one="Super Computer" msg-status ="read" bg-color ="#ffffff"></suku-card-line>',
+	    jsonSample: '',
+	    try: true,
 		id: 10
 	},
 	{
@@ -1407,6 +1548,8 @@ export class WebComponentsServices {
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-dashboard-profile</span> <span class="na">user-name=</span><span class="s">"Emery"</span> <span class="na">title-one=</span><span class="s">"CREATE NEW LISTING"</span><span class="hljs-name">&gt;
 		&lt;/suku-dashboard-profile&gt;</span></code></pre>`,
+		codeSample: '<suku-dashboard-profile user-name="Emery" title-one="CREATE NEW LISTING"></suku-dashboard-profile>',
+		jsonSample: '',
 		try: true,
 		id: 11
 	},
@@ -1417,7 +1560,9 @@ export class WebComponentsServices {
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-tag">&lt;<span class="hljs-name">suku-nav-submenu</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-nav-submenu</span>&gt;</span>
 				   </code></pre>`,
-		try: true,
+	    codeSample: '<suku-nav-submenu></suku-nav-submenu>',
+	    jsonSample: '',
+	    try: true,
 		id: 12
 	},
 	{
@@ -1427,7 +1572,9 @@ export class WebComponentsServices {
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-progress-bar</span> <span class="na">progress-style-one=</span><span class="s">"progressCompleted"</span> <span class="na"> heading-one=</span><span class="s">"first heading"</span><span class="hljs-name">&gt;&lt;/suku-progress-bar&gt;</span>
 				   </code></pre>`,
-		try: true,
+	    codeSample: '<suku-progress-bar progress-style-one="progressCompleted"  heading-one="first heading"></suku-progress-bar>',
+	    jsonSample: '',
+	    try: true,
 		id: 13
 	},
 	{
@@ -1437,7 +1584,9 @@ export class WebComponentsServices {
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-tag">&lt;<span class="hljs-name">suku-home-italic-heading</span> <span class="na">size=</span><span class="s">"20"</span> &gt;<span class="hljs-attr"> You just created suku-heading </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-home-italic-heading</span>&gt;</span>
 				   </code></pre>`,
-		try: true,
+	    codeSample: '<suku-home-italic-heading size="20" > You just created suku-heading </suku-home-italic-heading>',
+	    jsonSample: '',
+	    try: true,
 		id: 14
 	},
 	{
@@ -1447,7 +1596,9 @@ export class WebComponentsServices {
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-tag">&lt;<span class="hljs-name">suku-link</span><span class="na"> size=</span><span class="s">"14"</span>&gt;<span class="hljs-attr"> suku-link </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-link</span>&gt;</span>
 				   </code></pre>`,
-		try: true,
+		 codeSample: '<suku-link size="14"> suku-link </suku-link>',
+	    jsonSample: '',
+	    try: true,
 		id: 15
 	},
 	{
@@ -1457,6 +1608,8 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-add-widget</span> <span class="na">size=</span><span class="s">"12"</span>&gt;<span class="hljs-attr">ADD NEW LISTING</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-add-widget</span>&gt;</span>
 			   </code></pre>`,
+    codeSample: '<suku-add-widget size="12">ADD NEW LISTING</suku-add-widget>',
+	jsonSample: '',
 	try: true,
 	id: 16
 },
@@ -1467,6 +1620,8 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-select-input</span> <span class="na">size=</span><span class="s">"16"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-select-input</span>&gt;</span>
 			   </code></pre>`,
+    codeSample: '<suku-select-input size="16" ></suku-select-input>',
+    jsonSample: '',
 	try: true,
 	id: 17
 },
@@ -1477,6 +1632,8 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-phone-widget</span> <span class="na">number=</span><span class="s">"4806069863"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-phone-widget</span>&gt;</span>
 			   </code></pre>`,
+    codeSample: '<suku-phone-widget number="4806069863" ></suku-phone-widget>',
+    jsonSample: '',
 	try: true,
 	id: 18
 },
@@ -1487,7 +1644,9 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-address-widget</span> <span class="na">size=</span><span class="s">"16"</span> &gt;<span class="hljs-attr">ADD NEW LISTING</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-address-widget</span>&gt;</span>
 			   </code></pre>`,
-	try: true,
+    codeSample: '<suku-address-widget size="16" >ADD NEW LISTING</suku-address-widget>',
+    jsonSample: '',
+    try: true,
 	id: 19
 },
 {
@@ -1497,7 +1656,9 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-inline-dropdown</span>&gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-inline-dropdown</span>&gt;</span>
 			   </code></pre>`,
-	try: true,
+    codeSample: '<suku-inline-dropdown></suku-inline-dropdown>',
+    jsonSample: '',
+    try: true,
 	id: 20
 },
 {
@@ -1507,7 +1668,9 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-home-widget</span> <span class="na">size=</span><span class="s">"16"</span> &gt;<span class="hljs-attr">home widget</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-home-widget</span>&gt;</span>
 			   </code></pre>`,
-	try: true,
+    codeSample: '<suku-home-widget size="16" >home widget</suku-home-widget>',
+    jsonSample: '',
+    try: true,
 	id: 21
 },
 {
@@ -1517,6 +1680,8 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-filters</span> <span class="na">statusTypesDynamic=</span><span class="s">"InsertArrayHere"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-filter</span>&gt;</span>
 			   </code></pre>`,
+    codeSample: '<suku-filter statusTypesDynamic="InsertArrayHere" ></suku-filter>',
+    jsonSample: '',
 	try: false,
 	id: 22
 },
@@ -1527,7 +1692,9 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-info-button</span>&gt;<span class="hljs-attr">Suku-info-button</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-info-button</span>&gt;</span>
 			   </code></pre>`,
-	try: true,
+    codeSample: '<suku-info-button>Suku-info-button</suku-info-button>',
+    jsonSample: '',
+    try: true,
 	id: 23
 },
 {
@@ -1537,6 +1704,8 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-primary-button</span>&gt;<span class="hljs-attr">Suku-primary-button</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-primary-button</span>&gt;</span>
 			   </code></pre>`,
+    codeSample: '<suku-primary-button>Suku-primary-button</suku-primary-button>',
+    jsonSample: '',
 	try: true,
 	id: 24
 },
@@ -1547,7 +1716,9 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-secondary-button</span>&gt;<span class="hljs-attr">Suku-secondary-button</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-secondary-button</span>&gt;</span>
 			   </code></pre>`,
-	try: true,
+    codeSample: '<suku-secondary-button>Suku-secondary-button</suku-secondary-button>',
+    jsonSample: '',
+    try: true,
 	id: 25
 },
 {
@@ -1557,6 +1728,8 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-default-button</span>&gt;<span class="hljs-attr">Suku-default-button</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-default-button</span>&gt;</span>
 			   </code></pre>`,
+    codeSample: '<suku-default-button>Suku-default-button</suku-default-button>',
+    jsonSample: '',
 	try: true,
 	id: 26
 },
@@ -1567,6 +1740,8 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-star-badge</span>&gt;<span class="hljs-attr"></span></span>5<span class="hljs-tag">&lt;/<span class="hljs-name">suku-star-badge</span>&gt;</span>
 			   </code></pre>`,
+    codeSample: '<suku-star-badge>5</suku-star-badge>',
+    jsonSample: '',
 	try: true,
 	id: 27
 },
@@ -1577,7 +1752,9 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-search-input</span>&gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-search-input</span>&gt;</span>
 			   </code></pre>`,
-	try: true,
+    codeSample: '<suku-search-input></suku-search-input>',
+    jsonSample: '',
+    try: true,
 	id: 28
 },
 {
@@ -1587,7 +1764,9 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-bid-tag prize="$100"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-bid-tag</span>&gt;</span>
 			   </code></pre>`,
-	try: true,
+    codeSample: '<suku-bid-tag prize="$100" ></suku-bid-tag>',
+    jsonSample: '',
+    try: true,
 	id: 29
 },
 {
@@ -1597,8 +1776,34 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-rating-star</span> <span class="na">rating-value=</span><span class="s">"4"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-rating-star</span>&gt;</span>
 			   </code></pre>`,
-	try: true,
+    codeSample: '<suku-rating-star rating-value="4" ></suku-rating-star>',
+    jsonSample: '',
+    try: true,
 	id: 30
+},
+{
+	title: 'suku-track-progress-bar',
+	description: `  Track and trace helps the user to prompt the product track details.`,
+	properties: this.Properties_DATA,
+	mockSample: `<pre><code class="language-html f14" data-lang="html">
+	<span class="hljs-tag">&lt;<span class="hljs-name">suku-track-progress-bar</span>&gt;</span><span class="hljs-tag"> &lt;/<span class="hljs-name">suku-track-progress-bar</span>&gt;</span>
+			   </code></pre>`,
+    codeSample: '<suku-track-progress-bar> </suku-track-progress-bar>',
+    jsonSample: '',
+    try: true,
+	id: 31
+},
+{
+	title: 'Suku-product-trace-widget',
+	description: `It helps the users to trace the product details`,
+	properties: this.Properties_DATA,
+	mockSample: `<pre><code class="language-html f14" data-lang="html">
+	<span class="hljs-tag">&lt;<span class="hljs-name">suku-track-progress-bar</span>&gt;</span><span class="hljs-tag"> &lt;/<span class="hljs-name">suku-track-progress-bar</span>&gt;</span>
+			   </code></pre>`,
+    codeSample: '<suku-product-trace-widget> </suku-product-trace-widget>',
+    jsonSample: '',
+    try: false,
+	id: 32
 },
 {
 	title: 'Suku-tree',
@@ -1607,8 +1812,64 @@ export class WebComponentsServices {
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-tree</span>&gt;</span><span class="hljs-tag"> &lt;/<span class="hljs-name">suku-tree</span>&gt;</span>
 			   </code></pre>`,
-	try: true,
-	id: 31
+    codeSample: '<suku-tree [tree-data]="assign your data here"></suku-tree>',
+    jsonSample: `<h4 class="text-grey">JSON-Sample: </h4><pre>[{
+		_id: '5c45b8d37bccff62b4c83e4e',
+		timestamp: '2019-01-21T11:41:31.921Z',
+		children: [ 'Lx1002', 'Lx1003' ],
+		uid: 'Lx1001',
+		product: {
+			id: '1001',
+			name: 'Intel I5 CPU QuadCore',
+			description: 'HP Laptop'
+		},
+		links: [
+			{
+				_id: '5c45b8d37bccff62b4c83e4f',
+				uid: 'Lx1000',
+				type: 'usedIn'
+			},
+			{
+				_id: '5c45bf6b7bccff62b4c83e53',
+				uid: 'Lx1002',
+				type: 'composedOf'
+			},
+			{
+				_id: '5c45bf8a7bccff62b4c83e56',
+				uid: 'Lx1003',
+				type: 'composedOf'
+			}
+		],
+		parent: 'Lx1000',
+		__v: 0,
+		depth: 0,
+		relations: [
+			{
+				_id: '5c45bf6a7bccff62b4c83e51',
+				timestamp: '2019-01-21T11:41:31.921Z',
+				children: [],
+				uid: 'Lx1002',
+				product: {
+					id: '1002',
+					name: 'Intel I5 CPU Chip',
+					description: 'CPU Chip'
+				},
+				links: [
+					{
+						_id: '5c45bf6a7bccff62b4c83e52',
+						uid: 'Lx1001',
+						type: 'usedIn'
+					}
+				],
+				parent: 'Lx1001',
+				__v: 0,
+				depth: 1,
+				relations: []
+			}
+		]
+	}]</pre>`,
+    try: true,
+	id: 33
 }
 	];
 
@@ -1735,8 +1996,16 @@ export class WebComponentsServices {
 				id: 30
 			},
 			{
-				name: 'suku-tree',
+				name: 'track-trace-progress-bar',
 				id: 31
+			},
+			{
+				name: 'suku-product-trace-widget',
+				id: 32
+			},
+			{
+				name: 'suku-tree',
+				id: 33
 			}
 		];
 	}

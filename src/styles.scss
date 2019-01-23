@@ -1,6 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+@import '~@angular/material/theming';
+@include mat-core();
+$primary: mat-palette($mat-lime, 600);
+$accent:  mat-palette($mat-light-blue, 600, 100, 800);
+$warn:    mat-palette($mat-red, 600);
+$theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
+
 @font-face {
   font-family: 'Poppins';
   src:url('./assets/fonts/poppins/Poppins.ttf.woff') format('woff'),
@@ -725,7 +733,7 @@ pre {
   stroke-width: 2px !important;
 }
 
-.tree {
+#tree {
   width:100%;
   overflow-x: scroll !important;
   direction: rtl !important;

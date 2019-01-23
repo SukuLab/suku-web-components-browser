@@ -35,7 +35,8 @@ import {
   SukuResponseComponent,
   SukuDefaultButtonComponent,
   SukuTreeComponent,
-  DynamicFormComponent
+  SukuTrackProgressBarComponent,
+  SukuTrackTraceProductSearchComponent
 } from './webcomponents/webcomponent';
 import { createCustomElement } from '@angular/elements';
 @Component({
@@ -169,13 +170,17 @@ export class AppComponent implements OnInit {
       injector : this.injector
 		});
 		customElements.define('suku-response', SukuResponse);
+		const SukuTrackTrace = createCustomElement(SukuTrackProgressBarComponent, {
+      injector : this.injector
+		});
+		customElements.define('suku-track-progress-bar', SukuTrackTrace);
 		const SukuTree = createCustomElement(SukuTreeComponent, {
       injector : this.injector
 		});
 		customElements.define('suku-tree', SukuTree);
-		// const SukuDynamicInput = createCustomElement(DynamicFormComponent, {
+		// const SukuProductTrackWiget = createCustomElement(SukuTrackTraceProductSearchComponent, {
       // injector : this.injector
 		// });
-		// customElements.define('dynamic-form', SukuDynamicInput);
+		// customElements.define('suku-product-trace-widget', SukuProductTrackWiget);
   }
 }

@@ -7,7 +7,8 @@ import {
 	ChangeDetectionStrategy,
 	ElementRef,
 	ViewChild,
-	ViewEncapsulation
+	ViewEncapsulation,
+	OnChanges
 } from '@angular/core';
 import { FormGroup, AbstractControl, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -1360,7 +1361,6 @@ export class DynamicFormComponent implements OnInit {
 }
 
 /* test components */
-
 @Component({
 	selector: 'suku-response',
 	template: `
@@ -1380,13 +1380,69 @@ export class SukuResponseComponent {
 }
 
 @Component({
+	selector: 'suku-track-progress-bar',
+	template: `
+  <table class="col-sm-6 offset-sm-3">
+  <tr class="pt-3">
+    <td class="{{progressStyleOne}} text-center">
+      <i *ngIf="(progressStyleOne == 'progressCompleted')" class="fa fa-check tickSign"></i>
+      <span *ngIf="!(progressStyleOne == 'progressCompleted')">1</span>
+    </td>
+    <td>
+      <hr class="hrLine">
+    </td>
+    <td class="{{progressStyleTwo}} text-center">
+    <i *ngIf="(progressStyleTwo == 'progressCompleted')" class="fa fa-check tickSign"></i>
+    <span *ngIf="!(progressStyleTwo == 'progressCompleted')">2</span>
+  </td>
+    <td>
+      <hr class="hrLine">
+    </td>
+    <td class="{{progressStyleThree}} text-center">
+    <i *ngIf="(progressStyleThree == 'progressCompleted')" class="fa fa-check tickSign"></i>
+    <span *ngIf="!(progressStyleThree == 'progressCompleted')">3</span>
+  </td>
+  </tr>
+</table>
+<table class="col-sm-8 offset-sm-2 text-center">
+<tr id="txt">
+	<td class="{{customHeadingOneClass}} progressTitle pt-3">
+		{{headingOne}}
+	</td>
+	<td class="{{customHeadingTwoClass}} progressTitle pt-3">
+		{{headingTwo}}
+	</td>
+	<td class="{{customHeadingThreeClass}} progressTitle pt-3">
+	{{headingThree}}
+	</td>
+</tr>
+</table>
+`,
+	styleUrls: ['./webcomponents.scss']
+})
+export class SukuTrackProgressBarComponent {
+	@Input('progress-style-one') progressStyleOne = 'progressCompleted';
+	@Input('progress-style-two') progressStyleTwo = 'progressActive';
+	@Input('progress-style-three') progressStyleThree = 'progressUpcoming';
+	@Input() headingOne = 'SELECT A PRODUCT';
+	@Input() headingTwo = 'TRACE COMPONENTS';
+	@Input() headingThree = 'SHOW TRACE';
+	@Input() headingOneId = 'firstHeading';
+	@Input() headingTwoId = 'secondHeading';
+	@Input() headingThreeId = 'thirdHeading';
+	@Input('custom-heading-one-class') customHeadingOneClass = '';
+	@Input('custom-heading-two-class') customHeadingTwoClass = '';
+	@Input('custom-heading-three-class') customHeadingThreeClass = '';
+}
+
+@Component({
 	selector: 'suku-tree',
 	template: `<div class="tree"></div>`,
 	styleUrls: [ './webcomponents.scss' ],
 	encapsulation: ViewEncapsulation.Emulated
 })
 export class SukuTreeComponent implements OnInit {
-	@Input('tree-data') treeDataFromApi: Array<string>;
+	@Input('tree-data') treeDataFromApi;
 	// trace tree
 	tree;
 	root;
@@ -1405,145 +1461,1009 @@ export class SukuTreeComponent implements OnInit {
 	data: any;
 	testd: number;
 	childCount: number = 0;
+	max: any = 0;
+	tree1: any;
+	max1: number = 0;
+	treeDataApi = [
+		{
+			uid: 'Lx1000',
+			timestamp: '2019-01-21T11:41:31.921Z',
+			product: {
+				id: '1000',
+				name: 'HP Pavilion DV6',
+				description: 'HP Laptop'
+			},
+			parent: '',
+			children: [ 'Lx1001', 'Lx2000' ],
+			graphLinks: [
+				{
+					_id: '5c45c0a07bccff62b4c83e63',
+					timestamp: '2019-01-21T11:41:31.921Z',
+					children: [],
+					uid: 'Lx1008',
+					product: {
+						id: '1008',
+						name: 'Fan Speed Controller Board',
+						description: 'Motor Board'
+					},
+					links: [
+						{
+							_id: '5c45c0a07bccff62b4c83e64',
+							uid: 'Lx1005',
+							type: 'usedIn'
+						}
+					],
+					parent: 'Lx1005',
+					__v: 0,
+					depth: 3,
+					relations: []
+				},
+				{
+					_id: '5c45bf897bccff62b4c83e54',
+					timestamp: '2019-01-21T11:41:31.921Z',
+					children: [ 'Lx1004', 'Lx1005' ],
+					uid: 'Lx1003',
+					product: {
+						id: '1003',
+						name: 'Intel CPU Cooler',
+						description: 'CPU Cooler'
+					},
+					links: [
+						{
+							_id: '5c45bf897bccff62b4c83e55',
+							uid: 'Lx1001',
+							type: 'usedIn'
+						},
+						{
+							_id: '5c45bfc47bccff62b4c83e59',
+							uid: 'Lx1004',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c45bfe67bccff62b4c83e5c',
+							uid: 'Lx1005',
+							type: 'composedOf'
+						}
+					],
+					parent: 'Lx1001',
+					__v: 0,
+					depth: 1,
+					relations: [
+						{
+							_id: '5c45bfc47bccff62b4c83e57',
+							timestamp: '2019-01-21T11:41:31.921Z',
+							children: [],
+							uid: 'Lx1004',
+							product: {
+								id: '1004',
+								name: 'CPU HeatSink',
+								description: 'HeatSink'
+							},
+							links: [
+								{
+									_id: '5c45bfc47bccff62b4c83e58',
+									uid: 'Lx1003',
+									type: 'usedIn'
+								}
+							],
+							parent: 'Lx1003',
+							__v: 0,
+							depth: 2,
+							relations: []
+						}
+					]
+				},
+				{
+					_id: '5c45bf6a7bccff62b4c83e51',
+					timestamp: '2019-01-21T11:41:31.921Z',
+					children: [],
+					uid: 'Lx1002',
+					product: {
+						id: '1002',
+						name: 'Intel I5 CPU Chip',
+						description: 'CPU Chip'
+					},
+					links: [
+						{
+							_id: '5c45bf6a7bccff62b4c83e52',
+							uid: 'Lx1001',
+							type: 'usedIn'
+						}
+					],
+					parent: 'Lx1001',
+					__v: 0,
+					depth: 1,
+					relations: []
+				},
+				{
+					_id: '5c45b8d37bccff62b4c83e4e',
+					timestamp: '2019-01-21T11:41:31.921Z',
+					children: [ 'Lx1002', 'Lx1003' ],
+					uid: 'Lx1001',
+					product: {
+						id: '1001',
+						name: 'Intel I5 CPU QuadCore',
+						description: 'HP Laptop'
+					},
+					links: [
+						{
+							_id: '5c45b8d37bccff62b4c83e4f',
+							uid: 'Lx1000',
+							type: 'usedIn'
+						},
+						{
+							_id: '5c45bf6b7bccff62b4c83e53',
+							uid: 'Lx1002',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c45bf8a7bccff62b4c83e56',
+							uid: 'Lx1003',
+							type: 'composedOf'
+						}
+					],
+					parent: 'Lx1000',
+					__v: 0,
+					depth: 0,
+					relations: [
+						{
+							_id: '5c45bf6a7bccff62b4c83e51',
+							timestamp: '2019-01-21T11:41:31.921Z',
+							children: [],
+							uid: 'Lx1002',
+							product: {
+								id: '1002',
+								name: 'Intel I5 CPU Chip',
+								description: 'CPU Chip'
+							},
+							links: [
+								{
+									_id: '5c45bf6a7bccff62b4c83e52',
+									uid: 'Lx1001',
+									type: 'usedIn'
+								}
+							],
+							parent: 'Lx1001',
+							__v: 0,
+							depth: 1,
+							relations: []
+						},
+						{
+							_id: '5c45bf897bccff62b4c83e54',
+							timestamp: '2019-01-21T11:41:31.921Z',
+							children: [ 'Lx1004', 'Lx1005' ],
+							uid: 'Lx1003',
+							product: {
+								id: '1003',
+								name: 'Intel CPU Cooler',
+								description: 'CPU Cooler'
+							},
+							links: [
+								{
+									_id: '5c45bf897bccff62b4c83e55',
+									uid: 'Lx1001',
+									type: 'usedIn'
+								},
+								{
+									_id: '5c45bfc47bccff62b4c83e59',
+									uid: 'Lx1004',
+									type: 'composedOf'
+								},
+								{
+									_id: '5c45bfe67bccff62b4c83e5c',
+									uid: 'Lx1005',
+									type: 'composedOf'
+								}
+							],
+							parent: 'Lx1001',
+							__v: 0,
+							depth: 1,
+							relations: [
+								{
+									_id: '5c45bfc47bccff62b4c83e57',
+									timestamp: '2019-01-21T11:41:31.921Z',
+									children: [],
+									uid: 'Lx1004',
+									product: {
+										id: '1004',
+										name: 'CPU HeatSink',
+										description: 'HeatSink'
+									},
+									links: [
+										{
+											_id: '5c45bfc47bccff62b4c83e58',
+											uid: 'Lx1003',
+											type: 'usedIn'
+										}
+									],
+									parent: 'Lx1003',
+									__v: 0,
+									depth: 2,
+									relations: []
+								},
+								{
+									_id: '5c45bfe67bccff62b4c83e5a',
+									timestamp: '2019-01-21T11:41:31.921Z',
+									children: [ 'Lx1006', 'Lx1007', 'Lx1008' ],
+									uid: 'Lx1005',
+									product: {
+										id: '1005',
+										name: 'CPU Fan',
+										description: 'Fan'
+									},
+									links: [
+										{
+											_id: '5c45bfe67bccff62b4c83e5b',
+											uid: 'Lx1003',
+											type: 'usedIn'
+										},
+										{
+											_id: '5c45c0177bccff62b4c83e5f',
+											uid: 'Lx1006',
+											type: 'composedOf'
+										},
+										{
+											_id: '5c45c0657bccff62b4c83e62',
+											uid: 'Lx1007',
+											type: 'composedOf'
+										},
+										{
+											_id: '5c45c0a07bccff62b4c83e65',
+											uid: 'Lx1008',
+											type: 'composedOf'
+										}
+									],
+									parent: 'Lx1003',
+									__v: 0,
+									depth: 2,
+									relations: [
+										{
+											_id: '5c45c0177bccff62b4c83e5d',
+											timestamp: '2019-01-21T11:41:31.921Z',
+											children: [],
+											uid: 'Lx1006',
+											product: {
+												id: '1006',
+												name: 'Fan Blade',
+												description: 'Fan Blade'
+											},
+											links: [
+												{
+													_id: '5c45c0177bccff62b4c83e5e',
+													uid: 'Lx1005',
+													type: 'usedIn'
+												}
+											],
+											parent: 'Lx1005',
+											__v: 0,
+											depth: 3,
+											relations: []
+										},
+										{
+											_id: '5c45c0647bccff62b4c83e60',
+											timestamp: '2019-01-21T11:41:31.921Z',
+											children: [],
+											uid: 'Lx1007',
+											product: {
+												id: '1007',
+												name: 'Brushless DC Motor',
+												description: 'DC Motor'
+											},
+											links: [
+												{
+													_id: '5c45c0647bccff62b4c83e61',
+													uid: 'Lx1005',
+													type: 'usedIn'
+												}
+											],
+											parent: 'Lx1005',
+											__v: 0,
+											depth: 3,
+											relations: []
+										},
+										{
+											_id: '5c45c0a07bccff62b4c83e63',
+											timestamp: '2019-01-21T11:41:31.921Z',
+											children: [],
+											uid: 'Lx1008',
+											product: {
+												id: '1008',
+												name: 'Fan Speed Controller Board',
+												description: 'Motor Board'
+											},
+											links: [
+												{
+													_id: '5c45c0a07bccff62b4c83e64',
+													uid: 'Lx1005',
+													type: 'usedIn'
+												}
+											],
+											parent: 'Lx1005',
+											__v: 0,
+											depth: 3,
+											relations: []
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					_id: '5c45c1ba7bccff62b4c83e66',
+					timestamp: '2019-01-21T11:41:31.921Z',
+					children: [ 'Lx2001', 'Lx2002' ],
+					uid: 'Lx2000',
+					product: {
+						id: '2000',
+						name: 'WD HDD 1B',
+						description: 'Western Digital Darddisk'
+					},
+					links: [
+						{
+							_id: '5c45c1ba7bccff62b4c83e67',
+							uid: 'Lx1000',
+							type: 'usedIn'
+						},
+						{
+							_id: '5c45c3777bccff62b4c83e6b',
+							uid: 'Lx2001',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c45c3a87bccff62b4c83e6e',
+							uid: 'Lx2002',
+							type: 'composedOf'
+						}
+					],
+					parent: 'Lx1000',
+					__v: 0,
+					depth: 0,
+					relations: [
+						{
+							_id: '5c45c3777bccff62b4c83e69',
+							timestamp: '2019-01-21T11:41:31.921Z',
+							children: [],
+							uid: 'Lx2001',
+							product: {
+								id: '2001',
+								name: 'Platter',
+								description: 'platter Disk'
+							},
+							links: [
+								{
+									_id: '5c45c3777bccff62b4c83e6a',
+									uid: 'Lx2000',
+									type: 'usedIn'
+								}
+							],
+							parent: 'Lx2000',
+							__v: 0,
+							depth: 1,
+							relations: []
+						},
+						{
+							_id: '5c45c3a87bccff62b4c83e6c',
+							timestamp: '2019-01-21T11:41:31.921Z',
+							children: [],
+							uid: 'Lx2002',
+							product: {
+								id: '2002',
+								name: 'RW Arm assembly',
+								description: 'RW Arm assembly'
+							},
+							links: [
+								{
+									_id: '5c45c3a87bccff62b4c83e6d',
+									uid: 'Lx2000',
+									type: 'usedIn'
+								}
+							],
+							parent: 'Lx2000',
+							__v: 0,
+							depth: 1,
+							relations: []
+						}
+					]
+				},
+				{
+					_id: '5c45c3a87bccff62b4c83e6c',
+					timestamp: '2019-01-21T11:41:31.921Z',
+					children: [],
+					uid: 'Lx2002',
+					product: {
+						id: '2002',
+						name: 'RW Arm assembly',
+						description: 'RW Arm assembly'
+					},
+					links: [
+						{
+							_id: '5c45c3a87bccff62b4c83e6d',
+							uid: 'Lx2000',
+							type: 'usedIn'
+						}
+					],
+					parent: 'Lx2000',
+					__v: 0,
+					depth: 1,
+					relations: []
+				},
+				{
+					_id: '5c45c3777bccff62b4c83e69',
+					timestamp: '2019-01-21T11:41:31.921Z',
+					children: [],
+					uid: 'Lx2001',
+					product: {
+						id: '2001',
+						name: 'Platter',
+						description: 'platter Disk'
+					},
+					links: [
+						{
+							_id: '5c45c3777bccff62b4c83e6a',
+							uid: 'Lx2000',
+							type: 'usedIn'
+						}
+					],
+					parent: 'Lx2000',
+					__v: 0,
+					depth: 1,
+					relations: []
+				},
+				{
+					_id: '5c45bfc47bccff62b4c83e57',
+					timestamp: '2019-01-21T11:41:31.921Z',
+					children: [],
+					uid: 'Lx1004',
+					product: {
+						id: '1004',
+						name: 'CPU HeatSink',
+						description: 'HeatSink'
+					},
+					links: [
+						{
+							_id: '5c45bfc47bccff62b4c83e58',
+							uid: 'Lx1003',
+							type: 'usedIn'
+						}
+					],
+					parent: 'Lx1003',
+					__v: 0,
+					depth: 2,
+					relations: []
+				},
+				{
+					_id: '5c45c0647bccff62b4c83e60',
+					timestamp: '2019-01-21T11:41:31.921Z',
+					children: [],
+					uid: 'Lx1007',
+					product: {
+						id: '1007',
+						name: 'Brushless DC Motor',
+						description: 'DC Motor'
+					},
+					links: [
+						{
+							_id: '5c45c0647bccff62b4c83e61',
+							uid: 'Lx1005',
+							type: 'usedIn'
+						}
+					],
+					parent: 'Lx1005',
+					__v: 0,
+					depth: 3,
+					relations: []
+				},
+				{
+					_id: '5c45bfe67bccff62b4c83e5a',
+					timestamp: '2019-01-21T11:41:31.921Z',
+					children: [ 'Lx1006', 'Lx1007', 'Lx1008' ],
+					uid: 'Lx1005',
+					product: {
+						id: '1005',
+						name: 'CPU Fan',
+						description: 'Fan'
+					},
+					links: [
+						{
+							_id: '5c45bfe67bccff62b4c83e5b',
+							uid: 'Lx1003',
+							type: 'usedIn'
+						},
+						{
+							_id: '5c45c0177bccff62b4c83e5f',
+							uid: 'Lx1006',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c45c0657bccff62b4c83e62',
+							uid: 'Lx1007',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c45c0a07bccff62b4c83e65',
+							uid: 'Lx1008',
+							type: 'composedOf'
+						}
+					],
+					parent: 'Lx1003',
+					__v: 0,
+					depth: 2,
+					relations: [
+						{
+							_id: '5c45c0177bccff62b4c83e5d',
+							timestamp: '2019-01-21T11:41:31.921Z',
+							children: [],
+							uid: 'Lx1006',
+							product: {
+								id: '1006',
+								name: 'Fan Blade',
+								description: 'Fan Blade'
+							},
+							links: [
+								{
+									_id: '5c45c0177bccff62b4c83e5e',
+									uid: 'Lx1005',
+									type: 'usedIn'
+								}
+							],
+							parent: 'Lx1005',
+							__v: 0,
+							depth: 3,
+							relations: []
+						},
+						{
+							_id: '5c45c0647bccff62b4c83e60',
+							timestamp: '2019-01-21T11:41:31.921Z',
+							children: [],
+							uid: 'Lx1007',
+							product: {
+								id: '1007',
+								name: 'Brushless DC Motor',
+								description: 'DC Motor'
+							},
+							links: [
+								{
+									_id: '5c45c0647bccff62b4c83e61',
+									uid: 'Lx1005',
+									type: 'usedIn'
+								}
+							],
+							parent: 'Lx1005',
+							__v: 0,
+							depth: 3,
+							relations: []
+						},
+						{
+							_id: '5c45c0a07bccff62b4c83e63',
+							timestamp: '2019-01-21T11:41:31.921Z',
+							children: [],
+							uid: 'Lx1008',
+							product: {
+								id: '1008',
+								name: 'Fan Speed Controller Board',
+								description: 'Motor Board'
+							},
+							links: [
+								{
+									_id: '5c45c0a07bccff62b4c83e64',
+									uid: 'Lx1005',
+									type: 'usedIn'
+								}
+							],
+							parent: 'Lx1005',
+							__v: 0,
+							depth: 3,
+							relations: []
+						}
+					]
+				},
+				{
+					_id: '5c45c0177bccff62b4c83e5d',
+					timestamp: '2019-01-21T11:41:31.921Z',
+					children: [],
+					uid: 'Lx1006',
+					product: {
+						id: '1006',
+						name: 'Fan Blade',
+						description: 'Fan Blade'
+					},
+					links: [
+						{
+							_id: '5c45c0177bccff62b4c83e5e',
+							uid: 'Lx1005',
+							type: 'usedIn'
+						}
+					],
+					parent: 'Lx1005',
+					__v: 0,
+					depth: 3,
+					relations: []
+				}
+			],
+			links: [
+				{
+					_id: '5c45b8d37bccff62b4c83e50',
+					uid: 'Lx1001',
+					type: 'composedOf'
+				},
+				{
+					_id: '5c45c1ba7bccff62b4c83e68',
+					uid: 'Lx2000',
+					type: 'composedOf'
+				}
+			],
+			relations: [
+				{
+					_id: '5c45b8d37bccff62b4c83e4e',
+					timestamp: '2019-01-21T11:41:31.921Z',
+					children: [ 'Lx1002', 'Lx1003' ],
+					uid: 'Lx1001',
+					product: {
+						id: '1001',
+						name: 'Intel I5 CPU QuadCore',
+						description: 'HP Laptop'
+					},
+					links: [
+						{
+							_id: '5c45b8d37bccff62b4c83e4f',
+							uid: 'Lx1000',
+							type: 'usedIn'
+						},
+						{
+							_id: '5c45bf6b7bccff62b4c83e53',
+							uid: 'Lx1002',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c45bf8a7bccff62b4c83e56',
+							uid: 'Lx1003',
+							type: 'composedOf'
+						}
+					],
+					parent: 'Lx1000',
+					__v: 0,
+					depth: 0,
+					relations: [
+						{
+							_id: '5c45bf6a7bccff62b4c83e51',
+							timestamp: '2019-01-21T11:41:31.921Z',
+							children: [],
+							uid: 'Lx1002',
+							product: {
+								id: '1002',
+								name: 'Intel I5 CPU Chip',
+								description: 'CPU Chip'
+							},
+							links: [
+								{
+									_id: '5c45bf6a7bccff62b4c83e52',
+									uid: 'Lx1001',
+									type: 'usedIn'
+								}
+							],
+							parent: 'Lx1001',
+							__v: 0,
+							depth: 1,
+							relations: []
+						},
+						{
+							_id: '5c45bf897bccff62b4c83e54',
+							timestamp: '2019-01-21T11:41:31.921Z',
+							children: [ 'Lx1004', 'Lx1005' ],
+							uid: 'Lx1003',
+							product: {
+								id: '1003',
+								name: 'Intel CPU Cooler',
+								description: 'CPU Cooler'
+							},
+							links: [
+								{
+									_id: '5c45bf897bccff62b4c83e55',
+									uid: 'Lx1001',
+									type: 'usedIn'
+								},
+								{
+									_id: '5c45bfc47bccff62b4c83e59',
+									uid: 'Lx1004',
+									type: 'composedOf'
+								},
+								{
+									_id: '5c45bfe67bccff62b4c83e5c',
+									uid: 'Lx1005',
+									type: 'composedOf'
+								}
+							],
+							parent: 'Lx1001',
+							__v: 0,
+							depth: 1,
+							relations: [
+								{
+									_id: '5c45bfc47bccff62b4c83e57',
+									timestamp: '2019-01-21T11:41:31.921Z',
+									children: [],
+									uid: 'Lx1004',
+									product: {
+										id: '1004',
+										name: 'CPU HeatSink',
+										description: 'HeatSink'
+									},
+									links: [
+										{
+											_id: '5c45bfc47bccff62b4c83e58',
+											uid: 'Lx1003',
+											type: 'usedIn'
+										}
+									],
+									parent: 'Lx1003',
+									__v: 0,
+									depth: 2,
+									relations: []
+								},
+								{
+									_id: '5c45bfe67bccff62b4c83e5a',
+									timestamp: '2019-01-21T11:41:31.921Z',
+									children: [ 'Lx1006', 'Lx1007', 'Lx1008' ],
+									uid: 'Lx1005',
+									product: {
+										id: '1005',
+										name: 'CPU Fan',
+										description: 'Fan'
+									},
+									links: [
+										{
+											_id: '5c45bfe67bccff62b4c83e5b',
+											uid: 'Lx1003',
+											type: 'usedIn'
+										},
+										{
+											_id: '5c45c0177bccff62b4c83e5f',
+											uid: 'Lx1006',
+											type: 'composedOf'
+										},
+										{
+											_id: '5c45c0657bccff62b4c83e62',
+											uid: 'Lx1007',
+											type: 'composedOf'
+										},
+										{
+											_id: '5c45c0a07bccff62b4c83e65',
+											uid: 'Lx1008',
+											type: 'composedOf'
+										}
+									],
+									parent: 'Lx1003',
+									__v: 0,
+									depth: 2,
+									relations: []
+								}
+							]
+						}
+					]
+				},
+				{
+					_id: '5c45c1ba7bccff62b4c83e66',
+					timestamp: '2019-01-21T11:41:31.921Z',
+					children: [ 'Lx2001', 'Lx2002' ],
+					uid: 'Lx2000',
+					product: {
+						id: '2000',
+						name: 'WD HDD 1B',
+						description: 'Western Digital Darddisk'
+					},
+					links: [
+						{
+							_id: '5c45c1ba7bccff62b4c83e67',
+							uid: 'Lx1000',
+							type: 'usedIn'
+						},
+						{
+							_id: '5c45c3777bccff62b4c83e6b',
+							uid: 'Lx2001',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c45c3a87bccff62b4c83e6e',
+							uid: 'Lx2002',
+							type: 'composedOf'
+						}
+					],
+					parent: 'Lx1000',
+					__v: 0,
+					depth: 0,
+					relations: [
+						{
+							_id: '5c45c3777bccff62b4c83e69',
+							timestamp: '2019-01-21T11:41:31.921Z',
+							children: [],
+							uid: 'Lx2001',
+							product: {
+								id: '2001',
+								name: 'Platter',
+								description: 'platter Disk'
+							},
+							links: [
+								{
+									_id: '5c45c3777bccff62b4c83e6a',
+									uid: 'Lx2000',
+									type: 'usedIn'
+								}
+							],
+							parent: 'Lx2000',
+							__v: 0,
+							depth: 1,
+							relations: []
+						},
+						{
+							_id: '5c45c3a87bccff62b4c83e6c',
+							timestamp: '2019-01-21T11:41:31.921Z',
+							children: [],
+							uid: 'Lx2002',
+							product: {
+								id: '2002',
+								name: 'RW Arm assembly',
+								description: 'RW Arm assembly'
+							},
+							links: [
+								{
+									_id: '5c45c3a87bccff62b4c83e6d',
+									uid: 'Lx2000',
+									type: 'usedIn'
+								}
+							],
+							parent: 'Lx2000',
+							__v: 0,
+							depth: 1,
+							relations: []
+						}
+					]
+				}
+			],
+			depth: -1
+		}
+	];
+
+	treeData = [
+		{
+			uid: '1000',
+			product: {
+				id: '1000',
+				name: 'item Ax1000',
+				description: 'item A'
+			},
+			links: [
+				{
+					_id: '5c388e4f3bd185b35410bcd4',
+					uid: '1002',
+					type: 'composedOf'
+				},
+				{
+					_id: '5c388e4f3bd185b35410bcd3',
+					uid: '1003',
+					type: 'composedOf'
+				}
+			],
+			timestamp: '2019-01-11T12:38:15.895Z',
+			childrens: [
+				{
+					uid: '1002',
+					product: {
+						id: '1002',
+						name: 'item Bx1002',
+						description: 'item B'
+					},
+					links: [
+						{
+							_id: '5c388e833bd185b35410bcd6',
+							uid: '1001',
+							type: 'usedIn'
+						}
+					],
+					timestamp: '2019-01-11T12:38:15.895Z',
+					childrens: []
+				},
+				{
+					uid: '1003',
+					product: {
+						id: '1003',
+						name: 'item Cx1003',
+						description: 'item C'
+					},
+					links: [
+						{
+							_id: '5c388ee13bd185b35410bcda',
+							uid: '1001',
+							type: 'usedIn'
+						},
+						{
+							_id: '5c388ee13bd185b35410bcd9',
+							uid: '1004',
+							type: 'composedOf'
+						},
+						{
+							_id: '5c388ee13bd185b35410bcd8',
+							uid: '1005',
+							type: 'composedOf'
+						}
+					],
+					timestamp: '2019-01-11T12:38:15.895Z',
+					childrens: [
+						{
+							uid: '1004',
+							product: {
+								id: '1004',
+								name: 'item Dx1004',
+								description: 'item D'
+							},
+							links: [
+								{
+									_id: '5c388f8c3bd185b35410bce0',
+									uid: '1003',
+									type: 'usedIn'
+								},
+								{
+									_id: '5c388f8c3bd185b35410bcdf',
+									uid: '1006',
+									type: 'composedOf'
+								},
+								{
+									_id: '5c388f8c3bd185b35410bcde',
+									uid: '1007',
+									type: 'composedOf'
+								}
+							],
+							timestamp: '2019-01-11T12:38:15.895Z',
+							childrens: []
+						},
+						{
+							uid: '1005',
+							product: {
+								id: '1005',
+								name: 'item Ex1005',
+								description: 'item E'
+							},
+							links: [
+								{
+									_id: '5c388f333bd185b35410bcdc',
+									uid: '1003',
+									type: 'usedIn'
+								}
+							],
+							timestamp: '2019-01-11T12:38:15.895Z',
+							childrens: [
+								{
+									uid: '1005',
+									product: {
+										id: '1005',
+										name: 'item Ex1006',
+										description: 'item E'
+									},
+									links: [
+										{
+											_id: '5c388f333bd185b35410bcdc',
+											uid: '1003',
+											type: 'usedIn'
+										}
+									],
+									timestamp: '2019-01-11T12:38:15.895Z',
+									childrens: []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	];
 
 	ngOnInit() {
-		this.constructTree();
+		if (this.treeData) {
+			this.constructTree();
+		}
 	}
 
 	constructTree() {
-		// const treeData = (this.treeDataFromApi);
-		const treeData = [
-			{
-				uid: '1000',
-				product: {
-					id: '1000',
-					name: 'item Ax1000',
-					description: 'item A'
-				},
-				links: [
-					{
-						_id: '5c388e4f3bd185b35410bcd4',
-						uid: '1002',
-						type: 'composedOf'
-					},
-					{
-						_id: '5c388e4f3bd185b35410bcd3',
-						uid: '1003',
-						type: 'composedOf'
-					}
-				],
-				timestamp: '2019-01-11T12:38:15.895Z',
-				childrens: [
-					{
-						uid: '1002',
-						product: {
-							id: '1002',
-							name: 'item Bx1002',
-							description: 'item B'
-						},
-						links: [
-							{
-								_id: '5c388e833bd185b35410bcd6',
-								uid: '1001',
-								type: 'usedIn'
-							}
-						],
-						timestamp: '2019-01-11T12:38:15.895Z',
-						childrens: []
-					},
-					{
-						uid: '1003',
-						product: {
-							id: '1003',
-							name: 'item Cx1003',
-							description: 'item C'
-						},
-						links: [
-							{
-								_id: '5c388ee13bd185b35410bcda',
-								uid: '1001',
-								type: 'usedIn'
-							},
-							{
-								_id: '5c388ee13bd185b35410bcd9',
-								uid: '1004',
-								type: 'composedOf'
-							},
-							{
-								_id: '5c388ee13bd185b35410bcd8',
-								uid: '1005',
-								type: 'composedOf'
-							}
-						],
-						timestamp: '2019-01-11T12:38:15.895Z',
-						childrens: [
-							{
-								uid: '1004',
-								product: {
-									id: '1004',
-									name: 'item Dx1004',
-									description: 'item D'
-								},
-								links: [
-									{
-										_id: '5c388f8c3bd185b35410bce0',
-										uid: '1003',
-										type: 'usedIn'
-									},
-									{
-										_id: '5c388f8c3bd185b35410bcdf',
-										uid: '1006',
-										type: 'composedOf'
-									},
-									{
-										_id: '5c388f8c3bd185b35410bcde',
-										uid: '1007',
-										type: 'composedOf'
-									}
-								],
-								timestamp: '2019-01-11T12:38:15.895Z',
-								childrens: []
-							},
-							{
-								uid: '1005',
-								product: {
-									id: '1005',
-									name: 'item Ex1005',
-									description: 'item E'
-								},
-								links: [
-									{
-										_id: '5c388f333bd185b35410bcdc',
-										uid: '1003',
-										type: 'usedIn'
-									}
-								],
-								timestamp: '2019-01-11T12:38:15.895Z',
-								childrens: [
-									{
-										uid: '1005',
-										product: {
-											id: '1005',
-											name: 'item Ex1006',
-											description: 'item E'
-										},
-										links: [
-											{
-												_id: '5c388f333bd185b35410bcdc',
-												uid: '1003',
-												type: 'usedIn'
-											}
-										],
-										timestamp: '2019-01-11T12:38:15.895Z',
-										childrens: []
-									}
-								]
-							}
-						]
-					}
-				]
-			}
-		];
+		const treeData = this.treeDataApi;
 		this.i = 0;
 		this.testd = 0;
 		if (treeData) {
@@ -1551,7 +2471,7 @@ export class SukuTreeComponent implements OnInit {
 				.tree()
 				.separation((a, b) => (a.parent === b.parent ? 5 : 5.25))
 				.children((d) => {
-					return d.childrens;
+					return d.relations;
 				})
 				.size([ this.height, this.width ]);
 
@@ -1663,4 +2583,122 @@ export class SukuTreeComponent implements OnInit {
 				);
 			});
 	}
+}
+
+
+@Component({
+	selector: 'suku-product-trace-widget',
+	template: `
+	<span [formGroup]="form">
+	<div class=" product-boxContent">
+			<div class="col-sm-12 prizeHead pl-0">
+					{{headName}}
+			</div>
+			<div class="col-sm-12 prizesubHead pl-0">
+					{{subHeadName}}
+			</div>
+	</div>
+	<div class="col-sm-12 mt-2 pt-4 pb-4 RectangleBorder">
+			<div class="col-sm-12 productName pb-3">
+					{{name}}
+			</div>
+			<div class="col-sm-12 pb-2 pl-3 p-0 searchBorderBox">
+					<input type="text" #search class="searchBorderStyles" formControlName="{{control}}" name="{{control}}"
+					 placeholder="search"	(keyup)="searchFun.emit(isSearch)">
+					<span class="m-1"><i class="fa fa-search" style="font-size:22px;color:#b6b6b6;"></i></span>
+			</div>
+			<p class="resultCount" *ngIf="_result == 'true'">
+			{{productdetails?.length}} products found with the above number. </p>
+			<div *ngIf="_visible == 'false'">
+			<p class="responseInfo" *ngIf="productdetails?.length > 0 ? true : false ">please select one</p>
+				 <div class="heightTab" id="scrollDiv">
+				  <div class="col" *ngFor="let products of productdetails">
+						<mat-radio-button color="primary" class="searchData f13" value="2"
+						 (click)="selectproducts.emit(products)" (click)="showSelectedPro(products)">
+						 {{products.product.description}}<br>
+						 {{products.product.name}}<br></mat-radio-button>
+						<hr>
+				 </div>
+				</div>
+		</div>
+		<div class="col-sm-12 mb-2 text-center pt-3 mt-3 pb-1">
+		<span class="pt-2">
+    <a *ngIf="_visible == 'true'" id="searchForProduct" class="trackBtn c-pointer btn-info f14"
+        (click)="searchByProduct.emit()"> Search for product </a>
+		<a *ngIf="_visible == 'false'" [ngClass]="{'disabled': _disableBtn =='false' }"
+		    id="tracetheProduct"
+        class="trackBtn  c-pointer btn-info f14" (click)="traceproduct.emit(1)"> trace the
+				product </a>
+			</span>
+	</div>
+	</div>
+	</span>
+	`,
+	styleUrls: [ './webcomponents.scss' ],
+	changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class SukuTrackTraceProductSearchComponent {
+	@Input() form: FormGroup;
+	val = true;
+	val2 = false;
+	_visible;
+	_data;
+	_disableBtn;
+	selectedItem;
+	isSearch = false;
+	_result;
+	@Input('head-name') headName;
+	@Input('sub-Head-Name') subHeadName;
+	@Input() name;
+	@Input() control;
+	@Output() searchFun = new EventEmitter();
+	@Output() selectproducts = new EventEmitter();
+	@Output() searchByProduct = new EventEmitter();
+	@Output() traceproduct = new EventEmitter();
+	@Input()
+	get disableBtn() {
+		return this._disableBtn;
+	}
+	set disableBtn(val) {
+		this._disableBtn = val;
+		console.log("disableBtn", this._disableBtn);
+	}
+
+	@Input()
+	get productdetails() {
+		return this._data;
+	}
+	set productdetails(val) {
+		if (val) {
+			this._data = JSON.parse(val);
+		}
+	}
+
+	@Input()
+	get result() {
+		return this._result;
+	}
+	set result(res) {
+		 this._result = res;
+	}
+
+	searchEnabled() {
+		this.isSearch = ! this.isSearch;
+	}
+
+	@Input('visible')
+	get visible() {
+		console.log('data', this._visible);
+		return this._visible;
+	}
+
+	set visible(val) {
+		this._visible = val;
+		console.log('Setting date: ' + val);
+	}
+
+	showSelectedPro(newValue) {
+		this.selectedItem = newValue;
+	}
+
 }

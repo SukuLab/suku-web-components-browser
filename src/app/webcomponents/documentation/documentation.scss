@@ -442,7 +442,7 @@ button {
 
 .copied::after {
   position: absolute;
-  top: 80%;
+  top: 70%;
   right: 5%;
   display: block;
   content: "copied";
@@ -468,4 +468,28 @@ button {
   100% {
     opacity: 0;
   }
+}
+.link{
+  font-family: 'Encode Sans', sans-serif !important;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #b6b6b6;
+ }
+ 
+ textarea#datas {
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-size: 14px;
+}
+
+.ace_content {
+  color: rgba(171, 203, 39, 0.92);
+  font-size: 13px;
+}
+.c-pointer{
+ cursor: pointer;
 }

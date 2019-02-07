@@ -190,7 +190,7 @@ export class SukuAddWidgetComponent {
 	styleUrls: [ './webcomponents.scss' ]
 })
 export class SukuMailWidgetComponent {
-	@Input() name = 'dconway@vairog.com';
+	@Input() name = 'dconway@suku.world';
 	@Input() size = '14';
 	@Input() color = '#3e3e3e';
 	@Input() weight = '500';
@@ -1256,7 +1256,7 @@ export class SukuMatchChipComponent {
 })
 export class SukuProfileWidgetComponent {
 	@Input() image = '../../assets/images/browser.png';
-	@Input('user-name') userName = 'Vairog';
+	@Input('user-name') userName = 'Suku';
 	@Input('name-weight') nameweight = '400';
 	@Input('name-customclass') namecustomclass = 'mb-0 mt-1 pl-1';
 	@Input('name-size') namesize = '33.4';

@@ -1459,9 +1459,9 @@ export class WebComponentsServices {
 			description: `suku-profile-widget represents the user profile in brief which consists of name, account-type and ratings.`,
 			properties: this.Properties_DATA,
 			mockSample: `<pre><code class="language-html f14" data-lang="html">
-    		<span class="hljs-name">&lt;suku-profile-widget</span>  <span class="na">user-name=</span><span class="s">"Vairog"</span> <span class="na">account-type=</span><span class="s">"Manufacturer"</span><span class="hljs-name">&gt;&lt;/suku-profile-widget&gt;</span>
+    		<span class="hljs-name">&lt;suku-profile-widget</span>  <span class="na">user-name=</span><span class="s">"Suku"</span> <span class="na">account-type=</span><span class="s">"Manufacturer"</span><span class="hljs-name">&gt;&lt;/suku-profile-widget&gt;</span>
 					   </code></pre>`,
-		   codeSample: '<suku-profile-widget  user-name="Vairog" account-type="Manufacturer"></suku-profile-widget>',
+		   codeSample: '<suku-profile-widget  user-name="Suku" account-type="Manufacturer"></suku-profile-widget>',
 			jsonSample: '',
 			try: true,
 			id: 3
@@ -1498,9 +1498,9 @@ export class WebComponentsServices {
 		attachments sent through a network to a specified individual or group of individuals`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-mail-widget</span> <span class="na">name=</span><span class="s">"dconway@vairog.com"</span> <span class="na">size=</span><span class="s">"14"</span> <span class="na">color=</span><span class="s">"#3e3e3e"</span><span class="hljs-name">&gt;&lt;/suku-mail-widget&gt;</span>
+		<span class="hljs-name">&lt;suku-mail-widget</span> <span class="na">name=</span><span class="s">"dconway@suku.world"</span> <span class="na">size=</span><span class="s">"14"</span> <span class="na">color=</span><span class="s">"#3e3e3e"</span><span class="hljs-name">&gt;&lt;/suku-mail-widget&gt;</span>
 				   </code></pre>`,
-		codeSample: '<suku-mail-widget name="dconway@vairog.com" size="14" color="#3e3e3e"></suku-mail-widget>',
+		codeSample: '<suku-mail-widget name="dconway@suku.world" size="14" color="#3e3e3e"></suku-mail-widget>',
 		jsonSample: '',
 		try: true,
 		id: 6

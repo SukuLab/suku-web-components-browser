@@ -1422,7 +1422,7 @@ export class WebComponentsServices {
 
 	public Content_DATA: WebCompContent[] = [
 		{
-			title: 'Suku-Heading',
+			title: 'suku-heading',
 			description: `A heading element implies all the font changes, paragraph breaks before and after,
     		and any white space necessary to render the heading.`,
 			properties: this.Properties_DATA,
@@ -1439,8 +1439,8 @@ export class WebComponentsServices {
 			id: 1
 		},
 		{
-			title: 'Suku-sub-heading',
-			description: `Subheadings are a good way to break up writing.
+			title: 'suku-sub-heading',
+			description: `Sub headings are a good way to break up writing.
    			 They improve the layout of a page and draw the attention of the readers.`,
 			properties: this.Properties_DATA,
 			mockSample: `<pre class="docs-markdown-pre">
@@ -1455,8 +1455,8 @@ export class WebComponentsServices {
 			id: 2
 		},
 		{
-			title: 'Suku-profile-widget',
-			description: `suku-profile-widget represents the user profile in brief which consists of name, account-type and ratings.`,
+			title: 'suku-profile-widget',
+			description: `SUKU Profile Widgets represent the user profile in brief which consists of name, account-type and ratings.`,
 			properties: this.Properties_DATA,
 			mockSample: `<pre><code class="language-html f14" data-lang="html">
     		<span class="hljs-name">&lt;suku-profile-widget</span>  <span class="na">user-name=</span><span class="s">"Suku"</span> <span class="na">account-type=</span><span class="s">"Manufacturer"</span><span class="hljs-name">&gt;&lt;/suku-profile-widget&gt;</span>
@@ -1467,8 +1467,8 @@ export class WebComponentsServices {
 			id: 3
 		},
 		{
-		title: 'Suku-rating-widget',
-		description: ` suku-rating-widget that consists of suku-rating-star and comments reasoning the star.`,
+		title: 'suku-rating-widget',
+		description: `SUKU Rating widgets consist of SUKU Rating Stars and the comments associated with that rating.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-rating-widget</span>  <span class="na">comment-size=</span><span class="s">"16"</span> <span class="na">comment-color=</span><span class="s">"#b6b6b6"</span> <span class="hljs-name">&gt;&lt;/suku-rating-widget&gt;</span>
@@ -1479,8 +1479,8 @@ export class WebComponentsServices {
 		id: 4
 	},
 	{
-		title: 'Suku-notification',
-		description: `  suku-notification-widget is to notify the number of notification that shows on the widget.`,
+		title: 'suku-notification',
+		description: `The SUKU notification widget is to display the number of notifications for any provided categroy.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-notification-widget</span>  <span class="na">id=</span><span class="s">"notification"</span> <span class="na">notification-title=</span><span class="s">"review bids"</span> <span class="na">notification-value=</span><span class="s">"0"</span><span class="hljs-name">&gt;
@@ -1493,9 +1493,8 @@ export class WebComponentsServices {
 	},
 
 	{
-		title: 'Suku-mail-widget',
-		description: `  suku-mail-widget can be a message that may contain text, files, images, or other
-		attachments sent through a network to a specified individual or group of individuals`,
+		title: 'suku-mail-widget',
+		description: `The SUKU mail widget provides a branded icon and email address link for the provided content.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-mail-widget</span> <span class="na">name=</span><span class="s">"dconway@suku.world"</span> <span class="na">size=</span><span class="s">"14"</span> <span class="na">color=</span><span class="s">"#3e3e3e"</span><span class="hljs-name">&gt;&lt;/suku-mail-widget&gt;</span>
@@ -1506,8 +1505,8 @@ export class WebComponentsServices {
 		id: 6
 	},
 	{
-		title: 'Suku-bid-info',
-		description: `suku-bid-info shows the number of bids and the percentage fulfilled in a numerical form.`,
+		title: 'suku-bid-info',
+		description: `SUKU bif info shows the number of bids and the percentage fulfilled in a numerical form.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-bid-info</span> <span class="na">bids=</span><span class="s">"374"</span> <span class="na">percent=</span><span class="s">"10%"</span> <span class="na">bid-heading=</span><span class="s">"bids"</span>  <span class="na">percent-heading=</span><span class="s">"fulfill"</span><span class="hljs-name">&gt;&lt;/suku-bid-info&gt;</span>
@@ -1518,8 +1517,8 @@ export class WebComponentsServices {
 		id: 8
 	},
 	{
-		title: 'Suku-match-chip',
-		description: `suku-match-chip shows the user all the matching product that is available with its Title-card and expiry-date.`,
+		title: 'suku-match-chip',
+		description: `SUKU match chips show the user all the matching products that are available, including a title and expiration date.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-match-chip</span> <span class="na">list-name=</span><span class="s">"Super Computer"</span> <span class="na">prize=</span><span class="s">"10 SUKU"</span> <span class="na">bid-heading=</span><span class="s">"bids"</span>  <span class="na">sell=</span><span class="s">"seller"</span><span class="na">sell-v=</span><span class="s">"John Smith"</span><span class="hljs-name">&gt;
@@ -1530,8 +1529,8 @@ export class WebComponentsServices {
 		id: 9
 	},
 	{
-		title: 'Suku-card-line',
-		description: `suku-match-chip shows the user all the matching product that is available with its Title-card and expiry-date.`,
+		title: 'suku-card-line',
+		description: `SUKU Card lines demonstrate products on the marketplace and the various statuses associated with them.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-card-line</span> <span class="na">title-one=</span><span class="s">"Super Computer"</span> <span class="na">msg-status =</span><span class="s">"read"</span> <span class="na">bg-color =</span><span class="s">"#ffffff"</span><span class="hljs-name">&gt;&lt;/suku-card-line&gt;</span>
@@ -1542,8 +1541,8 @@ export class WebComponentsServices {
 		id: 10
 	},
 	{
-		title: 'Suku-dashboard-profile',
-		description: `Suku-Dashboard-Profile shows the profile of a user either buyer or seller with various functionalities like, creating new listing or new interest, etc.The user can also view the review matches, negotiate purchase and many other functions.`,
+		title: 'suku-dashboard-profile',
+		description: `A SUKU dashboard profile shows the profile of a user with various functionalities, such as creating new listing or new interest. The user can also view the review matches, negotiate purchase and many other functions.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-dashboard-profile</span> <span class="na">user-name=</span><span class="s">"Emery"</span> <span class="na">title-one=</span><span class="s">"CREATE NEW LISTING"</span><span class="hljs-name">&gt;
@@ -1554,8 +1553,8 @@ export class WebComponentsServices {
 		id: 11
 	},
 	{
-		title: 'Suku-sub-menu',
-		description: ` suku-nav-submenu guides user to navigate sub-menus under main menu. For example:"BUY" is a main-menu and under it "Interests and Matches" are the sub-menus.`,
+		title: 'suku-nav-submenu',
+		description: `Sub menus guide the user to navigate sub-menus under a main menu. For example:"BUY" in the SUKU Marketplace is a main menu and under it "Interests and Matches" make up the sub menu.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-tag">&lt;<span class="hljs-name">suku-nav-submenu</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-nav-submenu</span>&gt;</span>
@@ -1566,8 +1565,8 @@ export class WebComponentsServices {
 		id: 12
 	},
 	{
-		title: 'Suku-progress-bar',
-		description: `   suku-progress-bar implies the steps to follow one after another. Also emphasizes which step the user is in.`,
+		title: 'suku-progress-bar',
+		description: `Progress bars show a series of steps to complete a process (such as listing creation). They also emphasize which step the user is in.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-name">&lt;suku-progress-bar</span> <span class="na">progress-style-one=</span><span class="s">"progressCompleted"</span> <span class="na"> heading-one=</span><span class="s">"first heading"</span><span class="hljs-name">&gt;&lt;/suku-progress-bar&gt;</span>
@@ -1578,8 +1577,8 @@ export class WebComponentsServices {
 		id: 13
 	},
 	{
-		title: 'Suku-home-italic-heading',
-		description: `   suku home italic heading elements marks text to be displayed as italic.`,
+		title: 'suku-home-italic-heading',
+		description: `Home italic elements mark text to be displayed as italic.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-tag">&lt;<span class="hljs-name">suku-home-italic-heading</span> <span class="na">size=</span><span class="s">"20"</span> &gt;<span class="hljs-attr"> You just created suku-heading </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-home-italic-heading</span>&gt;</span>
@@ -1590,8 +1589,8 @@ export class WebComponentsServices {
 		id: 14
 	},
 	{
-		title: 'Suku-link',
-		description: ` The link can redirect the user to the required content in detail.`,
+		title: 'suku-link',
+		description: `A branded link to redirect the user.`,
 		properties: this.Properties_DATA,
 		mockSample: `<pre><code class="language-html f14" data-lang="html">
 		<span class="hljs-tag">&lt;<span class="hljs-name">suku-link</span><span class="na"> size=</span><span class="s">"14"</span>&gt;<span class="hljs-attr"> suku-link </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-link</span>&gt;</span>
@@ -1602,8 +1601,8 @@ export class WebComponentsServices {
 		id: 15
 	},
 	{
-	title: 'Suku-add-widget',
-	description: `suku-add-widget guides the end users to create a new listing or interest.`,
+	title: 'suku-add-widget',
+	description: `Add widgets guide the end users to add something, such as creating a new listing or interest.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-add-widget</span> <span class="na">size=</span><span class="s">"12"</span>&gt;<span class="hljs-attr">ADD NEW LISTING</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-add-widget</span>&gt;</span>
@@ -1614,8 +1613,8 @@ export class WebComponentsServices {
 	id: 16
 },
 {
-	title: 'Suku-select-input',
-	description: `suku-input-control makes convenient to input the accurate information. For example: mail placeholder may contain @ symbol.`,
+	title: 'suku-select-input',
+	description: `Select inputs make it convenient to give users a list of choices in a branded dropdown selector.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-select-input</span> <span class="na">size=</span><span class="s">"16"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-select-input</span>&gt;</span>
@@ -1626,8 +1625,8 @@ export class WebComponentsServices {
 	id: 17
 },
 {
-	title: 'Suku-phone-widget',
-	description: ` suku-phone-widget represents the contact information of a user.`,
+	title: 'suku-phone-widget',
+	description: `The SUKU phone widget provides a branded icon and phone number for the provided content.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-phone-widget</span> <span class="na">number=</span><span class="s">"4806069863"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-phone-widget</span>&gt;</span>
@@ -1638,8 +1637,8 @@ export class WebComponentsServices {
 	id: 18
 },
 {
-	title: 'Suku-address-widget',
-	description: ` The suku-address-widget element identifies address information of buyer and seller for tracking purpose.`,
+	title: 'suku-address-widget',
+	description: `The SUKU address widget provides a branded icon and address for the provided content.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-address-widget</span> <span class="na">size=</span><span class="s">"16"</span> &gt;<span class="hljs-attr">ADD NEW LISTING</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-address-widget</span>&gt;</span>
@@ -1650,8 +1649,8 @@ export class WebComponentsServices {
 	id: 19
 },
 {
-	title: 'Suku-inline-dropdown',
-	description: ` suku-inline-dropdown represents multiple selection options in a box.`,
+	title: 'suku-inline-dropdown',
+	description: `SUKU include dropdowns represent multiple selection options in a branded dropdown.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-inline-dropdown</span>&gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-inline-dropdown</span>&gt;</span>
@@ -1662,8 +1661,8 @@ export class WebComponentsServices {
 	id: 20
 },
 {
-	title: 'Suku-home-widget',
-	description: ` suku-Home-widget is a link to redirect user to the homepage.`,
+	title: 'suku-home-widget',
+	description: `SUKU home widget provides a link to redirect a user to the homepage.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-home-widget</span> <span class="na">size=</span><span class="s">"16"</span> &gt;<span class="hljs-attr">home widget</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-home-widget</span>&gt;</span>
@@ -1674,8 +1673,8 @@ export class WebComponentsServices {
 	id: 21
 },
 {
-	title: 'Suku-filter',
-	description: ` suku-filters guides to filter the list of user requirements. It can be either active or inactive,etc.`,
+	title: 'suku-filter',
+	description: `SUKU filters enabling the sorting of a the list. It can be either active or inactive`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-filters</span> <span class="na">statusTypesDynamic=</span><span class="s">"InsertArrayHere"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-filter</span>&gt;</span>
@@ -1686,8 +1685,8 @@ export class WebComponentsServices {
 	id: 22
 },
 {
-	title: 'Suku-info-button',
-	description: ` suku-info-button is a clickable navigators that lets user perform an action and get response according to it. For example: "Apply Filters" are the info-buttons..`,
+	title: 'suku-info-button',
+	description: `SUKU info button are branded buttons to execute actions upon clicking.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-info-button</span>&gt;<span class="hljs-attr">Suku-info-button</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-info-button</span>&gt;</span>
@@ -1698,44 +1697,44 @@ export class WebComponentsServices {
 	id: 23
 },
 {
-	title: 'Suku-primary-button',
-	description: `  primary buttons are mostly used by the user.`,
+	title: 'suku-primary-button',
+	description: `Branded SUKU buttons`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-primary-button</span>&gt;<span class="hljs-attr">Suku-primary-button</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-primary-button</span>&gt;</span>
 			   </code></pre>`,
-    codeSample: '<suku-primary-button>Suku-primary-button</suku-primary-button>',
+    codeSample: '<suku-primary-button>suku-primary-button</suku-primary-button>',
     jsonSample: '',
 	try: true,
 	id: 24
 },
 {
-	title: 'Suku-secondary-button',
-	description: ` secondary buttons tends to be less used by the user.`,
+	title: 'suku-secondary-button',
+	description: `Branded buttons as a secondary option.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-secondary-button</span>&gt;<span class="hljs-attr">Suku-secondary-button</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-secondary-button</span>&gt;</span>
 			   </code></pre>`,
-    codeSample: '<suku-secondary-button>Suku-secondary-button</suku-secondary-button>',
+    codeSample: '<suku-secondary-button>suku-secondary-button</suku-secondary-button>',
     jsonSample: '',
     try: true,
 	id: 25
 },
 {
-	title: 'Suku-default-button',
-	description: `  suku-default-button represents the general default buttons that are clickable navigators and lets user perform an action and get response according to it.`,
+	title: 'suku-default-button',
+	description: `General SUKU branded buttons.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-default-button</span>&gt;<span class="hljs-attr">Suku-default-button</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-default-button</span>&gt;</span>
 			   </code></pre>`,
-    codeSample: '<suku-default-button>Suku-default-button</suku-default-button>',
+    codeSample: '<suku-default-button>suku-default-button</suku-default-button>',
     jsonSample: '',
-	try: true,
+	try: false,
 	id: 26
 },
 {
-	title: 'Suku-star-badge',
-	description: ` star-badge idicates the users identity or the brand they represent.`,
+	title: 'suku-star-badge',
+	description: `A badge to display on a user's profile.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-star-badge</span>&gt;<span class="hljs-attr"></span></span>5<span class="hljs-tag">&lt;/<span class="hljs-name">suku-star-badge</span>&gt;</span>
@@ -1746,8 +1745,8 @@ export class WebComponentsServices {
 	id: 27
 },
 {
-	title: 'Suku-search-input',
-	description: `search box  matches  the items in the database and returns the search results.`,
+	title: 'suku-search-input',
+	description: `A SUKU Branded search bar with associated icon.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-search-input</span>&gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-search-input</span>&gt;</span>
@@ -1758,8 +1757,8 @@ export class WebComponentsServices {
 	id: 28
 },
 {
-	title: 'Suku-bid-tag',
-	description: `  suku-bid-tag shows the detail about the bid with number of items and price.`,
+	title: 'suku-bid-tag',
+	description: `A tag to display a bid associated with products on the Marketplace.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-bid-tag prize="$100"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-bid-tag</span>&gt;</span>
@@ -1770,8 +1769,8 @@ export class WebComponentsServices {
 	id: 29
 },
 {
-	title: 'Suku-rating-star',
-	description: `suku-rating-star shows the users feedback about the product,etc.`,
+	title: 'suku-rating-star',
+	description: `Stars to display ratings between 1-5.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-rating-star</span> <span class="na">rating-value=</span><span class="s">"4"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-rating-star</span>&gt;</span>
@@ -1783,7 +1782,7 @@ export class WebComponentsServices {
 },
 {
 	title: 'suku-track-progress-bar',
-	description: `  Track and trace helps the user to prompt the product track details.`,
+	description: `A progress bar meant to display the various steps to view a trace tree.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-track-progress-bar</span>&gt;</span><span class="hljs-tag"> &lt;/<span class="hljs-name">suku-track-progress-bar</span>&gt;</span>
@@ -1794,8 +1793,8 @@ export class WebComponentsServices {
 	id: 31
 },
 {
-	title: 'Suku-product-trace-widget',
-	description: `It helps the users to trace the product details`,
+	title: 'suku-product-trace-widget',
+	description: `Helps users to trace a product's details`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-track-progress-bar</span>&gt;</span><span class="hljs-tag"> &lt;/<span class="hljs-name">suku-track-progress-bar</span>&gt;</span>
@@ -1806,8 +1805,8 @@ export class WebComponentsServices {
 	id: 32
 },
 {
-	title: 'Suku-tree',
-	description: ` It represent the products in a parent/child hierarchy.`,
+	title: 'suku-tree',
+	description: `It represent the products in a parent/child hierarchy.`,
 	properties: this.Properties_DATA,
 	mockSample: `<pre><code class="language-html f14" data-lang="html">
 	<span class="hljs-tag">&lt;<span class="hljs-name">suku-tree</span>&gt;</span><span class="hljs-tag"> &lt;/<span class="hljs-name">suku-tree</span>&gt;</span>
@@ -1876,7 +1875,7 @@ export class WebComponentsServices {
 	public webcomponentList() {
 		return [
 			{
-				name: 'Getting started',
+				name: 'Getting Started',
 				id: 0
 			},
 			{
@@ -1884,15 +1883,15 @@ export class WebComponentsServices {
 				id: 1
 			},
 			{
-				name: 'Sub-heading',
+				name: 'Sub Heading',
 				id: 2
 			},
 			{
-				name: 'Profile widget',
+				name: 'Profile Widget',
 				id: 3
 			},
 			{
-				name: 'Rating widget',
+				name: 'Rating Widget',
 				id: 4
 			},
 			{
@@ -1900,7 +1899,7 @@ export class WebComponentsServices {
 				id: 5
 			},
 			{
-				name: 'Mail widget',
+				name: 'Mail Widget',
 				id: 6
 			},
 			{
@@ -1908,103 +1907,103 @@ export class WebComponentsServices {
 				id: 8
 			},
 			{
-				name: 'Match chip',
+				name: 'Match Chip',
 				id: 9
 			},
 			{
-				name: 'Card line',
+				name: 'Card Line',
 				id: 10
 			},
 			{
-				name: 'Dashboard-Profile',
+				name: 'Dashboard Profile',
 				id: 11
 			},
 			{
-				name: 'Sub-menu',
+				name: 'Sub Menu',
 				id: 12
 			},
 			{
-				name: 'progress-bar',
+				name: 'Progress Bar',
 				id: 13
 			},
 			{
-				name: 'Italic-Heading',
+				name: 'Italic Heading',
 				id: 14
 			},
 			{
-				name: 'suku-link',
+				name: 'SUKU Link',
 				id: 15
 			},
 			{
-				name: 'add-widget',
+				name: 'Add Widget',
 				id: 16
 			},
 			{
-				name: 'select-input',
+				name: 'Select Input',
 				id: 17
 			},
 			{
-				name: 'phone-widget',
+				name: 'Phone Widget',
 				id: 18
 			},
 			{
-				name: 'address-widget',
+				name: 'Address Widget',
 				id: 19
 			},
 			{
-				name: 'inline-dropdown',
+				name: 'Inline Dropdown',
 				id: 20
 			},
 			{
-				name: 'home-widget',
+				name: 'Home Widget',
 				id: 21
 			},
 			{
-				name: 'filters',
+				name: 'Filters',
 				id: 22
 			},
 			{
-				name: 'Info-button',
+				name: 'Info Button',
 				id: 23
 			},
 			{
-				name: 'primary-button',
+				name: 'Primary Button',
 				id: 24
 			},
 			{
-				name: 'secondary-button',
+				name: 'Secondary Button',
 				id: 25
 			},
 			{
-				name: 'default-button',
+				name: 'Default Button',
 				id: 26
 			},
 			{
-				name: 'star-badge',
+				name: 'Star Badge',
 				id: 27
 			},
 			{
-				name: 'search input',
+				name: 'Search Input',
 				id: 28
 			},
 			{
-				name: 'bid tag',
+				name: 'Bid Tag',
 				id: 29
 			},
 			{
-				name: 'rating-star',
+				name: 'Rating Star',
 				id: 30
 			},
 			{
-				name: 'track-trace-progress-bar',
+				name: 'Track and Trace Progress Bar',
 				id: 31
 			},
 			{
-				name: 'suku-product-trace-widget',
+				name: 'Product Trace Widget',
 				id: 32
 			},
 			{
-				name: 'suku-tree',
+				name: 'Trace Tree',
 				id: 33
 			}
 		];

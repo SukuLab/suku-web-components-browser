@@ -1422,6 +1422,22 @@ export class WebComponentsServices {
 
 	public Content_DATA: WebCompContent[] = [
 		{
+			title: 'GETTING STARTED',
+			description: `A heading element implies all the font changes, paragraph breaks before and after,
+    		and any white space necessary to render the heading.`,
+			properties: this.Properties_DATA,
+			mockSample: `<pre class="docs-markdown-pre">
+    		<code class="lang-html docs-markdown-code m-3">
+    		<span class="hljs-tag">&lt;<span class="hljs-name">suku-heading</span>&gt;<span class="hljs-attr"> You just created suku-heading </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-heading</span>&gt;</span>
+    		<span class="hljs-tag">&lt;<span class="hljs-name">suku-heading color="#a7be2f" size="50"</span>&gt;<span class="hljs-attr"> You just modified suku-heading </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-heading</span>&gt;</span>
+    		</code>
+    		</pre>
+			`,
+			codeSample: '<suku-heading> You just created suku-heading </suku-heading>',
+			jsonSample: '',
+			try: true,
+			id: 0
+		},{
 			title: 'suku-heading',
 			description: `A heading element implies all the font changes, paragraph breaks before and after,
     		and any white space necessary to render the heading.`,

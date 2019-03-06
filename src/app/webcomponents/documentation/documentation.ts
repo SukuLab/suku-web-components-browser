@@ -65,10 +65,6 @@ export class DocumentationComponent implements OnInit {
 			{
 				name: 'Components',
 				id: 1
-			},
-			{
-				name: 'Assets',
-				id: 2
 			}
 		];
 		this.webCompTitleList = this.services.webcomponentList();
@@ -76,6 +72,7 @@ export class DocumentationComponent implements OnInit {
 		this.CompDocSource = this.services.Content_DATA;
 		this.searchTraceToggleForID = true;
 		this.disableBtnForID = false;
+		this.selectedTitle = {name: "Getting Started", id: 0};
 	}
 
 	executeCode() {

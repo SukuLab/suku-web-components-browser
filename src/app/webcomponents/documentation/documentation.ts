@@ -109,6 +109,7 @@ export class DocumentationComponent implements OnInit {
 			statusTypess: this.fb.array([]),
 			firstName: '',
 			productId: [ '', [ Validators.required ] ],
+			checkAgreement:''
 		});
 		this.parentForm.valueChanges.subscribe((v) => console.log('data', v));
 		this.subMenuList = [

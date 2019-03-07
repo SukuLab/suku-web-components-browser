@@ -41,6 +41,8 @@ import {
 import { createCustomElement } from '@angular/elements';
 import { SukuACHSettingsComponent } from './webcomponents/suku-achsettings/suku-achsettings.component';
 import { SukuTransactionHistoryComponent } from './webcomponents/suku-transaction-history/suku-transaction-history.component';
+import { SukuDwollaFundingAgreementComponent } from './webcomponents/suku-dwolla-funding-agreement/suku-dwolla-funding-agreement.component';
+import { SukuDwollaFundingSourceComponent } from './webcomponents/suku-dwolla-funding-source/suku-dwolla-funding-source.component';
 
 @Component({
   selector: 'app-root',
@@ -189,9 +191,13 @@ export class AppComponent implements OnInit {
       injector : this.injector
 		});
 		customElements.define('suku-transaction-history', SukuTransactionHistory);
-		// const SukuProductTrackWiget = createCustomElement(SukuTrackTraceProductSearchComponent, {
-      // injector : this.injector
-		// });
-		// customElements.define('suku-product-trace-widget', SukuProductTrackWiget);
+		const SukuFundAgreement= createCustomElement(SukuDwollaFundingAgreementComponent, {
+      injector : this.injector
+		});
+		customElements.define('suku-dwolla-funding-agreement', SukuFundAgreement);
+		const SukuFundSource= createCustomElement(SukuDwollaFundingSourceComponent, {
+      injector : this.injector
+		});
+		customElements.define('suku-dwolla-funding-source', SukuFundSource);
   }
 }

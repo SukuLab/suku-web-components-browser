@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { flattenStyles } from '@angular/platform-browser/src/dom/dom_renderer';
 
 export interface WebCompProperties {
 	data: WebCompData[];
@@ -22,6 +23,8 @@ export interface WebCompContent {
 	providedIn: 'root'
 })
 export class WebComponentsServices {
+
+/* define properties for each webcomponents */
 	public Properties_DATA: WebCompProperties[] = [
 		{
 			data: []
@@ -1414,11 +1417,6 @@ export class WebComponentsServices {
 				type: '[Array]',
 				description: 'It holds the parent/child JSON Data of the products.'
 			},
-			// {
-			// 	properties: 'sample',
-			// 	type: '[JSON]',
-			// 	description: '',
-			// },
 		]
 	},
 	{
@@ -1534,8 +1532,123 @@ export class WebComponentsServices {
 			},
 		]
 	},
+	{
+		data: [
+			{
+				properties: 'form',
+				type: '[String]',
+				description: 'It corresponds to FormGroup name.'
+			},
+			{
+				properties: 'title',
+				type: '[String]',
+				description: 'It corresponds to title.'
+			},
+			{
+				properties: 'countriesList',
+				type: '[array]',
+				description: 'It holds array of countries provided.'
+			},
+			{
+				properties: 'countrySelect',
+				type: '[output]',
+				description: 'It holds array of countries provided.'
+			},
+			{
+				properties: 'statesList',
+				type: '[array]',
+				description: 'It holds array of states provided.'
+			},
+			{
+				properties: 'stateSelect',
+				type: '[array]',
+				description: 'It holds array of states provided.'
+			},
+			{
+				properties: 'content',
+				type: '[String]',
+				description: 'It holds to content for agreement.'
+			},
+			{
+				properties: 'contentId',
+				type: '[String]',
+				description: 'It holds to content Id for agreement.'
+			},
+			{
+				properties: 'control',
+				type: '[String]',
+				description: 'It defines to formcontrolname for checkbox element.'
+			},
+			{
+				properties: 'submit',
+				type: '[String]',
+				description: 'It corresponds to click action for button.'
+			}
+		]
+	},
+	{
+		data: [
+			{
+				properties: 'form',
+				type: '[String]',
+				description: 'It corresponds to FormGroup name.'
+			},
+			{
+				properties: 'title',
+				type: '[String]',
+				description: 'It corresponds to title.'
+			},
+			{
+				properties: 'titleClass',
+				type: '[String]',
+				description: 'It corresponds to custom class for title attribute.'
+			},
+			{
+				properties: 'checkBoxId',
+				type: '[String]',
+				description: 'It defines Id for checkbox.'
+			},
+			{
+				properties: 'content',
+				type: '[String]',
+				description: 'It holds to content for agreement.'
+			},
+			{
+				properties: 'contentId',
+				type: '[String]',
+				description: 'It holds to content Id for agreement.'
+			},
+			{
+				properties: 'control',
+				type: '[String]',
+				description: 'It defines to formcontrolname for checkbox element.'
+			},
+			{
+				properties: 'formArrayName',
+				type: '[String]',
+				description: 'It defines to form-array-name for beneficial owner form.'
+			},
+			{
+				properties: 'submit',
+				type: '[String]',
+				description: 'It corresponds to click action for button.'
+			}
+		]
+	},
+	{
+		data: [
+			{
+				properties: 'iavtoken',
+				type: '[String]',
+				description: 'It holds to iavtoken.'
+			}
+		]
+	}
 	];
 
+
+/* Webcomponent details injects here */
+/* !important -- Provided ID for each content-data and webcomponentList should be same */
 	public Content_DATA: WebCompContent[] = [
 		{
 			title: 'GETTING STARTED',
@@ -2005,8 +2118,7 @@ export class WebComponentsServices {
     jsonSample: ``,
     try: true,
 	id: 34
-}
-,
+},
 {
 	title: 'suku-transaction-history',
 	description: `It represent dummy`,
@@ -2016,9 +2128,73 @@ export class WebComponentsServices {
     jsonSample: ``,
     try: true,
 	id: 35
-}
-	];
+},
+{
+	title: 'suku-dwolla-funding-agreement',
+	description: `It represent funding agreement ui sample.In order run this, please provide the formgroup name for form attribute i.e [form]="parent form name" and define formcontrolname in control attribute i.e control="{{insert your formcontrol name here}}. "(Submit)" is a eventemitter which defines the click action and provides form data."`,
+	properties: this.Properties_DATA,
+	mockSample: ``,
+    codeSample: `<suku-dwolla-funding-agreement [form]="parentForm" control="checkAgreement" (submit)="submit($event)"></suku-dwolla-funding-agreement>`,
+	jsonSample: ``,
+    try: false,
+	id: 36
+},
+{
+	title: 'suku-beneficial-owner',
+	description: `It represent Beneficial owner ui sample.
+	In order run this, please provide the formgroup name for form attribute i.e [form]="parent form name" and define formArrayname in control attribute i.e control="{{insert your formcontrol name here}}. "(Submit)" is a eventemitter which defines the click action and provides form data.`,
+	properties: this.Properties_DATA,
+	mockSample: ``,
+	codeSample: `<suku-beneficial-owner [form]="parentForm" formArrayName="owner" checkBoxId="owner" control="checkOwner"  (submit)="submit($event)"></suku-beneficial-owner>`,
+	jsonSample: `
+	<pre>
+	Formarrayname sample to be defined:
+	owner: this.fb.array([]);
+	'owner': is the formarray name.
 
+	Push number of beneficial controls to be defined using the following sample code:
+	(<FormArray>this.parentForm.get('owner')).push(this.control());
+	'parentForm': is formgroup name.
+
+	Control names for formarray:
+
+	control(): FormGroup {
+		return this.fb.group({
+			firstName: new FormControl(),
+			lastName: new FormControl(),
+			dateOfBirth: new FormControl(),
+			ssn: new FormControl(),
+			address: this.fb.group({
+				address1: new FormControl(),
+				address2: new FormControl(),
+				city: new FormControl(),
+				stateProvinceRegion: new FormControl({ value: '', disabled: true }),
+				country: new FormControl(),
+				postalCode: new FormControl(),
+				document: ''
+			})
+		});
+	}
+	</pre>`,
+    try: false,
+	id: 37
+},
+{
+	title: 'suku-dwolla-funding-source',
+	description: `It represent funding source ui sample.
+	Import Dwolla.js Library:
+	 <script src="https://cdn.dwolla.com/1/dwolla.js"></script>`,
+	properties: this.Properties_DATA,
+	mockSample: ``,
+    codeSample: `<suku-dwolla-funding-source iav-token="4MTwIIvmwfq1jNttMrLrj7W0sxuE3cttpW56l4S4n8hJTiQoP4"></suku-dwolla-funding-source>`,
+	jsonSample: ``,
+    try: true,
+	id: 38
+}
+];
+
+
+/* declaring heading for sidebar block */
 	public webcomponentList() {
 		return [
 			{
@@ -2160,10 +2336,24 @@ export class WebComponentsServices {
 			{
 				name: 'Transaction History',
 				id: 35
+			},
+			{
+				name: 'Suku-Dwolla Funding Agreement',
+				id: 36
+			},
+			{
+				name: 'Suku Beneficial owner',
+				id: 37
+			},
+			{
+				name: 'Suku-Dwolla Funding Source',
+				id: 38
 			}
 		];
 	}
 }
+
+/* to be removed */
 export const person = {
     name: {
       label: 'Name',

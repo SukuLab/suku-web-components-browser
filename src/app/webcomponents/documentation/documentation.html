@@ -75,9 +75,9 @@
               <div class="col-sm-12 p-3">
                 <!-- sample json inject here -->
                 <!-- <p class="docs-markdown-p">Sample JSON:</p> -->
-                <div class="col p-0 mt-1" *ngIf="content.id == 33">
-                  <div class="link text-left mb-3 c-pointer" (click)="collapseFuc()">Click to {{ collapse ? 'hide json sample' : 'show json sample' }}</div>
-                  <div *ngIf="collapse" class="col p-0" id ="jsonSample" [innerHTML]="content.jsonSample"></div>
+                <div class="col p-0 mt-2" *ngIf="content?.jsonSample">
+                  <div class="links text-left mb-3 c-pointer" (click)="collapseFuc()">Click to {{ collapse ? 'hide info' : 'show info' }}</div>
+                  <div *ngIf="collapse" class="col p-0" id ="jsonSample" [innerHTML]="content?.jsonSample"></div>
                 </div>
               </div>
               <!-- terminal code-->

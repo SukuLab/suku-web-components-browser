@@ -42,6 +42,56 @@ export class DocumentationComponent implements OnInit {
 	search;
 	treeData;
 	collapse: Boolean = false;
+	transactionDetails = [
+		{
+		 'type': 'outgoing',
+		 'myAccount': 'Chase XXX',
+		 'counterParty': 'Logan',
+		 'amount': 500,
+		 'status': 'Complete',
+		 'dateCreated': '2/1/19'
+	   },
+		 {
+		 'type': 'outgoing',
+		 'myAccount': 'Chase XXX',
+		 'counterParty': 'Logan',
+		 'amount': 200,
+		 'status': 'Pending',
+		 'dateCreated': '2/1/19'
+	   },
+		 {
+		 'type': 'Incoming',
+		 'myAccount': 'Chase XXX',
+		 'counterParty': 'Logan',
+		 'amount': 100,
+		 'status': 'Failed',
+		 'dateCreated': '2/1/19'
+	   },
+		 {
+		'type': 'outgoing',
+		'myAccount': 'Chase XXX',
+		'counterParty': 'Logan',
+		'amount': 500,
+		'status': 'Complete',
+		'dateCreated': '2/1/19'
+	  },
+		{
+		'type': 'outgoing',
+		'myAccount': 'Chase XXX',
+		'counterParty': 'Logan',
+		'amount': 200,
+		'status': 'Pending',
+		'dateCreated': '2/1/19'
+	  },
+		{
+		'type': 'Incoming',
+		'myAccount': 'Chase XXX',
+		'counterParty': 'Logan',
+		'amount': 100,
+		'status': 'Failed',
+		'dateCreated': '2/1/19'
+	  }
+	  ];
 	constructor(private fb: FormBuilder, private domSanitizer: DomSanitizer, private services: WebComponentsServices) {
 		this.person = person;
 

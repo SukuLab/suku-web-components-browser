@@ -34,18 +34,18 @@
         <div class="col-sm-10 p-4 pl-5 pr-5">
           <!-- doc content inject here -->
           <span *ngFor="let content of CompDocSource;let j=index">
-            <span *ngIf="content?.id == 0 && selectedTitle?.id == 0">
+            <!-- <span *ngIf="content?.id == 0 && selectedTitle?.id == 0">
               <div class="col-sm-12 mt-5">
                   <strong class="borBottom">GETTING STARTED</strong>
                   <p class="mt-5">This page will help users get started with the SUKU UI Components</p>
               </div>
-            </span>
-            <span *ngIf="selectedTitle?.id == content?.id && content?.id != 0">
+            </span> -->
+            <span *ngIf="selectedTitle?.id == content?.id">
               <div class="col-sm-12 mt-5">
                 <strong class="borBottom">{{content.title}}</strong>
                 <p class="mt-5">{{content.description}}</p>
               </div>
-              <div class="col-sm-12 p-3">
+              <div class="col-sm-12 p-3" *ngIf="content?.properties[j]?.data?.length > 0">
                 <table mat-table [dataSource]="content?.properties[j]?.data" class="mat-elevation-z8">
                   <!-- Properties Column -->
                   <ng-container matColumnDef="Properties">
@@ -62,7 +62,7 @@
                   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
               </div>
-              <div class="col-sm-12 p-3">
+              <div class="col-sm-12 p-3" *ngIf="content?.codeSample">
                 <!-- sample webcomp code inject here -->
                 <p class="docs-markdown-p">For example:</p>
                 <p class="col text-left p-0 link">Click to copy</p>

@@ -36,9 +36,12 @@ import {
   SukuDefaultButtonComponent,
   SukuTreeComponent,
   SukuTrackProgressBarComponent,
-  SukuTrackTraceProductSearchComponent
+  SukuTrackTraceProductSearchComponent,
 } from './webcomponents/webcomponent';
 import { createCustomElement } from '@angular/elements';
+import { SukuACHSettingsComponent } from './webcomponents/suku-achsettings/suku-achsettings.component';
+import { SukuTransactionHistoryComponent } from './webcomponents/suku-transaction-history/suku-transaction-history.component';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -178,6 +181,14 @@ export class AppComponent implements OnInit {
       injector : this.injector
 		});
 		customElements.define('suku-tree', SukuTree);
+		const SukuACh = createCustomElement(SukuACHSettingsComponent, {
+      injector : this.injector
+		});
+		customElements.define('suku-ach-setting', SukuACh);
+		const SukuTransactionHistory = createCustomElement(SukuTransactionHistoryComponent, {
+      injector : this.injector
+		});
+		customElements.define('suku-transaction-history', SukuTransactionHistory);
 		// const SukuProductTrackWiget = createCustomElement(SukuTrackTraceProductSearchComponent, {
       // injector : this.injector
 		// });

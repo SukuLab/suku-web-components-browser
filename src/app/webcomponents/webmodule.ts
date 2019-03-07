@@ -42,6 +42,8 @@ import {
     SukuTrackProgressBarComponent,
     SukuTrackTraceProductSearchComponent
 } from './webcomponent';
+import { SukuACHSettingsComponent } from './suku-achsettings/suku-achsettings.component';
+import { SukuTransactionHistoryComponent } from './suku-transaction-history/suku-transaction-history.component';
 
 export const WebComponents = [
     SukuHeadingComponent,
@@ -85,7 +87,9 @@ export const WebComponents = [
     SukuTreeComponent,
     DynamicFormComponent,
     SukuTrackProgressBarComponent,
-    SukuTrackTraceProductSearchComponent
+    SukuTrackTraceProductSearchComponent,
+    SukuACHSettingsComponent,
+    SukuTransactionHistoryComponent
 ];
 
 

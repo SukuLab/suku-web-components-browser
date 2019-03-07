@@ -24,6 +24,9 @@ export interface WebCompContent {
 export class WebComponentsServices {
 	public Properties_DATA: WebCompProperties[] = [
 		{
+			data: []
+		},
+		{
 			data: [
 				{
 					properties: 'size',
@@ -1418,26 +1421,133 @@ export class WebComponentsServices {
 			// },
 		]
 	},
+	{
+		data: [
+			{
+				properties: 'title',
+				type: '[String]',
+				description: 'It corresponds to ACH title.'
+			},
+			{
+				properties: 'subTitle',
+				type: '[String]',
+				description: 'It corresponds to ACH subtitle.'
+			},
+			{
+				properties: 'upperText',
+				type: '[String]',
+				description: 'It corresponds to ACH upper description.'
+			},
+			{
+				properties: 'lowerText',
+				type: '[String]',
+				description: 'It corresponds to ACH lower description.'
+			},
+			{
+				properties: 'SetupACHPaymentsBtnText',
+				type: '[String]',
+				description: 'It corresponds to ACH Setup Payment button text.'
+			},
+			{
+				properties: 'action',
+				type: '[Output]',
+				description: 'It prompts the user to setup the ACH payment.'
+			},
+			{
+				properties: 'titleId',
+				type: '[String]',
+				description: 'It corresponds to ACH title tag ID.'
+			},
+			{
+				properties: 'subTitleId',
+				type: '[String]',
+				description: 'It corresponds to ACH subtitle tag ID.'
+			},
+			{
+				properties: 'upperTextId',
+				type: '[String]',
+				description: 'It corresponds to ACH Upper text tag ID.'
+			},
+			{
+				properties: 'lowerTextId',
+				type: '[String]',
+				description: 'It corresponds to ACH lower text tag ID.'
+			},
+			{
+				properties: 'paymentButtonId',
+				type: '[String]',
+				description: 'It corresponds to ACH payment button tag ID.'
+			},
+		]
+	},
+	{
+		data: [
+			{
+				properties: 'typeId',
+				type: '[String]',
+				description: 'It corresponds to Transaction Type table header ID.'
+			},
+			{
+				properties: 'myAccountId',
+				type: '[String]',
+				description: 'It corresponds to Transaction Account table header ID.'
+			},
+			{
+				properties: 'CounterpartyId',
+				type: '[String]',
+				description: 'It corresponds to Transaction Counter Party table header ID.'
+			},
+			{
+				properties: 'amountId',
+				type: '[String]',
+				description: 'It corresponds to Transaction Amount table header ID.'
+			},
+			{
+				properties: 'statusId',
+				type: '[String]',
+				description: 'It corresponds to Transaction Status table header ID.'
+			},
+			{
+				properties: 'dateCreatedId',
+				type: '[String]',
+				description: 'It corresponds to Transaction Date table header ID.'
+			},
+			{
+				properties: 'paymentManagementId',
+				type: '[String]',
+				description: 'It corresponds to Transaction payment Management table header ID.'
+			},
+			{
+				properties: 'cancel',
+				type: '[String]',
+				description: 'It corresponds to Transaction payment cancel button text.'
+			},
+			{
+				properties: 'cancelId',
+				type: '[String]',
+				description: 'It corresponds to Transaction payment cancel button ID.'
+			},
+			{
+				properties: 'action',
+				type: '[Output]',
+				description: 'It prompts the user to cancel the pending Transaction.'
+			},
+		]
+	},
 	];
 
 	public Content_DATA: WebCompContent[] = [
 		{
 			title: 'GETTING STARTED',
-			description: `A heading element implies all the font changes, paragraph breaks before and after,
-    		and any white space necessary to render the heading.`,
+			description: `This page will help users get started with the SUKU UI Components`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre class="docs-markdown-pre">
-    		<code class="lang-html docs-markdown-code m-3">
-    		<span class="hljs-tag">&lt;<span class="hljs-name">suku-heading</span>&gt;<span class="hljs-attr"> You just created suku-heading </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-heading</span>&gt;</span>
-    		<span class="hljs-tag">&lt;<span class="hljs-name">suku-heading color="#a7be2f" size="50"</span>&gt;<span class="hljs-attr"> You just modified suku-heading </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-heading</span>&gt;</span>
-    		</code>
-    		</pre>
-			`,
-			codeSample: '<suku-heading> You just created suku-heading </suku-heading>',
+			mockSample: ``,
+			codeSample: '',
 			jsonSample: '',
-			try: true,
+			try: false,
 			id: 0
-		},{
+		},
+		{
 			title: 'suku-heading',
 			description: `A heading element implies all the font changes, paragraph breaks before and after,
     		and any white space necessary to render the heading.`,
@@ -1885,6 +1995,27 @@ export class WebComponentsServices {
 	}]</pre>`,
     try: true,
 	id: 33
+},
+{
+	title: 'suku-ach-setting',
+	description: `It represent dummy`,
+	properties: this.Properties_DATA,
+	mockSample: ``,
+    codeSample: '<suku-ach-setting></suku-ach-setting>',
+    jsonSample: ``,
+    try: true,
+	id: 34
+}
+,
+{
+	title: 'suku-transaction-history',
+	description: `It represent dummy`,
+	properties: this.Properties_DATA,
+	mockSample: ``,
+    codeSample: '<suku-transaction-history [headings]="insert your array headings here" [transactionDetails]="insert your array variable here"></suku-transaction-history>',
+    jsonSample: ``,
+    try: true,
+	id: 35
 }
 	];
 
@@ -2021,6 +2152,14 @@ export class WebComponentsServices {
 			{
 				name: 'Trace Tree',
 				id: 33
+			},
+			{
+				name: 'Ach Settings',
+				id: 34
+			},
+			{
+				name: 'Transaction History',
+				id: 35
 			}
 		];
 	}

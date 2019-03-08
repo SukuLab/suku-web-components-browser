@@ -1552,7 +1552,7 @@ export class WebComponentsServices {
 			{
 				properties: 'countrySelect',
 				type: '[output]',
-				description: 'It holds array of countries provided.'
+				description: 'It helps the user to perform the required action.'
 			},
 			{
 				properties: 'statesList',
@@ -1561,8 +1561,8 @@ export class WebComponentsServices {
 			},
 			{
 				properties: 'stateSelect',
-				type: '[array]',
-				description: 'It holds array of states provided.'
+				type: '[output]',
+				description: 'It helps the user to perform the required action.'
 			},
 			{
 				properties: 'content',
@@ -1638,9 +1638,9 @@ export class WebComponentsServices {
 	{
 		data: [
 			{
-				properties: 'iavtoken',
+				properties: 'iav-token',
 				type: '[String]',
-				description: 'It holds to iavtoken.'
+				description: 'It holds to Instant Account Verification (IAV) token.'
 			}
 		]
 	}
@@ -2111,7 +2111,7 @@ export class WebComponentsServices {
 },
 {
 	title: 'suku-ach-setting',
-	description: `It represent dummy`,
+	description: `It represent ach-setting ui.`,
 	properties: this.Properties_DATA,
 	mockSample: ``,
     codeSample: '<suku-ach-setting></suku-ach-setting>',
@@ -2121,7 +2121,7 @@ export class WebComponentsServices {
 },
 {
 	title: 'suku-transaction-history',
-	description: `It represent dummy`,
+	description: `It represent transaction history ui.`,
 	properties: this.Properties_DATA,
 	mockSample: ``,
     codeSample: '<suku-transaction-history [headings]="insert your array headings here" [transactionDetails]="insert your array variable here"></suku-transaction-history>',
@@ -2131,7 +2131,7 @@ export class WebComponentsServices {
 },
 {
 	title: 'suku-dwolla-funding-agreement',
-	description: `It represent funding agreement ui sample.In order run this, please provide the formgroup name for form attribute i.e [form]="parent form name" and define formcontrolname in control attribute i.e control="{{insert your formcontrol name here}}. "(Submit)" is a eventemitter which defines the click action and provides form data."`,
+	description: `It represent funding agreement ui. In order to run this, please provide the formgroup name for form attribute i.e [form]="parent form name" and define formcontrolname in control attribute i.e control="{{insert your formcontrol name here}}. "(Submit)" is a eventemitter which defines the click action and provides form data."`,
 	properties: this.Properties_DATA,
 	mockSample: ``,
     codeSample: `<suku-dwolla-funding-agreement [form]="parentForm" control="checkAgreement" (submit)="submit($event)"></suku-dwolla-funding-agreement>`,
@@ -2141,11 +2141,12 @@ export class WebComponentsServices {
 },
 {
 	title: 'suku-beneficial-owner',
-	description: `It represent Beneficial owner ui sample.
+	description: `It represent Beneficial owner ui.
 	In order run this, please provide the formgroup name for form attribute i.e [form]="parent form name" and define formArrayname in control attribute i.e control="{{insert your formcontrol name here}}. "(Submit)" is a eventemitter which defines the click action and provides form data.`,
 	properties: this.Properties_DATA,
 	mockSample: ``,
-	codeSample: `<suku-beneficial-owner [form]="parentForm" formArrayName="owner" checkBoxId="owner" control="checkOwner"  (submit)="submit($event)"></suku-beneficial-owner>`,
+	codeSample: `<suku-beneficial-owner [form]="parentForm" formArrayName="owner" checkBoxId="owner" control="checkOwner" (submit)="submit($event)">
+	</suku-beneficial-owner>`,
 	jsonSample: `
 	<pre>
 	Formarrayname sample to be defined:
@@ -2154,7 +2155,7 @@ export class WebComponentsServices {
 
 	Push number of beneficial controls to be defined using the following sample code:
 	(<FormArray>this.parentForm.get('owner')).push(this.control());
-	'parentForm': is formgroup name.
+	'parentForm': is the formgroup name.
 
 	Control names for formarray:
 
@@ -2181,9 +2182,9 @@ export class WebComponentsServices {
 },
 {
 	title: 'suku-dwolla-funding-source',
-	description: `It represent funding source ui sample.
+	description: `It represent funding source dwolla ui.
 	Import Dwolla.js Library:
-	 <script src="https://cdn.dwolla.com/1/dwolla.js"></script>`,
+	 <script src="https://cdn.dwolla.com/1/dwolla.js"></script> to run this.`,
 	properties: this.Properties_DATA,
 	mockSample: ``,
     codeSample: `<suku-dwolla-funding-source iav-token="4MTwIIvmwfq1jNttMrLrj7W0sxuE3cttpW56l4S4n8hJTiQoP4"></suku-dwolla-funding-source>`,

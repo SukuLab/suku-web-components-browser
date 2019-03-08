@@ -30,6 +30,10 @@ button.mat-raised-button.mat-primary:active {
   height: 50em;
 }
 
+.preserve-whitespace {
+  white-space: pre-wrap;
+}
+
 #outerDiv {
   position: relative;
   background-image: url(../../../assets/img/background.png);

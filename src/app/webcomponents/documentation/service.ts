@@ -2354,15 +2354,15 @@ Import Dwolla.js Library to run this:
 				id: 35
 			},
 			{
-				name: 'Suku-Dwolla Funding Agreement',
+				name: 'Suku Dwolla Funding Agreement',
 				id: 36
 			},
 			{
-				name: 'Suku Beneficial owner',
+				name: 'Suku Beneficial Owner',
 				id: 37
 			},
 			{
-				name: 'Suku-Dwolla Funding Source',
+				name: 'Suku Dwolla Funding Source',
 				id: 38
 			}
 		];

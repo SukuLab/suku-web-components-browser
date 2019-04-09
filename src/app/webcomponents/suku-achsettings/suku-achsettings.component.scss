@@ -19,7 +19,7 @@
   }
 
 .poppinsFont {
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif !important;
 }
 
 .btn {
@@ -30,7 +30,7 @@
     padding: .375rem .75rem;
     font-size: 10px;
     font-weight: bold;
-    font-family: 'Poppins'
+    font-family: 'Poppins', sans-serif !important;
   }
   
   .btn:hover {

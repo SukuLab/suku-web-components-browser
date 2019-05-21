@@ -9,27 +9,23 @@ import { WebComponentsServices } from './webcomponents/documentation/service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatModule } from './shared/mat.module';
+import { QuillModule } from 'ngx-quill';
 @NgModule({
-  declarations: [
-    AppComponent,
-    DocumentationComponent,
-    WebComponents
-   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatModule
-  ],
-  providers: [
-    WebComponentsServices
-  ],
-  bootstrap: [AppComponent],
-  entryComponents: [DocumentationComponent, WebComponents],
-  schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ],
+	declarations: [ AppComponent, DocumentationComponent, WebComponents ],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		FormsModule,
+		ReactiveFormsModule,
+		BrowserAnimationsModule,
+		MatModule,
+		QuillModule
+	],
+	providers: [ WebComponentsServices ],
+	bootstrap: [ AppComponent ],
+	entryComponents: [ DocumentationComponent, WebComponents ],
+	schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {
-  ngDoBootstrap() { }
+	ngDoBootstrap() {}
 }

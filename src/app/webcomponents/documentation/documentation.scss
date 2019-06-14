@@ -426,14 +426,17 @@ pre {
 
 .mockSample{
   border: none;
-  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-  font-size: 14px;
+  font-family: "Fira Mono", "Andale Mono", "Consolas", monospace;
+  letter-spacing: -0.1px;
+  font-size: 13px;
   width: 100%;
-  padding: 10px;
+  padding: 10px 20px 10px 10px;
   border-left: 5px solid #d8f40c;
   background: #f7f7f7;
   border-radius: 3px;
   color: #3c3d3c;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 

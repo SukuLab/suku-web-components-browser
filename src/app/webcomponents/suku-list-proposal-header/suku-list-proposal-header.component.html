@@ -1,0 +1,18 @@
+<div [class]="customLayoutClass">
+  <section class="title-spacing {{customTitleClass}}" [style.color]="color">
+    <p class="title"><span class="border-bottom" [id]="titleOneId">{{titleOne}}<span class="text-bold"
+          [id]="titleTwoId"> {{titleTwo}}</span></span></p>
+  </section>
+  <section class="sub-title-spacing text-white {{subTitleOneClass}}">
+    <p><span class="text-bold" [id]="subTitleOneId">{{subTitleOne}}</span><span [id]="subContentOneId">
+        {{subContentOne}}</span></p>
+  </section>
+  <section class="sub-title-spacing text-white {{subTitleTwoClass}}">
+    <p><span class="text-bold" [id]="subTitleTwoId">{{subTitleTwo}}</span><span [id]="subContentTwoId">
+        {{subContentTwo}}</span></p>
+  </section>
+  <section class="sub-title-spacing text-white">
+    <p class="text-bold {{subTitleThreeClass}}" [id]="subTitleThreeId">{{subTitleThree}}</p>
+    <p class="text-justify text-capitalize {{descriptionClass}}" [id]="descriptionId">{{description}}</p>
+  </section>
+</div>

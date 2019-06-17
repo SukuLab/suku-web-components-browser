@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { WebComponentsServices } from './service';
 import { person } from './service';
+import { SukuGovernanceWebcomponentsService } from '../suku-governance-webcomponents.service';
+import { SukuModalService } from '../suku-proposal-option-modal/suku-modal.service';
 @Component({
 	selector: 'app-documentation',
 	templateUrl: 'documentation.html',
@@ -92,7 +94,8 @@ export class DocumentationComponent implements OnInit {
 		'dateCreated': '2/1/19'
 	  }
 	  ];
-	constructor(private fb: FormBuilder, private domSanitizer: DomSanitizer, private services: WebComponentsServices) {
+	constructor(private fb: FormBuilder, private domSanitizer: DomSanitizer, 
+		private services: WebComponentsServices, private sukuService: SukuModalService) {
 		this.person = person;
 
 	}
@@ -156,7 +159,6 @@ export class DocumentationComponent implements OnInit {
 	textJsonData() {
 		const data = (<HTMLInputElement>document.getElementById('datas')).value.replace(/\s/g, '');
 		console.log('data', data);
-		// console.log("json data", JSON.parse(data));
 		const validData = data;
 		this.dynamicData = validData;
 	}
@@ -275,6 +277,10 @@ export class DocumentationComponent implements OnInit {
 	collapseFuc() {
 		console.log("", this.collapse);
 		this.collapse = !this.collapse;
+	}
+
+	openSukuDialog() {
+	 this.sukuService.openInfoModal("");
 	}
 
 }

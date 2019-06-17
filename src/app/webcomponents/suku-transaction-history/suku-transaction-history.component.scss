@@ -31,45 +31,46 @@
     top: 0;
     left: 0;
     z-index: 10;
-  }
-  
-  .add-btn a:hover {
+}
+
+.add-btn a:hover {
     text-decoration: underline;
-  }
-  
-  .defaultDiv{
-      background-color: #d8fc40;
-      border-radius: 30px;
-  }
+}
 
-  .dangerBtn {
-      background-color: rgb(241, 48, 48);
-      color: white;
-  }
+.defaultDiv {
+    background-color: #d8fc40;
+    border-radius: 30px;
+}
 
-  .bankDiv {
+.dangerBtn {
+    background-color: rgb(241, 48, 48);
+    color: white;
+}
+
+.bankDiv {
     background-color: #f0f4f5;
     border-radius: 30px;
     border-style: solid;
     border-width: 1px;
     border-color: gray;
-  }
+}
 
-  .mT-35 {
-      margin-top: 18%;
-  }
+.mT-35 {
+    margin-top: 18%;
+}
 
-  #sailorTableArea{
+#sailorTableArea {
     max-height: 300px;
     overflow-x: auto;
     overflow-y: auto;
 }
-#sailorTable{
+
+#sailorTable {
     white-space: nowrap;
 }
 
 .fontPoppins {
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif !important;
 }
 
 .btn {
@@ -80,10 +81,10 @@
     padding: .375rem .75rem;
     font-size: 10px;
     font-weight: bold;
-    font-family: 'Poppins'
-  }
+    font-family: 'Poppins', sans-serif !important;
+}
 
-  .btnCancel {
+.btnCancel {
     border: solid 2px #a7bf2e;
     border-radius: 28px 76px 63px;
     background-color: white;
@@ -91,21 +92,21 @@
     padding: .375rem .75rem;
     font-size: 10px;
     font-weight: bold;
-    font-family: 'Poppins'
-  }
-  
-  .btn:hover {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.btn:hover {
     border: solid 2px #a7bf2e;
     border-radius: 28px 76px 63px;
     background-color: #a7bf2e;
     color: white;
-  }
+}
 
-  .btn:focus {
-      outline: none !important;
-      box-shadow: none !important;
-  }
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
 
-  .tableBg {
-      background-color: white;
-  }
+.tableBg {
+    background-color: white;
+}

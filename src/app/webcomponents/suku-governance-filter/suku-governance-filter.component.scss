@@ -1,0 +1,347 @@
+/* Side - Bar - Box */
+@import "../theme/_theme";
+
+.side-bar {
+  width: 100%;
+  float: left;
+  padding: 0 15px 0 0;
+}
+
+.side-bar .filter-title {
+  color: #c5af79;
+}
+
+.side-bar .filter-title a {
+  color: $suku-filter-label;
+  text-decoration: none;
+}
+
+.side-bar .box {
+  width: 100%;
+  float: left;
+  background: $suku-filter-bg;
+  box-shadow: rgba(0, 0, 0, 0.07) 0 10px 20px;
+  border-radius: 0 0 30px 30px;
+  padding: 25px 0 15px 0;
+}
+
+.side-bar .box .filter-list {
+  width: 100%;
+  float: left;
+  padding: 0 20px 0px 20px;
+}
+
+.side-bar .box .filter-list:last-child {
+  padding-bottom: 0;
+}
+
+.side-bar .box .filter-list h2 {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 15px;
+  color: $suku-filter-label;
+  border-bottom: 1px solid #b6b6b6;
+  padding: 0 0 5px 0;
+  margin: 0 0 10px 0;
+}
+
+.subHeading {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 15px;
+  color: $suku-filter-label-selected;
+}
+
+.dateHeading {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 12px;
+  color: $suku-filter-label-selected;
+}
+
+.side-bar .collapse {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .side-bar .filter-title a {
+    pointer-events: none;
+  }
+
+  .side-bar .collapse-filter {
+    height: auto !important;
+    display: block !important;
+    overflow: visible !important;
+    visibility: visible !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .side-bar {
+    padding: 0;
+    margin: 0 0 30px 0;
+  }
+
+  .side-bar .filter-title {
+    height: auto;
+    line-height: normal;
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 15px 0;
+  }
+
+  .side-bar .filter-title a {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  .side-bar .filter-title a:before {
+    content: "\f056";
+    float: right;
+    // font-family: "Font Awesome\ 5 Pro";
+    font-weight: 300;
+    font-size: 20px;
+    color: #c5af79;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .side-bar .filter-title a.collapsed:before {
+    content: "\f055";
+  }
+
+  .side-bar .collapse-filter {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mat-form-field {
+    display: flow-root;
+  }
+
+  .btn {
+    font-size: 10px !important;
+    padding: 5px 5px 5px 5px !important;
+  }
+}
+
+.btn-info {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  padding: 8px;
+}
+
+.btn-info:hover {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: #a7bf2e;
+  color: white;
+}
+
+.btn-info:active {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: #a7bf2e;
+  color: white;
+}
+
+.btn-info.disabled {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: grey;
+}
+
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled.focus,
+.btn-info[disabled].focus,
+fieldset[disabled] .btn-info.focus {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: white !important;
+  color: grey;
+}
+
+.btn-info:focus,
+.btn-info.focus {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: #a7bf2e;
+  color: white;
+}
+
+.btn-info:active:hover,
+.btn-info.active:hover,
+.open>.dropdown-toggle.btn-info:hover,
+.btn-info:active:focus,
+.btn-info.active:focus,
+.open>.dropdown-toggle .btn-info:focus,
+.btn-info:active.focus,
+.btn-info.active.focus,
+.open>.dropdown-toggle .btn-info.focus {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: #a7bf2e;
+  color: white;
+}
+
+.btn-info:not(:disabled):not(.disabled).active,
+.btn-info:not(:disabled):not(.disabled):active,
+.show>.btn-info.dropdown-toggle {
+  color: #fff;
+  background-color: #a7bf2e;
+  border-color: #a7bf2e;
+}
+
+.btn-info.focus,
+.btn-info:focus {
+  box-shadow: 0 0 0 0.2rem #a7bf2e;
+}
+
+.btn-info:not(:disabled):not(.disabled).active:focus,
+.btn-info:not(:disabled):not(.disabled):active:focus,
+.show>.btn-info.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem #a7bf2e;
+}
+
+/deep/.mat-checkbox-frame {
+  background-color: transparent;
+  transition: border-color 90ms cubic-bezier(0, 0, 0.2, 0.1);
+  border-width: 0px !important;
+  border-style: solid;
+  border-color: #757575a6;
+}
+
+.mat-checkbox-background,
+.mat-checkbox-frame {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 2px;
+  box-sizing: border-box;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #757575a6;
+}
+
+/deep/.mat-checkbox-background,
+.mat-checkbox-frame {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 2px;
+  box-sizing: border-box;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #757575a6;
+}
+
+.mat-checkbox-frame {
+  background-color: transparent;
+  transition: border-color 90ms cubic-bezier(0, 0, 0.2, 0.1);
+  border-width: 0px !important;
+  border-style: solid;
+  border-color: #757575a6;
+}
+
+/deep/.mat-checkbox-checked.mat-primary .mat-checkbox-background {
+  background-color: transparent;
+}
+
+/deep/.mat-checkbox-checkmark-path {
+  stroke: $suku-filter-label-selected !important;
+  stroke-width: 4px !important;
+}
+
+/deep/.mat-checkbox-checked .mat-checkbox-layout .mat-checkbox-label {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  color: $suku-filter-label-selected !important;
+}
+
+/deep/.mat-checkbox-layout .mat-checkbox-label {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  color: #757575a6 !important;
+}
+
+.mat-checkbox-label {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-wrapper {
+  padding-bottom: 1em;
+}
+
+.mat-input-element {
+  font-size: 15px;
+  color: $suku-text-link !important;
+}
+
+/deep/.mat-form-field-label {
+  color: $suku-text-link;
+}
+
+/deep/.mat-form-field-appearance-legacy .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
+  color: $suku-text-link;
+}
+
+/deep/.mat-form-field-underline {
+  background-color: $suku-text-link;
+}
+
+.side-bar .box .filter-links {
+  width: 100%;
+  float: left;
+  border-top: 1px solid #ececec;
+  padding: 10px 0 0 30px;
+}
+
+.side-bar .box .filter-links p {
+  font-family: 'Encode Sans', sans-serif !important;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: lowercase;
+  padding: 0;
+}
+
+.side-bar .box .filter-links p a {
+  color: #1d1d1d;
+  text-decoration: underline;
+  margin: 0 15px 0 0;
+}
+
+.side-bar .box .filter-links p a:hover {
+  color: #02b3e3;
+}
+
+a:hover {
+  cursor: pointer !important;
+  color: black !important;
+}

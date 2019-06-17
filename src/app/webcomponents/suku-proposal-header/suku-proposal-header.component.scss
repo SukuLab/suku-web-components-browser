@@ -1,0 +1,41 @@
+@import '../theme/_theme';
+
+
+h1 {
+  color: $suku-text-label-two;
+  font-size: 20px;
+  font-family: $suku-primary-font;
+  font-weight: 200 !important;
+}
+
+h2 {
+  color: $suku-text-sub-heading;
+  font-size: 15px;
+  font-family: $suku-primary-font;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+}
+
+.pop-light {
+  font-family: $suku-primary-font;
+  font-weight: 200 !important;
+  font-size: 16px;
+}
+
+.c-pointer {
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.proposal-header {
+  width: 100%;
+  float: left;
+  border-left: 5px solid;
+  border-color: $suku-primary-border-color;
+  border-radius: $suku-primary-border-radius;
+  box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
+  padding: 10px 5px 0px 15px;
+  margin: 0 0 0px 0;
+  background: $suku-bg-primary !important;
+}
+

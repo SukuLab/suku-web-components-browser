@@ -1,0 +1,305 @@
+@import '../theme/_theme';
+
+.tilebox {
+  width: 100%;
+  float: left;
+  padding: 10px;
+  background-image: linear-gradient(to bottom, rgba(101, 102, 243, 0.06), rgba(101, 102, 243, 0.06)),
+    radial-gradient(circle at 50% 0, #3a3a3a, #000000);
+  border-radius: 5px 5px 10px 10px;
+  box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
+}
+
+.color {
+  font-family: "Poppins", sans-serif !important;
+  color: #ffffff !important;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.boxStyle {
+  border-radius: 7px 7px 22px 22px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.05);
+}
+
+.bgColor {
+  background-color: #3a3a3a;
+  opacity: 0.5;
+}
+
+.iconstyle {
+  font-size: 50px;
+  color: #a7bf2e;
+}
+
+.iconPad {
+  padding: 5px;
+}
+
+h2 {
+  font-family: $suku-primary-font;
+  font-size: 16px;
+  color: $suku-text-heading;
+  font-weight: 700;
+}
+
+p {
+  font-family: $suku-primary-font;
+  font-size: 14px;
+}
+
+.title {
+  font-family: $suku-primary-font;
+  font-size: 16px;
+  color: $suku-text-label-two;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.sub-title {
+  font-family: $suku-primary-font;
+  font-size: 16px;
+  color: $suku-text-label-two;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+}
+
+/* user-widget */
+
+h3 {
+  color: $suku-text-heading;
+  font-size: 12px;
+  font-family: $suku-primary-font;
+  font-weight: 700 !important;
+}
+
+h4 {
+  color: $suku-text-info;
+  font-size: 10px;
+  font-family: $suku-primary-font;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+}
+
+.text-black {
+  color: black;
+}
+
+.img {
+  -webkit-box-shadow: 5px 8px 17px -5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 5px 8px 17px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 8px 17px -5px rgba(0, 0, 0, 0.25);
+  border-radius: $suku-default-border-radius;
+}
+
+.img-default {
+  width: 100%;
+  height: 78px;
+  border-radius: $suku-default-border-radius;
+}
+
+.user-chip-shadow {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  height: 162px;
+  width: 110px;
+  background: white;
+  -webkit-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: $suku-default-border-radius;
+}
+
+.user-info {
+  max-height: 62px;
+  height: 55px;
+}
+
+.socialMedia {
+  max-height: 15px;
+}
+
+.icons {
+  color: $suku-text-heading;
+}
+
+.icons:hover {
+  color: $suku-sick-green;
+  cursor: pointer;
+}
+
+@media only screen and (min-width:1080px) {
+  .user-layout {
+    max-width: 19.4%;
+  }
+}
+
+// [appSliderItem] {
+//   flex-shrink: 0;
+// }
+
+.links {
+  font-family: $suku-primary-font;
+  font-size: 12px;
+}
+
+/* scroll-bar */
+
+/deep/div {
+  ::-webkit-scrollbar {
+    width: 4px !important;
+    /* for vertical scrollbars */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+/deep/mat-dialog-container {
+  padding: 0px !important;
+  overflow: hidden !important;
+}
+
+:host {
+  /deep/mat-dialog-content {
+    max-height: 91% !important;
+    overflow-y: none !important;
+    margin: 0px !important;
+  }
+
+  /deep/mat-dialog-actions {
+    margin: 5px 10px 5px 5px !important;
+  }
+
+}
+
+#optionModal {
+  /deep/mat-dialog-content {
+    max-height: 91% !important;
+    overflow-y: none !important;
+    margin: 0px !important;
+  }
+
+  /deep/mat-dialog-actions {
+    padding-right: 10px !important;
+  }
+}
+
+button:focus {
+  outline: none !important;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+  background-color: none !important;
+  outline: none !important;
+
+  &:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+    background-color: none !important;
+    outline: none !important
+  }
+
+  &:focus {
+    color: inherit !important;
+    text-decoration: none !important;
+    background-color: none !important;
+    outline: none !important
+  }
+}
+
+.link {
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+/* siler icon css type-two--trail-2 */
+
+.leftRs {
+  position: absolute;
+  margin: auto;
+  top: -7px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  left: 0px;
+  background: white;
+  border: 0;
+  font-size: 23px;
+  outline: none !important;
+  cursor: pointer;
+  background: white;
+  color: grey !important;
+  border-radius: 50%;
+  box-shadow: 0px 3px 4px 0 #f2f2f2;
+
+  &:hover {
+    cursor: pointer;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    transform: translateX(-4px);
+  }
+}
+
+.rightRs {
+  position: absolute;
+  margin: auto;
+  top: -7px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  right: 0px;
+  border: 0;
+  font-size: 23px;
+  outline: none !important;
+  background: white;
+  color: grey !important;
+  border-radius: 50%;
+  box-shadow: 0px 3px 4px 0 #f2f2f2;
+
+  &:hover {
+    cursor: pointer;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    transform: translateX(4px);
+  }
+}
+
+/deep/.ngucarouselPoint {
+  display: none !important;
+}
+
+#user-widget {
+  /deep/ngu-tile {
+    padding: 4px !important;
+  }
+}
+
+/deep/[_nghost-ock-c9] {
+  padding: 6px !important;
+}
+
+#user-widget {
+  /deep/.tile {
+    width: 105px !important;
+  }
+}

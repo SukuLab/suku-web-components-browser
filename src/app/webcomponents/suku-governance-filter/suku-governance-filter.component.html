@@ -1,0 +1,56 @@
+<div class="side-bar" [formGroup]="form">
+  <div class="filter-title">
+    <a class="collapsed f30" data-toggle="collapse" href=".collapse-filter"></a>
+  </div>
+  <div class="collapse-filter collapse" id="collapse-filter">
+    <div class="box">
+      <div class="filter-list">
+        <h2 [style.font-size.px]="headingSize" class="mt-2 mb-3 {{headingCustomClass}}">{{ filterHeading }}</h2>
+        <div class="options pl-0">
+          <div *ngFor="let status of statusTypesDynamic; let l = index">
+            <mat-checkbox *ngIf="!status?.label" color="primary" [checked]="status.checked"
+            (change)="status.checked = $event.checked; filterOnChange.emit($event)">
+              {{ status.displayName }}</mat-checkbox>
+            <div *ngIf="status?.label" class="mat-checkbox-label pb-2">
+              <span class="subHeading" [style.font-size.px]="size">{{ status.displayName }}</span>
+            </div>
+            <div class="p-0">
+              <div class="col-sm-12 " *ngFor="let subStatus of status.sub; let sk = index">
+                <mat-checkbox [checked]="subStatus.checked" 
+                (change)="subStatus.checked = $event.checked; filterOnChange.emit($event)"
+                 color="primary">{{ subStatus.displayName }}</mat-checkbox>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-0 mt-1 mb-1">
+          <span class="subHeading" [style.font-size.px]="size">{{ filterSubHeading }}</span>
+          <div class=" dateHeading pb-0 mt-1">From</div>
+          <mat-form-field class="p-0 col-sm-12">
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" id="fromDate"
+              formControlName="fromDate" name="fromDate" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <div class="mt-2 pb-0 dateHeading">To</div>
+          <mat-form-field class="p-0 col-sm-12">
+            <input matInput formControlName="tillDate" [matDatepicker]="picker1" placeholder="Choose a date"
+              id="tillDate" name="tillDate" />
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="p-0 pb-4 pl-3 pr-3">
+          <button type="button" class=" btn btn-info btn-sm btn-block" (click)="applyFilter.emit()">Apply Date Filters
+          </button>
+        </div>
+      </div>
+      <div class="filter-links">
+        <p>
+          <a (click)="selectAll.emit();">select all</a>
+          <a (click)="deselectAll.emit();">clear all</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -71,6 +71,106 @@ export class SukuListProposalChoiceWidgetComponent implements OnInit {
     {
       voteCount: '203.5 Million',
       btnSecondry: 'More Information',
+      btnPrimary: 'Voted',
+      projectName: ' sample Project A',
+      optionId: '1',
+      optionSummary: 'text of an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+      optionImg: 'https://s3-eu-west-1.amazonaws.com/farmplan-assets-live/sites/1/2019/02/Microsoft-logo_rgb_c-gray.png',
+      optionImgId: 'image1',
+      optionImgName: 'image1',
+      IsBtnPrimary: false,
+      teamMembersCustomArray: [
+        {
+          userName: 'Larry',
+          userNameId: 'Larry',
+          userDesignation: 'Project Manager',
+          userDesignationId: 'Project Manager',
+          userImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhmUpYYHhalvLQxph1FulRdB6yx-JLqee73jF1UM8FCE6prCve',
+          userImgId: 'user1',
+          socialMedia: [
+            {
+              name: 'telegram',
+              link: 'xyz',
+              icon: 'fa fa-telegram',
+              id: 'telegram'
+            },
+            {
+              name: 'twitter',
+              link: 'xyz',
+              icon: 'fa fa-twitter-square',
+              id: 'twitter'
+            },
+            {
+              name: 'linkedin',
+              link: 'xyz',
+              icon: 'fa fa-linkedin-square',
+              id: 'linkedIn'
+            },
+            {
+              name: 'github',
+              link: 'xyz',
+              icon: 'fa fa-github-alt',
+            }
+          ],
+          path: '/userDashboard',
+          disabled: false,
+          id: 'user'
+        }
+      ]
+    },
+    {
+      voteCount: '203.5 Million',
+      btnSecondry: 'More Information',
+      btnPrimary: 'Voted',
+      projectName: ' sample Project A',
+      optionId: '1',
+      optionSummary: 'text of an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+      optionImg: 'https://s3-eu-west-1.amazonaws.com/farmplan-assets-live/sites/1/2019/02/Microsoft-logo_rgb_c-gray.png',
+      optionImgId: 'image1',
+      optionImgName: 'image1',
+      IsBtnPrimary: false,
+      teamMembersCustomArray: [
+        {
+          userName: 'Larry',
+          userNameId: 'Larry',
+          userDesignation: 'Project Manager',
+          userDesignationId: 'Project Manager',
+          userImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhmUpYYHhalvLQxph1FulRdB6yx-JLqee73jF1UM8FCE6prCve',
+          userImgId: 'user1',
+          socialMedia: [
+            {
+              name: 'telegram',
+              link: 'xyz',
+              icon: 'fa fa-telegram',
+              id: 'telegram'
+            },
+            {
+              name: 'twitter',
+              link: 'xyz',
+              icon: 'fa fa-twitter-square',
+              id: 'twitter'
+            },
+            {
+              name: 'linkedin',
+              link: 'xyz',
+              icon: 'fa fa-linkedin-square',
+              id: 'linkedIn'
+            },
+            {
+              name: 'github',
+              link: 'xyz',
+              icon: 'fa fa-github-alt',
+            }
+          ],
+          path: '/userDashboard',
+          disabled: false,
+          id: 'user'
+        }
+      ]
+    },
+    {
+      voteCount: '203.5 Million',
+      btnSecondry: 'More Information',
       btnPrimary: 'Cast Vote',
       projectName: 'Project A',
       optionId: '1',

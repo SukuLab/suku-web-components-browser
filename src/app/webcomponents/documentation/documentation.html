@@ -66,10 +66,15 @@
               <div class="col-sm-12 p-4">
                 <!-- sample json inject here -->
                 <!-- <p class="docs-markdown-p">Sample JSON:</p> -->
-                <div class="col p-0 mt-2" *ngIf="content?.jsonSample">
+                <div class="col p-0 mt-2" *ngIf="content?.jsonSample || content?.usage">
                   <div class="links text-left mb-3 c-pointer" (click)="collapseFuc()">Click to
                     {{ collapse ? 'hide info' : 'show info' }}</div>
-                  <div *ngIf="collapse" class="col p-0" id="jsonSample" [innerHTML]="content?.jsonSample"></div>
+                  <div *ngIf="collapse" class="col p-0">
+                    <div *ngIf="content?.usage" [innerHTML]="content?.usage"></div>
+                    <div *ngIf="content?.jsonSample" id="jsonSample">
+                      <ngx-json-viewer [json]="content?.jsonSample"></ngx-json-viewer>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- terminal code-->
@@ -85,7 +90,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-12 d-flex" *ngIf="dataLength">
+                <div class="col-sm-12 d-flex" *ngIf="dataLength > 0">
                   <div class="col-sm-12 box-color-shadow-rect pb-4 pt-4">
                     <p class="docs-markdown-p">Output: </p>
                     <div class="border-top-box"></div>

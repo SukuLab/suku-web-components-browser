@@ -69,6 +69,7 @@ ul#side {
     padding: 10px;
     cursor: pointer;
   }
+
   list-style: none;
   background-color: #d1d1d1;
   background-color: rgba(0, 0, 0, .03);
@@ -403,28 +404,30 @@ span.hljs-name {
 }
 
 .docs-markdown-pre {
-    border-radius: 5px;
-    display: block;
-    margin: 16px auto;
-    overflow-x: auto;
-    padding: 20px;
-    white-space: pre-wrap;
-    background: rgba(0,0,0,.01);
-    border: .5px solid rgba(0,0,0,.03);
+  border-radius: 5px;
+  display: block;
+  margin: 16px auto;
+  overflow-x: auto;
+  padding: 20px;
+  white-space: pre-wrap;
+  background: rgba(0, 0, 0, .01);
+  border: .5px solid rgba(0, 0, 0, .03);
 }
+
 pre {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .docs-markdown-pre .docs-markdown-code {
   padding: 0;
   background: 0 0;
 }
+
 .docs-markdown-pre code {
   font-size: 100%;
 }
 
-.mockSample{
+.mockSample {
   border: none;
   font-family: "Fira Mono", "Andale Mono", "Consolas", monospace;
   letter-spacing: -0.1px;
@@ -468,15 +471,18 @@ button {
     opacity: 0;
     transform: translateY(100%);
   }
+
   70% {
     opacity: 1;
     transform: translateY(0);
   }
+
   100% {
     opacity: 0;
   }
 }
-.link{
+
+.link {
   font-family: 'Encode Sans', sans-serif !important;
   font-size: 12px;
   font-weight: 500;
@@ -486,8 +492,9 @@ button {
   letter-spacing: -0.4px;
   text-align: center;
   color: #b6b6b6;
- }
-.links{
+}
+
+.links {
   font-family: 'Encode Sans', sans-serif !important;
   font-size: 14px;
   font-weight: 500;
@@ -497,10 +504,10 @@ button {
   letter-spacing: -0.4px;
   text-align: center;
   color: #b6b6b6;
- }
- 
- textarea#datas {
-  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+textarea#datas {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 14px;
 }
 
@@ -508,6 +515,22 @@ button {
   color: rgba(171, 203, 39, 0.92);
   font-size: 13px;
 }
-.c-pointer{
- cursor: pointer;
+
+.c-pointer {
+  cursor: pointer;
+}
+
+/deep/pre {
+  background: none !important;
+}
+
+#jsonSample {
+  padding: 10px 15px !important;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/deep/.ngx-json-viewer .segment .segment-main .segment-key {
+  color: rgb(35, 35, 36) !important;
 }

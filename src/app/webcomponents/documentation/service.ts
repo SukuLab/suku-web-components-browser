@@ -13,9 +13,9 @@ export interface WebCompContent {
 	title: string;
 	description: string;
 	properties: any;
-	mockSample: any;
 	codeSample: any;
 	jsonSample: any;
+	usage: any;
 	try: boolean;
 	id: number;
 }
@@ -1682,12 +1682,12 @@ export class WebComponentsServices {
 				{
 					properties: 'form',
 					type: '[String]',
-					description: 'It corresponds to FormGroup name.'
+					description: 'It defines FormGroup name.'
 				},
 				{
 					properties: 'filterHeading',
 					type: '[String]',
-					description: 'It corresponds to filter Heading.'
+					description: 'It defines filter Heading.'
 				},
 				{
 					properties: 'headingSize',
@@ -1702,22 +1702,22 @@ export class WebComponentsServices {
 				{
 					properties: 'filterOnChange',
 					type: '[Output]',
-					description: 'It corresponds to Change Event-Emitter for checkbox.'
+					description: 'It corresponds to change event-emitter for checkbox.'
 				},
 				{
 					properties: 'applyFilter',
 					type: '[Output]',
-					description: 'It corresponds to click Event-Emitter for applyFilter.'
+					description: 'It corresponds to click event-emitter for applyFilter.'
 				},
 				{
 					properties: 'selectAll',
 					type: '[Output]',
-					description: 'It corresponds to click Event-Emitter for selectAll action.'
+					description: 'It corresponds to click event-emitter for selectAll action.'
 				},
 				{
 					properties: 'deselectAll',
 					type: '[Output]',
-					description: 'It corresponds to click Event-Emitter for deselectAll action.'
+					description: 'It corresponds to click event-emitter for deselectAll action.'
 				},
 				{
 					properties: 'statusTypesDynamic',
@@ -1728,174 +1728,315 @@ export class WebComponentsServices {
 		},
 		{
 
-
-
-
-			// labelTwo: data.labelTwo,
-			// labelTwoSize: data.labelTwoSize,
-			// labelTwoColor: data.labelTwoColor,
-			// labelTwoCustomClass: data.labelTwoCustomClass,
-			// labelTwoId: data.labelTwoId,
-			// outlineSize: data.outlineSize,
-			// outlineColor: data.outlineColor,
-			// outlineCustomClass: data.outlineCustomClass,
-			// outlineId: data.outlineId,
-			// labelThree: data.labelThree,
-			// labelThreeSize: data.labelThreeSize,
-			// labelThreeColor: data.labelThreeColor,
-			// labelThreeCustomClass: data.labelThreeCustomClass,
-			// labelThreeId: data.labelThreeId,
-			// labelFour: data.labelFour,
-			// labelFourSize: data.labelFourSize,
-			// labelFourColor: data.labelFourColor,
-			// labelFourCustomClass: data.labelFourCustomClass,
-			// labelFourId: data.labelFourId,
-			// companyLogo: data.companyLogo,
-			// teamMembers: data.teamMembers,
-			// iconSize: data.iconSize,
-			// iconColor: data.iconColor,
-			// iconClass: data.iconClass,
-			// userNameSize: data.userNameSize,
-			// userNameColor: data.userNameColor,
-			// userNameClass: data.userNameClass,
-			// userDesignationSize: data.userDesignationSize,
-			// userDesignationColor: data.userDesignationColor,
-			// userDesignationClass: data.userDesignationClass,
-			// userImgClass: data.userImgClass,
-			// widgetCustomClass: data.widgetCustomClass,
-			// links: data.links,
-			// outline: data.outline,
-			// linksKey: data.linksKey
 			data: [
 				{
 					properties: 'title',
 					type: '[String]',
-					description: 'It corresponds to the title for option modal.'
+					description: 'It defines title for option modal.'
 				},
 				{
 					properties: 'title-size',
 					type: '[String]',
-					description: 'It corresponds to the font-size of title.'
+					description: 'It defines font-size for the title.'
 				},
 				{
 					properties: 'title-color',
 					type: '[String]',
-					description: 'It corresponds to the font-color of title.'
+					description: 'It defines font-color for the title.'
 				},
 				{
 					properties: 'title-custom-class',
 					type: '[String]',
-					description: 'It corresponds to the custom-class for title.'
+					description: 'It defines custom-class for the title.'
 				},
 				{
 					properties: 'title-Id',
 					type: '[String]',
-					description: 'It corresponds to the Id for title.'
+					description: 'It defines the Id for title.'
 				},
 				{
 					properties: 'content-one',
 					type: '[String]',
-					description: 'It corresponds to the Project-name for option modal.'
+					description: 'It defines the project-name for option modal.'
 				},
 				{
 					properties: 'content-one-size',
 					type: '[String]',
-					description: 'It corresponds to the font-size of content-one.'
+					description: 'It defines font-size for content-one.'
 				},
 				{
 					properties: 'content-one-color',
 					type: '[String]',
-					description: 'It corresponds to the font-color of content-one.'
+					description: 'It defines font-color for content-one.'
 				},
 				{
 					properties: 'content-one-custom-class',
 					type: '[String]',
-					description: 'It corresponds to the custom-class for content-one.'
+					description: 'It defines the custom-class for content-one.'
 				},
 				{
 					properties: 'content-one-Id',
 					type: '[String]',
-					description: 'It corresponds to the Id for content-one.'
+					description: 'It defines the Id for content-one.'
 				},
 				{
 					properties: 'img-class',
 					type: '[String]',
-					description: 'It corresponds to the custom-class for company-logo.'
+					description: 'It defines the custom-class for company-logo.'
 				},
 				{
 					properties: 'label-one',
 					type: '[String]',
-					description: 'It corresponds to the Votes for option modal.'
+					description: 'It defines votes heading for option modal.'
 				},
 				{
 					properties: 'label-one-size',
 					type: '[String]',
-					description: 'It corresponds to the font-size of label-one.'
+					description: 'It defines the font-size for label-one.'
 				},
 				{
 					properties: 'label-one-color',
 					type: '[String]',
-					description: 'It corresponds to the font-color of label-one.'
+					description: 'It defines the font-color for label-one.'
 				},
 				{
 					properties: 'label-one-custom-class',
 					type: '[String]',
-					description: 'It corresponds to the custom-class for label-one.'
+					description: 'It defines the custom-class for label-one.'
 				},
 				{
 					properties: 'label-one-Id',
 					type: '[String]',
-					description: 'It corresponds to the Id for label-one.'
+					description: 'It defines the Id for label-one.'
 				},
 				{
 					properties: 'content-two',
 					type: '[String]',
-					description: 'It corresponds to the vote-count for option modal.'
+					description: 'It defines the vote-count for option modal.'
 				},
 				{
 					properties: 'content-two-size',
 					type: '[String]',
-					description: 'It corresponds to the font-size of content-two.'
+					description: 'It defines the font-size for content-two.'
 				},
 				{
 					properties: 'content-two-color',
 					type: '[String]',
-					description: 'It corresponds to the font-color of content-two.'
+					description: 'It defines the font-color for content-two.'
 				},
 				{
 					properties: 'content-two-custom-class',
 					type: '[String]',
-					description: 'It corresponds to the custom-class for content-two.'
+					description: 'It defines the custom-class for content-two.'
 				},
 				{
 					properties: 'content-two-Id',
 					type: '[String]',
-					description: 'It corresponds to the Id for content-two.'
+					description: 'It defines the Id for content-two.'
 				},
 				{
 					properties: 'label-two',
 					type: '[String]',
-					description: 'It corresponds to the putline for option modal.'
+					description: 'It defines the outline label for option modal.'
 				},
 				{
 					properties: 'label-two-size',
 					type: '[String]',
-					description: 'It corresponds to the font-size of label-two.'
+					description: 'It defines the font-size for label-two.'
 				},
 				{
 					properties: 'label-two-color',
 					type: '[String]',
-					description: 'It corresponds to the font-color of label-two.'
+					description: 'It defines the font-color for label-two.'
 				},
 				{
 					properties: 'label-two-custom-class',
 					type: '[String]',
-					description: 'It corresponds to the custom-class for label-two.'
+					description: 'It defines the custom-class for label-two.'
 				},
 				{
 					properties: 'label-two-Id',
 					type: '[String]',
-					description: 'It corresponds to the Id for label-two.'
+					description: 'It defines the Id for label-two.'
+				},
+				{
+					properties: 'outline',
+					type: '[String]',
+					description: 'It defines the outline for the project.'
+				},
+				{
+					properties: 'outline-size',
+					type: '[String]',
+					description: 'It defines the font-size for outline.'
+				},
+				{
+					properties: 'outline-color',
+					type: '[String]',
+					description: 'It defines the font-color for outline.'
+				},
+				{
+					properties: 'outline-custom-class',
+					type: '[String]',
+					description: 'It defines the custom class for outline.'
+				},
+				{
+					properties: 'outline-Id',
+					type: '[String]',
+					description: 'It defines the Id for outline.'
+				},
+				{
+					properties: 'label-three',
+					type: '[String]',
+					description: 'It defines the team member label.'
+				},
+				{
+					properties: 'label-three-size',
+					type: '[String]',
+					description: 'It defines the font-size for label-three.'
+				},
+				{
+					properties: 'label-three-color',
+					type: '[String]',
+					description: 'It defines the font-color for label-three.'
+				},
+				{
+					properties: 'label-three-custom-class',
+					type: '[String]',
+					description: 'It defines the custom-class for label-three.'
+				},
+				{
+					properties: 'label-three-Id',
+					type: '[String]',
+					description: 'It defines the Id for label-three.'
+				},
+				{
+					properties: 'label-four',
+					type: '[String]',
+					description: 'It defines the addtional resources label.'
+				},
+				{
+					properties: 'label-four-size',
+					type: '[String]',
+					description: 'It defines the font-size of label-four.'
+				},
+				{
+					properties: 'label-four-color',
+					type: '[String]',
+					description: 'It defines the font-color of label-four.'
+				},
+				{
+					properties: 'label-four-custom-class',
+					type: '[String]',
+					description: 'It defines the custom-class for label-four.'
+				},
+				{
+					properties: 'label-four-Id',
+					type: '[String]',
+					description: 'It defines the Id for label-four.'
+				},
+				{
+					properties: 'company-logo',
+					type: '[String]',
+					description: 'It defines the company logo.'
+				},
+				{
+					properties: 'iconSize',
+					type: '[number]',
+					description: 'It defines the icon font-size.'
+				},
+				{
+					properties: 'iconColor',
+					type: '[String]',
+					description: 'It defines the icon color.'
+				},
+				{
+					properties: 'iconClass',
+					type: '[String]',
+					description: 'It defines the icon custom class.'
+				},
+				{
+					properties: 'userNameSize',
+					type: '[number]',
+					description: 'It corresponds to the user-name font-size.'
+				},
+				{
+					properties: 'userNameColor',
+					type: '[String]',
+					description: 'It corresponds to the user-name font-color.'
+				},
+				{
+					properties: 'userNameClass',
+					type: '[String]',
+					description: 'It corresponds to the user-name custom class.'
+				},
+				{
+					properties: 'userDesignationSize',
+					type: '[number]',
+					description: 'It corresponds to the user-designation font-size.'
+				},
+				{
+					properties: 'userDesignationColor',
+					type: '[String]',
+					description: 'It corresponds to the user-designation font-color.'
+				},
+				{
+					properties: 'userDesignationClass',
+					type: '[String]',
+					description: 'It corresponds to the user-designation custom class.'
+				},
+				{
+					properties: 'userImgClass',
+					type: '[String]',
+					description: 'It corresponds to the user-image custom class.'
+				},
+				{
+					properties: 'widgetCustomClass',
+					type: '[String]',
+					description: 'It corresponds to the users-widget custom class.'
+				},
+				{
+					properties: 'links',
+					type: '[Array]',
+					description: 'It corresponds to the additional resources links.'
+				},
+				{
+					properties: 'linksKey',
+					type: '[Array]',
+					description: 'It defines key name in link array for additional resources links.'
+				}
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'titleStyle',
+					type: '[String]',
+					description: 'It defines custom class for title(project name).'
+				},
+				{
+					properties: 'summeryStyle',
+					type: '[String]',
+					description: 'It defines custom class for project Summery.'
+				},
+				{
+					properties: 'bgColor',
+					type: '[String]',
+					description: 'It defines background-color for choice-widget.'
+				},
+				{
+					properties: 'footerbox',
+					type: '[String]',
+					description: 'It defines custom class for choice-widget-footer.'
+				},
+				{
+					properties: 'choiceOptions',
+					type: '[Array]',
+					description: 'It defines choice-options array.'
+				},
+				{
+					properties: 'teamMemberskey',
+					type: '[String]',
+					description: 'It defines key name for teamMemebers details in choiceoptions array.'
 				}
 			]
 		},
@@ -1904,17 +2045,17 @@ export class WebComponentsServices {
 				{
 					properties: 'title',
 					type: '[String]',
-					description: 'It corresponds to the title for Voting breakdown.'
+					description: 'It defines the title for Voting breakdown.'
 				},
 				{
 					properties: 'title-size',
 					type: '[String]',
-					description: 'It corresponds to the font-size of title in Voting breakdown.'
+					description: 'It defines the font-size for title in Voting breakdown.'
 				},
 				{
 					properties: 'doughnutChartData',
 					type: '[Array]',
-					description: 'It corresponds to the chart-data for Voting breakdown.'
+					description: 'It defines the chart-data for Voting breakdown.'
 				},
 			]
 		}
@@ -1934,9 +2075,9 @@ Let's get started:
 3) Use the sandbox at the bottom of each component page to test out the component and any inputs of your choosing.
 			`,
 			properties: this.Properties_DATA,
-			mockSample: ``,
 			codeSample: '',
 			jsonSample: '',
+			usage: ``,
 			try: false,
 			id: 0
 		},
@@ -1945,15 +2086,9 @@ Let's get started:
 			description: `redners all the font changes, paragraph breaks before and after,
     		and any white space necessary to render the heading.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre class="docs-markdown-pre">
-    		<code class="lang-html docs-markdown-code m-3">
-    		<span class="hljs-tag">&lt;<span class="hljs-name">suku-heading</span>&gt;<span class="hljs-attr"> You just created suku-heading </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-heading</span>&gt;</span>
-    		<span class="hljs-tag">&lt;<span class="hljs-name">suku-heading color="#a7be2f" size="50"</span>&gt;<span class="hljs-attr"> You just modified suku-heading </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-heading</span>&gt;</span>
-    		</code>
-    		</pre>
-			`,
 			codeSample: '<suku-heading> You just created suku-heading </suku-heading>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 1
 		},
@@ -1962,14 +2097,9 @@ Let's get started:
 			description: `is used to help break up heading text.
    			 They improve the layout of a page and draw the attention of the readers.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre class="docs-markdown-pre">
-    		<code class="lang-html docs-markdown-code m-3">
-    		<span class="hljs-tag">&lt;<span class="hljs-name">suku-sub-heading</span>&gt;<span class="hljs-attr"> You just created suku-sub-heading </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-sub-heading</span>&gt;</span>
-        	<span class="hljs-tag">&lt;<span class="hljs-name">suku-sub-heading color="#a7be2f" size="50"</span>&gt;<span class="hljs-attr"> You just modified suku-sub-heading </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-sub-heading</span>&gt;</span>
-    		</code>
-			</pre>`,
 			codeSample: '<suku-sub-heading> You just created suku-sub-heading </suku-sub-heading>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 2
 		},
@@ -1977,11 +2107,9 @@ Let's get started:
 			title: 'suku-profile-widget',
 			description: `represents the user profile which consists of name, account-type, and ratings.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-    		<span class="hljs-name">&lt;suku-profile-widget</span>  <span class="na">user-name=</span><span class="s">"Suku"</span> <span class="na">account-type=</span><span class="s">"Manufacturer"</span><span class="hljs-name">&gt;&lt;/suku-profile-widget&gt;</span>
-					   </code></pre>`,
 			codeSample: '<suku-profile-widget  user-name="Suku" account-type="Manufacturer"></suku-profile-widget>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 3
 		},
@@ -1989,11 +2117,9 @@ Let's get started:
 			title: 'suku-rating-widget',
 			description: `allows a user to submit a rating on a five-star scale.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-rating-widget</span>  <span class="na">comment-size=</span><span class="s">"16"</span> <span class="na">comment-color=</span><span class="s">"#b6b6b6"</span> <span class="hljs-name">&gt;&lt;/suku-rating-widget&gt;</span>
-				   </code></pre>`,
 			codeSample: '<suku-rating-widget  comment-size="16" comment-color="#b6b6b6" ></suku-rating-widget>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 4
 		},
@@ -2001,13 +2127,10 @@ Let's get started:
 			title: 'suku-notification',
 			description: `is to display the number of notifications for any provided cetegory.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-notification-widget</span>  <span class="na">id=</span><span class="s">"notification"</span> <span class="na">notification-title=</span><span class="s">"review bids"</span> <span class="na">notification-value=</span><span class="s">"0"</span><span class="hljs-name">&gt;
-		&lt;/suku-notification-widget&gt;</span>
-				   </code></pre>`,
 			codeSample:
 				'<suku-notification-widget  id="notification" notification-title="review bids" notification-value="0"></suku-notification-widget>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 5
 		},
@@ -2016,11 +2139,9 @@ Let's get started:
 			title: 'suku-mail-widget',
 			description: `provides a branded icon and email address link for the provided content.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-mail-widget</span> <span class="na">name=</span><span class="s">"dconway@suku.world"</span> <span class="na">size=</span><span class="s">"14"</span> <span class="na">color=</span><span class="s">"#3e3e3e"</span><span class="hljs-name">&gt;&lt;/suku-mail-widget&gt;</span>
-				   </code></pre>`,
 			codeSample: '<suku-mail-widget name="dconway@suku.world" size="14" color="#3e3e3e"></suku-mail-widget>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 6
 		},
@@ -2028,12 +2149,10 @@ Let's get started:
 			title: 'suku-bid-info',
 			description: `shows the number of bids and the percentage fulfilled in a numerical form.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-bid-info</span> <span class="na">bids=</span><span class="s">"374"</span> <span class="na">percent=</span><span class="s">"10%"</span> <span class="na">bid-heading=</span><span class="s">"bids"</span>  <span class="na">percent-heading=</span><span class="s">"fulfill"</span><span class="hljs-name">&gt;&lt;/suku-bid-info&gt;</span>
-				   </code></pre>`,
 			codeSample:
 				'<suku-bid-info bids="374" percent="10%" bid-heading="bids"  percent-heading="fulfill"></suku-bid-info>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 8
 		},
@@ -2041,12 +2160,10 @@ Let's get started:
 			title: 'suku-match-chip',
 			description: `shows the user all the matching products that are available, including a title and expiration date.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-match-chip</span> <span class="na">list-name=</span><span class="s">"Super Computer"</span> <span class="na">prize=</span><span class="s">"10 SUKU"</span> <span class="na">bid-heading=</span><span class="s">"bids"</span>  <span class="na">sell=</span><span class="s">"seller"</span><span class="na">sell-v=</span><span class="s">"John Smith"</span><span class="hljs-name">&gt;
-		&lt;/suku-match-chip&gt;</span></code></pre>`,
 			codeSample:
 				'<suku-match-chip list-name="Super Computer" prize="10 SUKU" bid-heading="bids"  sell="seller"sell-v="John Smith"></suku-match-chip>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 9
 		},
@@ -2054,11 +2171,9 @@ Let's get started:
 			title: 'suku-card-line',
 			description: `is used to display marketplace products and various statuses associated with them.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-card-line</span> <span class="na">title-one=</span><span class="s">"Super Computer"</span> <span class="na">msg-status =</span><span class="s">"read"</span> <span class="na">bg-color =</span><span class="s">"#ffffff"</span><span class="hljs-name">&gt;&lt;/suku-card-line&gt;</span>
-				   </code></pre>`,
 			codeSample: '<suku-card-line title-one="Super Computer" msg-status ="read" bg-color ="#ffffff"></suku-card-line>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 10
 		},
@@ -2066,11 +2181,9 @@ Let's get started:
 			title: 'suku-dashboard-profile',
 			description: `shows the profile of a user with various functionalities, such as creating new listing or new interest. The user can also review matches, negotiate purchases and various other functionalities.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-dashboard-profile</span> <span class="na">user-name=</span><span class="s">"Emery"</span> <span class="na">title-one=</span><span class="s">"CREATE NEW LISTING"</span><span class="hljs-name">&gt;
-		&lt;/suku-dashboard-profile&gt;</span></code></pre>`,
 			codeSample: '<suku-dashboard-profile user-name="Emery" title-one="CREATE NEW LISTING"></suku-dashboard-profile>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 11
 		},
@@ -2078,11 +2191,9 @@ Let's get started:
 			title: 'suku-nav-submenu',
 			description: `provides a sub-navigation menu for more grainular navigation options.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-tag">&lt;<span class="hljs-name">suku-nav-submenu</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-nav-submenu</span>&gt;</span>
-				   </code></pre>`,
 			codeSample: '<suku-nav-submenu></suku-nav-submenu>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 12
 		},
@@ -2090,12 +2201,10 @@ Let's get started:
 			title: 'suku-progress-bar',
 			description: `shows a series of steps to complete a process, such as a listing creation.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-name">&lt;suku-progress-bar</span> <span class="na">progress-style-one=</span><span class="s">"progressCompleted"</span> <span class="na"> heading-one=</span><span class="s">"first heading"</span><span class="hljs-name">&gt;&lt;/suku-progress-bar&gt;</span>
-				   </code></pre>`,
 			codeSample:
 				'<suku-progress-bar progress-style-one="progressCompleted"  heading-one="first heading"></suku-progress-bar>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 13
 		},
@@ -2103,11 +2212,9 @@ Let's get started:
 			title: 'suku-home-italic-heading',
 			description: `displays italic heading text.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-tag">&lt;<span class="hljs-name">suku-home-italic-heading</span> <span class="na">size=</span><span class="s">"20"</span> &gt;<span class="hljs-attr"> You just created suku-heading </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-home-italic-heading</span>&gt;</span>
-				   </code></pre>`,
 			codeSample: '<suku-home-italic-heading size="20" > You just created suku-heading </suku-home-italic-heading>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 14
 		},
@@ -2115,11 +2222,9 @@ Let's get started:
 			title: 'suku-link',
 			description: `provides a branded link to redirect a user.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-		<span class="hljs-tag">&lt;<span class="hljs-name">suku-link</span><span class="na"> size=</span><span class="s">"14"</span>&gt;<span class="hljs-attr"> suku-link </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-link</span>&gt;</span>
-				   </code></pre>`,
 			codeSample: '<suku-link size="14"> suku-link </suku-link>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 15
 		},
@@ -2127,11 +2232,9 @@ Let's get started:
 			title: 'suku-add-widget',
 			description: `guides the end users to create a new item, such as a listing or interest.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-add-widget</span> <span class="na">size=</span><span class="s">"12"</span>&gt;<span class="hljs-attr">ADD NEW LISTING</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-add-widget</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-add-widget size="12">ADD NEW LISTING</suku-add-widget>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 16
 		},
@@ -2139,11 +2242,9 @@ Let's get started:
 			title: 'suku-select-input',
 			description: `is used to give users a list of choices in a branded dropdown selector.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-select-input</span> <span class="na">size=</span><span class="s">"16"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-select-input</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-select-input size="16" ></suku-select-input>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 17
 		},
@@ -2151,11 +2252,9 @@ Let's get started:
 			title: 'suku-phone-widget',
 			description: `provides a branded icon and phone number for the provided content.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-phone-widget</span> <span class="na">number=</span><span class="s">"4806069863"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-phone-widget</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-phone-widget number="4806069863" ></suku-phone-widget>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 18
 		},
@@ -2163,11 +2262,9 @@ Let's get started:
 			title: 'suku-address-widget',
 			description: `provides a branded icon and address for the provided content.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-address-widget</span> <span class="na">size=</span><span class="s">"16"</span> &gt;<span class="hljs-attr">ADD NEW LISTING</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-address-widget</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-address-widget size="16" >ADD NEW LISTING</suku-address-widget>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 19
 		},
@@ -2175,11 +2272,9 @@ Let's get started:
 			title: 'suku-inline-dropdown',
 			description: `displays multiple selection options in a branded dropdown.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-inline-dropdown</span>&gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-inline-dropdown</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-inline-dropdown></suku-inline-dropdown>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 20
 		},
@@ -2187,11 +2282,9 @@ Let's get started:
 			title: 'suku-home-widget',
 			description: `provides a branded link to redirect a user to the homepage.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-home-widget</span> <span class="na">size=</span><span class="s">"16"</span> &gt;<span class="hljs-attr">home widget</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-home-widget</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-home-widget size="16" >home widget</suku-home-widget>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 21
 		},
@@ -2199,11 +2292,9 @@ Let's get started:
 			title: 'suku-filter',
 			description: `enables filtering of a list. It can either be active or inactive`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-filters</span> <span class="na">statusTypesDynamic=</span><span class="s">"InsertArrayHere"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-filter</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-filter statusTypesDynamic="InsertArrayHere" ></suku-filter>',
 			jsonSample: '',
+			usage: '',
 			try: false,
 			id: 22
 		},
@@ -2211,11 +2302,9 @@ Let's get started:
 			title: 'suku-info-button',
 			description: `is a branded button that is used to direct a user to detailed information.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-info-button</span>&gt;<span class="hljs-attr">Suku-info-button</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-info-button</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-info-button>Suku-info-button</suku-info-button>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 23
 		},
@@ -2223,11 +2312,9 @@ Let's get started:
 			title: 'suku-primary-button',
 			description: `represents a branded "primary" button.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-primary-button</span>&gt;<span class="hljs-attr">Suku-primary-button</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-primary-button</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-primary-button>suku-primary-button</suku-primary-button>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 24
 		},
@@ -2235,11 +2322,9 @@ Let's get started:
 			title: 'suku-secondary-button',
 			description: `represents a branded "secondary" button.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-secondary-button</span>&gt;<span class="hljs-attr">Suku-secondary-button</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-secondary-button</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-secondary-button>suku-secondary-button</suku-secondary-button>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 25
 		},
@@ -2247,11 +2332,9 @@ Let's get started:
 			title: 'suku-default-button',
 			description: `represents a branded "default" button.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-default-button</span>&gt;<span class="hljs-attr">Suku-default-button</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-default-button</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-default-button>suku-default-button</suku-default-button>',
 			jsonSample: '',
+			usage: '',
 			try: false,
 			id: 26
 		},
@@ -2259,11 +2342,9 @@ Let's get started:
 			title: 'suku-star-badge',
 			description: `displays a branded badge with a start background.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-star-badge</span>&gt;<span class="hljs-attr"></span></span>5<span class="hljs-tag">&lt;/<span class="hljs-name">suku-star-badge</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-star-badge>5</suku-star-badge>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 27
 		},
@@ -2271,11 +2352,9 @@ Let's get started:
 			title: 'suku-search-input',
 			description: `represents a search bar with an associated icon.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-search-input</span>&gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-search-input</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-search-input></suku-search-input>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 28
 		},
@@ -2283,11 +2362,9 @@ Let's get started:
 			title: 'suku-bid-tag',
 			description: `displays a bid associated with products on the marketplace.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-bid-tag prize="$100"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-bid-tag</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-bid-tag prize="$100" ></suku-bid-tag>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 29
 		},
@@ -2295,11 +2372,9 @@ Let's get started:
 			title: 'suku-rating-star',
 			description: `is used to display ratings between 1-5.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-rating-star</span> <span class="na">rating-value=</span><span class="s">"4"</span> &gt;<span class="hljs-attr"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">suku-rating-star</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-rating-star rating-value="4" ></suku-rating-star>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 30
 		},
@@ -2307,11 +2382,9 @@ Let's get started:
 			title: 'suku-track-progress-bar',
 			description: `displays the various steps to view a trace tree.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-track-progress-bar</span>&gt;</span><span class="hljs-tag"> &lt;/<span class="hljs-name">suku-track-progress-bar</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-track-progress-bar> </suku-track-progress-bar>',
 			jsonSample: '',
+			usage: '',
 			try: true,
 			id: 31
 		},
@@ -2319,11 +2392,9 @@ Let's get started:
 			title: 'suku-product-trace-widget',
 			description: `gelps users trace a product's details.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-track-progress-bar</span>&gt;</span><span class="hljs-tag"> &lt;/<span class="hljs-name">suku-track-progress-bar</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-product-trace-widget> </suku-product-trace-widget>',
 			jsonSample: '',
+			usage: '',
 			try: false,
 			id: 32
 		},
@@ -2331,65 +2402,63 @@ Let's get started:
 			title: 'suku-tree',
 			description: `represents the products in a parent/child hierarchy.`,
 			properties: this.Properties_DATA,
-			mockSample: `<pre><code class="language-html f14" data-lang="html">
-	<span class="hljs-tag">&lt;<span class="hljs-name">suku-tree</span>&gt;</span><span class="hljs-tag"> &lt;/<span class="hljs-name">suku-tree</span>&gt;</span>
-			   </code></pre>`,
 			codeSample: '<suku-tree [tree-data]="assign your data here"></suku-tree>',
-			jsonSample: `<h4 class="text-grey">JSON-Sample: </h4><pre>[{
-		_id: '5c45b8d37bccff62b4c83e4e',
-		timestamp: '2019-01-21T11:41:31.921Z',
-		children: [ 'Lx1002', 'Lx1003' ],
-		uid: 'Lx1001',
-		product: {
-			id: '1001',
-			name: 'Intel I5 CPU QuadCore',
-			description: 'HP Laptop'
-		},
-		links: [
-			{
-				_id: '5c45b8d37bccff62b4c83e4f',
-				uid: 'Lx1000',
-				type: 'usedIn'
-			},
-			{
-				_id: '5c45bf6b7bccff62b4c83e53',
-				uid: 'Lx1002',
-				type: 'composedOf'
-			},
-			{
-				_id: '5c45bf8a7bccff62b4c83e56',
-				uid: 'Lx1003',
-				type: 'composedOf'
-			}
-		],
-		parent: 'Lx1000',
-		__v: 0,
-		depth: 0,
-		relations: [
-			{
-				_id: '5c45bf6a7bccff62b4c83e51',
+			jsonSample: [{
+				_id: '5c45b8d37bccff62b4c83e4e',
 				timestamp: '2019-01-21T11:41:31.921Z',
-				children: [],
-				uid: 'Lx1002',
+				children: ['Lx1002', 'Lx1003'],
+				uid: 'Lx1001',
 				product: {
-					id: '1002',
-					name: 'Intel I5 CPU Chip',
-					description: 'CPU Chip'
+					id: '1001',
+					name: 'Intel I5 CPU QuadCore',
+					description: 'HP Laptop'
 				},
 				links: [
 					{
-						_id: '5c45bf6a7bccff62b4c83e52',
-						uid: 'Lx1001',
+						_id: '5c45b8d37bccff62b4c83e4f',
+						uid: 'Lx1000',
 						type: 'usedIn'
+					},
+					{
+						_id: '5c45bf6b7bccff62b4c83e53',
+						uid: 'Lx1002',
+						type: 'composedOf'
+					},
+					{
+						_id: '5c45bf8a7bccff62b4c83e56',
+						uid: 'Lx1003',
+						type: 'composedOf'
 					}
 				],
-				parent: 'Lx1001',
+				parent: 'Lx1000',
 				__v: 0,
-				depth: 1,
-				relations: []
-			}
-		]
-	}]</pre>`,
+				depth: 0,
+				relations: [
+					{
+						_id: '5c45bf6a7bccff62b4c83e51',
+						timestamp: '2019-01-21T11:41:31.921Z',
+						children: [],
+						uid: 'Lx1002',
+						product: {
+							id: '1002',
+							name: 'Intel I5 CPU Chip',
+							description: 'CPU Chip'
+						},
+						links: [
+							{
+								_id: '5c45bf6a7bccff62b4c83e52',
+								uid: 'Lx1001',
+								type: 'usedIn'
+							}
+						],
+						parent: 'Lx1001',
+						__v: 0,
+						depth: 1,
+						relations: []
+					}
+				]
+			}],
+			usage: `Sample JSON Data:`,
 			try: true,
 			id: 33
 		},
@@ -2397,9 +2466,9 @@ Let's get started:
 			title: 'suku-ach-setting',
 			description: `represents ACH settings ui.`,
 			properties: this.Properties_DATA,
-			mockSample: ``,
 			codeSample: '<suku-ach-setting></suku-ach-setting>',
 			jsonSample: ``,
+			usage: ``,
 			try: true,
 			id: 34
 		},
@@ -2407,10 +2476,10 @@ Let's get started:
 			title: 'suku-transaction-history',
 			description: `displays a table of a user's transaction history.`,
 			properties: this.Properties_DATA,
-			mockSample: ``,
 			codeSample:
 				'<suku-transaction-history [headings]="insert your array headings here" [transactionDetails]="insert your array variable here"></suku-transaction-history>',
 			jsonSample: ``,
+			usage: ``,
 			try: true,
 			id: 35
 		},
@@ -2420,9 +2489,9 @@ Let's get started:
 	
 *In order to run this, please provide the formgroup name for form attribute i.e [form]="parent form name" and define formcontrolname in control attribute i.e control="{{insert your formcontrol name here}}. "(Submit)" is a eventemitter which defines the click action and provides form data."`,
 			properties: this.Properties_DATA,
-			mockSample: ``,
 			codeSample: `<suku-dwolla-funding-agreement [form]="parentForm" control="checkAgreement" (submit)="submit($event)"></suku-dwolla-funding-agreement>`,
 			jsonSample: ``,
+			usage: ``,
 			try: false,
 			id: 36
 		},
@@ -2432,11 +2501,8 @@ Let's get started:
 
 *In order run this, please provide the formgroup name for form attribute i.e [form]="parent form name" and define formArrayname in control attribute i.e control="{{insert your formcontrol name here}}. "(Submit)" is a eventemitter which defines the click action and provides form data.`,
 			properties: this.Properties_DATA,
-			mockSample: ``,
-			codeSample: `<suku-beneficial-owner [form]="parentForm" formArrayName="owner" checkBoxId="owner" control="checkOwner" (submit)="submit($event)">
-	</suku-beneficial-owner>`,
-			jsonSample: `
-	<pre>
+			codeSample: `<suku-beneficial-owner [form]="parentForm" formArrayName="owner" checkBoxId="owner" control="checkOwner" (submit)="submit($event)"></suku-beneficial-owner>`,
+			usage: `<pre>
 	Formarrayname sample to be defined:
 	owner: this.fb.array([]);
 	'owner': is the formarray name.
@@ -2463,8 +2529,8 @@ Let's get started:
 				document: ''
 			})
 		});
-	}
-	</pre>`,
+	}</pre>`,
+			jsonSample: '',
 			try: false,
 			id: 37
 		},
@@ -2475,9 +2541,9 @@ Let's get started:
 Import Dwolla.js Library to run this:
 <script src="https://cdn.dwolla.com/1/dwolla.js"></script>`,
 			properties: this.Properties_DATA,
-			mockSample: ``,
 			codeSample: `<suku-dwolla-funding-source iav-token="4MTwIIvmwfq1jNttMrLrj7W0sxuE3cttpW56l4S4n8hJTiQoP4"></suku-dwolla-funding-source>`,
 			jsonSample: ``,
+			usage: ``,
 			try: true,
 			id: 38
 		},
@@ -2485,9 +2551,9 @@ Import Dwolla.js Library to run this:
 			title: 'suku-proposal-header',
 			description: `is a simple header widget.`,
 			properties: this.Properties_DATA,
-			mockSample: ``,
 			codeSample: `<suku-proposal-header></suku-proposal-header>`,
 			jsonSample: ``,
+			usage: ``,
 			try: true,
 			id: 39
 		},
@@ -2495,10 +2561,8 @@ Import Dwolla.js Library to run this:
 			title: 'suku-governance-filter',
 			description: `is a filter widget.`,
 			properties: this.Properties_DATA,
-			mockSample: ``,
 			codeSample: `<suku-governance-filter [statusTypesDynamic]="insert your array here"></suku-governance-filter>`,
-			jsonSample: `<pre>
-statusTypesDynamic = [
+			jsonSample: [
 				{
 					displayName: 'Proposal Status',
 					key: 'Proposal Status',
@@ -2551,48 +2615,105 @@ statusTypesDynamic = [
 						}
 					]
 				}
-			];</pre>
-		 `,
+			],
+			usage: `Sample JSON Data:`,
 			try: false,
 			id: 40
 		},
 		{
-			title: 'Suku proposal option modal',
+			title: 'suku-proposal-option-modal',
 			description: `is a dialog component with proposal option information.
 *In order to run this,  import 'SukuModalService' from suku-governance-webcomponent.`,
 			properties: this.Properties_DATA,
-			mockSample: ``,
 			codeSample: ``,
 			jsonSample: ``,
+			usage: ``,
 			try: false,
 			id: 41
 		},
 		{
-			title: 'Suku Doughnut Chart Widget',
-			description: `is a doughnut chart widget which represents the votes breakdown.`,
+			title: 'suku-list-proposal-choice-widget',
+			description: `is a list of choice for a proposal.`,
 			properties: this.Properties_DATA,
-			mockSample: ``,
-			codeSample: `<suku-doughnut-chart-widget [doughnutChartData]="insert data here"></suku-doughnut-chart-widget>`,
-			jsonSample: `
-			<pre>
-			doughnutChartData = [
-				[ 'Choice #01', 20000 ],
-				[ 'Choice #02', 30000 ],
-				[ 'Choice #03', 40000 ],
-				[ 'Choice #04', 50000 ]
-			]</pre>`,
+			codeSample: `<suku-list-proposal-choice-widget [choiceOptions]="insert your data here"></suku-list-proposal-choice-widget>`,
+			jsonSample: [{
+				voteCount: '203.5 Million',
+				btnSecondry: 'More Information',
+				btnPrimary: 'Voted',
+				projectName: ' sample Project A',
+				optionId: '1',
+				optionSummary: 'text of an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+				optionImg: 'https://s3-eu-west-1.amazonaws.com/farmplan-assets-live/sites/1/2019/02/Microsoft-logo_rgb_c-gray.png',
+				optionImgId: 'image1',
+				optionImgName: 'image1',
+				IsBtnPrimary: false,
+				teamMembersCustomArray: [
+					{
+						userName: 'Larry',
+						userNameId: 'Larry',
+						userDesignation: 'Project Manager',
+						userDesignationId: 'Project Manager',
+						userImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhmUpYYHhalvLQxph1FulRdB6yx-JLqee73jF1UM8FCE6prCve',
+						userImgId: 'user1',
+						socialMedia: [
+							{
+								name: 'telegram',
+								link: 'xyz',
+								icon: 'fa fa-telegram',
+								id: 'telegram'
+							},
+							{
+								name: 'twitter',
+								link: 'xyz',
+								icon: 'fa fa-twitter-square',
+								id: 'twitter'
+							},
+							{
+								name: 'linkedin',
+								link: 'xyz',
+								icon: 'fa fa-linkedin-square',
+								id: 'linkedIn'
+							},
+							{
+								name: 'github',
+								link: 'xyz',
+								icon: 'fa fa-github-alt',
+							}
+						],
+						path: '/userDashboard',
+						disabled: false,
+						id: 'user'
+					}
+				]
+			}],
+			usage: `Sample JSON Data:`,
 			try: true,
 			id: 42
+		},
+		{
+			title: 'suku-doughnut-chart-widget',
+			description: `is a doughnut chart widget which represents the votes breakdown.`,
+			properties: this.Properties_DATA,
+			codeSample: `<suku-doughnut-chart-widget [doughnutChartData]="insert data here"></suku-doughnut-chart-widget>`,
+			jsonSample: [
+				['Choice #01', 20000],
+				['Choice #02', 30000],
+				['Choice #03', 40000],
+				['Choice #04', 50000]
+			],
+			usage: `Sample JSON Data:`,
+			try: true,
+			id: 43
 		},
 		{
 			title: 'suku-text-editor',
 			description: `is a simple text editor.`,
 			properties: this.Properties_DATA,
-			mockSample: ``,
 			codeSample: `<suku-text-editor></suku-text-editor>`,
 			jsonSample: ``,
+			usage: ``,
 			try: true,
-			id: 43
+			id: 44
 		}
 	];
 
@@ -2764,11 +2885,11 @@ statusTypesDynamic = [
 				id: 41
 			},
 			{
-				name: 'Suku Doughnut Chart Widget',
+				name: 'Suku list proposal choice widget',
 				id: 42
 			},
 			{
-				name: 'Suku Text Editor',
+				name: 'Suku Doughnut Chart Widget',
 				id: 43
 			}
 		];

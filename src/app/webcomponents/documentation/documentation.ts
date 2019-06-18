@@ -269,8 +269,6 @@ export class DocumentationComponent implements OnInit {
 		if (this.traceResultForID) {
 			console.log("this.traceResult.product.id", this.traceResultForID.product.id);
 			const value = this.traceResultForID.product.id;
-			// const url = '/showTrace';
-			// this.router.navigate([ url ], { queryParams: { id: value } });
 		}
 	}
 

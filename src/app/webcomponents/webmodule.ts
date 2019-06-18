@@ -52,6 +52,9 @@ import { SukuProposalHeaderComponent } from './suku-proposal-header/suku-proposa
 import { SukuOptionModalComponent } from './suku-proposal-option-modal/suku-option-modal.component';
 import { suku } from './suku-governance-webcomponents.service';
 import { SukuDoughnutChartWidgetComponent } from './suku-doughnut-chart-widget/suku-doughnut-chart-widget.component';
+import { SukuGovernanceFilterComponent } from './suku-governance-filter/suku-governance-filter.component';
+import { SukuProposalOptionModalComponent } from './suku-proposal-option-modal/suku-proposal-option-modal.component';
+import { SukuListProposalChoiceWidgetComponent } from './suku-list-proposal-choice-widget/suku-list-proposal-choice-widget.component';
 
 export const WebComponents = [
 	SukuHeadingComponent,
@@ -104,5 +107,8 @@ export const WebComponents = [
 	SukuTextEditorComponent,
 	SukuProposalHeaderComponent,
 	SukuOptionModalComponent,
-	SukuDoughnutChartWidgetComponent
+	SukuProposalOptionModalComponent,
+	SukuDoughnutChartWidgetComponent,
+	SukuListProposalChoiceWidgetComponent,
+	SukuGovernanceFilterComponent
 ];

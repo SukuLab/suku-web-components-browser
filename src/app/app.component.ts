@@ -45,6 +45,7 @@ import { SukuDwollaFundingSourceComponent } from './webcomponents/suku-dwolla-fu
 import { SukuTextEditorComponent } from './webcomponents/suku-text-editor/suku-text-editor.component';
 import { SukuProposalHeaderComponent } from './webcomponents/suku-proposal-header/suku-proposal-header.component';
 import { SukuDoughnutChartWidgetComponent } from './webcomponents/suku-doughnut-chart-widget/suku-doughnut-chart-widget.component';
+import { SukuListProposalChoiceWidgetComponent } from './webcomponents/suku-list-proposal-choice-widget/suku-list-proposal-choice-widget.component';
 
 @Component({
 	selector: 'app-root',
@@ -209,6 +210,10 @@ export class AppComponent implements OnInit {
 			injector: this.injector
 		});
 		customElements.define('suku-proposal-header', SukuProposal);
+		const SukuListProposalChoice = createCustomElement(SukuListProposalChoiceWidgetComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-list-proposal-choice-widget', SukuListProposalChoice);
 		const SukuDoughnutChart = createCustomElement(SukuDoughnutChartWidgetComponent, {
 			injector: this.injector
 		});

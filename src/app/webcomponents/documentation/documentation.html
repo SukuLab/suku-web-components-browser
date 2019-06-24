@@ -57,7 +57,6 @@
                 <!-- sample webcomp code inject here -->
                 <p class="docs-markdown-p">For example:</p>
                 <p class="col text-left p-0 link">Click on the tag to copy</p>
-                <!-- <div class="col p-0" id ="mockSample" [innerHTML]="content.mockSample"></div> -->
                 <span id="copied">
                   <input class="mockSample" id="sampleCode" (click)="copySample()" value="{{content.codeSample}}"
                     readonly="true" />
@@ -65,12 +64,11 @@
               </div>
               <div class="col-sm-12 p-4">
                 <!-- sample json inject here -->
-                <!-- <p class="docs-markdown-p">Sample JSON:</p> -->
                 <div class="col p-0 mt-2" *ngIf="content?.jsonSample || content?.usage">
                   <div class="links text-left mb-3 c-pointer" (click)="collapseFuc()">Click to
                     {{ collapse ? 'hide info' : 'show info' }}</div>
                   <div *ngIf="collapse" class="col p-0">
-                    <div *ngIf="content?.usage" [innerHTML]="content?.usage"></div>
+                    <div [ngClass]="{'usage col': !content?.jsonSample}" *ngIf="content?.usage" [innerHTML]="content?.usage"></div>
                     <div *ngIf="content?.jsonSample" id="jsonSample">
                       <ngx-json-viewer [json]="content?.jsonSample"></ngx-json-viewer>
                     </div>
@@ -111,5 +109,3 @@
   </div>
 </form>
 
-
-<!-- <a id="progress">In development **</a> -->

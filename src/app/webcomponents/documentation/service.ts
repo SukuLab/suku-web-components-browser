@@ -2486,7 +2486,7 @@ Let's get started:
 		{
 			title: 'suku-dwolla-funding-agreement',
 			description: `represents the funding agreement necessary to add a funding source. 
-	
+
 *In order to run this, please provide the formgroup name for form attribute i.e [form]="parent form name" and define formcontrolname in control attribute i.e control="{{insert your formcontrol name here}}. "(Submit)" is a eventemitter which defines the click action and provides form data."`,
 			properties: this.Properties_DATA,
 			codeSample: `<suku-dwolla-funding-agreement [form]="parentForm" control="checkAgreement" (submit)="submit($event)"></suku-dwolla-funding-agreement>`,
@@ -2574,7 +2574,7 @@ Import Dwolla.js Library to run this:
 						{
 							displayName: 'Open',
 							key: 'Open',
-							level: 0,
+							level: 1,
 							checked: false,
 							hasSub: false,
 							sub: []
@@ -2583,7 +2583,7 @@ Import Dwolla.js Library to run this:
 							displayName: 'Closed',
 							key: 'Closed',
 							checked: false,
-							level: 0,
+							level: 1,
 							hasSub: false,
 							sub: []
 						}
@@ -2627,7 +2627,21 @@ Import Dwolla.js Library to run this:
 			properties: this.Properties_DATA,
 			codeSample: ``,
 			jsonSample: ``,
-			usage: ``,
+			usage: `
+			<pre>
+Usage:
+constructor(private sukuService: SukuModalService){ }
+openDialog() {
+const data = {
+	title : 'OPTION#1',
+	contentOne : 'Project A',
+  labelOne : 'Votes',
+  ...
+};
+this.sukuService.openInfoModal(data);
+}
+			</pre>
+			`,
 			try: false,
 			id: 41
 		},
@@ -2680,7 +2694,7 @@ Import Dwolla.js Library to run this:
 								icon: 'fa fa-github-alt',
 							}
 						],
-						path: '/userDashboard',
+						path: '/pathName',
 						disabled: false,
 						id: 'user'
 					}

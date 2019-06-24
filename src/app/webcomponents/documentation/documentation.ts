@@ -33,7 +33,6 @@ export class DocumentationComponent implements OnInit {
 	copied: any;
 	dynamicData: string;
 	dynamicHeight = 200;
-	@ViewChild('editor') editor;
 	disableBtnForID: boolean;
 	dummyData;
 	productJsonArrayForId: string;
@@ -44,6 +43,7 @@ export class DocumentationComponent implements OnInit {
 	search;
 	treeData;
 	collapse: Boolean = false;
+	@ViewChild('editor') editor;
 	transactionDetails = [
 		{
 		 'type': 'outgoing',
@@ -94,10 +94,10 @@ export class DocumentationComponent implements OnInit {
 		'dateCreated': '2/1/19'
 	  }
 	  ];
-	constructor(private fb: FormBuilder, private domSanitizer: DomSanitizer, 
+
+  constructor(private fb: FormBuilder, private domSanitizer: DomSanitizer, 
 		private services: WebComponentsServices, private sukuService: SukuModalService) {
 		this.person = person;
-
 	}
 
 	ngOnInit() {

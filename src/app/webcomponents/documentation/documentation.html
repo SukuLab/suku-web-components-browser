@@ -17,7 +17,7 @@
           <span class="py-3 px-2 sticky-top flex-grow-1">
             <ul id="side">
               <li [ngClass]="{'activeComponent': selectedTitle == title }" (click)="titleActive($event, title)"
-                *ngFor="let title of webCompTitleList;let i=index"> 
+                *ngFor="let title of webCompTitleList;let i=index">
                 {{title.name}}
               </li>
             </ul>
@@ -68,7 +68,8 @@
                   <div class="links text-left mb-3 c-pointer" (click)="collapseFuc()">Click to
                     {{ collapse ? 'hide info' : 'show info' }}</div>
                   <div *ngIf="collapse" class="col p-0">
-                    <div [ngClass]="{'usage col': !content?.jsonSample}" *ngIf="content?.usage" [innerHTML]="content?.usage"></div>
+                    <div [ngClass]="{'usage col': !content?.jsonSample}" *ngIf="content?.usage"
+                      [innerHTML]="content?.usage"></div>
                     <div *ngIf="content?.jsonSample" id="jsonSample">
                       <ngx-json-viewer [json]="content?.jsonSample"></ngx-json-viewer>
                     </div>
@@ -100,6 +101,18 @@
                   </div>
                 </div>
               </div>
+              <div class="col p-0" *ngIf="content?.preview">
+                <div class="col">
+                  <p class="links text-left">Preview:</p>
+                </div>
+                <div class="col-sm-12 d-flex mb-5" *ngIf="content?.preview">
+                  <div class="col-sm-3 p-0">
+                    <suku-governance-filter filterHeading="PROPOSALS" filterSubHeading="Proposal Date" [form]="parentForm"
+                      [statusTypesDynamic]="statusTypesDynamic" (selectAll)="selectAll()" (deselectAll)="deselectAll()">
+                    </suku-governance-filter>
+                  </div>
+                </div>
+              </div>
             </span>
           </span>
           <!-- terminal code end-->
@@ -108,4 +121,3 @@
     </div>
   </div>
 </form>
-

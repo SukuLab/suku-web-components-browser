@@ -18,6 +18,7 @@ export interface WebCompContent {
 	usage: any;
 	try: boolean;
 	id: number;
+	preview?: boolean;
 }
 @Injectable({
 	providedIn: 'root'
@@ -2296,7 +2297,7 @@ Let's get started:
 			jsonSample: '',
 			usage: '',
 			try: false,
-			id: 22
+			id: 22,
 		},
 		{
 			title: 'suku-info-button',
@@ -2618,7 +2619,8 @@ Import Dwolla.js Library to run this:
 			],
 			usage: `Sample JSON Data:`,
 			try: false,
-			id: 40
+			id: 40,
+			preview: true
 		},
 		{
 			title: 'suku-proposal-option-modal',
@@ -2891,15 +2893,15 @@ this.sukuService.openInfoModal(data);
 				id: 39
 			},
 			{
-				name: 'Suku governance filter',
+				name: 'Suku Governance Filter',
 				id: 40
 			},
 			{
-				name: 'Suku proposal option modal',
+				name: 'Suku Proposal Option Modal',
 				id: 41
 			},
 			{
-				name: 'Suku list proposal choice widget',
+				name: 'Suku List Proposal Choice Widget',
 				id: 42
 			},
 			{

@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
 	styleUrls: [ './suku-doughnut-chart-widget.component.scss' ]
 })
 export class SukuDoughnutChartWidgetComponent implements OnInit {
-	@Input() title = 'Voting Brakedown';
+	@Input() title = 'Voting Breakdown';
 	@Input() titleSize;
 	type = 'PieChart';
 	@Input()

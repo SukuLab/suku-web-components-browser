@@ -94,6 +94,61 @@ export class DocumentationComponent implements OnInit {
 		'dateCreated': '2/1/19'
 	  }
 	  ];
+		statusTypesDynamic = [
+			{
+				displayName: 'Proposal Status',
+				key: 'Proposal Status',
+				checked: true,
+				level: 0,
+				label: true,
+				hasSub: true,
+				sub: [
+					{
+						displayName: 'Open',
+						key: 'Open',
+						level: 0,
+						checked: false,
+						hasSub: false,
+						sub: []
+					},
+					{
+						displayName: 'Closed',
+						key: 'Closed',
+						checked: false,
+						level: 0,
+						hasSub: false,
+						sub: []
+					}
+				]
+			},
+			{
+				displayName: 'Vote Status',
+				key: 'Vote Status',
+				checked: true,
+				level: 0,
+				label: true,
+				hasSub: true,
+				sub: [
+					{
+						displayName: 'Have Voted',
+						key: 'Voted',
+						checked: false,
+						level: 1,
+						hasSub: true,
+						sub: []
+					},
+					{
+						displayName: 'Have Not Voted',
+						key: 'NotVoted',
+						checked: false,
+						level: 1,
+						hasSub: false,
+						sub: []
+					}
+				]
+			}
+		];
+	collapsePreview: boolean;
 
   constructor(private fb: FormBuilder, private domSanitizer: DomSanitizer, 
 		private services: WebComponentsServices, private sukuService: SukuModalService) {
@@ -275,6 +330,30 @@ export class DocumentationComponent implements OnInit {
 	collapseFuc() {
 		console.log("", this.collapse);
 		this.collapse = !this.collapse;
+	}
+
+	selectAll() {
+		this.statusTypesDynamic.forEach((ele) => {
+				ele.checked = true;
+				if (ele.hasSub) {
+					ele.sub.forEach((sele) => {
+						sele.checked = true;
+					});
+			}
+		});
+	}
+
+	deselectAll() {
+		this.statusTypesDynamic.forEach((ele) => {
+			if (ele.checked) {
+				ele.checked = true;
+				if (ele.hasSub) {
+					ele.sub.forEach((sele) => {
+						sele.checked = false;
+					});
+				}
+			}
+		});
 	}
 
 	openSukuDialog() {

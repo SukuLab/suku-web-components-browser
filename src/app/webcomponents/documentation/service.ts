@@ -2623,7 +2623,7 @@ Import Dwolla.js Library to run this:
 		},
 		{
 			title: 'suku-governance-filter',
-			description: `is a filter widget.`,
+			description: `is a filter widget used to filter the proposal's based on proposal status, vote status and by proposal date.`,
 			properties: this.Properties_DATA,
 			codeSample: `<suku-governance-filter [statusTypesDynamic]="insert your array here"></suku-governance-filter>`,
 			jsonSample: [

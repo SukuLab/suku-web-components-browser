@@ -10,9 +10,28 @@ export class SukuListProposalChoiceWidgetComponent implements OnInit {
   dataSlideCount;
   screenWidth = screen.width;
   @Input() customLayoutClass = 'col pl-2 pr-2 pt-3 pb-0';
-  @Input() subTitle = 'subTitle';
-  @Input() titleStyle = 'subTitle';
-  @Input() summeryStyle = 'subTitle';
+
+  @Input() labelOneSize = '';
+  @Input() labelOneCustomClass = '';
+
+  @Input() labelTwoSize = '';
+  @Input() labelTwoCustomClass = '';
+
+  @Input() labelThreeSize = '20';
+  @Input() labelThreeCustomClass = '';
+
+  @Input() labelFourSize = '20';
+  @Input() labelFourCustomClass = '';
+
+  @Input() labelFiveSize = '20';
+  @Input() labelFiveCustomClass = 'subTitle';
+
+  @Input() contentTwoCustomClass;
+
+  @Input() labelSixSize = '';
+  @Input() labelSixCustomClass = 'subTitle';
+
+
   @Input() color = '';
   @Input() bgColor = 'rgba(196, 203, 216, 0.09)';
   @Input() footerbox = 'footerbox';
@@ -21,7 +40,7 @@ export class SukuListProposalChoiceWidgetComponent implements OnInit {
     {
       voteCount: '203.5 Million',
       btnSecondry: 'More Information',
-      btnPrimary: 'Voted',
+      btnPrimary: 'Cast Vote',
       projectName: ' sample Project A',
       optionId: '1',
       optionSummary: 'text of an unknown printer took a galley of type and scrambled it to make a type specimen book.',
@@ -71,7 +90,7 @@ export class SukuListProposalChoiceWidgetComponent implements OnInit {
     {
       voteCount: '203.5 Million',
       btnSecondry: 'More Information',
-      btnPrimary: 'Voted',
+      btnPrimary: 'Cast Vote',
       projectName: ' sample Project A',
       optionId: '1',
       optionSummary: 'text of an unknown printer took a galley of type and scrambled it to make a type specimen book.',
@@ -121,7 +140,7 @@ export class SukuListProposalChoiceWidgetComponent implements OnInit {
     {
       voteCount: '203.5 Million',
       btnSecondry: 'More Information',
-      btnPrimary: 'Voted',
+      btnPrimary: 'Cast Vote',
       projectName: ' sample Project A',
       optionId: '1',
       optionSummary: 'text of an unknown printer took a galley of type and scrambled it to make a type specimen book.',

@@ -7,9 +7,11 @@
           <div class="box" [style.background-color]='bgColor'>
             <div [class]="customLayoutClass">
               <section class="optionTitle">
-                <p class="text-bold col {{titleStyle}}"><b>OPTION #{{option?.optionId}}</b>
-                  <span id="projectName{{choiceIndex}}">
-                  -{{option?.projectName}}</span></p>
+                <p class="text-bold col">
+                  <b><span class="{{labelOneCustomClass}}" [style.font-size]="labelOneSize">
+                      #{{option?.optionId}}</span></b>
+                  <span class="{{labelTwoCustomClass}}" [style.font-size]="labelTwoSize"
+                    id="projectName{{choiceIndex}}">-{{option?.projectName}}</span></p>
               </section>
               <section class="subTitle voteSection">
                 <div class="col">
@@ -21,12 +23,14 @@
                     <div class="col-sm-6 text-center p-0">
                       <div class="col">
                         <div class="row">
-                          <span class='col-sm-12' style="font-size:20px"><b>Votes</b> </span>
+                          <span class='col-sm-12 {{labelThreeCustomClass}}'
+                            [style.font-size]="labelThreeSize"><b>Votes</b> </span>
                         </div>
                       </div>
-                      <div class="col"> 
+                      <div class="col">
                         <div class="row">
-                          <span class='col-sm-12' id="voteCount{{choiceIndex}}">{{option?.voteCount}}</span>
+                          <span class='col-sm-12 {{labelFourCustomClass}}' [style.font-size]="labelFourSize"
+                            id="voteCount{{choiceIndex}}">{{option?.voteCount}}</span>
                         </div>
                       </div>
                     </div>
@@ -34,20 +38,21 @@
                 </div>
               </section>
               <section class=" mb-2 mt-2">
-                <span class="{{titleStyle}} col"><b>SUMMARY</b></span>
+                <span class="{{labelFiveCustomClass}} col" [style.font-size]="labelFourSize"><b>SUMMARY</b></span>
               </section>
               <section class="summary">
-                <p class=' {{summeryStyle}} col block-with-text  mb-2'><span
-                    class="subTitle " id="summary{{choiceIndex}}">{{option?.optionSummary}}</span>
+                <p class='{{contentTwoCustomClass}} col block-with-text  mb-2'>
+                  <span class="subTitle" id="summary{{choiceIndex}}">{{option?.optionSummary}}</span>
                 </p>
               </section>
-              <section class="{{titleStyle}} mb-2 mt-2">
-                <span class="col mb-2 mt-2"><b>TEAM</b> </span>
+              <section class="mb-2 mt-2">
+                <span class="col mb-2 mt-2 {{labelSixCustomClass}}" [style.font-size]="labelSixSize"><b>TEAM</b> </span>
               </section>
               <section class="mb-2">
                 <div class="col">
                   <div class="row">
-                    <div class="col-lg-4 col-4 pl-1 pr-2" *ngFor="let user of option[teamMemberskey] | slice:0:3; let userIndex = index">
+                    <div class="col-lg-4 col-4 pl-1 pr-2"
+                      *ngFor="let user of option[teamMemberskey] | slice:0:3; let userIndex = index">
                       <div class="user-chip-shadow m-1 {{widgetCustomClass}}" id="userwidget{{userIndex}}">
                         <div class="col p-0">
                           <a class="d-flex justify-content-center" id="match-chip">
@@ -87,18 +92,21 @@
                   <button (click)="actionOne.emit(option);" id="btnSecondry{{choiceIndex}}"
                     class="btn btn-secondry btnSecondry">{{option?.btnSecondry}}</button>
                 </div>
-                <div *ngIf = "option?.IsBtnPrimary == false" class="col mt-2 mb-2">
-                  <button (click)="actionTwo.emit(option);" id="btnPrimary{{choiceIndex}}" class="btn {{option?.btnPrimary}} btn-primary ">{{option?.btnPrimary}}</button>
+                <div *ngIf="option?.IsBtnPrimary == false" class="col mt-2 mb-2">
+                  <button (click)="actionTwo.emit(option);" id="btnPrimary{{choiceIndex}}"
+                    class="btn {{option?.btnPrimary}} btn-primary ">{{option?.btnPrimary}}</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </ngu-tile>
-      <button NguCarouselPrev class='leftRs' [id]="leftIconId" *ngIf="(choiceOptions?.length > 3 || screenWidth < 1024)"> <span
-          class="left-icon"><i class="fa fa-chevron-left"></i></span></button>
-      <button NguCarouselNext class='rightRs' [id]="rightIconId" *ngIf="(choiceOptions?.length > 3 || screenWidth < 1024)"> <span
-          class="right-icon"><i class="fa fa-chevron-right"></i></span></button>
+      <button NguCarouselPrev class='leftRs' [id]="leftIconId"
+        *ngIf="(choiceOptions?.length > 3 || screenWidth < 1024)"> <span class="left-icon"><i
+            class="fa fa-chevron-left"></i></span></button>
+      <button NguCarouselNext class='rightRs' [id]="rightIconId"
+        *ngIf="(choiceOptions?.length > 3 || screenWidth < 1024)"> <span class="right-icon"><i
+            class="fa fa-chevron-right"></i></span></button>
     </ngu-carousel>
   </div>
 </div>

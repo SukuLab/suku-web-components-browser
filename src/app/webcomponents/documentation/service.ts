@@ -1680,25 +1680,88 @@ export class WebComponentsServices {
 		},
 		{
 			data: [
+
+				// @Input() customLayoutClass = 'col p-2 ';
+
+
+
+				// @Input() labelThree = 'From';
+				// @Input() labelThreeSize;
+				// @Input() labelThreeCustomClass = '';
+
+				// @Input() labelFour = 'To';
+				// @Input() labelFourSize;
+				// @Input() labelFourCustomClass = '';
+
+				// @Input() selectAllCustomClass;
+				// @Input() clearAllCustomClass;
+				// @Input() statusTypesDynamic: any[];
+				// @Input() filterBtnLabel = 'Apply Date Filters';
+
 				{
 					properties: 'form',
 					type: '[String]',
 					description: 'It defines FormGroup name.'
 				},
 				{
-					properties: 'filterHeading',
+					properties: 'labelOne',
 					type: '[String]',
-					description: 'It defines filter Heading.'
+					description: 'It defines filter heading.'
 				},
 				{
-					properties: 'headingSize',
+					properties: 'labelOneSize',
 					type: '[String]',
-					description: 'It corresponds to filter Heading font-size.'
+					description: 'It defines font-size for filter heading.'
 				},
 				{
-					properties: 'filterSubHeading',
+					properties: 'labelOneCustomClass',
 					type: '[String]',
-					description: 'It corresponds to filter Sub-Heading.'
+					description: 'It defines customclass for filter heading.'
+				},
+				{
+					properties: 'labelTwo',
+					type: '[String]',
+					description: 'It defines filter sub-heading.'
+				},
+				{
+					properties: 'labelTwoSize',
+					type: '[String]',
+					description: 'It defines font-size for filter sub-heading.'
+				},
+				{
+					properties: 'labelTwoCustomClass',
+					type: '[String]',
+					description: 'It defines customclass for filter sub-heading.'
+				},
+				{
+					properties: 'labelThree',
+					type: '[String]',
+					description: `It defines date-filter 'from' label.`
+				},
+				{
+					properties: 'labelThreeSize',
+					type: '[String]',
+					description: `It defines font-size for date-filter 'from' label.`
+				},
+				{
+					properties: 'labelThreeCustomClass',
+					type: '[String]',
+					description: `It defines custom-class for date-filter 'from' label.`
+				},
+				{
+					properties: 'labelFour',
+					type: '[String]',
+					description: `It defines date-filter 'To' label.`
+				},
+				{
+					properties: 'labelFourSize',
+					type: '[String]',
+					description: `It defines font-size for date-filter 'To' label.`
+				},
+				{
+					properties: 'labelFourCustomClass',
+					type: '[String]',
+					description: `It defines custom-class for date-filter 'To' label.`
 				},
 				{
 					properties: 'filterOnChange',
@@ -2635,10 +2698,10 @@ Usage:
 constructor(private sukuService: SukuModalService){ }
 openDialog() {
 const data = {
-	title : 'OPTION#1',
-	contentOne : 'Project A',
-  labelOne : 'Votes',
-  ...
+ title : 'OPTION#1',
+ contentOne : 'Project A',
+ labelOne : 'Votes',
+ ...
 };
 this.sukuService.openInfoModal(data);
 }
@@ -2877,35 +2940,35 @@ this.sukuService.openInfoModal(data);
 				id: 35
 			},
 			{
-				name: 'Suku Dwolla Funding Agreement',
+				name: 'Dwolla Funding Agreement',
 				id: 36
 			},
 			{
-				name: 'Suku Beneficial Owner',
+				name: 'Beneficial Owner',
 				id: 37
 			},
 			{
-				name: 'Suku Dwolla Funding Source',
+				name: 'Dwolla Funding Source',
 				id: 38
 			},
 			{
-				name: 'Suku Proposal Header',
+				name: 'Proposal Header',
 				id: 39
 			},
 			{
-				name: 'Suku Governance Filter',
+				name: 'Governance Filter',
 				id: 40
 			},
 			{
-				name: 'Suku Proposal Option Modal',
+				name: 'Proposal Option Modal',
 				id: 41
 			},
 			{
-				name: 'Suku List Proposal Choice Widget',
+				name: 'List Proposal Choice Widget',
 				id: 42
 			},
 			{
-				name: 'Suku Doughnut Chart Widget',
+				name: 'Doughnut Chart Widget',
 				id: 43
 			}
 		];

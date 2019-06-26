@@ -5,7 +5,7 @@
   <div class="collapse-filter collapse" id="collapse-filter">
     <div class="box">
       <div class="filter-list">
-        <h2 [style.font-size.px]="headingSize" class="mt-2 mb-3 {{headingCustomClass}}">{{ filterHeading }}</h2>
+        <h2 [style.font-size.px]="labelOneSize" class="mt-2 mb-3 {{labelOneCustomClass}}">{{ labelOne }}</h2>
         <div class="options pl-0">
           <div *ngFor="let status of statusTypesDynamic; let l = index">
             <mat-checkbox *ngIf="!status?.label" color="primary" [checked]="status.checked"
@@ -24,15 +24,15 @@
           </div>
         </div>
         <div class="p-0 mt-1 mb-1">
-          <span class="subHeading" [style.font-size.px]="size">{{ filterSubHeading }}</span>
-          <div class=" dateHeading pb-0 mt-1">From</div>
+          <span class="labelTwoCustomClass" [style.font-size.px]="labelTwoSize">{{ labelTwo }}</span>
+          <div [style.font-size.px]="labelThreeSize" class="dateHeading pb-0 mt-1 {{labelThreeCustomClass}}">{{labelThree}}</div>
           <mat-form-field class="p-0 col-sm-12">
             <input matInput [matDatepicker]="picker" placeholder="Choose a date" id="fromDate"
               formControlName="fromDate" name="fromDate" />
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
-          <div class="mt-2 pb-0 dateHeading">To</div>
+          <div [style.font-size.px]="labelFourSize" class="mt-2 pb-0 dateHeading {{labelFourCustomClass}}">{{labelFour}}</div>
           <mat-form-field class="p-0 col-sm-12">
             <input matInput formControlName="tillDate" [matDatepicker]="picker1" placeholder="Choose a date"
               id="tillDate" name="tillDate" />
@@ -41,14 +41,14 @@
           </mat-form-field>
         </div>
         <div class="p-0 pb-4 pl-3 pr-3">
-          <button type="button" class=" btn btn-info btn-sm btn-block" (click)="applyFilter.emit()">Apply Date Filters
+          <button type="button" class=" btn btn-info btn-sm btn-block" (click)="applyFilter.emit()">{{filterBtnLabel}}
           </button>
         </div>
       </div>
       <div class="filter-links">
         <p>
-          <a (click)="selectAll.emit();">select all</a>
-          <a (click)="deselectAll.emit();">clear all</a>
+          <a (click)="selectAll.emit();" [class]="selectAllCustomClass" >select all</a>
+          <a (click)="deselectAll.emit();" [class]="clearAllCustomClass" >clear all</a>
         </p>
       </div>
     </div>

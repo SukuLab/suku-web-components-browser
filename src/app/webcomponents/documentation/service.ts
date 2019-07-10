@@ -1637,9 +1637,19 @@ export class WebComponentsServices {
 					description: 'It defines Id for titleOne in suku-confirmation dialog.'
 				},
 				{
+					properties: 'titleOneCustomClass',
+					type: '[String]',
+					description: 'It defines the customclass for titleOne.'
+				},
+				{
 					properties: 'titleTwo',
 					type: '[String]',
 					description: 'It defines the sub-title for suku-confirmation dialog.'
+				},
+				{
+					properties: 'titleTwoCustomClass',
+					type: '[String]',
+					description: 'It defines the customclass for titleTwo.'
 				},
 				{
 					properties: 'titleOneId',
@@ -1655,6 +1665,16 @@ export class WebComponentsServices {
 					properties: 'titleThreeId',
 					type: '[String]',
 					description: 'It defines Id for titleThree in suku-confirmation dialog.'
+				},
+				{
+					properties: 'titleThreeCustomClass',
+					type: '[String]',
+					description: 'It defines the customclass for titleThree.'
+				},
+				{
+					properties: 'titleBoxCustomClass',
+					type: '[String]',
+					description: 'It defines the customclass for title-box.'
 				},
 				{
 					properties: 'buttonLableOne',

@@ -5,10 +5,11 @@ import { WebComponentsServices } from './service';
 import { person } from './service';
 import { SukuGovernanceWebcomponentsService } from '../suku-governance-webcomponents.service';
 import { SukuModalService } from '../suku-proposal-option-modal/suku-modal.service';
+import { SukuModalService as sukuService } from 'suku-webcomponents';
 @Component({
 	selector: 'app-documentation',
 	templateUrl: 'documentation.html',
-	styleUrls: [ './documentation.scss' ]
+	styleUrls: ['./documentation.scss']
 })
 export class DocumentationComponent implements OnInit {
 	data: any;
@@ -23,7 +24,7 @@ export class DocumentationComponent implements OnInit {
 	images: any;
 	webCompTitleList;
 	selectedTitle: any;
-	displayedColumns: string[] = [ 'Properties', 'Description' ];
+	displayedColumns: string[] = ['Properties', 'Description'];
 	dataSource;
 	CompDocSource;
 	person;
@@ -46,112 +47,113 @@ export class DocumentationComponent implements OnInit {
 	@ViewChild('editor') editor;
 	transactionDetails = [
 		{
-		 'type': 'outgoing',
-		 'myAccount': 'Chase XXX',
-		 'counterParty': 'Logan',
-		 'amount': 500,
-		 'status': 'Complete',
-		 'dateCreated': '2/1/19'
-	   },
-		 {
-		 'type': 'outgoing',
-		 'myAccount': 'Chase XXX',
-		 'counterParty': 'Logan',
-		 'amount': 200,
-		 'status': 'Pending',
-		 'dateCreated': '2/1/19'
-	   },
-		 {
-		 'type': 'Incoming',
-		 'myAccount': 'Chase XXX',
-		 'counterParty': 'Logan',
-		 'amount': 100,
-		 'status': 'Failed',
-		 'dateCreated': '2/1/19'
-	   },
-		 {
-		'type': 'outgoing',
-		'myAccount': 'Chase XXX',
-		'counterParty': 'Logan',
-		'amount': 500,
-		'status': 'Complete',
-		'dateCreated': '2/1/19'
-	  },
+			'type': 'outgoing',
+			'myAccount': 'Chase XXX',
+			'counterParty': 'Logan',
+			'amount': 500,
+			'status': 'Complete',
+			'dateCreated': '2/1/19'
+		},
 		{
-		'type': 'outgoing',
-		'myAccount': 'Chase XXX',
-		'counterParty': 'Logan',
-		'amount': 200,
-		'status': 'Pending',
-		'dateCreated': '2/1/19'
-	  },
+			'type': 'outgoing',
+			'myAccount': 'Chase XXX',
+			'counterParty': 'Logan',
+			'amount': 200,
+			'status': 'Pending',
+			'dateCreated': '2/1/19'
+		},
 		{
-		'type': 'Incoming',
-		'myAccount': 'Chase XXX',
-		'counterParty': 'Logan',
-		'amount': 100,
-		'status': 'Failed',
-		'dateCreated': '2/1/19'
-	  }
-	  ];
-		statusTypesDynamic = [
-			{
-				displayName: 'Proposal Status',
-				key: 'Proposal Status',
-				checked: true,
-				level: 0,
-				label: true,
-				hasSub: true,
-				sub: [
-					{
-						displayName: 'Open',
-						key: 'Open',
-						level: 0,
-						checked: false,
-						hasSub: false,
-						sub: []
-					},
-					{
-						displayName: 'Closed',
-						key: 'Closed',
-						checked: false,
-						level: 0,
-						hasSub: false,
-						sub: []
-					}
-				]
-			},
-			{
-				displayName: 'Vote Status',
-				key: 'Vote Status',
-				checked: true,
-				level: 0,
-				label: true,
-				hasSub: true,
-				sub: [
-					{
-						displayName: 'Have Voted',
-						key: 'Voted',
-						checked: false,
-						level: 1,
-						hasSub: true,
-						sub: []
-					},
-					{
-						displayName: 'Have Not Voted',
-						key: 'NotVoted',
-						checked: false,
-						level: 1,
-						hasSub: false,
-						sub: []
-					}
-				]
-			}
-		];
+			'type': 'Incoming',
+			'myAccount': 'Chase XXX',
+			'counterParty': 'Logan',
+			'amount': 100,
+			'status': 'Failed',
+			'dateCreated': '2/1/19'
+		},
+		{
+			'type': 'outgoing',
+			'myAccount': 'Chase XXX',
+			'counterParty': 'Logan',
+			'amount': 500,
+			'status': 'Complete',
+			'dateCreated': '2/1/19'
+		},
+		{
+			'type': 'outgoing',
+			'myAccount': 'Chase XXX',
+			'counterParty': 'Logan',
+			'amount': 200,
+			'status': 'Pending',
+			'dateCreated': '2/1/19'
+		},
+		{
+			'type': 'Incoming',
+			'myAccount': 'Chase XXX',
+			'counterParty': 'Logan',
+			'amount': 100,
+			'status': 'Failed',
+			'dateCreated': '2/1/19'
+		}
+	];
+	statusTypesDynamic = [
+		{
+			displayName: 'Proposal Status',
+			key: 'Proposal Status',
+			checked: true,
+			level: 0,
+			label: true,
+			hasSub: true,
+			sub: [
+				{
+					displayName: 'Open',
+					key: 'Open',
+					level: 0,
+					checked: false,
+					hasSub: false,
+					sub: []
+				},
+				{
+					displayName: 'Closed',
+					key: 'Closed',
+					checked: false,
+					level: 0,
+					hasSub: false,
+					sub: []
+				}
+			]
+		},
+		{
+			displayName: 'Vote Status',
+			key: 'Vote Status',
+			checked: true,
+			level: 0,
+			label: true,
+			hasSub: true,
+			sub: [
+				{
+					displayName: 'Have Voted',
+					key: 'Voted',
+					checked: false,
+					level: 1,
+					hasSub: true,
+					sub: []
+				},
+				{
+					displayName: 'Have Not Voted',
+					key: 'NotVoted',
+					checked: false,
+					level: 1,
+					hasSub: false,
+					sub: []
+				}
+			]
+		}
+	];
 	collapsePreview: boolean;
 
-  constructor(private fb: FormBuilder, private domSanitizer: DomSanitizer, 
-		private services: WebComponentsServices, private sukuService: SukuModalService) {
+	constructor(private fb: FormBuilder, private domSanitizer: DomSanitizer,
+		private services: WebComponentsServices, private sukuService: SukuModalService,
+		private SukuService: sukuService) {
 		this.person = person;
 	}
 
@@ -166,8 +168,8 @@ export class DocumentationComponent implements OnInit {
 			tillDate: null,
 			statusTypess: this.fb.array([]),
 			firstName: '',
-			productId: [ '', [ Validators.required ] ],
-			checkAgreement:''
+			productId: ['', [Validators.required]],
+			checkAgreement: ''
 		});
 		this.parentForm.valueChanges.subscribe((v) => console.log('data', v));
 		this.subMenuList = [
@@ -181,7 +183,7 @@ export class DocumentationComponent implements OnInit {
 		this.CompDocSource = this.services.Content_DATA;
 		this.searchTraceToggleForID = true;
 		this.disableBtnForID = false;
-		this.selectedTitle = {name: "Getting Started", id: 0};
+		this.selectedTitle = { name: "Getting Started", id: 0 };
 	}
 
 	executeCode() {
@@ -334,11 +336,11 @@ export class DocumentationComponent implements OnInit {
 
 	selectAll() {
 		this.statusTypesDynamic.forEach((ele) => {
-				ele.checked = true;
-				if (ele.hasSub) {
-					ele.sub.forEach((sele) => {
-						sele.checked = true;
-					});
+			ele.checked = true;
+			if (ele.hasSub) {
+				ele.sub.forEach((sele) => {
+					sele.checked = true;
+				});
 			}
 		});
 	}
@@ -356,8 +358,34 @@ export class DocumentationComponent implements OnInit {
 		});
 	}
 
-	openSukuDialog() {
-	 this.sukuService.openInfoModal("");
+	openSukuDialog(id) {
+		if (id == 42) {
+			this.sukuService.openInfoModal("");
+		}
+		if (id == 39) {
+			this.sukuConfirmService();
+		}
+	}
+
+	sukuConfirmService() {
+		const data = {
+			'icon': 'fa fa-question',
+			'iconCustomClass': '',
+			'iconId': 'questionIcon',
+			'titleOne': 'Are You Sure?',
+			'titleOneId': 'confirmation',
+			'titleTwo': `Are you sure you'd like to delete this Listing?`,
+			'titleTwoId': '',
+			'titleThree': '',
+			'titleThreeId': '',
+			'titleBoxCustomClass': '',
+			'buttonLableOne': 'cancel',
+			'buttonLableOneId': '',
+			'buttonLableTwo': 'delete',
+			'buttonLableTwoId': '',
+			'buttonCustomClass': ''
+		};
+		this.SukuService.openConfirmationDialog(data);
 	}
 
 }

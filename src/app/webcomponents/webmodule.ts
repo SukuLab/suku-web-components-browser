@@ -1,5 +1,4 @@
 import {
-	SukuBidTagComponent,
 	SukuCardLineComponent,
 	SukuCheckboxComponent,
 	SukuDashboardProfileComponent,
@@ -77,7 +76,6 @@ export const WebComponents = [
 	SukuRadioButtonComponent,
 	SukuCardLineComponent,
 	SukuSecondaryButtonComponent,
-	SukuBidTagComponent,
 	SukuMatchChipComponent,
 	SukuRatingComponent,
 	SukuRatingLineItemComponent,

@@ -17,8 +17,9 @@ import { GoogleChartsModule } from 'angular-google-charts';
 import { CountdownTimerModule } from 'ngx-countdown-timer';
 import { SukuDoughnutChartWidgetComponent } from './webcomponents/suku-doughnut-chart-widget/suku-doughnut-chart-widget.component';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
+import { SukuModalModule, SukuBidTagModule, SukuWebcomponentsService } from 'suku-webcomponents';
 @NgModule({
-	declarations: [ AppComponent, DocumentationComponent, WebComponents ],
+	declarations: [AppComponent, DocumentationComponent, WebComponents],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -31,18 +32,21 @@ import { NgxJsonViewerModule } from 'ngx-json-viewer';
 		CountdownTimerModule.forRoot(),
 		QuillModule,
 		NgxJsonViewerModule,
+		SukuModalModule,
+		SukuBidTagModule,
 		ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 	],
-	providers: [ WebComponentsServices, SukuGovernanceWebcomponentsService ],
-	bootstrap: [ AppComponent ],
-	entryComponents: [ DocumentationComponent, 
+	providers: [WebComponentsServices, SukuGovernanceWebcomponentsService],
+	bootstrap: [AppComponent],
+	entryComponents: [DocumentationComponent,
 		WebComponents,
-		SukuDoughnutChartWidgetComponent ],
-	schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]
+		SukuDoughnutChartWidgetComponent],
+	schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
-	constructor(private sukuService: SukuGovernanceWebcomponentsService) {
+	constructor(private sukuService: SukuGovernanceWebcomponentsService, private sukuWebService: SukuWebcomponentsService) {
 		this.sukuService.setSukuTheme();
+		this.sukuWebService.setSukuTheme();
 	}
-	ngDoBootstrap() {}
+	ngDoBootstrap() { }
 }

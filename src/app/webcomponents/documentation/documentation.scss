@@ -201,6 +201,95 @@ ul {
   padding: 1px;
 }
 
+.btn-info {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: black;
+  font-size: 1.3rem;
+  padding: 0.85rem 1.5rem;
+}
+
+.btn-info:hover {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: #a7bf2e;
+  color: white;
+}
+
+.btn-info:active {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: #a7bf2e;
+  color: white;
+}
+
+.btn-info.disabled {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: white;
+  color: grey;
+}
+
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled.focus,
+.btn-info[disabled].focus,
+fieldset[disabled] .btn-info.focus {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: white !important;
+  color: grey;
+}
+
+.btn-info:focus,
+.btn-info.focus {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: #a7bf2e;
+  color: white;
+}
+
+.btn-info:active:hover,
+.btn-info.active:hover,
+.open>.dropdown-toggle.btn-info:hover,
+.btn-info:active:focus,
+.btn-info.active:focus,
+.open>.dropdown-toggle .btn-info:focus,
+.btn-info:active.focus,
+.btn-info.active.focus,
+.open>.dropdown-toggle .btn-info.focus {
+  border: solid 2px #a7bf2e;
+  border-radius: 28px 76px 63px;
+  background-color: #a7bf2e;
+  color: white;
+}
+
+
+.btn-info:not(:disabled):not(.disabled).active,
+.btn-info:not(:disabled):not(.disabled):active,
+.show>.btn-info.dropdown-toggle {
+  color: #fff;
+  background-color: #a7bf2e;
+  border-color: #a7bf2e;
+}
+
+.btn-info.focus,
+.btn-info:focus {
+  box-shadow: 0 0 0 0.2rem #a7bf2e;
+}
+
+.btn-info:not(:disabled):not(.disabled).active:focus,
+.btn-info:not(:disabled):not(.disabled):active:focus,
+.show>.btn-info.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem #a7bf2e;
+}
+
+
 /* scroll bar */
 ul#side::-webkit-scrollbar {
   height: 3px !important;

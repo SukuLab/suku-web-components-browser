@@ -27,12 +27,13 @@
           <!-- doc content inject here -->
           <span *ngFor="let content of CompDocSource; let j=index">
             <span *ngIf="selectedTitle?.id == content?.id">
-              <div class="col-sm-12 mt-5">
+              <div class="col-sm-12 mt-4">
                 <strong class="borBottom">{{content.title}}</strong>
-                <p ng-bind-html class="mt-5 preserve-whitespace"><span *ngIf="j!=0"
-                    class="font-weight-bold">{{content.title}}</span> {{content.description}}</p>
+                <p ng-bind-html class="mt-4 preserve-whitespace">
+                  <span *ngIf="j!=0" class="font-weight-bold">{{content.title}} </span>
+                  <span [innerHTML]="content.description"></span></p>
               </div>
-              <div class="col-sm-12 p-3" *ngIf="content?.properties[j]?.data?.length > 0">
+              <div class="col-sm-12 p-4" *ngIf="content?.properties[j]?.data?.length > 0">
                 <table mat-table [dataSource]="content?.properties[j]?.data" class="mat-elevation-z8">
                   <!-- Properties Column -->
                   <ng-container matColumnDef="Properties">
@@ -50,8 +51,9 @@
                   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
               </div>
-              <div class="col-sm-12 mt-5 mb-3" *ngIf="selectedTitle?.id  == 41">
-                <button mat-raised-button (click)="openSukuDialog()">Open Suku-Dialog</button>
+              <div class="col-lg-6 col-12 mt-5 mb-3" *ngIf="selectedTitle?.id  == 42 || selectedTitle?.id  == 39">
+                <button class="btn btn-info" (click)="openSukuDialog(selectedTitle?.id)">Open {{content.title}}
+                </button>
               </div>
               <div class="col-sm-12 p-4" *ngIf="content?.codeSample">
                 <!-- sample webcomp code inject here -->

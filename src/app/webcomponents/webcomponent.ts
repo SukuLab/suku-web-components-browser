@@ -1,17 +1,5 @@
-import {
-	Component,
-	EventEmitter,
-	Input,
-	OnInit,
-	Output,
-	ChangeDetectionStrategy,
-	ElementRef,
-	ViewChild,
-	ViewEncapsulation,
-	OnChanges
-} from '@angular/core';
-import { FormGroup, AbstractControl, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 /* text components start */
 import * as d3 from 'd3';
 
@@ -20,7 +8,7 @@ import * as d3 from 'd3';
 	template: `<h1 [style.font-size.px]="size" [class]="customclass" [style.font-weight]="weight" [style.color]="color" id="{{id}}">
   <ng-content></ng-content>
   </h1>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuHeadingComponent {
 	@Input() id = 'heading';
@@ -36,7 +24,7 @@ export class SukuHeadingComponent {
   <h2 [style.font-size.px]="size" [class]="customclass" id="{{id}}" [style.font-weight]="weight" [style.color]="color">
   <ng-content></ng-content>
   </h2>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuSubHeadingComponent {
 	@Input() id = 'subheading';
@@ -52,7 +40,7 @@ export class SukuSubHeadingComponent {
   <h3 [style.font-size.px]="size" [style.color]="color" id="{{id}}" [class]="customclass" [style.font-weight]="weight">
   <ng-content></ng-content>
   </h3>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuHomeHeadingComponent {
 	@Input() id = 'homeHeading';
@@ -68,7 +56,7 @@ export class SukuHomeHeadingComponent {
   <h5 [style.font-size.px]="size" [style.color]="color" id="{{id}}" [class]="customclass" [style.font-weight]="weight">
   <ng-content></ng-content>
   </h5>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuHomeItalicHeadingComponent {
 	@Input() id = 'homeItalicHeading';
@@ -86,7 +74,7 @@ export class SukuHomeItalicHeadingComponent {
 	template: `<h1 [style.font-size.px]="size" [class]="customclass" [style.font-weight]="weight" [style.color]="color" id="{{id}}">
   {{name}}
   </h1>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuHeadingNestComponent {
 	@Input() name;
@@ -103,7 +91,7 @@ export class SukuHeadingNestComponent {
   <h2 [style.font-size.px]="size" [class]="customclass" id="{{id}}" [style.font-weight]="weight" [style.color]="color">
   {{name}}
   </h2>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuSubNestHeadingComponent {
 	@Input() name;
@@ -122,7 +110,7 @@ export class SukuSubNestHeadingComponent {
   <suku-sub-nest-heading name="{{cardTitle}}" size="{{cardTitleSize}}" weight="{{cardTitleWeight}}" color="{{cardTitleColor}}"></suku-sub-nest-heading>
   <suku-nest-heading name="{{cardContent}}" size="{{cardContentSize}}" weight="{{cardContentWeight}}" color="{{cardContentColor}}"></suku-nest-heading>
   </div>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuCardTitleComponent {
 	@Input('card-title') cardTitle = 'INTEREST NAME';
@@ -142,7 +130,7 @@ export class SukuCardTitleComponent {
   <suku-sub-nest-heading name="{{cardTitle}}" size="{{cardTitleSize}}" weight="{{cardTitleWeight}}" color="{{cardTitleColor}}"></suku-sub-nest-heading>
   <suku-sub-nest-heading name="{{cardContent}}" size="{{cardContentSize}}" weight="{{cardContentWeight}}" color="{{cardContentColor}}"></suku-sub-nest-heading>
   </div>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuCardListComponent {
 	@Input() cardTitle = 'INTEREST NAME';
@@ -167,7 +155,7 @@ export class SukuCardListComponent {
       </span>
     </a>
   `,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuAddWidgetComponent {
 	@Input() image = '../../assets/images/plus-icon-gold.png';
@@ -187,7 +175,7 @@ export class SukuAddWidgetComponent {
   <suku-sub-nest-heading name="{{name}}" size="{{size}}" color="{{color}}" weight="{{weight}}" class="{{customclass}} c-pointer" >
   </suku-sub-nest-heading>
   </span>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuMailWidgetComponent {
 	@Input() name = 'dconway@suku.world';
@@ -205,7 +193,7 @@ export class SukuMailWidgetComponent {
   <suku-sub-nest-heading name="{{number}}" size="{{size}}" color="{{color}}" weight="{{weight}}" class="{{customclass}}" >
   </suku-sub-nest-heading>
   </span>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuPhoneWidgetComponent {
 	@Input() number = '4806069863';
@@ -223,7 +211,7 @@ export class SukuPhoneWidgetComponent {
   <suku-sub-nest-heading name="{{name}}" size="{{size}}" color="{{color}}" weight="{{weight}}" class="{{customclass}} c-pointer" >
   </suku-sub-nest-heading>
   </span>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuAddressWidgetComponent {
 	@Input() name = '9315 NW 112TH AVE';
@@ -241,7 +229,7 @@ export class SukuAddressWidgetComponent {
     </suku-sub-nest-heading>
     <i class="fa fa-chevron-circle-down f10" style="color:#a7bf2e"></i>
 </span>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuInlineDropDownComponent {
 	@Input() name = 'View Details';
@@ -259,7 +247,7 @@ export class SukuInlineDropDownComponent {
    <span [style.font-size.px]="size" [style.color]="color" (click)="action.emit()" [class]="customClass" [style.font-weight]="weight">
    <ng-content></ng-content>
    </span>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuLinkComponent {
 	@Input() size;
@@ -282,7 +270,7 @@ export class SukuLinkComponent {
   </div>
 </div>
 `,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuSelectInputComponent {
 	@Input() title = 'SORT BY';
@@ -321,7 +309,7 @@ export class SukuSelectInputComponent {
    <div class="col widget" [style.background-color]="bgColor" [style.color]="color" (click)="routerLink.emit()">
   <label class="pt-2 pb-2 c-pointer" id="{{id}}"><ng-content></ng-content></label>
    </div>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuHomeWidgetComponent {
 	@Input() name;
@@ -362,7 +350,7 @@ export class SukuHomeWidgetComponent {
     </div>
   </div>
   `,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuDashboardProfileComponent {
 	@Input('user-name') userName;
@@ -396,7 +384,7 @@ export class SukuDashboardProfileComponent {
          </strong>
       </div>
   </div>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuNotificationBoxComponent {
 	@Input() id;
@@ -458,7 +446,7 @@ export class SukuNotificationBoxComponent {
     </div>
   </div>
   </div>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuFiltersComponent {
 	@Input() form: FormGroup;
@@ -477,7 +465,7 @@ export class SukuFiltersComponent {
   <button class="btn btn-info btn-lg btn-block" id="{{id}}" (click)="action.emit()">
     <ng-content></ng-content>
   </button>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuInfoButtonComponent {
 	@Input() name;
@@ -491,7 +479,7 @@ export class SukuInfoButtonComponent {
   <button class="btn-p btn-primary" id="{{id}}" (click)="action.emit()">
     <ng-content></ng-content>
    </button>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuPrimaryButtonComponent {
 	@Input() name;
@@ -505,7 +493,7 @@ export class SukuPrimaryButtonComponent {
   <a class="secondary-btn" id="{{id}}" (click)="action.emit()">
   <ng-content></ng-content>
    </a>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuSecondaryButtonComponent {
 	@Input() name;
@@ -519,7 +507,7 @@ export class SukuSecondaryButtonComponent {
   <a class="default-btn" id="{{id}}" (click)="action.emit()">
     <ng-content></ng-content>
   </a>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuDefaultButtonComponent {
 	@Input() id = 'default';
@@ -585,7 +573,7 @@ export class SukuDefaultButtonComponent {
   </tr>
 </table>
   `,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuProgressBarComponent {
 	@Input('progress-style-one') progressStyleOne = 'progressCompleted';
@@ -612,7 +600,7 @@ export class SukuProgressBarComponent {
   <ng-content></ng-content>
   </mat-checkbox>
     `,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuCheckboxComponent {
 	@Input() id;
@@ -628,7 +616,7 @@ export class SukuCheckboxComponent {
    </mat-radio-group>
    </span>
     `,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuRadioButtonComponent {
 	@Input() formRadio: FormGroup;
@@ -648,7 +636,7 @@ export class SukuRadioButtonComponent {
   <h2 class="star-txt text-center" id="value"><ng-content></ng-content></h2>
   </div>
     `,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuStarBadgeComponent {
 	@Input() icon = '../../../assets/images/star_2.svg';
@@ -662,7 +650,7 @@ export class SukuStarBadgeComponent {
   <div [innerHTML]="myHTML" [class]="customclass" ratingValue=""></div>
   </span>
     `,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuRatingComponent {
 	myHTML;
@@ -805,7 +793,7 @@ export class SukuRatingComponent {
   </div>
 </div>
     `,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuRatingLineItemComponent {
 	@Input() size = 14;
@@ -946,7 +934,7 @@ export class SukuRatingLineItemComponent {
     <img src="{{icon}}" [class]="customClass" width="8%" height="10%">
    </div>
     `,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuSearchInputComponent {
 	@Input() formRadio: FormGroup;
@@ -974,7 +962,7 @@ export class SukuSearchInputComponent {
     </span>
   </span>
     `,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuBidInfoComponent {
 	@Input() bids = '374';
@@ -1015,7 +1003,7 @@ export class SukuBidInfoComponent {
   </div>
 </div>
     `,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuNavSubmenuComponent {
 	subMenuList = [];
@@ -1080,7 +1068,7 @@ export class SukuNavSubmenuComponent {
 </div>
 </span>
     `,
-	styleUrls: [ './webcomponents.scss' ],
+	styleUrls: ['./webcomponents.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SukuCardLineComponent {
@@ -1137,7 +1125,7 @@ export class SukuCardLineComponent {
   </span>
 </div>
 `,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuBidTagComponent {
 	@Input() prize = '$100';
@@ -1195,7 +1183,7 @@ export class SukuBidTagComponent {
   </div>
 </div>
 `,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuMatchChipComponent {
 	@Input() image = '../../assets/images/manageTrack.png';
@@ -1252,7 +1240,7 @@ export class SukuMatchChipComponent {
     </div>
   </div>
 </div>`,
-	styleUrls: [ './webcomponents.scss' ]
+	styleUrls: ['./webcomponents.scss']
 })
 export class SukuProfileWidgetComponent {
 	@Input() image = '../../assets/images/browser.png';
@@ -1319,7 +1307,7 @@ export class DynamicFormComponent implements OnInit {
 	parentForm: FormGroup;
 	objectProps;
 	@Output() action = new EventEmitter();
-	constructor() {}
+	constructor() { }
 	push() {
 		const value = JSON.parse(this.parentForm.value);
 		console.log('value', value);
@@ -1368,7 +1356,7 @@ export class DynamicFormComponent implements OnInit {
   <img src="../../assets/images/no_data.png">
   </div>
       `,
-	styleUrls: [ './webcomponents.scss' ],
+	styleUrls: ['./webcomponents.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SukuResponseComponent {
@@ -1438,7 +1426,7 @@ export class SukuTrackProgressBarComponent {
 @Component({
 	selector: 'suku-tree',
 	template: `<div class="tree"></div>`,
-	styleUrls: [ './webcomponents.scss' ],
+	styleUrls: ['./webcomponents.scss'],
 	encapsulation: ViewEncapsulation.Emulated
 })
 export class SukuTreeComponent implements OnInit {
@@ -1474,7 +1462,7 @@ export class SukuTreeComponent implements OnInit {
 				description: 'HP Laptop'
 			},
 			parent: '',
-			children: [ 'Lx1001', 'Lx2000' ],
+			children: ['Lx1001', 'Lx2000'],
 			graphLinks: [
 				{
 					_id: '5c45c0a07bccff62b4c83e63',
@@ -1501,7 +1489,7 @@ export class SukuTreeComponent implements OnInit {
 				{
 					_id: '5c45bf897bccff62b4c83e54',
 					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [ 'Lx1004', 'Lx1005' ],
+					children: ['Lx1004', 'Lx1005'],
 					uid: 'Lx1003',
 					product: {
 						id: '1003',
@@ -1578,7 +1566,7 @@ export class SukuTreeComponent implements OnInit {
 				{
 					_id: '5c45b8d37bccff62b4c83e4e',
 					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [ 'Lx1002', 'Lx1003' ],
+					children: ['Lx1002', 'Lx1003'],
 					uid: 'Lx1001',
 					product: {
 						id: '1001',
@@ -1631,7 +1619,7 @@ export class SukuTreeComponent implements OnInit {
 						{
 							_id: '5c45bf897bccff62b4c83e54',
 							timestamp: '2019-01-21T11:41:31.921Z',
-							children: [ 'Lx1004', 'Lx1005' ],
+							children: ['Lx1004', 'Lx1005'],
 							uid: 'Lx1003',
 							product: {
 								id: '1003',
@@ -1684,7 +1672,7 @@ export class SukuTreeComponent implements OnInit {
 								{
 									_id: '5c45bfe67bccff62b4c83e5a',
 									timestamp: '2019-01-21T11:41:31.921Z',
-									children: [ 'Lx1006', 'Lx1007', 'Lx1008' ],
+									children: ['Lx1006', 'Lx1007', 'Lx1008'],
 									uid: 'Lx1005',
 									product: {
 										id: '1005',
@@ -1792,7 +1780,7 @@ export class SukuTreeComponent implements OnInit {
 				{
 					_id: '5c45c1ba7bccff62b4c83e66',
 					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [ 'Lx2001', 'Lx2002' ],
+					children: ['Lx2001', 'Lx2002'],
 					uid: 'Lx2000',
 					product: {
 						id: '2000',
@@ -1957,7 +1945,7 @@ export class SukuTreeComponent implements OnInit {
 				{
 					_id: '5c45bfe67bccff62b4c83e5a',
 					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [ 'Lx1006', 'Lx1007', 'Lx1008' ],
+					children: ['Lx1006', 'Lx1007', 'Lx1008'],
 					uid: 'Lx1005',
 					product: {
 						id: '1005',
@@ -2097,7 +2085,7 @@ export class SukuTreeComponent implements OnInit {
 				{
 					_id: '5c45b8d37bccff62b4c83e4e',
 					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [ 'Lx1002', 'Lx1003' ],
+					children: ['Lx1002', 'Lx1003'],
 					uid: 'Lx1001',
 					product: {
 						id: '1001',
@@ -2150,7 +2138,7 @@ export class SukuTreeComponent implements OnInit {
 						{
 							_id: '5c45bf897bccff62b4c83e54',
 							timestamp: '2019-01-21T11:41:31.921Z',
-							children: [ 'Lx1004', 'Lx1005' ],
+							children: ['Lx1004', 'Lx1005'],
 							uid: 'Lx1003',
 							product: {
 								id: '1003',
@@ -2203,7 +2191,7 @@ export class SukuTreeComponent implements OnInit {
 								{
 									_id: '5c45bfe67bccff62b4c83e5a',
 									timestamp: '2019-01-21T11:41:31.921Z',
-									children: [ 'Lx1006', 'Lx1007', 'Lx1008' ],
+									children: ['Lx1006', 'Lx1007', 'Lx1008'],
 									uid: 'Lx1005',
 									product: {
 										id: '1005',
@@ -2244,7 +2232,7 @@ export class SukuTreeComponent implements OnInit {
 				{
 					_id: '5c45c1ba7bccff62b4c83e66',
 					timestamp: '2019-01-21T11:41:31.921Z',
-					children: [ 'Lx2001', 'Lx2002' ],
+					children: ['Lx2001', 'Lx2002'],
 					uid: 'Lx2000',
 					product: {
 						id: '2000',
@@ -2473,7 +2461,7 @@ export class SukuTreeComponent implements OnInit {
 				.children((d) => {
 					return d.relations;
 				})
-				.size([ this.height, this.width ]);
+				.size([this.height, this.width]);
 
 			this.svg = d3
 				.select('.tree')
@@ -2634,7 +2622,7 @@ export class SukuTreeComponent implements OnInit {
 	</div>
 	</span>
 	`,
-	styleUrls: [ './webcomponents.scss' ],
+	styleUrls: ['./webcomponents.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SukuTrackTraceProductSearchComponent {
@@ -2679,11 +2667,11 @@ export class SukuTrackTraceProductSearchComponent {
 		return this._result;
 	}
 	set result(res) {
-		 this._result = res;
+		this._result = res;
 	}
 
 	searchEnabled() {
-		this.isSearch = ! this.isSearch;
+		this.isSearch = !this.isSearch;
 	}
 
 	@Input('visible')

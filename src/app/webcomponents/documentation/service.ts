@@ -1617,6 +1617,75 @@ export class WebComponentsServices {
 		{
 			data: [
 				{
+					properties: 'icon',
+					type: '[String]',
+					description: 'It defines the type of icon.'
+				},
+				{
+					properties: 'iconCustomClass',
+					type: '[String]',
+					description: 'It defines the custom class for icon.'
+				},
+				{
+					properties: 'titleOne',
+					type: '[String]',
+					description: 'It defines the title for suku-confirmation dialog.'
+				},
+				{
+					properties: 'titleOneId',
+					type: '[String]',
+					description: 'It defines Id for titleOne in suku-confirmation dialog.'
+				},
+				{
+					properties: 'titleTwo',
+					type: '[String]',
+					description: 'It defines the sub-title for suku-confirmation dialog.'
+				},
+				{
+					properties: 'titleOneId',
+					type: '[String]',
+					description: 'It defines Id for titleTwo in suku-confirmation dialog.'
+				},
+				{
+					properties: 'titleThree',
+					type: '[String]',
+					description: 'It defines the message for suku-confirmation dialog.'
+				},
+				{
+					properties: 'titleThreeId',
+					type: '[String]',
+					description: 'It defines Id for titleThree in suku-confirmation dialog.'
+				},
+				{
+					properties: 'buttonLableOne',
+					type: '[String]',
+					description: 'It defines the name for suku-confirmation dialog button-one.'
+				},
+				{
+					properties: 'buttonLableOneId',
+					type: '[String]',
+					description: 'It defines Id for buttonLabelOneId in suku-confirmation dialog.'
+				},
+				{
+					properties: 'buttonLableTwo',
+					type: '[String]',
+					description: 'It defines Id for buttonLabelOneId in suku-confirmation dialog.'
+				},
+				{
+					properties: 'buttonLableTwoId',
+					type: '[String]',
+					description: 'It defines Id for buttonLabelOneId in suku-confirmation dialog.'
+				},
+				{
+					properties: 'buttonCustomClass',
+					type: '[String]',
+					description: 'It defines Id for buttonLabelOneId in suku-confirmation dialog.'
+				}
+			]
+		},
+		{
+			data: [
+				{
 					properties: 'label-one',
 					type: '[String]',
 					description: 'It defines main heading.'
@@ -1680,24 +1749,6 @@ export class WebComponentsServices {
 		},
 		{
 			data: [
-
-				// @Input() customLayoutClass = 'col p-2 ';
-
-
-
-				// @Input() labelThree = 'From';
-				// @Input() labelThreeSize;
-				// @Input() labelThreeCustomClass = '';
-
-				// @Input() labelFour = 'To';
-				// @Input() labelFourSize;
-				// @Input() labelFourCustomClass = '';
-
-				// @Input() selectAllCustomClass;
-				// @Input() clearAllCustomClass;
-				// @Input() statusTypesDynamic: any[];
-				// @Input() filterBtnLabel = 'Apply Date Filters';
-
 				{
 					properties: 'form',
 					type: '[String]',
@@ -2130,8 +2181,7 @@ export class WebComponentsServices {
 	public Content_DATA: WebCompContent[] = [
 		{
 			title: 'GETTING STARTED',
-			description: `
-Welcome to SUKU's web component library! Here you will find a catalog of web components available for building SUKU applications. 
+			description: `Welcome to SUKU's web component library! Here you will find a catalog of web components available for building SUKU applications. 
 
 Let's get started: 
 1) Select a component from the navigation menu. 
@@ -2152,7 +2202,7 @@ Let's get started:
 			properties: this.Properties_DATA,
 			codeSample: '<suku-heading> You just created suku-heading </suku-heading>',
 			jsonSample: '',
-			usage: '',
+			usage: ``,
 			try: true,
 			id: 1
 		},
@@ -2424,7 +2474,9 @@ Let's get started:
 		},
 		{
 			title: 'suku-bid-tag',
-			description: `displays a bid associated with products on the marketplace.`,
+			description: `displays a bid associated with products on the marketplace.<div class="d-flex">
+			<blockquote>import <span>'SukuBidTagModule'</span> from <span>'suku-webcomponents';</span></blockquote>
+			</div><div class="text-left">check show more info to know implementation.</div>`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-bid-tag prize="$100" ></suku-bid-tag>',
 			jsonSample: '',
@@ -2612,6 +2664,43 @@ Import Dwolla.js Library to run this:
 			id: 38
 		},
 		{
+			title: 'suku-confirmation-modal',
+			description: `is a dialog component which is used to get confirmation feedback in different scenarios.<div class="d-flex">
+			<blockquote>import <span>'SukuModalService'</span> from <span>'suku-webcomponents';</span></blockquote>
+			</div><div class="text-left">check show more info to know implementation.</div>`,
+			properties: this.Properties_DATA,
+			codeSample: ``,
+			jsonSample: ``,
+			usage: `			<pre>
+Usage:
+import { SukuModalModule } from 'suku-webcomponents'; or
+import { SukuWebcomponentsModule } from 'suku-webcomponents';
+into 'app.module.ts';
+
+constructor(private sukuService: SukuModalService){ }
+openDialog() {
+const data = {
+ 	icon': 'fa fa-question',
+	iconCustomClass: '',
+	titleOne: 'Are You Sure?',
+	titleOneId: 'confirmation',
+	titleTwo: 'Are you sure you'd like to delete this Listing?',
+ ...
+};
+this.sukuService.openConfirmationDialog(data);
+
+// 'onDialogClose' is a eventemitter, which is triggered on close of dialog.
+this.sukuService.onDialogClose.subscribe(res => {
+	if (res) {
+	// action here
+	}
+});
+}
+			</pre>`,
+			try: false,
+			id: 39
+		},
+		{
 			title: 'suku-proposal-header',
 			description: `is a simple header widget.`,
 			properties: this.Properties_DATA,
@@ -2619,7 +2708,7 @@ Import Dwolla.js Library to run this:
 			jsonSample: ``,
 			usage: ``,
 			try: true,
-			id: 39
+			id: 40
 		},
 		{
 			title: 'suku-governance-filter',
@@ -2682,7 +2771,7 @@ Import Dwolla.js Library to run this:
 			],
 			usage: `Sample JSON Data:`,
 			try: false,
-			id: 40,
+			id: 41,
 			preview: true
 		},
 		{
@@ -2708,7 +2797,7 @@ this.sukuService.openInfoModal(data);
 			</pre>
 			`,
 			try: false,
-			id: 41
+			id: 42
 		},
 		{
 			title: 'suku-list-proposal-choice-widget',
@@ -2767,7 +2856,7 @@ this.sukuService.openInfoModal(data);
 			}],
 			usage: `Sample JSON Data:`,
 			try: true,
-			id: 42
+			id: 43
 		},
 		{
 			title: 'suku-doughnut-chart-widget',
@@ -2782,7 +2871,7 @@ this.sukuService.openInfoModal(data);
 			],
 			usage: `Sample JSON Data:`,
 			try: true,
-			id: 43
+			id: 44
 		},
 		{
 			title: 'suku-text-editor',
@@ -2792,7 +2881,7 @@ this.sukuService.openInfoModal(data);
 			jsonSample: ``,
 			usage: ``,
 			try: true,
-			id: 44
+			id: 45
 		}
 	];
 
@@ -2952,24 +3041,32 @@ this.sukuService.openInfoModal(data);
 				id: 38
 			},
 			{
-				name: 'Proposal Header',
+				name: 'Confirmation Modal',
 				id: 39
 			},
 			{
-				name: 'Governance Filter',
+				name: 'Proposal Header',
 				id: 40
 			},
 			{
-				name: 'Proposal Option Modal',
+				name: 'Governance Filter',
 				id: 41
 			},
 			{
-				name: 'List Proposal Choice Widget',
+				name: 'Proposal Option Modal',
 				id: 42
 			},
 			{
-				name: 'Doughnut Chart Widget',
+				name: 'List Proposal Choice Widget',
 				id: 43
+			},
+			{
+				name: 'Doughnut Chart Widget',
+				id: 44
+			},
+			{
+				name: 'Text Editor',
+				id: 45
 			}
 		];
 	}

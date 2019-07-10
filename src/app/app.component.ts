@@ -50,11 +50,11 @@ import { SukuListProposalChoiceWidgetComponent } from './webcomponents/suku-list
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
-	styleUrls: [ './app.component.scss' ]
+	styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
 	title = 'suku-doc';
-	constructor(private injector: Injector) {}
+	constructor(private injector: Injector) { }
 	ngOnInit() {
 		const sukuHeading = createCustomElement(SukuHeadingComponent, { injector: this.injector });
 		customElements.define('suku-heading', sukuHeading);
@@ -134,8 +134,6 @@ export class AppComponent implements OnInit {
 			injector: this.injector
 		});
 		customElements.define('suku-secondary-button', SukuSecondaryBtn);
-		const SukuBidTag = createCustomElement(SukuBidTagComponent, { injector: this.injector });
-		customElements.define('suku-bid-tag', SukuBidTag);
 		const SukuMatchChip = createCustomElement(SukuMatchChipComponent, {
 			injector: this.injector
 		});

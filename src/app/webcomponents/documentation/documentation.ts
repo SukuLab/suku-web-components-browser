@@ -150,6 +150,43 @@ export class DocumentationComponent implements OnInit {
 		}
 	];
 	collapsePreview: boolean;
+	beneficialOwnerStatus = [
+		{
+			firstName: 'Jaison',
+			verificationStatus: 'document',
+			labelThree: '',
+			data: [
+				{
+					'labelOne': 'Doc Type:',
+					'labelTwo': 'Status:',
+					'labelThree': 'Failure Reason:',
+					type: 'Jaison',
+					status: 'document',
+					failureReason: 'NOn'
+				}
+			]
+		},
+		{
+			firstName: 'Jaison',
+			verificationStatus: 'verify'
+		}
+	];
+	status = 'document';
+	documentStatus = [
+		{
+			'labelOne': 'Doc Type:',
+			'labelTwo': 'Status:',
+			'labelThree': 'Failure Reason:',
+			type: 'Jaison',
+			status: 'document'
+		},
+		{
+			'labelOne': 'Doc Type:',
+			type: 'Jaison',
+			status: 'verify'
+		}
+	];
+
 
 	constructor(private fb: FormBuilder, private domSanitizer: DomSanitizer,
 		private services: WebComponentsServices, private sukuService: SukuModalService,
@@ -169,9 +206,13 @@ export class DocumentationComponent implements OnInit {
 			statusTypess: this.fb.array([]),
 			firstName: '',
 			productId: ['', [Validators.required]],
-			checkAgreement: ''
+			checkAgreement: '',
+			code: ''
 		});
-		this.parentForm.valueChanges.subscribe((v) => console.log('data', v));
+		this.parentForm.get('code').valueChanges.subscribe((v) => {
+			this.executeCode();
+			console.log('data', v)
+		});
 		this.subMenuList = [
 			{
 				name: 'Components',
@@ -200,6 +241,7 @@ export class DocumentationComponent implements OnInit {
 	titleActive(event, newValue) {
 		this.selectedTitle = newValue;
 		this.dataDom = '';
+		this.dataLength = 0;
 	}
 
 	copySample() {

@@ -41,7 +41,6 @@ import {
 	SukuTrackProgressBarComponent,
 	SukuTrackTraceProductSearchComponent
 } from './webcomponent';
-import { SukuACHSettingsComponent } from './suku-achsettings/suku-achsettings.component';
 import { SukuTransactionHistoryComponent } from './suku-transaction-history/suku-transaction-history.component';
 import { SukuBeneficialOwnerComponent } from './suku-beneficial-owner/suku-beneficial-owner.component';
 import { SukuDwollaFundingAgreementComponent } from './suku-dwolla-funding-agreement/suku-dwolla-funding-agreement.component';
@@ -97,7 +96,6 @@ export const WebComponents = [
 	DynamicFormComponent,
 	SukuTrackProgressBarComponent,
 	SukuTrackTraceProductSearchComponent,
-	SukuACHSettingsComponent,
 	SukuTransactionHistoryComponent,
 	SukuDwollaFundingAgreementComponent,
 	SukuBeneficialOwnerComponent,

@@ -1,6 +1,5 @@
 import { Component, OnInit, Injector } from '@angular/core';
 import {
-	SukuBidTagComponent,
 	SukuCardLineComponent,
 	SukuCheckboxComponent,
 	SukuDashboardProfileComponent,
@@ -38,7 +37,6 @@ import {
 	SukuTrackProgressBarComponent
 } from './webcomponents/webcomponent';
 import { createCustomElement } from '@angular/elements';
-import { SukuACHSettingsComponent } from './webcomponents/suku-achsettings/suku-achsettings.component';
 import { SukuTransactionHistoryComponent } from './webcomponents/suku-transaction-history/suku-transaction-history.component';
 import { SukuDwollaFundingAgreementComponent } from './webcomponents/suku-dwolla-funding-agreement/suku-dwolla-funding-agreement.component';
 import { SukuDwollaFundingSourceComponent } from './webcomponents/suku-dwolla-funding-source/suku-dwolla-funding-source.component';
@@ -54,6 +52,7 @@ import { SukuListProposalChoiceWidgetComponent } from './webcomponents/suku-list
 })
 export class AppComponent implements OnInit {
 	title = 'suku-doc';
+
 	constructor(private injector: Injector) { }
 	ngOnInit() {
 		const sukuHeading = createCustomElement(SukuHeadingComponent, { injector: this.injector });
@@ -184,10 +183,6 @@ export class AppComponent implements OnInit {
 			injector: this.injector
 		});
 		customElements.define('suku-tree', SukuTree);
-		const SukuACh = createCustomElement(SukuACHSettingsComponent, {
-			injector: this.injector
-		});
-		customElements.define('suku-ach-setting', SukuACh);
 		const SukuTransactionHistory = createCustomElement(SukuTransactionHistoryComponent, {
 			injector: this.injector
 		});

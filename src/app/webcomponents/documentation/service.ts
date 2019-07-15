@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { flattenStyles } from '@angular/platform-browser/src/dom/dom_renderer';
-
 export interface WebCompProperties {
 	data: WebCompData[];
 }
@@ -33,23 +31,23 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				}
@@ -59,19 +57,19 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
-				{ properties: 'weight', type: '[number]', description: 'Weight corresponds to the font size.' },
+				{ properties: 'weight', type: '[Number]', description: 'Weight corresponds to the font size.' },
 				{
 					properties: 'color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				}
@@ -81,46 +79,46 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'user-name',
-					type: '[string]',
+					type: '[String]',
 					description: 'it represents the below username.'
 				},
-				{ properties: 'name-weight', type: '[number]', description: 'Weight corresponds to the font size.' },
+				{ properties: 'name-weight', type: '[Number]', description: 'Weight corresponds to the font size.' },
 				{
 					properties: 'name-customclass ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet'
 				},
 				{
 					properties: 'name-size',
-					type: '[string]',
+					type: '[String]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'name-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'account-type',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'A manufacturer  provides goods or services relating to the item being designed, typically prototype or production components.'
 				},
 				{
 					properties: 'account-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of size which is passed to the directive.'
 				},
 				{
 					properties: 'account-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'account-customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				}
@@ -130,51 +128,51 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'users',
-					type: '[string]',
+					type: '[String]',
 					description: 'The user are the end-users who can be buyer or seller.'
 				},
 				{
 					properties: 'comment-size',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The comment-size describes how large or small the user shares his feedback about the product and transactions.'
 				},
 				{
 					properties: 'comment-weight',
-					type: '[string]',
+					type: '[String]',
 					description: ' The comment-weight corresponds to the font size of the comment-size.'
 				},
 				{
 					properties: 'comment-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'comment',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'A product description is the marketing copy used to describe a product value proposition to potential customers.'
 				},
 				{
 					properties: 'rating-value',
-					type: '[string]',
+					type: '[String]',
 					description: ' Rating value shows the users feedback about the product .'
 				}
 			]
@@ -184,17 +182,17 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'id',
-					type: '[string]',
+					type: '[String]',
 					description: 'If you need to support more than one instance of notification  at a time.'
 				},
 				{
 					properties: 'notification-title',
-					type: '[string]',
+					type: '[String]',
 					description: 'It represents the name of the specific notification. This is submitted with the form data.'
 				},
 				{
 					properties: 'notification-value ',
-					type: '[number]',
+					type: '[Number]',
 					description: '  It shows the value of its corresponing title.'
 				}
 			]
@@ -203,28 +201,28 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'name',
-					type: '[string]',
+					type: '[String]',
 					description: 'it represents the mail id of a user. Example: username@mail.com'
 				},
 				{
 					properties: 'size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				}
@@ -234,86 +232,86 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'bid',
-					type: '[number]',
+					type: '[Number]',
 					description: 'A bid is an offer made by an investor, trader or dealer to buy a product.'
 				},
 				{
 					properties: 'bid-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'bid-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'bid-color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'bid-heading',
-					type: '[string]',
+					type: '[String]',
 					description: ' Bid-heading is also sometimes referred to as advance bidding or pre-bidding to end users.'
 				},
 				{
 					properties: 'bid-heading-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'bid-heading-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'bid-heading-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'percent',
-					type: '[string]',
+					type: '[String]',
 					description: 'To determine the strength of a bid.'
 				},
 				{
 					properties: 'percent-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'percent-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'percent-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'percent-heading',
-					type: '[string]',
+					type: '[String]',
 					description: 'It allows to determine exactly which demand sources are participating.'
 				},
 				{
 					properties: 'percent-heading-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'percent-heading-color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'percent-heading-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				}
 			]
@@ -322,167 +320,167 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'image',
-					type: '[number]',
+					type: '[Number]',
 					description: '	An image is a picture that has been created or copied and stored in electronic form.'
 				},
 				{
 					properties: 'match',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the match for users listing and interest.'
 				},
 				{
 					properties: 'list-name-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'list-color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'list-weight',
-					type: '[string]',
+					type: '[String]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'list-name',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the name for each list.'
 				},
 				{
 					properties: 'prize',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value given to the matched listing of the product.'
 				},
 				{
 					properties: 'prize-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'prize-weight ',
-					type: '[string]',
+					type: '[String]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'prize-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'prize-customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'date',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Date corresponds to listing expiry date.'
 				},
 				{
 					properties: 'date-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'date-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'date-color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'date-customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'dateV',
-					type: '[number]',
+					type: '[Number]',
 					description: 'The dateV corresponds to the date value of listing a product.'
 				},
 				{
 					properties: 'dateV-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'dateV-color',
-					type: '[number]',
+					type: '[Number]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'dateV-weight',
-					type: '[string]',
+					type: '[String]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'dateV-costomclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'sell',
-					type: '[number]',
+					type: '[Number]',
 					description: 'The seller details who sell the product.'
 				},
 				{
 					properties: 'sell-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'sell-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'sell-color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'sell-customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'sell-v',
-					type: '[string]',
+					type: '[String]',
 					description: 'Corresponds to the seller value name.'
 				},
 				{
 					properties: 'sell-v-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'sell-v-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'sell-v-color',
-					type: '[number]',
+					type: '[Number]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'sell-v-customclass ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and mostly used to point to a class in a style sheet.'
 				}
@@ -492,145 +490,145 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'image',
-					type: '[string]',
+					type: '[String]',
 					description: ' An image is a picture that has been created or copied and stored in electronic form.'
 				},
 				{
 					properties: 'chat-read-icon',
-					type: '[string]',
+					type: '[String]',
 					description: 'The  check mark will appear when all participants in the group have received your message.'
 				},
 				{
 					properties: 'chat-unread-icon',
-					type: '[string]',
+					type: '[String]',
 					description: 'The message counts next to the  icon to be read.'
 				},
 				{
 					properties: 'msg-status',
-					type: '[string]',
+					type: '[String]',
 					description: ' It conveys the current status of the message.'
 				},
 				{
 					properties: 'customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'custom-icon-class',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'bg-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'title-one ',
-					type: '[string]',
+					type: '[String]',
 					description: 'It displays list name.'
 				},
 				{
 					properties: 'title-one-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'title-one-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'title-one-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'content-one',
-					type: '[string]',
+					type: '[String]',
 					description: 'It allows the users to determine exactly which demand sources are participating.'
 				},
 				{
 					properties: 'content-one-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'content-one-weight',
-					type: '[string]',
+					type: '[String]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'content-one-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'sub-title-two',
-					type: '[string]',
+					type: '[String]',
 					description: 'It displays seller name.'
 				},
 				{
 					properties: 'sub-title-two-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'sub-title-two-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'sub-title-two-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'sub-title-three',
-					type: '[number]',
+					type: '[Number]',
 					description: 'It displays the date status.'
 				},
 				{
 					properties: 'sub-title-three-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'sub-title-three-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'sub-title-three-size',
-					type: '[string]',
+					type: '[String]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'content-three',
-					type: '[string]',
+					type: '[String]',
 					description: 'It displays date.'
 				},
 				{
 					properties: 'content-three-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'content-three-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'content-three-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				}
 			]
@@ -639,37 +637,37 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'user-name',
-					type: '[string]',
+					type: '[String]',
 					description: ' It represents the below username.'
 				},
 				{
 					properties: 'image',
-					type: '[string]',
+					type: '[String]',
 					description: ' An image is a picture that has been created or copied and stored in electronic form.'
 				},
 				{
 					properties: 'icon',
-					type: '[string]',
+					type: '[String]',
 					description: ' It helps the user quickly identify the type of file represented by the icon.'
 				},
 				{
 					properties: 'title-one ',
-					type: '[string]',
+					type: '[String]',
 					description: 'Titleone contains descriptive keywords to clearly and accurately convey the contents.'
 				},
 				{
 					properties: 'title-two',
-					type: '[string]',
+					type: '[String]',
 					description: 'If you need to support more than one instance of title  at a time .'
 				},
 				{
 					properties: 'action-one',
-					type: '[output]',
+					type: '[Output]',
 					description: 'It helps the user to perform the required action.'
 				},
 				{
 					properties: 'action-two',
-					type: '[output]',
+					type: '[Output]',
 					description: 'It helps the user to perform the required action.'
 				}
 			]
@@ -678,12 +676,12 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'name',
-					type: '[string]',
+					type: '[String]',
 					description: ' it represents the below submenu name.'
 				},
 				{
 					properties: 'id',
-					type: '[number]',
+					type: '[Number]',
 					description: ' If you need to support more than one instance of submenu at a time.'
 				},
 				{
@@ -697,82 +695,82 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'progress-style-one',
-					type: '[string]',
+					type: '[String]',
 					description: ' it represents the progress as completed.'
 				},
 				{
 					properties: 'progress-style-two',
-					type: '[number]',
+					type: '[Number]',
 					description: '  it represents the progress as active.'
 				},
 				{
 					properties: 'progress-style-three',
-					type: '[number]',
+					type: '[Number]',
 					description: ' It represents the progress as upcoming.'
 				},
 				{
 					properties: 'progress-style-four',
-					type: '[number]',
+					type: '[Number]',
 					description: ' It represents the progress as upcoming.'
 				},
 				{
 					properties: 'progress-style-five',
-					type: '[number]',
+					type: '[Number]',
 					description: ' It represents the progress as upcoming .'
 				},
 				{
 					properties: 'first-heading',
-					type: '[string]',
+					type: '[String]',
 					description: 'It represents the below contents.'
 				},
 				{
 					properties: 'second-heading',
-					type: '[string]',
+					type: '[String]',
 					description: ' it represents the below contents.'
 				},
 				{
 					properties: 'third-heading',
-					type: '[string]',
+					type: '[String]',
 					description: 'it represents the below contents.'
 				},
 				{
 					properties: 'fourth-heading',
-					type: '[string]',
+					type: '[String]',
 					description: 'it represents the below contents.'
 				},
 				{
 					properties: 'fifth-heading',
-					type: '[string]',
+					type: '[String]',
 					description: 'it represents the below contents.'
 				},
 				{
 					properties: 'heading-one-id',
-					type: '[string]',
+					type: '[String]',
 					description: 'If you need to support more than one instance of title  at a time.'
 				},
 				{
 					properties: 'heading-two-id',
-					type: '[string]',
+					type: '[String]',
 					description: 'If you need to support more than one instance of title  at a time.'
 				},
 				{
 					properties: 'heading-three-id',
-					type: '[string]',
+					type: '[String]',
 					description: 'If you need to support more than one instance of title  at a time.'
 				},
 				{
 					properties: 'heading-four-id',
-					type: '[string]',
+					type: '[String]',
 					description: 'If you need to support more than one instance of title  at a time.'
 				},
 				{
 					properties: 'heading-five-id',
-					type: '[string]',
+					type: '[String]',
 					description: 'If you need to support more than one instance of title  at a time .'
 				},
 				{
 					properties: 'Custom CSS',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'ProgressCompleted- "progressCompleted", ProgressActive-"progressActive", ProgressUpcoming-"progressUpcoming".'
 				}
@@ -782,23 +780,23 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				}
@@ -808,29 +806,29 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'weight corresponds to the font size.'
 				},
 				{
 					properties: 'color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'action',
-					type: '[output]',
+					type: '[Output]',
 					description: 'It helps the user to perform the required action.'
 				}
 			]
@@ -839,29 +837,29 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'action',
-					type: '[string]',
+					type: '[String]',
 					description: ' The response when the link is navigated to the required page or content.'
 				}
 			]
@@ -870,34 +868,34 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'title',
-					type: '[string]',
+					type: '[String]',
 					description: ' it represents the contents below.'
 				},
 				{
 					properties: 'size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'options',
-					type: '[string]',
+					type: '[String]',
 					description: ' Specifies that the user is required to select a value before submitting the form.'
 				}
 			]
@@ -906,28 +904,28 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'number',
-					type: '[string]',
+					type: '[String]',
 					description: ' String of specific numbers that a telephone or cell phone user can dial to reach the end user.'
 				},
 				{
 					properties: 'size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				}
@@ -937,28 +935,28 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'name',
-					type: '[string]',
+					type: '[String]',
 					description: ' element identifies contact information relevant to the current site.'
 				},
 				{
 					properties: 'size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				}
@@ -968,34 +966,34 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'name',
-					type: '[string]',
+					type: '[String]',
 					description: 'it guides the end user to select the required optiion.'
 				},
 				{
 					properties: 'size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'action',
-					type: '[output]',
+					type: '[Output]',
 					description: ' It performs required actions.'
 				}
 			]
@@ -1004,28 +1002,28 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'name',
-					type: '[string]',
+					type: '[String]',
 					description: 'It represents the contents below.'
 				},
 				{
 					properties: 'id',
-					type: '[number]',
+					type: '[Number]',
 					description: 'If you need to support more than one instance of title  at a time.'
 				},
 				{
 					properties: 'color ',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'bgcolor',
-					type: '[string]',
+					type: '[String]',
 					description: 'The background-color CSS property sets the background color of an element.'
 				},
 				{
 					properties: 'routerlink',
-					type: '[output]',
+					type: '[Output]',
 					description: 'It helps the user to perform the required action.'
 				}
 			]
@@ -1043,12 +1041,39 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'id',
-					type: '[number]',
+					type: '[Number]',
 					description: 'If you need to support more than one instance of title  at a time.'
 				},
 				{
+					properties: 'size',
+					type: '[Number-rem]',
+					description: 'Corresponds to the value of font-size which is passed to the directive.'
+				},
+				{
+					properties: 'weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size.'
+				},
+				{
+					properties: 'color ',
+					type: '[String]',
+					description:
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
+				},
+				{
+					properties: 'disable-value ',
+					type: '[boolean]',
+					description:
+						'It is used alter enable/disable states of button.'
+				},
+				{
+					properties: 'custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for info button'
+				},
+				{
 					properties: 'action',
-					type: '[output]',
+					type: '[Output]',
 					description: 'It helps the user to perform the required action.'
 				}
 			]
@@ -1057,12 +1082,39 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'id',
-					type: '[number]',
+					type: '[Number]',
 					description: 'If you need to support more than one instance of title  at a time.'
 				},
 				{
+					properties: 'size',
+					type: '[Number-rem]',
+					description: 'Corresponds to the value of font-size which is passed to the directive.'
+				},
+				{
+					properties: 'weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size.'
+				},
+				{
+					properties: 'color',
+					type: '[String]',
+					description:
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
+				},
+				{
+					properties: 'disable-value',
+					type: '[boolean]',
+					description:
+						'It is used alter enable/disable states of button.'
+				},
+				{
+					properties: 'custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for primary button'
+				},
+				{
 					properties: 'action',
-					type: '[output]',
+					type: '[Output]',
 					description: ' It helps the user to perform the required action.'
 				}
 			]
@@ -1071,12 +1123,33 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'id',
-					type: '[number]',
+					type: '[Number]',
 					description: 'If you need to support more than one instance of title  at a time.'
 				},
 				{
+					properties: 'size',
+					type: '[Number-rem]',
+					description: 'Corresponds to the value of font-size which is passed to the directive.'
+				},
+				{
+					properties: 'weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size.'
+				},
+				{
+					properties: 'color',
+					type: '[String]',
+					description:
+						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
+				},
+				{
+					properties: 'custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for secondary button'
+				},
+				{
 					properties: 'action',
-					type: '[output]',
+					type: '[Output]',
 					description: ' It helps the user to perform the required action.'
 				}
 			]
@@ -1085,12 +1158,32 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'id',
-					type: '[number]',
+					type: '[Number]',
 					description: 'If you need to support more than one instance of title  at a time.'
 				},
 				{
+					properties: 'size',
+					type: '[Number-rem]',
+					description: ' It is used to update font-size.'
+				},
+				{
+					properties: 'color',
+					type: '[String]',
+					description: ' It is used to update font-color.'
+				},
+				{
+					properties: 'weight',
+					type: '[Number]',
+					description: ' It is used to update font-weight.'
+				},
+				{
+					properties: 'custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for default button'
+				},
+				{
 					properties: 'action',
-					type: '[output]',
+					type: '[Output]',
 					description: ' It helps the user to perform the required action.'
 				}
 			]
@@ -1099,12 +1192,12 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'icon',
-					type: '[string]',
+					type: '[String]',
 					description: 'It is used to represent the user and can often identify the Scratcher.'
 				},
 				{
 					properties: 'value',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Rating the feeback to the buyer or seller from an end user.'
 				}
 			]
@@ -1113,17 +1206,17 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'form-radio',
-					type: '[string]',
+					type: '[String]',
 					description: 'The text-box helps the user to enter the search string they require.'
 				},
 				{
 					properties: 'icon',
-					type: '[string]',
+					type: '[String]',
 					description: 'Used to identify the searh box to fetch the required data.'
 				},
 				{
 					properties: 'customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				}
@@ -1133,109 +1226,109 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'prize',
-					type: '[number]',
+					type: '[Number]',
 					description: 'The value assigned to the product by a buyer or seller.'
 				},
 				{
 					properties: 'prize-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'prize-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'prize-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value..'
 				},
 				{
 					properties: 'prize-customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'unit',
-					type: '[number]',
+					type: '[Number]',
 					description: 'unit indicates the cost per product or bid placed.'
 				},
 				{
 					properties: 'unit-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'unit-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'unit-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value.'
 				},
 				{
 					properties: 'unit-customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'q-content',
-					type: '[string]',
+					type: '[String]',
 					description: ' The quantity per product in the bid.'
 				},
 				{
 					properties: 'q-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'q-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'q-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value..'
 				},
 				{
 					properties: 'q-customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'p-content',
-					type: '[string]',
+					type: '[String]',
 					description: 'The bids placed for each products  .'
 				},
 				{
 					properties: 'p-size',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Corresponds to the value of font-size which is passed to the directive.'
 				},
 				{
 					properties: 'p-weight',
-					type: '[number]',
+					type: '[Number]',
 					description: 'Weight corresponds to the font size.'
 				},
 				{
 					properties: 'p-color',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The color data type represents a color in the sRGB color space. Color may also include an alpha-channel transparency value..'
 				},
 				{
 					properties: 'p-customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				}
@@ -1245,18 +1338,18 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'rating',
-					type: '[number]',
+					type: '[Number]',
 					description: 'The feedback given by the buyer or seller to the product.'
 				},
 				{
 					properties: 'customclass',
-					type: '[string]',
+					type: '[String]',
 					description:
 						'The class attribute specifies one or more classnames for an element and is mostly used to point to a class in a style sheet.'
 				},
 				{
 					properties: 'value',
-					type: '[number]',
+					type: '[Number]',
 					description: ' The rating value feedback in terms of star to the product.'
 				}
 			]
@@ -1265,47 +1358,47 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'progress-style-one',
-					type: '[string]',
+					type: '[String]',
 					description: 'It shows the progress in completed state.'
 				},
 				{
 					properties: 'progress-style-two',
-					type: '[string]',
+					type: '[String]',
 					description: 'It shows the progress as active.'
 				},
 				{
 					properties: 'progress-style-three',
-					type: '[string]',
+					type: '[String]',
 					description: ' It shows the progress as upcoming.'
 				},
 				{
 					properties: 'heading-one',
-					type: '[string]',
+					type: '[String]',
 					description: 'It represents the different categories of tracking.'
 				},
 				{
 					properties: 'heading-two',
-					type: '[string]',
+					type: '[String]',
 					description: 'It represents the different categories of tracking.'
 				},
 				{
 					properties: 'heading-three',
-					type: '[string]',
+					type: '[String]',
 					description: 'It represents the different categories of tracking.'
 				},
 				{
 					properties: 'custom-heading-one-class',
-					type: '[string]',
+					type: '[String]',
 					description: 'It differentiates the categories with the color indications.'
 				},
 				{
 					properties: 'custom-heading-two-class',
-					type: '[string]',
+					type: '[String]',
 					description: 'It differentiates the categories with the color indications.'
 				},
 				{
 					properties: 'custom-heading-three-class',
-					type: '[string]',
+					type: '[String]',
 					description: ' It differentiates the categories with the color indications.'
 				}
 			]
@@ -1314,12 +1407,12 @@ export class WebComponentsServices {
 			data: [
 				{
 					properties: 'head-name',
-					type: '[string]',
+					type: '[String]',
 					description: 'It corresponds to product title.'
 				},
 				{
 					properties: 'sub-head-name',
-					type: '[string]',
+					type: '[String]',
 					description: 'It corresponds to product sub-title.'
 				},
 				{
@@ -1397,24 +1490,209 @@ export class WebComponentsServices {
 					description: 'It corresponds to ACH title.'
 				},
 				{
+					properties: 'titleId',
+					type: '[String]',
+					description: 'It defines Id corresponds to ACH title.'
+				},
+				{
+					properties: 'titleCustomClass',
+					type: '[String]',
+					description: 'It defines customClass for ACH title.'
+				},
+				{
 					properties: 'subTitle',
 					type: '[String]',
 					description: 'It corresponds to ACH subtitle.'
 				},
 				{
-					properties: 'upperText',
+					properties: 'subTitleId',
 					type: '[String]',
-					description: 'It corresponds to ACH upper description.'
+					description: 'It defines Id corresponds to ACH subtitle.'
 				},
 				{
-					properties: 'lowerText',
+					properties: 'subTitleCustomClass',
 					type: '[String]',
-					description: 'It corresponds to ACH lower description.'
+					description: 'It defines customClass for ACH subtitle.'
 				},
 				{
-					properties: 'SetupACHPaymentsBtnText',
+					properties: 'LabelOne',
 					type: '[String]',
-					description: 'It corresponds to ACH Setup Payment button text.'
+					description: 'It defines status of the customer.'
+				},
+				{
+					properties: 'LabelOneId',
+					type: '[String]',
+					description: 'It defines Id corresponds to LabelOne.'
+				},
+				{
+					properties: 'LabelOneCustomClass',
+					type: '[String]',
+					description: 'It defines customClass for LabelOne.'
+				},
+				{
+					properties: 'labelTwo',
+					type: '[String]',
+					description: 'It defines status of the beneficial owner.'
+				},
+				{
+					properties: 'labelTwoId',
+					type: '[String]',
+					description: 'It defines Id corresponds to labelTwo.'
+				},
+				{
+					properties: 'labelTwoCustomClass',
+					type: '[String]',
+					description: 'It defines customClass for labelTwo.'
+				},
+				{
+					properties: 'labelThree',
+					type: '[String]',
+					description: 'It defines status of the beneficial owner.'
+				},
+				{
+					properties: 'labelThreeId',
+					type: '[String]',
+					description: 'It defines Id corresponds to labelThree.'
+				},
+				{
+					properties: 'labelThreeCustomClass',
+					type: '[String]',
+					description: 'It defines customClass for labelThree.'
+				},
+				{
+					properties: 'labelFour',
+					type: '[String]',
+					description: 'It defines the status of document upload.'
+				},
+				{
+					properties: 'labelFourId',
+					type: '[String]',
+					description: 'It defines Id corresponds to labelFour.'
+				},
+				{
+					properties: 'labelFourCustomClass',
+					type: '[String]',
+					description: 'It defines customClass for labelFour.'
+				},
+				{
+					properties: 'labelFive',
+					type: '[String]',
+					description: 'It provides the information regarding document upload.'
+				},
+				{
+					properties: 'labelFiveId',
+					type: '[String]',
+					description: 'It defines Id corresponds to labelFive.'
+				},
+				{
+					properties: 'labelFiveCustomClass',
+					type: '[String]',
+					description: 'It defines customClass for labelFive.'
+				},
+				{
+					properties: 'labelSix',
+					type: '[String]',
+					description: 'It provides the information regarding document upload.'
+				},
+				{
+					properties: 'labelSixId',
+					type: '[String]',
+					description: 'It defines Id corresponds to labelSix.'
+				},
+				{
+					properties: 'labelSixCustomClass',
+					type: '[String]',
+					description: 'It defines customClass for labelSix.'
+				},
+				{
+					properties: 'labelSeven',
+					type: '[String]',
+					description: 'It defines the document status.'
+				},
+				{
+					properties: 'labelSevenId',
+					type: '[String]',
+					description: 'It defines Id corresponds to labelSeven.'
+				},
+				{
+					properties: 'labelSevenCustomClass',
+					type: '[String]',
+					description: 'It defines customClass for labelSeven.'
+				},
+				{
+					properties: 'labelEight',
+					type: '[String]',
+					description: 'It defines the label for document upload button.'
+				},
+				{
+					properties: 'labelEightId',
+					type: '[String]',
+					description: 'It defines Id corresponds to labelEight.'
+				},
+				{
+					properties: 'labelEightCustomClass',
+					type: '[String]',
+					description: 'It defines customClass for labelEight.'
+				},
+				{
+					properties: 'labelNine',
+					type: '[String]',
+					description: 'It defines the label for beneficial owners list.'
+				},
+				{
+					properties: 'labelNineId',
+					type: '[String]',
+					description: 'It defines Id corresponds to labelEight.'
+				},
+				{
+					properties: 'labelNineCustomClass',
+					type: '[String]',
+					description: 'It defines customClass for labelEight.'
+				},
+				{
+					properties: 'labelNine',
+					type: '[String]',
+					description: 'It defines the label for beneficial owners list.'
+				},
+				{
+					properties: 'labelNineId',
+					type: '[String]',
+					description: 'It defines Id corresponds to labelEight.'
+				},
+				{
+					properties: 'labelNineCustomClass',
+					type: '[String]',
+					description: 'It defines customClass for labelEight.'
+				},
+				{
+					properties: 'subContent',
+					type: '[String]',
+					description: 'It defines the status of customer.'
+				},
+				{
+					properties: 'subContentId',
+					type: '[String]',
+					description: 'It defines Id corresponds to subContent.'
+				},
+				{
+					properties: 'subContentCustomClass',
+					type: '[String]',
+					description: 'It defines customClass for subContent.'
+				},
+				{
+					properties: 'buttonLabel',
+					type: '[String]',
+					description: 'It defines label for button to setup ach payment for customer.'
+				},
+				{
+					properties: 'buttonLabelId',
+					type: '[String]',
+					description: 'It defines Id corresponds to buttonLabel.'
+				},
+				{
+					properties: 'subContentCustomClass',
+					type: '[String]',
+					description: 'It defines customClass for subContent.'
 				},
 				{
 					properties: 'action',
@@ -1422,29 +1700,9 @@ export class WebComponentsServices {
 					description: 'It prompts the user to setup the ACH payment.'
 				},
 				{
-					properties: 'titleId',
-					type: '[String]',
-					description: 'It corresponds to ACH title tag ID.'
-				},
-				{
-					properties: 'subTitleId',
-					type: '[String]',
-					description: 'It corresponds to ACH subtitle tag ID.'
-				},
-				{
-					properties: 'upperTextId',
-					type: '[String]',
-					description: 'It corresponds to ACH Upper text tag ID.'
-				},
-				{
-					properties: 'lowerTextId',
-					type: '[String]',
-					description: 'It corresponds to ACH lower text tag ID.'
-				},
-				{
-					properties: 'paymentButtonId',
-					type: '[String]',
-					description: 'It corresponds to ACH payment button tag ID.'
+					properties: 'upload',
+					type: '[Output]',
+					description: 'It a prompts the user to upload beneficial owner documents.'
 				}
 			]
 		},
@@ -1521,7 +1779,7 @@ export class WebComponentsServices {
 				},
 				{
 					properties: 'countrySelect',
-					type: '[output]',
+					type: '[Output]',
 					description: 'It helps the user to perform the required action.'
 				},
 				{
@@ -1531,7 +1789,7 @@ export class WebComponentsServices {
 				},
 				{
 					properties: 'stateSelect',
-					type: '[output]',
+					type: '[Output]',
 					description: 'It helps the user to perform the required action.'
 				},
 				{
@@ -2076,7 +2334,7 @@ export class WebComponentsServices {
 				},
 				{
 					properties: 'iconSize',
-					type: '[number]',
+					type: '[Number]',
 					description: 'It defines the icon font-size.'
 				},
 				{
@@ -2091,7 +2349,7 @@ export class WebComponentsServices {
 				},
 				{
 					properties: 'userNameSize',
-					type: '[number]',
+					type: '[Number]',
 					description: 'It corresponds to the user-name font-size.'
 				},
 				{
@@ -2106,7 +2364,7 @@ export class WebComponentsServices {
 				},
 				{
 					properties: 'userDesignationSize',
-					type: '[number]',
+					type: '[Number]',
 					description: 'It corresponds to the user-designation font-size.'
 				},
 				{
@@ -2149,9 +2407,9 @@ export class WebComponentsServices {
 					description: 'It defines custom class for title(project name).'
 				},
 				{
-					properties: 'summeryStyle',
+					properties: 'summaryStyle',
 					type: '[String]',
-					description: 'It defines custom class for project Summery.'
+					description: 'It defines custom class for project Summary.'
 				},
 				{
 					properties: 'bgColor',
@@ -2178,6 +2436,25 @@ export class WebComponentsServices {
 		{
 			data: [
 				{
+					properties: 'title-id',
+					type: '[String]',
+					description: 'It defines id corresponding to the title of the homepage button.'
+				},
+				{
+					properties: 'title-size',
+					type: '[String]',
+					description: 'It defines the font-size for title.'
+				},
+				{
+					properties: 'doughnutChartData',
+					type: '[Array]',
+					description: 'It defines the chart-data for Voting breakdown.'
+				},
+			]
+		},
+		{
+			data: [
+				{
 					properties: 'title',
 					type: '[String]',
 					description: 'It defines the title for Voting breakdown.'
@@ -2185,13 +2462,192 @@ export class WebComponentsServices {
 				{
 					properties: 'title-size',
 					type: '[String]',
-					description: 'It defines the font-size for title in Voting breakdown.'
+					description: 'Corresponds to the value of font-size for the title.'
 				},
 				{
-					properties: 'doughnutChartData',
-					type: '[Array]',
-					description: 'It defines the chart-data for Voting breakdown.'
+					properties: 'icon-custom-class',
+					type: '[String]',
+					description: 'It defines the custom class for icon.'
 				},
+				{
+					properties: 'suku-button-custom-class',
+					type: '[String]',
+					description: 'It defines the custom class for home button.'
+				},
+				{
+					properties: 'button-data',
+					type: '[Array]',
+					description: 'It defines the data for home button.'
+				},
+				{
+					properties: 'sendRoutePath',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action.'
+				}
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'btn-one-label',
+					type: '[String]',
+					description: 'It corresponds to the label name for the button-one which is left most in the footer.'
+				},
+				{
+					properties: 'btn-one-id',
+					type: '[String]',
+					description: 'It defines id corresponding to the button-one.'
+				},
+				{
+					properties: 'btn-one-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for the button-one label.'
+				},
+				{
+					properties: 'btn-one-color',
+					type: '[String]',
+					description: 'It defines font-color for the button-one label.'
+				},
+				{
+					properties: 'btn-one-weight',
+					type: '[Number]',
+					description: 'It defines font-weight for the button-one label.'
+				},
+				{
+					properties: 'btn-one-custom-class',
+					type: '[String]',
+					description: 'It defines custom class for the button-one label.'
+				},
+				{
+					properties: 'btn-one-visible',
+					type: '[Boolean]',
+					description: 'It corresponds to visibility property for the button-one.'
+				},
+				{
+					properties: 'btnOneAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using button-one.'
+				},
+				{
+					properties: 'btn-two-label',
+					type: '[String]',
+					description: 'It corresponds to the label name for the button-two which is left most in the footer.'
+				},
+				{
+					properties: 'btn-two-id',
+					type: '[String]',
+					description: 'It defines id corresponding to the button-two.'
+				},
+				{
+					properties: 'btn-two-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for the button-two label.'
+				},
+				{
+					properties: 'btn-two-color',
+					type: '[String]',
+					description: 'It defines font-color for the button-two label.'
+				},
+				{
+					properties: 'btn-two-weight',
+					type: '[Number]',
+					description: 'It defines font-weight for the button-two label.'
+				},
+				{
+					properties: 'btn-two-custom-class',
+					type: '[String]',
+					description: 'It defines custom class for the button-two label.'
+				},
+				{
+					properties: 'btn-two-visible',
+					type: '[Boolean]',
+					description: 'It corresponds to visibility property for the button-two.'
+				},
+				{
+					properties: 'btnTwoAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using button-two.'
+				},
+				{
+					properties: 'btn-three-label',
+					type: '[String]',
+					description: 'It corresponds to the label name for the button-three which is left most in the footer.'
+				},
+				{
+					properties: 'btn-three-id',
+					type: '[String]',
+					description: 'It defines id corresponding to the button-three.'
+				},
+				{
+					properties: 'btn-three-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for the button-three label.'
+				},
+				{
+					properties: 'btn-three-color',
+					type: '[String]',
+					description: 'It defines font-color for the button-three label.'
+				},
+				{
+					properties: 'btn-three-weight',
+					type: '[Number]',
+					description: 'It defines font-weight for the button-three label.'
+				},
+				{
+					properties: 'btn-three-custom-class',
+					type: '[String]',
+					description: 'It defines custom class for the button-three label.'
+				},
+				{
+					properties: 'btn-three-visible',
+					type: '[Boolean]',
+					description: 'It corresponds to visibility property for the button-three.'
+				},
+				{
+					properties: 'btnThreeAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using button-three.'
+				},
+				{
+					properties: 'btn-four-label',
+					type: '[String]',
+					description: 'It corresponds to the label name for the button-four which is left most in the footer.'
+				},
+				{
+					properties: 'btn-four-id',
+					type: '[String]',
+					description: 'It defines id corresponding to the button-four.'
+				},
+				{
+					properties: 'btn-four-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for the button-four label.'
+				},
+				{
+					properties: 'btn-four-color',
+					type: '[String]',
+					description: 'It defines font-color for the button-four label.'
+				},
+				{
+					properties: 'btn-four-weight',
+					type: '[Number]',
+					description: 'It defines font-weight for the button-four label.'
+				},
+				{
+					properties: 'btn-four-custom-class',
+					type: '[String]',
+					description: 'It defines custom class for the button-four label.'
+				},
+				{
+					properties: 'btn-four-visible',
+					type: '[Boolean]',
+					description: 'It corresponds to visibility property for the button-four.'
+				},
+				{
+					properties: 'btnFourAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using button-four.'
+				}
 			]
 		}
 	];
@@ -2204,7 +2660,7 @@ export class WebComponentsServices {
 			description: `Welcome to SUKU's web component library! Here you will find a catalog of web components available for building SUKU applications. 
 
 Let's get started: 
-1) Select a component from the navigation menu. 
+1) Select a component from the navigation menu.
 2) Review the details information provided to use the component.
 3) Use the sandbox at the bottom of each component page to test out the component and any inputs of your choosing.
 			`,
@@ -2217,8 +2673,7 @@ Let's get started:
 		},
 		{
 			title: 'suku-heading',
-			description: `redners all the font changes, paragraph breaks before and after,
-    		and any white space necessary to render the heading.`,
+			description: `redners all the font changes, paragraph breaks before and after, and any white space necessary to render the heading.`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-heading> You just created suku-heading </suku-heading>',
 			jsonSample: '',
@@ -2228,8 +2683,7 @@ Let's get started:
 		},
 		{
 			title: 'suku-sub-heading',
-			description: `is used to help break up heading text.
-   			 They improve the layout of a page and draw the attention of the readers.`,
+			description: `is used to help break up heading text.They improve the layout of a page and draw the attention of the readers.`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-sub-heading> You just created suku-sub-heading </suku-sub-heading>',
 			jsonSample: '',
@@ -2469,7 +2923,7 @@ Let's get started:
 			codeSample: '<suku-default-button>suku-default-button</suku-default-button>',
 			jsonSample: '',
 			usage: '',
-			try: false,
+			try: true,
 			id: 26
 		},
 		{
@@ -2602,7 +3056,7 @@ Let's get started:
 			title: 'suku-ach-setting',
 			description: `represents ACH settings ui.`,
 			properties: this.Properties_DATA,
-			codeSample: '<suku-ach-setting></suku-ach-setting>',
+			codeSample: `<suku-ach-setting></suku-ach-setting>`,
 			jsonSample: ``,
 			usage: ``,
 			try: true,
@@ -2894,6 +3348,36 @@ this.sukuService.openInfoModal(data);
 			id: 44
 		},
 		{
+			title: 'suku-homepage-button',
+			description: `is .`,
+			properties: this.Properties_DATA,
+			codeSample: `<suku-homepage-button></suku-homepage-button>`,
+			jsonSample: ``,
+			usage: `
+	<pre>
+Sample Data: {
+   title: 'Marketplace',
+   icon: 'fa fa-shopping-cart',
+   path: '/marketplaceDashboard',
+   disabled: true,
+   id: 'Marketplace'
+};
+	</pre>
+			`,
+			try: true,
+			id: 45
+		},
+		{
+			title: 'suku-form-footer',
+			description: `is a simple form footer.`,
+			properties: this.Properties_DATA,
+			codeSample: `<suku-form-footer></suku-form-footer>`,
+			jsonSample: ``,
+			usage: ``,
+			try: true,
+			id: 46
+		},
+		{
 			title: 'suku-text-editor',
 			description: `is a simple text editor.`,
 			properties: this.Properties_DATA,
@@ -2901,12 +3385,70 @@ this.sukuService.openInfoModal(data);
 			jsonSample: ``,
 			usage: ``,
 			try: true,
-			id: 45
+			id: 47
 		}
 	];
 
 	/* declaring heading for sidebar block */
 	public webcomponentList() {
+		const listName = [
+			'Getting Started',
+			'Heading',
+			'Sub Heading',
+			'Profile Widget',
+			'Rating Widget',
+			'Rating Widget',
+			'Notification',
+			'Mail Widget',
+			'Bid Info',
+			'Match Chip',
+			'Card Line',
+			'Dashboard Profile',
+			'Sub Menu',
+			'Progress Bar',
+			'Italic Heading',
+			'SUKU Link',
+			'Add Widget',
+			'Select Input',
+			'Phone Widget',
+			'Address Widget',
+			'Inline Dropdown',
+			'Home Widget',
+			'Filters',
+			'Info Button',
+			'Primary Button',
+			'Secondary Button',
+			'Default Button',
+			'Star Badge',
+			'Search Input',
+			'Bid Tag',
+			'Rating Star',
+			'Track and Trace Progress Bar',
+			'Product Trace Widget',
+			'Trace Tree',
+			'Ach Settings',
+			'Transaction History',
+			'Dwolla Funding Agreement',
+			'Beneficial Owner',
+			'Dwolla Funding Source',
+			'Confirmation Modal',
+			'Proposal Header',
+			'Governance Filter',
+			'Proposal Option Modal',
+			'List Proposal Choice Widget',
+			'Doughnut Chart Widget',
+			'Form Footer',
+			'Text Editor'
+		];
+		const webCompNamelist = [];
+		listName.forEach((name, index) => {
+			const obj = {
+				name: name,
+				id: index
+			}
+			webCompNamelist.push(obj);
+		});
+		console.log("listName", JSON.stringify(webCompNamelist));
 		return [
 			{
 				name: 'Getting Started',
@@ -3085,9 +3627,17 @@ this.sukuService.openInfoModal(data);
 				id: 44
 			},
 			{
-				name: 'Text Editor',
+				name: 'Homepage Button',
 				id: 45
+			},
+			{
+				name: 'Form Footer',
+				id: 46
 			}
+			// {
+			// 	name: 'Text Editor',
+			// 	id: 45
+			// }
 		];
 	}
 }

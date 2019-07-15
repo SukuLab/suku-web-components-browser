@@ -1110,47 +1110,6 @@ export class SukuCardLineComponent {
 }
 
 @Component({
-	selector: 'suku-bid-tag',
-	template: `
-  <div class="col-sm-4 p-4 suku-big-tag pl-5">
-  <span class="row pr-3 pl-3">
-    <suku-nest-heading size="{{prizeSize}}" weight="{{prizeWeight}}" color="{{prizeColor}}" name="{{prize}}" customclass="{{prizeCustomClass}}"></suku-nest-heading>
-    <suku-sub-nest-heading size="{{unitSize}}" weight="{{unitWeight}}" name="{{unit}}" customclass="{{unitCustomClass}}"></suku-sub-nest-heading>
-  </span>
-  <span>
-    <suku-nest-heading size="{{qSize}}" color="{{qColor}}" weight="{{qWeight}}" name="{{qContent}}" customclass="{{qCustomClass}}">
-    </suku-nest-heading>
-    <suku-nest-heading  size="{{pSize}}" color="{{pColor}}" weight="{{pWeight}}" name="{{pContent}}" customclass="{{pCustomClass}}">
-    </suku-nest-heading>
-  </span>
-</div>
-`,
-	styleUrls: ['./webcomponents.scss']
-})
-export class SukuBidTagComponent {
-	@Input() prize = '$100';
-	@Input('prize-size') prizeSize = '50';
-	@Input('prize-weight') prizeWeight = '500';
-	@Input('prize-color') prizeColor = 'white';
-	@Input('prize-customclass') prizeCustomClass = 'mb-0 mt-1';
-	@Input() unit = '/ BOX';
-	@Input('unit-size') unitSize = '16';
-	@Input('unit-weight') unitWeight = '500';
-	@Input('unit-color') unitColor = 'white';
-	@Input('unit-customclass') unitCustomClass = 'mt-5 pt-3 mb-0 ml-3';
-	@Input('q-content') qContent = '100 cases / box: 200 boxes';
-	@Input('q-size') qSize = '15';
-	@Input('q-weight') qWeight = '500';
-	@Input('q-color') qColor = 'white';
-	@Input('q-customclass') qCustomClass = 'mt-1';
-	@Input('p-content') pContent = '$40,000 total (80,000 SUKU)';
-	@Input('p-size') pSize = '15';
-	@Input('p-weight') pWeight = '500';
-	@Input('p-color') pColor = 'white';
-	@Input('p-customclass') pCustomClass = 'mt-1 pb-4';
-}
-
-@Component({
 	selector: 'suku-match-chip',
 	template: `
   <div class="col-sm-3 p-0">

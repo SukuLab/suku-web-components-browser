@@ -17,7 +17,7 @@ import { GoogleChartsModule } from 'angular-google-charts';
 import { CountdownTimerModule } from 'ngx-countdown-timer';
 import { SukuDoughnutChartWidgetComponent } from './webcomponents/suku-doughnut-chart-widget/suku-doughnut-chart-widget.component';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
-import { SukuModalModule, SukuBidTagModule, SukuWebcomponentsService } from 'suku-webcomponents';
+import { SukuModalModule, SukuBidTagModule, SukuAchSettingModule, SukuWebcomponentsService } from 'suku-webcomponents';
 @NgModule({
 	declarations: [AppComponent, DocumentationComponent, WebComponents],
 	imports: [
@@ -34,6 +34,7 @@ import { SukuModalModule, SukuBidTagModule, SukuWebcomponentsService } from 'suk
 		NgxJsonViewerModule,
 		SukuModalModule,
 		SukuBidTagModule,
+		SukuAchSettingModule,
 		ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 	],
 	providers: [WebComponentsServices, SukuGovernanceWebcomponentsService],

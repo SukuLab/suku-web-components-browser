@@ -53,6 +53,15 @@ import { SukuDoughnutChartWidgetComponent } from './suku-doughnut-chart-widget/s
 import { SukuGovernanceFilterComponent } from './suku-governance-filter/suku-governance-filter.component';
 import { SukuProposalOptionModalComponent } from './suku-proposal-option-modal/suku-proposal-option-modal.component';
 import { SukuListProposalChoiceWidgetComponent } from './suku-list-proposal-choice-widget/suku-list-proposal-choice-widget.component';
+import { SukuBidWidgetTagComponent } from './suku-bid-widget/suku-bid-widget.component';
+import { SukuDateComponent } from './suku-date/suku-date.component';
+import { SukuShippingInfoWidgetComponent } from './suku-shipping-info-widget/suku-shipping-info-widget.component';
+import { SukuSocialIconsComponent } from './suku-social-icons/suku-social-icons.component';
+import { SukuTermsAndConditionsComponent } from './suku-terms-and-conditions/suku-terms-and-conditions.component';
+import { SukuHeaderComponent } from './suku-header/suku-header.component';
+import { SukuCardLineTypeTwoComponent } from './suku-card-line-type-two/suku-card-line.component';
+import { SukuRatingCardLineComponent } from './suku-rating-card-line/suku-rating-card-line.component';
+import { SukuProgressBarTypeTwoComponent } from './suku-progress-bar-type-two/suku-progress-bar-type-two.component';
 
 export const WebComponents = [
 	SukuHeadingComponent,
@@ -106,5 +115,14 @@ export const WebComponents = [
 	SukuProposalOptionModalComponent,
 	SukuDoughnutChartWidgetComponent,
 	SukuListProposalChoiceWidgetComponent,
+	SukuBidWidgetTagComponent,
+	SukuDateComponent,
+	SukuShippingInfoWidgetComponent,
+	SukuSocialIconsComponent,
+	SukuTermsAndConditionsComponent,
+	SukuHeaderComponent,
+	SukuCardLineTypeTwoComponent,
+	SukuRatingCardLineComponent,
+	SukuProgressBarTypeTwoComponent,
 	SukuGovernanceFilterComponent
 ];

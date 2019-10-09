@@ -44,6 +44,15 @@ import { SukuTextEditorComponent } from './webcomponents/suku-text-editor/suku-t
 import { SukuProposalHeaderComponent } from './webcomponents/suku-proposal-header/suku-proposal-header.component';
 import { SukuDoughnutChartWidgetComponent } from './webcomponents/suku-doughnut-chart-widget/suku-doughnut-chart-widget.component';
 import { SukuListProposalChoiceWidgetComponent } from './webcomponents/suku-list-proposal-choice-widget/suku-list-proposal-choice-widget.component';
+import {SukuBidWidgetTagComponent} from './webcomponents/suku-bid-widget/suku-bid-widget.component';
+import { SukuDateComponent } from './webcomponents/suku-date/suku-date.component';
+import { SukuShippingInfoWidgetComponent } from './webcomponents/suku-shipping-info-widget/suku-shipping-info-widget.component'
+import { SukuSocialIconsComponent } from './webcomponents/suku-social-icons/suku-social-icons.component';
+import { SukuTermsAndConditionsComponent } from './webcomponents/suku-terms-and-conditions/suku-terms-and-conditions.component'
+import { SukuHeaderComponent } from './webcomponents/suku-header/suku-header.component';
+import { SukuCardLineTypeTwoComponent } from './webcomponents/suku-card-line-type-two/suku-card-line.component';
+import { SukuRatingCardLineComponent } from './webcomponents/suku-rating-card-line/suku-rating-card-line.component';
+import { SukuProgressBarTypeTwoComponent } from './webcomponents/suku-progress-bar-type-two/suku-progress-bar-type-two.component'
 
 @Component({
 	selector: 'app-root',
@@ -211,5 +220,42 @@ export class AppComponent implements OnInit {
 			injector: this.injector
 		});
 		customElements.define('suku-doughnut-chart-widget', SukuDoughnutChart);
+		const SukuBidWidgetTag = createCustomElement(SukuBidWidgetTagComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-bid-widget', SukuBidWidgetTag);
+		const SukuDate = createCustomElement(SukuDateComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-date', SukuDate);
+		const SukuShippingInfo = createCustomElement(SukuShippingInfoWidgetComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-shipping-info-widget', SukuShippingInfo);
+		const SocialIcons = createCustomElement(SukuSocialIconsComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-social-icons', SocialIcons);
+		const SukuTermsAndConditions = createCustomElement(SukuTermsAndConditionsComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-terms-and-conditions', SukuTermsAndConditions);
+		const SukuHeader = createCustomElement(SukuHeaderComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-header', SukuHeader);
+		const SukuCardLineTypeTwo = createCustomElement(SukuCardLineTypeTwoComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-card-line-type-two', SukuCardLineTypeTwo);
+		const SukuRatingCardLine = createCustomElement(SukuRatingCardLineComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-rating-card-line', SukuRatingCardLine);
+		const SukuProgressBarTypeTwo = createCustomElement(SukuProgressBarTypeTwoComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-progress-bar-type-two', SukuProgressBarTypeTwo);
+		
 	}
 }

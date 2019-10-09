@@ -2649,7 +2649,1365 @@ export class WebComponentsServices {
 					description: 'It helps the user to perform the required action using button-four.'
 				}
 			]
-		}
+		},
+		{
+			data: [
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'payment-method',
+					type: '[String]',
+					description: 'It corresponds to the value of payment method.'
+				},
+				{
+					properties: 'product-price',
+					type: '[Number]',
+					description: 'It corresponds to the value of product price.'
+				},
+				{
+					properties: 'product-total-price',
+					type: '[Number]',
+					description: "It corresponds to the value of product's total price."
+				},
+				{
+					properties: 'product-quantity',
+					type: '[Number]',
+					description: "It corresponds to the value of product's quantity."
+				},
+				{
+					properties: 'minimum-quantity',
+					type: '[Number]',
+					description: 'It corresponds to the value of minimun product quantity.'
+				},
+				{
+					properties: 'payment-terms',
+					type: '[Number]',
+					description: 'It corresponds to the value of payment terms.'
+				},
+				{
+					properties: 'delivery-terms',
+					type: '[Number]',
+					description: 'It corresponds to the value of delivery terms.'
+				},
+				{
+					properties: 'payment-method-label',
+					type: '[String]',
+					description: 'It corresponds to the label name for payment method.'
+				},
+				{
+					properties: 'payment-terms-label',
+					type: '[String]',
+					description: 'It corresponds to the label name for payment terms.'
+				},
+				{
+					properties: 'delivery-terms-label',
+					type: '[String]',
+					description: 'It corresponds to the label name for delivery terms.'
+				},
+				{
+					properties: 'total-price-label',
+					type: '[String]',
+					description: 'It corresponds to the label name for total price.'
+				},
+				{
+					properties: 'quantity-label',
+					type: '[String]',
+					description: 'It corresponds to the label name for quantity.'
+				},
+				{
+					properties: 'min-qtylabel',
+					type: '[String]',
+					description: 'It corresponds to the label name for min-quantity.'
+				},
+				{
+					properties: 'title-text',
+					type: '[String]',
+					description: 'It corresponds to the label name for title.'
+				},
+				{
+					properties: 'custom-class',
+					type: '[string]',
+					description: 'It defines custom class for the bid-widget.'
+				},
+				{
+					properties: 'price-font-size',
+					type: '[string]',
+					description: 'It Corresponds to the value of font-size for price.'
+				},
+				{
+					properties: 'price-font-color',
+					type: '[String]',
+					description: 'It defines font-color for the price label.'
+				},
+				{
+					properties: 'list-font-color',
+					type: '[String]',
+					description: 'It defines font-color for the list.'
+				},
+				{
+					properties: 'list-font-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for the list.'
+				},
+				{
+					properties: 'bid-title-font-color',
+					type: '[String]',
+					description: 'It defines font-color for the bid title.'
+				},
+				{
+					properties: 'bid-title-font-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for the bid title.'
+				},
+				{
+					properties: 'bid-detail-font-color',
+					type: '[String]',
+					description: 'It defines font-color for the bid details.'
+				},
+				{
+					properties: 'bid-detail-font-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for the bid details.'
+				},
+				{
+					properties: 'list-font-weight',
+					type: '[Number]',
+					description: 'It defines font-weight for the list.'
+				},
+				{
+					properties: 'bid-title-font-weight',
+					type: '[Number]',
+					description: 'It defines font-weight for the bid title.'
+				},
+				{
+					properties: 'bid-detail-font-weight',
+					type: '[Number]',
+					description: 'It defines font-weight for the bid details.'
+				},
+				{
+					properties: 'title-font-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for the title.'
+				},
+				{
+					properties: 'title-font-color',
+					type: '[String]',
+					description: 'It defines font-color for the title.'
+				},
+				{
+					properties: 'title-font-weight',
+					type: '[Number]',
+					description: 'It defines font-weight for the title.'
+				},
+				{
+					properties: 'aside-bg-Color',
+					type: '[String]',
+					description: 'It defines background color for the layout.'
+				},
+				{
+					properties: 'product-payment-custom-class',
+					type: '[String]',
+					description: 'It defines custom class for product payment.'
+				},
+				{
+					properties: 'bid-details-custom-class',
+					type: '[String]',
+					description: 'It defines custom class for bid details.'
+				},
+				{
+					properties: 'article-alignment-custom-class',
+					type: '[String]',
+					description: 'It defines custom class for artical alignment.'
+				}
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'dateString',
+					type: '[String]',
+					description: 'It corresponds to the value of date string needs to be formated'
+				},
+				{
+					properties: 'dateId',
+					type: '[String]',
+					description: 'It defines id corresponding to the display date.'
+				},
+				{
+					properties: 'fontSize',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for date.'
+				},
+				{
+					properties: 'fontWeight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size.'
+				},
+				{
+					properties: 'fontColor',
+					type: '[String]',
+					description: 'It defines font-color for the date.'
+				},
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'widgetTitle',
+					type: '[String]',
+					description: 'It corresponds to the value for title'
+				},
+				{
+					properties: 'widgetTitleid',
+					type: '[String]',
+					description: 'It defines id corresponding to the title.'
+				},
+				{
+					properties: 'widgetTitleSize',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for title.'
+				},
+				{
+					properties: 'widgetTitleWeight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for title.'
+				},
+				{
+					properties: 'widgetTitleColor',
+					type: '[String]',
+					description: 'It defines font-color for the title.'
+				},
+				{
+					properties: 'shippingaddressCustomClass',
+					type: '[String]',
+					description: 'The defines custom class attribute for address'
+				},
+				{
+					properties: 'firstName',
+					type: '[String]',
+					description: 'It Corresponds to the value of label first name'
+				},
+				{
+					properties: 'secondName',
+					type: '[String]',
+					description: 'It Corresponds to the value of label second name'
+				},
+				{
+					properties: 'addressOne',
+					type: '[String]',
+					description: 'It Corresponds to the value of address line one'
+				},
+				{
+					properties: 'addressTwo',
+					type: '[String]',
+					description: 'It Corresponds to the value of address line two'
+				}, {
+					properties: 'city',
+					type: '[String]',
+					description: 'It Corresponds to the value of city'
+				},
+				{
+					properties: 'state',
+					type: '[String]',
+					description: 'It Corresponds to the value of state'
+				},
+				{
+					properties: 'zip',
+					type: '[String]',
+					description: 'It Corresponds to the value of zip code'
+				},
+				{
+					properties: 'country',
+					type: '[String]',
+					description: 'It Corresponds to the value of country'
+				},
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'socialIcons',
+					type: '[array]',
+					description: '[object]={icon,id,path} use the formate to create array .'
+				},
+				{
+					properties: 'action',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				}
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'action',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+				{
+					properties: 'check-box-color',
+					type: '[String]',
+					description: 'It defines color for the check box.'
+				},
+				{
+					properties: 'title',
+					type: '[String]',
+					description: 'It corresponds to the value for title'
+				},
+				{
+					properties: 'title-color',
+					type: '[String]',
+					description: 'It defines color for title.'
+				},
+				{
+					properties: 'title-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for title.'
+				},
+				{
+					properties: 'title-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for title.'
+				},
+				{
+					properties: 'description',
+					type: '[String]',
+					description: 'It corresponds to the value for description'
+				},
+				{
+					properties: 'description-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for description'
+				},
+				{
+					properties: 'link-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for link'
+				},
+				{
+					properties: 'link-one',
+					type: '[String]',
+					description: 'It corresponds to the value for link one'
+				},
+				{
+					properties: 'link-two',
+					type: '[String]',
+					description: 'It corresponds to the value for link two'
+				},
+				{
+					properties: 'link-name-one',
+					type: '[String]',
+					description: 'It defines value for the first link name label'
+				},
+				{
+					properties: 'link-name-two',
+					type: '[String]',
+					description: 'It defines value for the second link name label'
+				},
+				{
+					properties: 'control',
+					type: '[String]',
+					description: 'It defines to formcontrolname for checkbox element.'
+				},
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'action',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+				{
+					properties: 'titleOne',
+					type: '[String]',
+					description: 'It corresponds to the value for title'
+				},
+				{
+					properties: 'title-one-color',
+					type: '[String]',
+					description: 'It defines color for first title.'
+				},
+				{
+					properties: 'title-one-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for first title.'
+				},
+				{
+					properties: 'title-one-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for first title.'
+				},
+				{
+					properties: 'title-one-id',
+					type: '[Number]',
+					description: 'It corresponds to the id for first title.'
+				},
+				{
+					properties: 'titleTwo',
+					type: '[String]',
+					description: 'It corresponds to the value for title'
+				},
+				{
+					properties: 'title-two-color',
+					type: '[String]',
+					description: 'It defines color for second title.'
+				},
+				{
+					properties: 'title-two-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for second title.'
+				},
+				{
+					properties: 'title-two-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for second title.'
+				},
+				{
+					properties: 'title-two-id',
+					type: '[Number]',
+					description: 'It corresponds to the id for second title.'
+				},
+
+				{
+					properties: 'contentOne',
+					type: '[String]',
+					description: 'It corresponds to the value content'
+				},
+				{
+					properties: 'content-two-color',
+					type: '[String]',
+					description: 'It defines color for first content.'
+				},
+				{
+					properties: 'content-two-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for first content.'
+				},
+				{
+					properties: 'content-two-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for first content.'
+				},
+				{
+					properties: 'content-two-id',
+					type: '[Number]',
+					description: 'It corresponds to the id for first content.'
+				},
+				{
+					properties: 'contentTwo',
+					type: '[String]',
+					description: 'It corresponds to the value content'
+				},
+				{
+					properties: 'content-two-color',
+					type: '[String]',
+					description: 'It defines color for second content.'
+				},
+				{
+					properties: 'content-two-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for second content.'
+				},
+				{
+					properties: 'content-two-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for second content.'
+				},
+				{
+					properties: 'content-two-id',
+					type: '[Number]',
+					description: 'It corresponds to the id for second content.'
+				},
+				{
+					properties: 'titleThree',
+					type: '[String]',
+					description: 'It corresponds to the value for title'
+				},
+				{
+					properties: 'title-three-color',
+					type: '[String]',
+					description: 'It defines color for third title.'
+				},
+				{
+					properties: 'title-three-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for third title.'
+				},
+				{
+					properties: 'title-three-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for third title.'
+				},
+				{
+					properties: 'title-three-id',
+					type: '[Number]',
+					description: 'It corresponds to the id for third title.'
+				},
+				{
+					properties: 'product-box-content-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for product content box'
+				},
+				{
+					properties: 'product-box-content-bg-color',
+					type: '[String]',
+					description: 'It defines background color for  product content box.'
+				},
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'imageSrc',
+					type: '[String]',
+					description: 'It corresponds to the value to display image.'
+				},
+			]
+		},		
+		{
+			data: [
+				{
+					properties: 'image',
+					type: '[String]',
+					description: 'It corresponds to the value to display image.'
+				},
+				{
+					properties: 'bgColor',
+					type: '[String]',
+					description: 'It defines background color.'
+				},
+				{
+					properties: 'icon-one',
+					type: '[String]',
+					description: 'It Corresponds to the value of icon '
+				},
+				{
+					properties: 'icon-one-id',
+					type: '[Number]',
+					description: 'It corresponds to the id for first icon.'
+				},
+				{
+					properties: 'icon-two',
+					type: '[String]',
+					description: 'It Corresponds to the value of icon '
+				},
+				{
+					properties: 'icon-two-id',
+					type: '[Number]',
+					description: 'It corresponds to the id for first icon.'
+				},
+				{
+					properties: 'custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute'
+				},
+				{
+					properties: 'custom-icon-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for icon'
+				},
+				{
+					properties: 'image-col-size',
+					type: '[String]',
+					description: 'It Corresponds to the value of size for image.'
+				},
+				{
+					properties: 'customImgclass',
+					type: '[String]',
+					description: 'The defines custom class attribute for image'
+				},
+				{
+					properties: 'txtcolsize',
+					type: '[String]',
+					description: 'The defines custom class attribute'
+				},
+				{
+					properties: 'txttwocolsize',
+					type: '[String]',
+					description: 'The defines custom class attribute'
+				},
+				{
+					properties: 'txtthreecolsize',
+					type: '[String]',
+					description: 'The defines custom class attribute'
+				},
+				{
+					properties: 'icon-info-one',
+					type: '[String]',
+					description: 'It corresponds to the value for icon information (tooltip)'
+				},
+				{
+					properties: 'title-one',
+					type: '[String]',
+					description: 'It corresponds to the value for title'
+				},
+				{
+					properties: 'title-one',
+					type: '[String]',
+					description: 'It corresponds to the value for title'
+				},
+				{
+					properties: 'title-one-color',
+					type: '[String]',
+					description: 'It defines color for first title.'
+				},
+				{
+					properties: 'title-one-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for first title.'
+				},
+				{
+					properties: 'title-one-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for first title.'
+				},
+				{
+					properties: 'title-one-customclass',
+					type: '[Number]',
+					description: 'The defines custom class attribute for title.'
+				},
+				{
+					properties: 'icon-info-two',
+					type: '[String]',
+					description: 'It corresponds to the value for icon information (tooltip)'
+				},
+				{
+					properties: 'content-one',
+					type: '[String]',
+					description: 'It corresponds to the value for content'
+				},
+				{
+					properties: 'content-one-color',
+					type: '[String]',
+					description: 'It defines color for first content.'
+				},
+				{
+					properties: 'content-one-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for first content.'
+				},
+				{
+					properties: 'content-one-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for first content.'
+				},
+				{
+					properties: 'content-one-customclass',
+					type: '[String]',
+					description: 'The defines custom class attribute for first content.'
+				},
+				{
+					properties: 'content-two',
+					type: '[String]',
+					description: 'It corresponds to the value content'
+				},
+				{
+					properties: 'content-two-color',
+					type: '[String]',
+					description: 'It defines color for second content.'
+				},
+				{
+					properties: 'content-two-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for second content.'
+				},
+				{
+					properties: 'content-two-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for second content.'
+				},
+				{
+					properties: 'content-two-customclass',
+					type: '[String]',
+					description: 'The defines custom class attribute for second content.'
+				},
+				{
+					properties: 'sub-title-two',
+					type: '[String]',
+					description: 'It corresponds to the value for sub title'
+				},
+				{
+					properties: 'sub-title-two-color',
+					type: '[String]',
+					description: 'It defines color for second sub title.'
+				},
+				{
+					properties: 'sub-title-two-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for second sub title.'
+				},
+				{
+					properties: 'sub-title-two-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for second sub title.'
+				},
+				{
+					properties: 'sub-title-two-customclass',
+					type: '[Number]',
+					description: 'The defines custom class attribute for second sub title.'
+				},
+				{
+					properties: 'sub-title-three',
+					type: '[String]',
+					description: 'It corresponds to the value for sub-title'
+				},
+				{
+					properties: 'sub-title-three-color',
+					type: '[String]',
+					description: 'It defines color for third title.'
+				},
+				{
+					properties: 'sub-title-three-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for sub third title.'
+				},
+				{
+					properties: 'sub-title-three-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for third sub title.'
+				},
+				{
+					properties: 'sub-title-threeclass',
+					type: '[Number]',
+					description: 'The defines custom class attribute for third sub title.'
+				},
+				{
+					properties: 'content-three',
+					type: '[String]',
+					description: 'It corresponds to the value for sub-title'
+				},
+				{
+					properties: 'content-three-color',
+					type: '[String]',
+					description: 'It defines color for third content.'
+				},
+				{
+					properties: 'content-three-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for third content.'
+				},
+				{
+					properties: 'content-three-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for third content.'
+				},
+				{
+					properties: 'content-three-customclass',
+					type: '[String]',
+					description: 'The defines custom class attribute for third content.'
+				},
+				{
+					properties: 'userAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'form',
+					type: '[String]',
+					description: 'It defines FormGroup name.'
+				},
+				{
+					properties: 'control',
+					type: '[Input]',
+					description: 'It holds the formcontrolname for radio button.'
+				},
+				{
+					properties: 'radioButtonId',
+					type: '[Number]',
+					description: 'It corresponds to the id for radio button.'
+				},
+				{
+					properties: 'color',
+					type: '[String]',
+					description: 'It defines color for radio button.'
+				},
+				{
+					properties: 'content',
+					type: '[String]',
+					description: 'It corresponds to the value for content'
+				},
+				{
+					properties: 'contentCustomClass',
+					type: '[String]',
+					description: 'The defines custom class attribute for radio button content.'
+				},
+				{
+					properties: 'value',
+					type: '[Number]',
+					description: 'It Corresponds to the default value of the radio button.'
+				},
+				{
+					properties: 'action',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'image',
+					type: '[String]',
+					description: 'It corresponds to the value to display image.'
+				},
+				{
+					properties: 'bgColor',
+					type: '[String]',
+					description: 'It defines background color.'
+				},
+				{
+					properties: 'icon-one',
+					type: '[String]',
+					description: 'It Corresponds to the value of icon '
+				},
+				{
+					properties: 'icon-one-id',
+					type: '[Number]',
+					description: 'It corresponds to the id for first icon.'
+				},
+				{
+					properties: 'icon-two',
+					type: '[String]',
+					description: 'It Corresponds to the value of icon '
+				},
+				{
+					properties: 'icon-two-id',
+					type: '[Number]',
+					description: 'It corresponds to the id for first icon.'
+				},
+				{
+					properties: 'custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute'
+				},
+				{
+					properties: 'custom-icon-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for icon'
+				},
+				{
+					properties: 'image-col-size',
+					type: '[String]',
+					description: 'It Corresponds to the value of size for image.'
+				},
+				{
+					properties: 'customImgclass',
+					type: '[String]',
+					description: 'The defines custom class attribute for image'
+				},
+				{
+					properties: 'txtcolsize',
+					type: '[String]',
+					description: 'The defines custom class attribute'
+				},
+				{
+					properties: 'txttwocolsize',
+					type: '[String]',
+					description: 'The defines custom class attribute'
+				},
+				{
+					properties: 'txtthreecolsize',
+					type: '[String]',
+					description: 'The defines custom class attribute'
+				},
+				{
+					properties: 'icon-info-one',
+					type: '[String]',
+					description: 'It corresponds to the value for icon information (tooltip)'
+				},
+				{
+					properties: 'card-title-name',
+					type: '[String]',
+					description: 'It corresponds to the name for card title'
+				},
+				{
+					properties: 'card-title-color',
+					type: '[String]',
+					description: 'It defines color for card title.'
+				},
+				{
+					properties: 'card-title-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for first title.'
+				},
+				{
+					properties: 'card-title-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for first title.'
+				},
+				{
+					properties: 'card-title-id',
+					type: '[Number]',
+					description: 'It corresponds to the id for card title.'
+				},
+				{
+					properties: 'card-content-name',
+					type: '[String]',
+					description: 'It corresponds to the name for card content'
+				},
+				{
+					properties: 'card-content-color',
+					type: '[String]',
+					description: 'It defines color for card content.'
+				},
+				{
+					properties: 'card-content-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for first content.'
+				},
+				{
+					properties: 'card-content-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for first content.'
+				},
+				{
+					properties: 'card-content-id',
+					type: '[Number]',
+					description: 'It corresponds to the id for card content.'
+				},
+				{
+					properties: 'custom-title-class',
+					type: '[String]',
+					description: 'It defines custom class attribute for title.'
+				},
+				{
+					properties: 'custom-content-class',
+					type: '[String]',
+					description: 'It defines custom class attribute for content.'
+				},
+				{
+					properties: 'icon-color',
+					type: '[String]',
+					description: 'It defines color for icon .'
+				},
+				{
+					properties: 'icon-font-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for icon.'
+				},
+				{
+					properties: 'enable-info-tooltip',
+					type: '[boolean]',
+					description: 'It defines whether to enable or disable tooltip information  '
+				},
+				{
+					properties: 'tooltip-info',
+					type: '[String]',
+					description: 'It corresponds to the value for information (tooltip)'
+				},
+				{
+					properties: 'tooltiptext-customclass',
+					type: '[String]',
+					description: 'The defines custom class attribute for tooltip.'
+				},
+				{
+					properties: 'position-tooltip',
+					type: '[String]',
+					description: 'The defines custom position for tooltip to align left or right.'
+				},
+				{
+					properties: 'position-top-tooltext',
+					type: '[String]',
+					description: 'The defines custom position for tooltip to align top.'
+				},
+				{
+					properties: 'position-btn-tooltext',
+					type: '[String]',
+					description: 'The defines custom position for tooltip to align bottom.'
+				},
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'image',
+					type: '[String]',
+					description: 'It corresponds to the value to display image.'
+				},
+				{
+					properties: 'bgColor',
+					type: '[String]',
+					description: 'It defines background color.'
+				},
+				{
+					properties: 'icon-one',
+					type: '[String]',
+					description: 'It Corresponds to the value of icon '
+				},
+				{
+					properties: 'icon-two',
+					type: '[String]',
+					description: 'It Corresponds to the value of icon '
+				},
+				{
+					properties: 'customclass',
+					type: '[String]',
+					description: 'The defines custom class attribute'
+				},
+				{
+					properties: 'custom-iconclass',
+					type: '[String]',
+					description: 'The defines custom class attribute for icon'
+				},
+				{
+					properties: 'image-col-size',
+					type: '[String]',
+					description: 'It Corresponds to the value of size for image.'
+				},
+				{
+					properties: 'customImgclass',
+					type: '[String]',
+					description: 'The defines custom class attribute for image'
+				},
+				{
+					properties: 'txtcolsize',
+					type: '[String]',
+					description: 'The defines custom class attribute'
+				},
+				{
+					properties: 'txttwocolsize',
+					type: '[String]',
+					description: 'The defines custom class attribute'
+				},
+				{
+					properties: 'txtthreecolsize',
+					type: '[String]',
+					description: 'The defines custom class attribute'
+				},
+				{
+					properties: 'title-one',
+					type: '[String]',
+					description: 'It corresponds to the value for title'
+				},
+				{
+					properties: 'title-one-color',
+					type: '[String]',
+					description: 'It defines color for first title.'
+				},
+				{
+					properties: 'title-one-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for first title.'
+				},
+				{
+					properties: 'title-one-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for first title.'
+				},
+				{
+					properties: 'title-one-customclass',
+					type: '[Number]',
+					description: 'The defines custom class attribute for title.'
+				},
+				{
+					properties: 'rating-title',
+					type: '[String]',
+					description: 'It corresponds to the value for rating title'
+				},
+				{
+					properties: 'rating-title-color',
+					type: '[String]',
+					description: 'It defines color for rating title.'
+				},
+				{
+					properties: 'rating-title-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for rating title.'
+				},
+				{
+					properties: 'rating-title-size',
+					type: '[Number]',
+					description: 'It Corresponds to the value of font-size for rating title.'
+				},
+				{
+					properties: 'rating-title-customclass',
+					type: '[String]',
+					description: 'The defines custom class attribute for rating title.'
+				},
+				{
+					properties: 'content-one',
+					type: '[String]',
+					description: 'It corresponds to the value for content'
+				},
+				{
+					properties: 'content-one-color',
+					type: '[String]',
+					description: 'It defines color for first content.'
+				},
+				{
+					properties: 'content-one-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for first content.'
+				},
+				{
+					properties: 'content-one-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for first content.'
+				},
+				{
+					properties: 'content-one-customclass',
+					type: '[String]',
+					description: 'The defines custom class attribute for first content.'
+				},
+				{
+					properties: 'content-two',
+					type: '[String]',
+					description: 'It corresponds to the value content'
+				},
+				{
+					properties: 'content-two-color',
+					type: '[String]',
+					description: 'It defines color for second content.'
+				},
+				{
+					properties: 'content-two-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for second content.'
+				},
+				{
+					properties: 'content-two-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for second content.'
+				},
+				{
+					properties: 'content-two-customclass',
+					type: '[String]',
+					description: 'The defines custom class attribute for second content.'
+				},
+				{
+					properties: 'content-three',
+					type: '[String]',
+					description: 'It corresponds to the value for sub-title'
+				},
+				{
+					properties: 'content-three-color',
+					type: '[String]',
+					description: 'It defines color for third content.'
+				},
+				{
+					properties: 'content-three-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for third content.'
+				},
+				{
+					properties: 'content-three-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for third content.'
+				},
+				{
+					properties: 'content-three-customclass',
+					type: '[String]',
+					description: 'The defines custom class attribute for third content.'
+				},
+				{
+					properties: 'sub-title-two',
+					type: '[String]',
+					description: 'It corresponds to the value for sub title'
+				},
+				{
+					properties: 'sub-title-two-color',
+					type: '[String]',
+					description: 'It defines color for second sub title.'
+				},
+				{
+					properties: 'sub-title-two-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for second sub title.'
+				},
+				{
+					properties: 'sub-title-two-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for second sub title.'
+				},
+				{
+					properties: 'sub-title-two-customclass',
+					type: '[String]',
+					description: 'The defines custom class attribute for second sub title.'
+				},
+				{
+					properties: 'sub-title-three',
+					type: '[String]',
+					description: 'It corresponds to the value for sub-title'
+				},
+				{
+					properties: 'sub-title-three-color',
+					type: '[String]',
+					description: 'It defines color for third title.'
+				},
+				{
+					properties: 'sub-title-three-size',
+					type: '[Number-rem]',
+					description: 'It Corresponds to the value of font-size for sub third title.'
+				},
+				{
+					properties: 'sub-title-three-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for third sub title.'
+				},
+				{
+					properties: 'sub-title-threeclass',
+					type: '[String]',
+					description: 'The defines custom class attribute for third sub title.'
+				},
+				{
+					properties: 'userAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+				{
+					properties: 'action',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+				{
+					properties: 'rating-value',
+					type: '[String]',
+					description: 'It corresponds to the value for rating star'
+				},
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'progress-style-one',
+					type: '[String]',
+					description: ' it represents the progress as completed.'
+				},
+				{
+					properties: 'progress-style-two',
+					type: '[Number]',
+					description: '  it represents the progress as active.'
+				},
+				{
+					properties: 'progress-style-three',
+					type: '[Number]',
+					description: ' It represents the progress as upcoming.'
+				},
+				{
+					properties: 'progress-style-four',
+					type: '[Number]',
+					description: ' It represents the progress as upcoming.'
+				},
+				{
+					properties: 'progress-style-five',
+					type: '[Number]',
+					description: ' It represents the progress as upcoming .'
+				},
+				{
+					properties: 'custom-heading-one-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for first heading.'
+				},
+				{
+					properties: 'custom-heading-two-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for second heading.'
+				},
+				{
+					properties: 'custom-heading-three-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for third heading.'
+				},
+				{
+					properties: 'custom-heading-four-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for fourth heading.'
+				},
+				{
+					properties: 'custom-heading-five-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for fifth heading.'
+				},
+				{
+					properties: 'enable-pointer',
+					type: '[Boolean]',
+					description: ' It enable/disable pointer .'
+				},
+				{
+					properties: 'progressBarLabels',
+					type: '[Object]',
+					description: 'it represents the list of labels.'
+				},
+				{
+					properties: 'progressBarIconId',
+					type: '[Object]',
+					description: 'it represents the list of icon id.'
+				},
+				{
+					properties: 'progressBarTitleId',
+					type: '[String]',
+					description: 'it represents the list of title id.'
+				},
+				{
+					properties: 'progressOneAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+				{
+					properties: 'progressTwoAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+				{
+					properties: 'progressThreeAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+				{
+					properties: 'progressFourAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+				{
+					properties: 'progressFiveAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+				{
+					properties: 'fifth-heading',
+					type: '[String]',
+					description: 'it represents the below contents.'
+				},
+				{
+					properties: 'heading-one-id',
+					type: '[String]',
+					description: 'If you need to support more than one instance of title  at a time.'
+				},
+				{
+					properties: 'heading-two-id',
+					type: '[String]',
+					description: 'If you need to support more than one instance of title  at a time.'
+				},
+				{
+					properties: 'heading-three-id',
+					type: '[String]',
+					description: 'If you need to support more than one instance of title  at a time.'
+				},
+				{
+					properties: 'heading-four-id',
+					type: '[String]',
+					description: 'If you need to support more than one instance of title  at a time.'
+				},
+				{
+					properties: 'heading-five-id',
+					type: '[String]',
+					description: 'If you need to support more than one instance of title  at a time .'
+				},
+				{
+					properties: 'Custom CSS',
+					type: '[String]',
+					description:
+						'ProgressCompleted- "progressCompleted", ProgressActive-"progressActive", ProgressUpcoming-"progressUpcoming".'
+				}
+			]
+		},
 	];
 
 	/* Webcomponent details injects here */
@@ -3386,6 +4744,130 @@ Sample Data: {
 			usage: ``,
 			try: true,
 			id: 47
+		},
+		{
+			title: 'suku-bid-widget',
+			description: `displays a bid details associated with products on the marketplace.`,
+			properties: this.Properties_DATA,
+			codeSample: `<suku-bid-widget></suku-bid-widget>`,
+			jsonSample: ``,
+			usage: ``,
+			try: true,
+			id: 48
+		},
+		{
+			title: 'suku-date',
+			description: `displays a formated date.`,
+			properties: this.Properties_DATA,
+			codeSample: `<suku-date></suku-date>`,
+			jsonSample: ``,
+			usage: ``,
+			try: true,
+			id: 49
+		},
+		{
+			title: 'suku-shipping-info-widget',
+			description: `displays a shipping infromation.`,
+			properties: this.Properties_DATA,
+			codeSample: `<suku-shipping-info-widget widgetTitle="Shipping Information" firstName="shipper name" addressOne="mailingAddress"
+			addressTwo="mailingAddressTwo"city="name of the city," state="name of the state"
+			zip="70525" country="name of the country"></suku-shipping-info-widget>`,
+			jsonSample: ``,
+			usage: ``,
+			try: true,
+			id: 50
+		},
+		{
+			title: 'suku-social-icons',
+			description: `It helps the use to view the social media pages.`,
+			properties: this.Properties_DATA,
+			codeSample: `<suku-social-icons></suku-social-icons>`,
+			jsonSample: ``,
+			usage: ``,
+			try: true,
+			id: 51
+		},
+		{
+			title: 'suku-terms-and-conditions',
+			description: `is a used to verify and Acknowledge.`,
+			properties: this.Properties_DATA,
+			codeSample: `<suku-terms-and-conditions></suku-terms-and-conditions>`,
+			jsonSample: ``,
+			usage: ``,
+			try: true,
+			id: 52
+		},
+		{
+			title: 'suku-header',
+			description: `is a header with title and content.`,
+			properties: this.Properties_DATA,
+			codeSample: `<suku-header></suku-header>`,
+			jsonSample: ``,
+			usage: ``,
+			try: true,
+			id: 53
+		},
+		{
+			title: 'suku-image-widget',
+			description: `is used to display image .`,
+			properties: this.Properties_DATA,
+			codeSample: `<suku-image-widget></suku-image-widget>`,
+			jsonSample: ``,
+			usage: ``,
+			try: true,
+			id: 54
+		},
+		{
+			title: 'suku-card-line-type-two',
+			description: `is used to display marketplace products and various status associated with them.`,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-card-line-type-two></suku-card-line-type-two>',
+			jsonSample: '',
+			usage: '',
+			try: true,
+			id: 55
+		},
+		{
+			title: 'suku-radio-button',
+			description: `It is used to select one out of many options. 
+
+*In order to run this, please provide the formgroup name for form attribute i.e [form]="parent form name" and define control attribute i.e control="{{insert your formcontrol name here}}.`,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-radio-button></suku-radio-button>',
+			jsonSample: '',
+			usage: '',
+			try: true,
+			id: 56
+		},
+		{
+			title: 'suku-card-title',
+			description: `It used to display interest details `,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-card-title></suku-card-title>',
+			jsonSample: '',
+			usage: '',
+			try: true,
+			id: 57
+		},
+		{
+			title: 'suku-rating-card-line',
+			description: `It used to display rating details `,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-rating-card-line rating-value = {{2}} ></suku-rating-card-line>',
+			jsonSample: '',
+			usage: '',
+			try: true,
+			id: 58
+		},
+		{
+			title: 'suku-progress-bar-type-two',
+			description: `shows a series of steps to complete a process.`,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-progress-bar-type-two ></suku-progress-bar-type-two>',
+			jsonSample: '',
+			usage: '',
+			try: true,
+			id: 59
 		}
 	];
 
@@ -3633,11 +5115,59 @@ Sample Data: {
 			{
 				name: 'Form Footer',
 				id: 46
+			},
+			{
+				name: 'Text Editor',
+				id: 47
+			},
+			{
+				name: 'Bid Widget',
+				id: 48
+			},
+			{
+				name: 'Display Date',
+				id: 49
+			},
+			{
+				name: 'Shipping Info Widget',
+				id: 50
+			},
+			{
+				name: 'Social icons',
+				id: 51
+			},
+			{
+				name: 'Suku Terms and Conditions',
+				id: 52
+			},
+			{
+				name: 'Suku Header',
+				id: 53
+			},
+			{
+				name: 'Suku Image Widget',
+				id: 54
+			},
+			{
+				name: 'Card Line Type Two',
+				id: 55
+			},
+			{
+				name: 'Radio Button',
+				id: 56
+			},
+			{
+				name: 'Suku Card Title',
+				id: 57
+			},
+			{
+				name: 'Rating Card Line',
+				id: 58
+			},
+			{
+				name: 'Progress Bar Type Two',
+				id: 59
 			}
-			// {
-			// 	name: 'Text Editor',
-			// 	id: 45
-			// }
 		];
 	}
 }

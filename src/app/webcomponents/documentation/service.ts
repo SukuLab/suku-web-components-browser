@@ -3882,22 +3882,112 @@ export class WebComponentsServices {
 				},
 				{
 					properties: 'progress-style-two',
-					type: '[Number]',
+					type: '[String]',
 					description: '  it represents the progress as active.'
 				},
 				{
 					properties: 'progress-style-three',
-					type: '[Number]',
+					type: '[String]',
 					description: ' It represents the progress as upcoming.'
 				},
 				{
 					properties: 'progress-style-four',
-					type: '[Number]',
+					type: '[String]',
+					description: ' It represents the progress as upcoming.'
+				},
+				{
+					properties: 'custom-heading-one-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for first heading.'
+				},
+				{
+					properties: 'custom-heading-two-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for second heading.'
+				},
+				{
+					properties: 'custom-heading-three-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for third heading.'
+				},
+				{
+					properties: 'custom-heading-four-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for fourth heading.'
+				},
+				{
+					properties: 'enable-pointer',
+					type: '[Boolean]',
+					description: ' It enable/disable pointer .'
+				},
+				{
+					properties: 'progressBarLabels',
+					type: '[Object]',
+					description: 'it represents the list of labels.'
+				},
+				{
+					properties: 'progressBarIconId',
+					type: '[Object]',
+					description: 'it represents the list of icon id.'
+				},
+				{
+					properties: 'progressBarTitleId',
+					type: '[String]',
+					description: 'it represents the list of title id.'
+				},
+				{
+					properties: 'progressOneAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+				{
+					properties: 'progressTwoAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+				{
+					properties: 'progressThreeAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+				{
+					properties: 'progressFourAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+				{
+					properties: 'Custom CSS',
+					type: '[String]',
+					description:
+						'ProgressCompleted- "progressCompleted", ProgressActive-"progressActive", ProgressUpcoming-"progressUpcoming".'
+				}
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'progress-style-one',
+					type: '[String]',
+					description: ' it represents the progress as completed.'
+				},
+				{
+					properties: 'progress-style-two',
+					type: '[String]',
+					description: '  it represents the progress as active.'
+				},
+				{
+					properties: 'progress-style-three',
+					type: '[String]',
+					description: ' It represents the progress as upcoming.'
+				},
+				{
+					properties: 'progress-style-four',
+					type: '[String]',
 					description: ' It represents the progress as upcoming.'
 				},
 				{
 					properties: 'progress-style-five',
-					type: '[Number]',
+					type: '[String]',
 					description: ' It represents the progress as upcoming .'
 				},
 				{
@@ -3969,36 +4059,6 @@ export class WebComponentsServices {
 					properties: 'progressFiveAction',
 					type: '[Output]',
 					description: 'It helps the user to perform the required action using action.'
-				},
-				{
-					properties: 'fifth-heading',
-					type: '[String]',
-					description: 'it represents the below contents.'
-				},
-				{
-					properties: 'heading-one-id',
-					type: '[String]',
-					description: 'If you need to support more than one instance of title  at a time.'
-				},
-				{
-					properties: 'heading-two-id',
-					type: '[String]',
-					description: 'If you need to support more than one instance of title  at a time.'
-				},
-				{
-					properties: 'heading-three-id',
-					type: '[String]',
-					description: 'If you need to support more than one instance of title  at a time.'
-				},
-				{
-					properties: 'heading-four-id',
-					type: '[String]',
-					description: 'If you need to support more than one instance of title  at a time.'
-				},
-				{
-					properties: 'heading-five-id',
-					type: '[String]',
-					description: 'If you need to support more than one instance of title  at a time .'
 				},
 				{
 					properties: 'Custom CSS',
@@ -4860,6 +4920,16 @@ Sample Data: {
 			id: 58
 		},
 		{
+			title: 'suku-progress-bar-type-one',
+			description: `shows a series of steps to complete a process.`,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-progress-bar-type-one ></suku-progress-bar-type-one>',
+			jsonSample: '',
+			usage: '',
+			try: true,
+			id: 59
+		},
+		{
 			title: 'suku-progress-bar-type-two',
 			description: `shows a series of steps to complete a process.`,
 			properties: this.Properties_DATA,
@@ -4867,7 +4937,7 @@ Sample Data: {
 			jsonSample: '',
 			usage: '',
 			try: true,
-			id: 59
+			id: 60
 		}
 	];
 
@@ -5165,8 +5235,12 @@ Sample Data: {
 				id: 58
 			},
 			{
-				name: 'Progress Bar Type Two',
+				name: 'Progress Bar Type One',
 				id: 59
+			},
+			{
+				name: 'Progress Bar Type Two',
+				id: 60
 			}
 		];
 	}

@@ -63,6 +63,7 @@ import { SukuCardLineTypeTwoComponent } from './suku-card-line-type-two/suku-car
 import { SukuRatingCardLineComponent } from './suku-rating-card-line/suku-rating-card-line.component';
 import { SukuProgressBarTypeTwoComponent } from './suku-progress-bar-type-two/suku-progress-bar-type-two.component';
 import { SukuProgressBarTypeOneComponent } from './suku-progress-bar-type-one/suku-progress-bar-type-one.component';
+import { SukuPaymentPortalHelpComponent } from './suku-payment-portal-help/suku-payment-portal-help.component';
 
 export const WebComponents = [
 	SukuHeadingComponent,
@@ -126,5 +127,6 @@ export const WebComponents = [
 	SukuRatingCardLineComponent,
 	SukuProgressBarTypeOneComponent,
 	SukuProgressBarTypeTwoComponent,
+	SukuPaymentPortalHelpComponent,
 	SukuGovernanceFilterComponent
 ];

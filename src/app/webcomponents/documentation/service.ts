@@ -3118,7 +3118,7 @@ export class WebComponentsServices {
 				},
 				{
 					properties: 'content-two-id',
-					type: '[Number]',
+					type: '[String]',
 					description: 'It corresponds to the id for second content.'
 				},
 				{
@@ -4032,7 +4032,7 @@ export class WebComponentsServices {
 				},
 				{
 					properties: 'progressBarTitleId',
-					type: '[String]',
+					type: '[Object]',
 					description: 'it represents the list of title id.'
 				},
 				{
@@ -4065,6 +4065,80 @@ export class WebComponentsServices {
 					type: '[String]',
 					description:
 						'ProgressCompleted- "progressCompleted", ProgressActive-"progressActive", ProgressUpcoming-"progressUpcoming".'
+				}
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'title',
+					type: '[String]',
+					description: 'It corresponds to the value for title'
+				},
+				{
+					properties: 'titleId',
+					type: '[String]',
+					description: 'It corresponds to the id for title.'
+				},
+				{
+					properties: 'titleCustomClass',
+					type: '[String]',
+					description: 'The defines custom class attribute for title.'
+				},
+				{
+					properties: 'sub-title',
+					type: '[String]',
+					description: 'It corresponds to the value for sub title'
+				},
+				{
+					properties: 'sub-title-id',
+					type: '[String]',
+					description: 'It corresponds to the id for sub title.'
+				},
+				{
+					properties: 'sub-title-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for sub title.'
+				},
+				{
+					properties: 'description-Id',
+					type: '[String]',
+					description: 'It corresponds to the id for description.'
+				},
+				{
+					properties: 'description-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for description.'
+				},
+				{
+					properties: 'icon',
+					type: '[String]',
+					description: 'It corresponds to the value for icon '
+				},
+				{
+					properties: 'icon-id',
+					type: '[String]',
+					description: 'It corresponds to the id for icon.'
+				},
+				{
+					properties: 'label-one',
+					type: '[String]',
+					description: 'It corresponds to the value for label'
+				},
+				{
+					properties: 'label-one-id',
+					type: '[String]',
+					description: 'It corresponds to the id for label.'
+				},
+				{
+					properties: 'label-one-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for label.'
+				},
+				{
+					properties: 'add',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using add.'
 				}
 			]
 		},
@@ -4938,6 +5012,16 @@ Sample Data: {
 			usage: '',
 			try: true,
 			id: 60
+		},
+		{
+			title: 'suku-payment-portal-help',
+			description: `shows a series of steps to complete a process.`,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-payment-portal-help></suku-payment-portal-help>',
+			jsonSample: '',
+			usage: '',
+			try: true,
+			id: 61
 		}
 	];
 
@@ -5241,6 +5325,10 @@ Sample Data: {
 			{
 				name: 'Progress Bar Type Two',
 				id: 60
+			},
+			{
+				name: 'Payment Portal Help',
+				id: 61
 			}
 		];
 	}

@@ -54,6 +54,7 @@ import { SukuCardLineTypeTwoComponent } from './webcomponents/suku-card-line-typ
 import { SukuRatingCardLineComponent } from './webcomponents/suku-rating-card-line/suku-rating-card-line.component';
 import { SukuProgressBarTypeTwoComponent } from './webcomponents/suku-progress-bar-type-two/suku-progress-bar-type-two.component'
 import { SukuProgressBarTypeOneComponent } from './webcomponents/suku-progress-bar-type-one/suku-progress-bar-type-one.component'
+import { SukuPaymentPortalHelpComponent } from './webcomponents/suku-payment-portal-help/suku-payment-portal-help.component'
 
 @Component({
 	selector: 'app-root',
@@ -261,6 +262,10 @@ export class AppComponent implements OnInit {
 			injector: this.injector
 		});
 		customElements.define('suku-progress-bar-type-one', SukuProgressBarTypeOne);
+		const SukuPaymentPortalHelp = createCustomElement(SukuPaymentPortalHelpComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-payment-portal-help', SukuPaymentPortalHelp);
 		
 	}
 }

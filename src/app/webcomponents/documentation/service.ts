@@ -1105,7 +1105,7 @@ export class WebComponentsServices {
 					properties: 'disable-value',
 					type: '[boolean]',
 					description:
-						'It is used alter enable/disable states of button.'
+						'It is used to enable/disable states of button.'
 				},
 				{
 					properties: 'custom-class',
@@ -4142,6 +4142,348 @@ export class WebComponentsServices {
 				}
 			]
 		},
+		{
+			data: [
+				{
+					properties: 'profileImage',
+					type: '[String]',
+					description: '	An image is a picture that has been created or copied and stored to display.'
+				},
+				{
+					properties: 'user-name',
+					type: '[String]',
+					description: 'It corresponds to the value for user name'
+				},
+				{
+					properties: 'nameWeight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for user name.'
+				},
+				{
+					properties: 'nameColor',
+					type: '[String]',
+					description: 'It defines color for user name.'
+				},
+				{
+					properties: 'nameSize',
+					type: '[Number]',
+					description: 'It Corresponds to the value of font-size for user name.'
+				},
+				{
+					properties: 'userNameId',
+					type: '[String]',
+					description: 'It corresponds to the id for user name.'
+				},
+				{
+					properties: 'nameCustomClass',
+					type: '[String]',
+					description: 'The defines custom class attribute for name.'
+				},
+				{
+					properties: 'account-type',
+					type: '[String]',
+					description: 'It corresponds to the value for account type'
+				},
+				{
+					properties: 'accountWeight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for account type.'
+				},
+				{
+					properties: 'accountCustomClass',
+					type: '[String]',
+					description: 'The defines custom class attribute for account type.'
+				},
+				{
+					properties: 'accountSize',
+					type: '[Number]',
+					description: 'It Corresponds to the value of font-size for account type.'
+				},
+				{
+					properties: 'accountColor',
+					type: '[String]',
+					description: 'It defines color for account type.'
+				},
+				{
+					properties: 'accountId',
+					type: '[String]',
+					description: 'It corresponds to the id for account type.'
+				},
+				{
+					properties: 'ratingCustomClass',
+					type: '[String]',
+					description: 'The defines custom class attribute for rating details.'
+				},
+				{
+					properties: 'rateDetails',
+					type: '[String]',
+					description: 'It corresponds to the value for rating details'
+				},
+				{
+					properties: 'rateDetailColor',
+					type: '[String]',
+					description: 'It defines color for rating details.'
+				},
+				{
+					properties: 'ratingDetailWeight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for rating details.'
+				},
+				{
+					properties: 'rateDetailSize',
+					type: '[Number]',
+					description: 'It Corresponds to the value of font-size for rating details.'
+				},
+				{
+					properties: 'rateDetailsCustomClass',
+					type: '[String]',
+					description: 'The defines custom class attribute for rating details .'
+				},
+				{
+					properties: 'ratingPrivacy',
+					type: '[boolean]',
+					description:'It is used to enable/disable privacy of rating.'
+				},
+				{
+					properties: 'rateDetailsId',
+					type: '[String]',
+					description: 'It corresponds to the id for account type.'
+				},
+				{
+					properties: 'actionOne',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using actionOne.'
+				},
+				{
+					properties: 'actionTwo',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using actionTwo.'
+				},
+				{
+					properties: 'rating',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using rating.'
+				},
+				{
+					properties: 'rating-value',
+					type: '[String]',
+					description: 'It corresponds to the value for rating star'
+				},
+				{
+					properties: 'subHeadingOne',
+					type: '[String]',
+					description: 'It corresponds to the value for sub heading one'
+				},
+				{
+					properties: 'subHeadingOneId',
+					type: '[String]',
+					description: 'It corresponds to the id for sub heading one.'
+				},
+				{
+					properties: 'subHeadingTwo',
+					type: '[String]',
+					description: 'It corresponds to the value for sub heading two'
+				},
+				{
+					properties: 'subHeadingTwoId',
+					type: '[String]',
+					description: 'It corresponds to the id for sub heading two.'
+				},
+				{
+					properties: 'editvisibility',
+					type: '[boolean]',
+					description:'It is used to enable/disable visibility for edit.'
+				},
+				{
+					properties: 'changePasswordvisibility',
+					type: '[boolean]',
+					description:'It is used to enable/disable visibility for changePassword.'
+				},
+				{
+					properties: 'mail',
+					type: '[String]',
+					description: 'It corresponds to the value for mail'
+				},
+				{
+					properties: 'mailTextColor',
+					type: '[String]',
+					description: 'It defines color for mail .'
+				},
+				{
+					properties: 'mailWeight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for mail.'
+				},
+				{
+					properties: 'mailTxtSize',
+					type: '[Number]',
+					description: 'It Corresponds to the value of font-size for mail.'
+				},
+				{
+					properties: 'mailcustomClass',
+					type: '[String]',
+					description: 'The defines custom class attribute for mail .'
+				},
+				{
+					properties: 'mailId',
+					type: '[String]',
+					description: 'It corresponds to the id for mail.'
+				},
+				{
+					properties: 'mailIcon',
+					type: '[String]',
+					description: 'It corresponds to the value for mail icon'
+				},
+				{
+					properties: 'mailIconClass',
+					type: '[String]',
+					description: 'The defines class attribute for mail icon .'
+				},
+				{
+					properties: 'icon-one-id',
+					type: '[String]',
+					description: 'It corresponds to the id for first icon'
+				},
+				{
+					properties: 'icon-one',
+					type: '[String]',
+					description: 'It corresponds to the value for first icon'
+				},
+				{
+					properties: 'icon-one-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for first icon .'
+				},	
+				{
+					properties: 'number',
+					type: '[String]',
+					description: 'It corresponds to the value for phone number'
+				},
+				{
+					properties: 'phnumberColor',
+					type: '[String]',
+					description: 'It defines color for phone number.'
+				},
+				{
+					properties: 'phnumberWeight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for phone number.'
+				},
+				{
+					properties: 'phnumberSize',
+					type: '[Number]',
+					description: 'It Corresponds to the value of font-size for phone number.'
+				},
+				{
+					properties: 'phnumberCustomClass',
+					type: '[String]',
+					description: 'The defines custom class attribute for phone number .'
+				},
+				{
+					properties: 'phoneId',
+					type: '[String]',
+					description: 'It corresponds to the id for phone number.'
+				},
+				{
+					properties: 'phNumberIcon',
+					type: '[String]',
+					description: 'It corresponds to the value for phone icon'
+				},
+				{
+					properties: 'icon-two-id',
+					type: '[String]',
+					description: 'It corresponds to the id for second icon'
+				},
+				{
+					properties: 'icon-two',
+					type: '[String]',
+					description: 'It corresponds to the value for second icon'
+				},
+				{
+					properties: 'icon-two-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for second icon .'
+				},{
+					properties: 'address',
+					type: '[String]',
+					description: 'It corresponds to the value for user address'
+				},
+				{
+					properties: 'addressColor',
+					type: '[String]',
+					description: 'It defines color for user address.'
+				},
+				{
+					properties: 'addressWeight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for user address.'
+				},
+				{
+					properties: 'addressSize',
+					type: '[Number]',
+					description: 'It Corresponds to the value of font-size for user address.'
+				},
+				{
+					properties: 'addressCustomClass',
+					type: '[String]',
+					description: 'The defines custom class attribute for user address.'
+				},
+				{
+					properties: 'addressId',
+					type: '[String]',
+					description: 'It corresponds to the id for user address.'
+				},
+				{
+					properties: 'addressIcon',
+					type: '[String]',
+					description: 'It corresponds to the value for user address icon'
+				},
+				{
+					properties: 'icon-three-id',
+					type: '[String]',
+					description: 'It corresponds to the id for third icon'
+				},
+				{
+					properties: 'icon-three',
+					type: '[String]',
+					description: 'It corresponds to the value for third icon'
+				},
+				{
+					properties: 'icon-three-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for third icon .'
+				},{
+					properties: 'samBadgeIcon',
+					type: '[String]',
+					description: 'It corresponds to the value for badge icon'
+				},
+				{
+					properties: 'samBadgeClass',
+					type: '[String]',
+					description: 'The defines custom class attribute for badge .'
+				},				
+				{
+					properties: 'samIconAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using actionOne.'
+				},
+				{
+					properties: 'icon-four-id',
+					type: '[String]',
+					description: 'It corresponds to the id for fourth icon'
+				},
+				{
+					properties: 'icon-four',
+					type: '[String]',
+					description: 'It corresponds to the value for fourth icon'
+				},
+				{
+					properties: 'icon-four-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for fourth icon .'
+				}
+			]
+		}
 	];
 
 	/* Webcomponent details injects here */
@@ -5022,6 +5364,16 @@ Sample Data: {
 			usage: '',
 			try: true,
 			id: 61
+		},
+		{
+			title: 'suku-profile-header',
+			description: `is to display profile details .`,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-profile-header></suku-profile-header>',
+			jsonSample: '',
+			usage: '',
+			try: true,
+			id: 62
 		}
 	];
 
@@ -5329,6 +5681,10 @@ Sample Data: {
 			{
 				name: 'Payment Portal Help',
 				id: 61
+			},
+			{
+				name: 'Suku Profile Header',
+				id: 62
 			}
 		];
 	}

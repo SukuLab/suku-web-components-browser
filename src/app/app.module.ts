@@ -18,6 +18,7 @@ import { CountdownTimerModule } from 'ngx-countdown-timer';
 import { SukuDoughnutChartWidgetComponent } from './webcomponents/suku-doughnut-chart-widget/suku-doughnut-chart-widget.component';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { SukuModalModule, SukuBidTagModule, SukuAchSettingModule, SukuWebcomponentsService } from 'suku-webcomponents';
+import { SukuLoaderModule } from './webcomponents/suku-loader/suku-loader.module'
 @NgModule({
 	declarations: [AppComponent, DocumentationComponent, WebComponents],
 	imports: [
@@ -35,6 +36,7 @@ import { SukuModalModule, SukuBidTagModule, SukuAchSettingModule, SukuWebcompone
 		SukuModalModule,
 		SukuBidTagModule,
 		SukuAchSettingModule,
+		SukuLoaderModule,
 		ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 	],
 	providers: [WebComponentsServices, SukuGovernanceWebcomponentsService],

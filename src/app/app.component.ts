@@ -61,6 +61,7 @@ import { SukuCreateCustomerComponent } from './webcomponents/suku-create-custome
 import { SukuLoaderComponent } from './webcomponents/suku-loader/suku-loader.component';
 import { SukuChatWidgetComponent } from './webcomponents/suku-chat-widget/suku-chat-widget.component';
 import { SukuResponseComponent } from './webcomponents/suku-response/suku-response.component';
+import { SukuImageWidgetComponent } from './webcomponents/suku-image-widget/suku-image-widget.component';
 
 @Component({
 	selector: 'app-root',
@@ -296,5 +297,10 @@ export class AppComponent implements OnInit {
 			injector: this.injector
 		});
 		customElements.define('suku-response', SukuResponse);
+		const SukuImageWidget = createCustomElement(SukuImageWidgetComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-image-widget', SukuImageWidget);
+		
 	}
 }

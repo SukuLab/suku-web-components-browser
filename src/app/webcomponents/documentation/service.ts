@@ -5655,7 +5655,7 @@ Sample Data: {
 			title: 'suku-rating-card-line',
 			description: `It used to display rating details `,
 			properties: this.Properties_DATA,
-			codeSample: '<suku-rating-card-line rating-value = {{2}} ></suku-rating-card-line>',
+			codeSample: '<suku-rating-card-line></suku-rating-card-line>',
 			jsonSample: '',
 			usage: '',
 			try: true,

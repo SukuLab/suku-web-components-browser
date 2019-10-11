@@ -5713,7 +5713,8 @@ Sample Data: {
 		},
 		{
 			title: 'Suku-loader',
-			description: `used as loader to try it use the above sample code and pass the object as input for the function .`,
+			description: `used as loader to try it use the bellow sample code and pass the object as input for the function 
+			Note: import suku-modal in .ts file`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-loader></suku-loader>',
 			jsonSample: `
@@ -5734,7 +5735,7 @@ Sample Data: {
 			'titleThreeCustomClass': '',
 			'titleBoxCustomClass': '' `,
 			usage: '',
-			try: true,
+			try: false,
 			id: 64
 		},
 		{

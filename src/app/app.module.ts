@@ -19,9 +19,12 @@ import { SukuDoughnutChartWidgetComponent } from './webcomponents/suku-doughnut-
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { SukuModalModule, SukuBidTagModule, SukuAchSettingModule, SukuWebcomponentsService } from 'suku-webcomponents';
 import { SukuLoaderModule } from './webcomponents/suku-loader/suku-loader.module';
-import { SukuACHSettingsComponent } from './webcomponents/suku-achsettings/suku-achsettings.component';
+// import { SukuACHSettingsComponent } from './webcomponents/suku-achsettings/suku-achsettings.component';
+import { SukuResponseComponent  } from './webcomponents/suku-response/suku-response.component';
+import { ScrollToBottomDirective } from './webcomponents/suku-chat-widget/suku-chat-scroll-directive'
 @NgModule({
-	declarations: [AppComponent, DocumentationComponent, WebComponents],
+	declarations: [AppComponent, DocumentationComponent, WebComponents,SukuResponseComponent,
+		ScrollToBottomDirective,],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -37,7 +40,8 @@ import { SukuACHSettingsComponent } from './webcomponents/suku-achsettings/suku-
 		SukuModalModule,
 		SukuBidTagModule,
 		SukuAchSettingModule,
-		SukuACHSettingsComponent,
+		// SukuACHSettingsComponent,
+		// SukuResponseComponent,
 		SukuLoaderModule,
 		ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 	],

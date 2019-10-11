@@ -35,7 +35,7 @@ import {
 	SukuHeadingNestComponent,
 	SukuSubNestHeadingComponent,
 	SukuInputComponent,
-	// SukuResponseComponent,
+	SukuResponseComponent,
 	SukuTreeComponent,
 	DynamicFormComponent,
 	SukuTrackProgressBarComponent,
@@ -69,8 +69,9 @@ import { SukuFundingSourceComponent } from './suku-funding-source/suku-funding-s
 import { SukuCreateCustomerComponent } from './suku-create-customer/suku-create-customer.component';
 import { SukuLoaderComponent } from './suku-loader/suku-loader.component';
 import { SukuChatWidgetComponent } from './suku-chat-widget/suku-chat-widget.component';
-import { SukuResponseComponent } from './suku-response/suku-response.component';
+// import { SukuResponseComponent } from './suku-response/suku-response.component';
 import { SukuImageWidgetComponent } from './suku-image-widget/suku-image-widget.component';
+import { SukuACHSettingsComponent } from './suku-achsettings/suku-achsettings.component'
 
 export const WebComponents = [
 	SukuHeadingComponent,
@@ -141,5 +142,6 @@ export const WebComponents = [
 	SukuLoaderComponent,
 	SukuChatWidgetComponent,
 	SukuImageWidgetComponent,
+	SukuACHSettingsComponent,
 	SukuGovernanceFilterComponent
 ];

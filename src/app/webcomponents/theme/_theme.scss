@@ -34,6 +34,7 @@ $suku-filter-bg: var(--suku-filter-bg);
 $suku-filter-label: var(--suku-filter-label);
 $suku-filter-label-selected: var(--suku-filter-label-selected);
 $suku-font-size-2: var(--suku-font-size-2);
+$suku-font-size-3: var(--suku-font-size-3);
 $suku-font-size-4: var(--suku-font-size-4);
 $suku-font-size-5: var(--suku-font-size-5);
 $suku-font-size-6: var(--suku-font-size-6);
@@ -41,3 +42,10 @@ $suku-star-full-bg: var(--suku-star-full-bg);
 $suku-star-empty-bg: var(--suku-star-empty-bg);
 $suku-default-bg: var(--suku-default-bg);
 $suku-star-size: var(--suku-star-size);
+
+@mixin suku-title-box {
+  background-image: linear-gradient(to bottom, rgba(101, 102, 243, 0.06), rgba(101, 102, 243, 0.06)),
+    radial-gradient(circle at 50% 0, #3a3a3a, #000000);
+  border-radius: 0px;
+  box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.08);
+}

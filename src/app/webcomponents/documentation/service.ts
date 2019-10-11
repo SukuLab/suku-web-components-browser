@@ -3869,7 +3869,7 @@ export class WebComponentsServices {
 				{
 					properties: 'rating-value',
 					type: '[String]',
-					description: 'It corresponds to the value for rating star'
+					description: 'It corresponds to the value for rating star.'
 				},
 			]
 		},
@@ -4483,7 +4483,333 @@ export class WebComponentsServices {
 					description: 'The defines custom class attribute for fourth icon .'
 				}
 			]
-		}
+		},
+		{
+			data: [
+				{
+					properties: 'fundingSourceLabel',
+					type: '[Object]',
+					description: 'It represents the list of labels & id eg.{labelOne: " your label",labelOneId: "your label id"}.'
+				},
+				{
+					properties: 'fundingSourceWidgetLabel',
+					type: '[Object]',
+					description: 'It represents the list of widget labels & ideg.{labelOne: " your label",labelOneId: "your label id"}.'
+				},
+				{
+					properties: 'fundingSourceWidgetButtonLabel',
+					type: '[Object]',
+					description: "It represents the list of widget's button labels & id eg.{labelOne: 'your label',labelOneId: 'your label id'}."
+				},
+				{
+					properties: 'contentOne',
+					type: '[String]',
+					description: 'It corresponds to the value for first content.'
+				},
+				{
+					properties: 'iconClass',
+					type: '[String]',
+					description: 'The defines class attribute for icon.'
+				},
+				{
+					properties: 'fundingDetails',
+					type: '[Array]',
+					description: 'It corresponds to the details for funding data'
+				},
+				{
+					properties: 'removeDefault',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action.'
+				},
+				{
+					properties: 'makeDefaultAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action.'
+				},
+				{
+					properties: 'removeSourceAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action.'
+				},
+				{
+					properties: 'transferFundAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action.'
+				},
+				{
+					properties: 'addSource',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using action.'
+				},
+				{
+					properties: 'Custom CSS',
+					type: '[String]',
+					description:
+						'ProgressCompleted- "progressCompleted", ProgressActive-"progressActive", ProgressUpcoming-"progressUpcoming".'
+				}
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'dialogData',
+					type: '[Object]',
+					description:
+					`'logo': '../../../assets/icons/icon-96x96.png',
+					'logoCustomClass': '',
+					'logoId': 'loaderIcon',
+					'icon': 'fa fa-spinner fa-spin',
+					'iconCustomClass': 'icon',
+					'iconId': 'questionIcon',
+					'titleOne': 'please wait...',
+					'titleOneId': 'confirmation',
+					'titleOneCustomClass': '',
+					'titleTwo': 'The document you are downloading is being authenticated against the SUKU Blockchain.',
+					'titleTwoId': '',
+					'titleTwoCustomClass': '',
+					'titleThree': 'Please wait momentarily while this process completes...',
+					'titleThreeId': '',
+					'titleThreeCustomClass': '',
+					'titleBoxCustomClass': '' `
+				}
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'form',
+					type: '[String]',
+					description: 'It defines FormGroup name.'
+				},
+				{
+					properties: 'formArrayName',
+					type: '[String]',
+					description: 'It defines to form-array-name.'
+				},
+				{
+					properties: 'CRDwollaTOSControl',
+					type: '[String]',
+					description: 'It defines to formcontrolname for CRDwollaTOS.'
+				},
+				{
+					properties: 'CRDwollaTOSControl',
+					type: '[String]',
+					description: 'It defines to formcontrolname for CitizensReserveTOS.'
+				},
+				{
+					properties: 'countriesList',
+					type: '[String]',
+					description: 'It corresponds to the value for countries list.'
+				},
+				{
+					properties: 'businessTypeValue',
+					type: '[String]',
+					description: 'It corresponds to the value for states list.'
+				},
+				{
+					properties: 'businessTypeValue',
+					type: '[String]',
+					description: 'It corresponds to the value for business type.'
+				},
+				{
+					properties: 'industryTypeValue',
+					type: '[String]',
+					description: 'It corresponds to the value for industry type.'
+				},
+				{
+					properties: 'businessClassificationValue',
+					type: '[String]',
+					description: 'It corresponds to the value for business classification.'
+				},
+				{
+					properties: 'stateSelect',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action.'
+				},
+				{
+					properties: 'onSubmit',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action.'
+				},
+				{
+					properties: 'submitData',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action.'
+				},
+				{
+					properties: 'countrySelect',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using countrySelect .'
+				},
+				{
+					properties: 'industryTypeFun',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action.'
+				},
+				{
+					properties: 'businessTypeFun',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action.'
+				},
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'chat',
+					type: '[Object]',
+					description: `description: 'It represents the list of labels & id eg.{labelOne: " your label",labelOneId: "your label id"}.
+					labelOne: 'Negotiation Chat Box',
+					labelOneId: 'negotiationChatBox',
+					labelTwo: 'Chatting with:',
+					labelTwoId: 'chattingWith'`
+				},
+				{
+					properties: 'toUserName',
+					type: '[String]',
+					description: 'It corresponds to the value for other user name .'
+				},
+				{
+					properties: 'toUserNameId',
+					type: '[String]',
+					description: 'It corresponds to the id for other user name.'
+				},
+				{
+					properties: 'chatStatus',
+					type: '[Boolean]',
+					description: 'It defines the status of chat.'
+				},
+				{
+					properties: 'messageData',
+					type: '[Array]',
+					description: 'It corresponds to the value for message data.'
+				},
+				{
+					properties: 'sendMessageIconSrc',
+					type: '[String]',
+					description: 'It corresponds to the value for message icon.'
+				},
+				{
+					properties: 'sendmessage',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action.'
+				},
+				{
+					properties: 'userAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action.'
+				},
+				{
+					properties: 'submitData',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action.'
+				},
+				{
+					properties: 'userAction',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action.'
+				},
+			]
+		},
+		{
+			data: [
+				{
+					properties: 'title',
+					type: '[String]',
+					description: 'It corresponds to the value for title'
+				},
+				{
+					properties: 'title-id',
+					type: '[String]',
+					description: 'It corresponds to the id for title.'
+				},
+				{
+					properties: 'title-size',
+					type: '[String]',
+					description: 'It defines font-size for the title.'
+				},
+				{
+					properties: 'title-color',
+					type: '[String]',
+					description: 'It defines font-color for the title.'
+				},
+				{
+					properties: 'title-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for title.'
+				},
+				{
+					properties: 'title-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for title.'
+				},
+				{
+					properties: 'description',
+					type: '[String]',
+					description: 'It corresponds to the value for sub title'
+				},
+				{
+					properties: 'description-id',
+					type: '[String]',
+					description: 'It corresponds to the id for description.'
+				},
+				{
+					properties: 'description-size',
+					type: '[String]',
+					description: 'It defines font-size for the description.'
+				},
+				{
+					properties: 'description-color',
+					type: '[String]',
+					description: 'It defines font-color for the description.'
+				},
+				{
+					properties: 'description-weight',
+					type: '[Number]',
+					description: 'Weight corresponds to the font size for description.'
+				},
+				{
+					properties: 'description-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for description.'
+				},
+				{
+					properties: 'bg-color',
+					type: '[String]',
+					description: 'It corresponds to the value for background color.'
+				},
+				{
+					properties: 'img-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for image.'
+				},
+				{
+					properties: 'suku-response-logo',
+					type: '[String]',
+					description: 'It corresponds to the value for response logo '
+				},
+				{
+					properties: 'icon',
+					type: '[String]',
+					description: 'It corresponds to the value for icon '
+				},
+				{
+					properties: 'icon-id',
+					type: '[String]',
+					description: 'It corresponds to the id for icon.'
+				},
+				{
+					properties: 'icon-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for icon.'
+				},
+				{
+					properties: 'sub-custom-class',
+					type: '[String]',
+					description: 'The defines custom class attribute for sub.'
+				},
+			]
+		},
 	];
 
 	/* Webcomponent details injects here */
@@ -5312,7 +5638,7 @@ Sample Data: {
 			codeSample: '<suku-radio-button></suku-radio-button>',
 			jsonSample: '',
 			usage: '',
-			try: true,
+			try: false,
 			id: 56
 		},
 		{
@@ -5374,6 +5700,72 @@ Sample Data: {
 			usage: '',
 			try: true,
 			id: 62
+		},
+		{
+			title: 'suku-funding-source',
+			description: `it is used to display and add funding source .`,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-funding-source></suku-funding-source>',
+			jsonSample: '',
+			usage: '',
+			try: true,
+			id: 63
+		},
+		{
+			title: 'Suku-loader',
+			description: `used as loader to try it use the above sample code and pass the object as input for the function .`,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-loader></suku-loader>',
+			jsonSample: `
+			'logo': '../../../assets/icons/icon-96x96.png',
+			'logoCustomClass': '',
+			'logoId': 'loaderIcon',
+			'icon': 'fa fa-spinner fa-spin',
+			'iconCustomClass': 'icon',
+			'iconId': 'questionIcon',
+			'titleOne': 'please wait...',
+			'titleOneId': 'confirmation',
+			'titleOneCustomClass': '',
+			'titleTwo': 'The document you are downloading is being authenticated against the SUKU Blockchain.',
+			'titleTwoId': '',
+			'titleTwoCustomClass': '',
+			'titleThree': 'Please wait momentarily while this process completes...',
+			'titleThreeId': '',
+			'titleThreeCustomClass': '',
+			'titleBoxCustomClass': '' `,
+			usage: '',
+			try: true,
+			id: 64
+		},
+		{
+			title: 'suku-create-customer',
+			description: `is used to create customer to try this refer the properties above, create from, formcontrolname and more from above list of properties to view the screen.`,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-create-customer></suku-create-customer>',
+			jsonSample: '',
+			usage: '',
+			try: false,
+			id: 65
+		},
+		{
+			title: 'suku-chat-widget',
+			description: `is used to chat with other user.`,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-chat-widget></suku-chat-widget>',
+			jsonSample: '',
+			usage: '',
+			try: true,
+			id: 66
+		},
+		{
+			title: 'suku-response',
+			description: `is used to show the response.`,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-response></suku-response>',
+			jsonSample: '',
+			usage: '',
+			try: true,
+			id: 67
 		}
 	];
 
@@ -5685,6 +6077,26 @@ Sample Data: {
 			{
 				name: 'Suku Profile Header',
 				id: 62
+			},
+			{
+				name: 'Suku Funding Source',
+				id: 63
+			},
+			{
+				name: 'Suku Loader',
+				id: 64
+			},
+			{
+				name: 'Suku Create Customer',
+				id: 65
+			},
+			{
+				name: 'Suku Chat Widget',
+				id: 66
+			},
+			{
+				name: 'Suku Response',
+				id: 67
 			}
 		];
 	}

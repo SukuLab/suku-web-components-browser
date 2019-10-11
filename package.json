@@ -43,6 +43,7 @@
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.5.2",
     "suku-governance-webcomponents": "git+https://parashur:d053b93a67bdbfa89b1d6b79a0de35540d644dd3@github.com/SukuLab/suku-governance-webcomponents-library.git#feature/proposals",
+    "suku-icons-library": "git+https://parashur:d053b93a67bdbfa89b1d6b79a0de35540d644dd3@github.com/SukuLab/suku-icons-library.git#feature/svg-updates-v1",
     "suku-webcomponents": "git+https://parashur:d053b93a67bdbfa89b1d6b79a0de35540d644dd3@github.com/SukuLab/suku-web-components-library.git#feature/ui-cleanup",
     "zone.js": "~0.8.26"
   },

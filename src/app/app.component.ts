@@ -31,7 +31,7 @@ import {
 	SukuStarBadgeComponent,
 	SukuCardTitleComponent,
 	SukuInputComponent,
-	SukuResponseComponent,
+	// SukuResponseComponent,
 	SukuDefaultButtonComponent,
 	SukuTreeComponent,
 	SukuTrackProgressBarComponent
@@ -56,6 +56,11 @@ import { SukuProgressBarTypeTwoComponent } from './webcomponents/suku-progress-b
 import { SukuProgressBarTypeOneComponent } from './webcomponents/suku-progress-bar-type-one/suku-progress-bar-type-one.component'
 import { SukuPaymentPortalHelpComponent } from './webcomponents/suku-payment-portal-help/suku-payment-portal-help.component'
 import { SukuProfileHeaderComponent } from './webcomponents/suku-profile-header/suku-profile-header.component';
+import { SukuFundingSourceComponent } from './webcomponents/suku-funding-source/suku-funding-source.component'
+import { SukuCreateCustomerComponent } from './webcomponents/suku-create-customer/suku-create-customer.component';
+import { SukuLoaderComponent } from './webcomponents/suku-loader/suku-loader.component';
+import { SukuChatWidgetComponent } from './webcomponents/suku-chat-widget/suku-chat-widget.component';
+import { SukuResponseComponent } from './webcomponents/suku-response/suku-response.component';
 
 @Component({
 	selector: 'app-root',
@@ -183,10 +188,10 @@ export class AppComponent implements OnInit {
 			injector: this.injector
 		});
 		customElements.define('suku-input-control', SukuInput);
-		const SukuResponse = createCustomElement(SukuResponseComponent, {
-			injector: this.injector
-		});
-		customElements.define('suku-response', SukuResponse);
+		// const SukuResponse = createCustomElement(SukuResponseComponent, {
+		// 	injector: this.injector
+		// });
+		// customElements.define('suku-response', SukuResponse);
 		const SukuTrackTrace = createCustomElement(SukuTrackProgressBarComponent, {
 			injector: this.injector
 		});
@@ -271,6 +276,25 @@ export class AppComponent implements OnInit {
 			injector: this.injector
 		});
 		customElements.define('suku-profile-header', SukuProfileHeader);
-		
+		const SukuFundingSource = createCustomElement(SukuFundingSourceComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-funding-source', SukuFundingSource);
+		const SukuCreateCustomer = createCustomElement(SukuCreateCustomerComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-create-customer', SukuCreateCustomer);
+		const SukuLoader = createCustomElement(SukuLoaderComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-loader', SukuLoader);
+		const SukuChatWidget = createCustomElement(SukuChatWidgetComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-chat-widget', SukuChatWidget);
+		const SukuResponse = createCustomElement(SukuResponseComponent, {
+			injector: this.injector
+		});
+		customElements.define('suku-response', SukuResponse);
 	}
 }

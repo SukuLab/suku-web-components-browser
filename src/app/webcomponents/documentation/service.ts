@@ -17,6 +17,7 @@ export interface WebCompContent {
 	try: boolean;
 	id: number;
 	preview?: boolean;
+	previewRadio?: boolean;
 }
 @Injectable({
 	providedIn: 'root'
@@ -5655,15 +5656,14 @@ Sample Data: {
 		},
 		{
 			title: 'suku-radio-button',
-			description: `It is used to select one out of many options. 
-
-*In order to run this, please provide the formgroup name for form attribute i.e [form]="parent form name" and define control attribute i.e control="{{insert your formcontrol name here}}.`,
+			description: `It is used to select one out of many options.`,
 			properties: this.Properties_DATA,
-			codeSample: '<suku-radio-button></suku-radio-button>',
+			codeSample: `<suku-radio-button></suku-radio-button>`,
 			jsonSample: '',
 			usage: '',
 			try: false,
-			id: 56
+			id: 56,
+			previewRadio:true
 		},
 		{
 			title: 'suku-card-title',
@@ -5801,7 +5801,17 @@ Note: import suku-modal in .ts file`,
 			usage: '',
 			try: true,
 			id: 68
-		}
+		},
+		{
+			title: 'suku-checkbox',
+			description: `is used to select.`,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-checkbox></suku-checkbox>',
+			jsonSample: '',
+			usage: '',
+			try: true,
+			id: 69
+		},
 	
 	];
 
@@ -6137,6 +6147,10 @@ Note: import suku-modal in .ts file`,
 			{
 				name: 'Suku Creation Customer Fileupload',
 				id: 68
+			},
+			{
+				name: 'Suku Checkbox',
+				id: 69
 			}
 		];
 	}

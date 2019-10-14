@@ -73,7 +73,7 @@ import { SukuChatWidgetComponent } from './suku-chat-widget/suku-chat-widget.com
 import { SukuImageWidgetComponent } from './suku-image-widget/suku-image-widget.component';
 import { SukuACHSettingsComponent } from './suku-achsettings/suku-achsettings.component'
 import { SukuCreationCustomerFileuploadComponent } from './suku-creation-customer-fileupload/suku-creation-customer-fileupload.component'
-
+// import { SukuRadioButtonComponent } from './suku-radio-button/suku-radio-button.component'
 export const WebComponents = [
 	SukuHeadingComponent,
 	SukuSubHeadingComponent,

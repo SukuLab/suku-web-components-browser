@@ -609,8 +609,8 @@ export class SukuCheckboxComponent {
 @Component({
 	selector: 'suku-radio-button',
 	template: `
-   <span  [formGroup]="formRadio">
-   <mat-radio-group formControlName="{{controlName}}">
+   <span>
+   <mat-radio-group>
    <mat-radio-button color="{{color}}" value="{{sukuOne}}">{{Title}}
    </mat-radio-button>
    </mat-radio-group>
@@ -619,9 +619,6 @@ export class SukuCheckboxComponent {
 	styleUrls: ['./webcomponents.scss']
 })
 export class SukuRadioButtonComponent {
-	@Input() formRadio: FormGroup;
-	@Input() controlName = 'sukuRadio';
-	@Input() radioControl = '';
 	@Input() Title = 'Suku Radio Button';
 	@Input() sukuOne = 'sukuOne';
 	@Input() checked = 'true';
@@ -2531,7 +2528,6 @@ export class SukuTreeComponent implements OnInit {
 			});
 	}
 }
-
 
 @Component({
 	selector: 'suku-product-trace-widget',

@@ -64,6 +64,7 @@ import { SukuChatWidgetComponent } from './webcomponents/suku-chat-widget/suku-c
 import { SukuImageWidgetComponent } from './webcomponents/suku-image-widget/suku-image-widget.component';
 import { SukuACHSettingsComponent } from './webcomponents/suku-achsettings/suku-achsettings.component';
 import { SukuCreationCustomerFileuploadComponent } from './webcomponents/suku-creation-customer-fileupload/suku-creation-customer-fileupload.component';
+// import { SukuRadioButtonComponent } from './webcomponents/suku-radio-button/suku-radio-button.component';
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',

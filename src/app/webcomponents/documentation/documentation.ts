@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators,FormControl } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { WebComponentsServices } from './service';
 import { person } from './service';
@@ -16,6 +16,7 @@ export class DocumentationComponent implements OnInit {
 	dataDom;
 	dataLength = 0;
 	parentForm: FormGroup;
+	radioGroup: FormGroup;
 	questionkey;
 	content;
 	selectedItem: any;
@@ -187,7 +188,6 @@ export class DocumentationComponent implements OnInit {
 		}
 	];
 
-
 	constructor(private fb: FormBuilder, private domSanitizer: DomSanitizer,
 		private services: WebComponentsServices, private sukuService: SukuModalService,
 		private SukuService: sukuService) {
@@ -196,6 +196,7 @@ export class DocumentationComponent implements OnInit {
 
 	ngOnInit() {
 		this.parentForm = this.fb.group({
+			sukuRadio:'',
 			selectAll: '',
 			Status: '',
 			sort: 'default',
@@ -207,8 +208,12 @@ export class DocumentationComponent implements OnInit {
 			firstName: '',
 			productId: ['', [Validators.required]],
 			checkAgreement: '',
-			code: ''
+			code: '',
+			radio:true
 		});
+	// 	this.radioGroup = this.fb.group({
+	// 		traceabilityProduct: true,
+	//  });
 		this.parentForm.get('code').valueChanges.subscribe((v) => {
 			this.executeCode();
 			console.log('data', v)

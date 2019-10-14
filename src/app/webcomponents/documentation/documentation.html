@@ -104,7 +104,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col p-0" *ngIf="content?.preview">
+              <div class="col p-0" *ngIf="content?.preview || content?.previewRadio">
                 <div class="col">
                   <p class="links text-left">Preview:</p>
                 </div>
@@ -113,6 +113,13 @@
                     <suku-governance-filter labelOne="PROPOSALS" labelTwo="Proposal Date" [form]="parentForm"
                       [statusTypesDynamic]="statusTypesDynamic" (selectAll)="selectAll()" (deselectAll)="deselectAll()">
                     </suku-governance-filter>
+                  </div>
+                </div>
+                <div class="col-sm-12 d-flex mb-5" *ngIf="content?.previewRadio">
+                  <div class="col-sm-3 p-0">
+                    <!-- <suku-radio-button [form]="parentForm" radioButtonId="sttThisproduct" content="using an id">
+                    </suku-radio-button> -->
+                    <suku-radio-button [form]="parentForm" ></suku-radio-button>
                   </div>
                 </div>
               </div>

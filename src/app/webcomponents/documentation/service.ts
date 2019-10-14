@@ -4810,6 +4810,30 @@ export class WebComponentsServices {
 				},
 			]
 		},
+		{
+			data: [
+				{
+					properties: 'title',
+					type: '[String]',
+					description: 'It corresponds to the value for title'
+				},
+				{
+					properties: 'classification',
+					type: '[String]',
+					description: 'It corresponds to value of classification.'
+				},
+				{
+					properties: 'OnFileChange',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using OnFileChange.'
+				},
+				{
+					properties: 'submitData',
+					type: '[Output]',
+					description: 'It helps the user to perform the required action using submitData.'
+				}
+			]
+		},
 	];
 
 	/* Webcomponent details injects here */
@@ -5569,7 +5593,7 @@ Sample Data: {
 		},
 		{
 			title: 'suku-shipping-info-widget',
-			description: `displays a shipping infromation.`,
+			description: `displays the shipping infromation.`,
 			properties: this.Properties_DATA,
 			codeSample: `<suku-shipping-info-widget widgetTitle="Shipping Information" firstName="shipper name" addressOne="mailingAddress"
 			addressTwo="mailingAddressTwo"city="name of the city," state="name of the state"
@@ -5581,7 +5605,7 @@ Sample Data: {
 		},
 		{
 			title: 'suku-social-icons',
-			description: `It helps the use to view the social media pages.`,
+			description: `It helps the user to view the social media pages.`,
 			properties: this.Properties_DATA,
 			codeSample: `<suku-social-icons></suku-social-icons>`,
 			jsonSample: ``,
@@ -5714,7 +5738,7 @@ Sample Data: {
 		{
 			title: 'Suku-loader',
 			description: `used as loader to try it use the bellow sample code and pass the object as input for the function 
-			Note: import suku-modal in .ts file`,
+Note: import suku-modal in .ts file`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-loader></suku-loader>',
 			jsonSample: `
@@ -5740,7 +5764,7 @@ Sample Data: {
 		},
 		{
 			title: 'suku-create-customer',
-			description: `is used to create customer to try this refer the properties above, create from, formcontrolname and more from above list of properties to view the screen.`,
+			description: `used fot the creation of customer to try this refer the properties below, create form, formcontrolname and more from below list of properties to view the screen.`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-create-customer></suku-create-customer>',
 			jsonSample: '',
@@ -5767,7 +5791,18 @@ Sample Data: {
 			usage: '',
 			try: true,
 			id: 67
+		},
+		{
+			title: 'suku-creation-customer-fileupload',
+			description: `is used to upload documents accounding to the classification.`,
+			properties: this.Properties_DATA,
+			codeSample: '<suku-creation-customer-fileupload classification ="business" ></suku-creation-customer-fileupload>',
+			jsonSample: '',
+			usage: '',
+			try: true,
+			id: 68
 		}
+	
 	];
 
 	/* declaring heading for sidebar block */
@@ -6098,6 +6133,10 @@ Sample Data: {
 			{
 				name: 'Suku Response',
 				id: 67
+			},
+			{
+				name: 'Suku Creation Customer Fileupload',
+				id: 68
 			}
 		];
 	}

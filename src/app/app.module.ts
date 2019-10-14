@@ -17,7 +17,8 @@ import { GoogleChartsModule } from 'angular-google-charts';
 import { CountdownTimerModule } from 'ngx-countdown-timer';
 import { SukuDoughnutChartWidgetComponent } from './webcomponents/suku-doughnut-chart-widget/suku-doughnut-chart-widget.component';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
-import { SukuModalModule, SukuBidTagModule, SukuAchSettingModule, SukuWebcomponentsService } from 'suku-webcomponents';
+import { SukuModalModule, SukuBidTagModule, SukuWebcomponentsService } from 'suku-webcomponents';
+// SukuAchSettingModule removed 
 import { SukuLoaderModule } from './webcomponents/suku-loader/suku-loader.module';
 // import { SukuACHSettingsComponent } from './webcomponents/suku-achsettings/suku-achsettings.component';
 import { SukuResponseComponent  } from './webcomponents/suku-response/suku-response.component';
@@ -39,7 +40,7 @@ import { ScrollToBottomDirective } from './webcomponents/suku-chat-widget/suku-c
 		NgxJsonViewerModule,
 		SukuModalModule,
 		SukuBidTagModule,
-		SukuAchSettingModule,
+		// SukuAchSettingModule,
 		// SukuACHSettingsComponent,
 		// SukuResponseComponent,
 		SukuLoaderModule,

@@ -63,6 +63,7 @@ import { SukuChatWidgetComponent } from './webcomponents/suku-chat-widget/suku-c
 // import { SukuResponseComponent } from './webcomponents/suku-response/suku-response.component';
 import { SukuImageWidgetComponent } from './webcomponents/suku-image-widget/suku-image-widget.component';
 import { SukuACHSettingsComponent } from './webcomponents/suku-achsettings/suku-achsettings.component';
+import { SukuCreationCustomerFileuploadComponent } from './webcomponents/suku-creation-customer-fileupload/suku-creation-customer-fileupload.component';
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
@@ -301,10 +302,14 @@ export class AppComponent implements OnInit {
 			injector: this.injector
 		});
 		customElements.define('suku-image-widget', SukuImageWidget);
-		const SukuACHSettings = createCustomElement(SukuACHSettingsComponent, {
+		// const SukuACHSettings = createCustomElement(SukuACHSettingsComponent, {
+		// 	injector: this.injector
+		// });
+		// customElements.define('suku-ach-setting', SukuACHSettings);
+		const SukuCreationCustomerFileupload = createCustomElement(SukuCreationCustomerFileuploadComponent, {
 			injector: this.injector
 		});
-		customElements.define('suku-ach-setting', SukuACHSettings);
+		customElements.define('suku-creation-customer-fileupload', SukuCreationCustomerFileupload);
 		
 	}
 }

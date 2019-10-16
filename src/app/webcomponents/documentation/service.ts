@@ -4858,7 +4858,7 @@ Let's get started:
 		},
 		{
 			title: 'suku-heading',
-			description: `redners all the font changes, paragraph breaks before and after, and any white space necessary to render the heading.`,
+			description: `renders all the font changes, paragraph breaks before and after, and any white space necessary to render the heading.`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-heading> You just created suku-heading </suku-heading>',
 			jsonSample: '',
@@ -4868,7 +4868,7 @@ Let's get started:
 		},
 		{
 			title: 'suku-sub-heading',
-			description: `is used to help break up heading text.They improve the layout of a page and draw the attention of the readers.`,
+			description: `is used to help break up heading text. They improve the layout of a page and draw the attention of the readers.`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-sub-heading> You just created suku-sub-heading </suku-sub-heading>',
 			jsonSample: '',
@@ -4898,7 +4898,7 @@ Let's get started:
 		},
 		{
 			title: 'suku-notification',
-			description: `is to display the number of notifications for any provided cetegory.`,
+			description: `is to display the number of notifications for any provided category.`,
 			properties: this.Properties_DATA,
 			codeSample:
 				'<suku-notification-widget  id="notification" notification-title="review bids" notification-value="0"></suku-notification-widget>',
@@ -4952,7 +4952,7 @@ Let's get started:
 		},
 		{
 			title: 'suku-dashboard-profile',
-			description: `shows the profile of a user with various functionalities, such as creating new listing or new interest. The user can also review matches, negotiate purchases and various other functionalities.`,
+			description: `shows the profile of a user with various functionalities, such as creating a new listing or new interest. The user can also review matches, negotiate purchases and various other functionalities.`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-dashboard-profile user-name="Emery" title-one="CREATE NEW LISTING"></suku-dashboard-profile>',
 			jsonSample: '',
@@ -5003,7 +5003,7 @@ Let's get started:
 		},
 		{
 			title: 'suku-add-widget',
-			description: `guides the end users to create a new item, such as a listing or interest.`,
+			description: `guides the end-users to create a new item, such as a listing or interest.`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-add-widget size="12">ADD NEW LISTING</suku-add-widget>',
 			jsonSample: '',
@@ -5063,7 +5063,7 @@ Let's get started:
 		},
 		{
 			title: 'suku-filter',
-			description: `enables filtering of a list. It can either be active or inactive`,
+			description: `enables the filtering of a list. It can either be active or inactive.	`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-filter statusTypesDynamic="InsertArrayHere" ></suku-filter>',
 			jsonSample: '',
@@ -5155,7 +5155,7 @@ Let's get started:
 		},
 		{
 			title: 'suku-track-progress-bar',
-			description: `displays the various steps to view a trace tree.`,
+			description: `displays various steps to view a trace tree.`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-track-progress-bar> </suku-track-progress-bar>',
 			jsonSample: '',
@@ -5165,7 +5165,7 @@ Let's get started:
 		},
 		{
 			title: 'suku-product-trace-widget',
-			description: `gelps users trace a product's details.`,
+			description: `helps users trace a product's details.`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-product-trace-widget> </suku-product-trace-widget>',
 			jsonSample: '',
@@ -5239,7 +5239,7 @@ Let's get started:
 		},
 		{
 			title: 'suku-ach-setting',
-			description: `represents ACH settings ui.`,
+			description: `represents ACH settings UI.`,
 			properties: this.Properties_DATA,
 			codeSample: `<suku-ach-setting></suku-ach-setting>`,
 			jsonSample: ``,
@@ -5311,7 +5311,7 @@ Let's get started:
 		},
 		{
 			title: 'suku-dwolla-funding-source',
-			description: `represents a funding source that is attatched to a user's dwolla account.
+			description: `represents a funding source that is attached to a user's dwolla account.
 
 Import Dwolla.js Library to run this:
 <script src="https://cdn.dwolla.com/1/dwolla.js"></script>`,
@@ -5324,7 +5324,7 @@ Import Dwolla.js Library to run this:
 		},
 		{
 			title: 'suku-confirmation-modal',
-			description: `is a dialog component which is used to get confirmation feedback in different scenarios.<div class="d-flex">
+			description: `is a dialog component that is used to get confirmation feedback in different scenarios.<div class="d-flex">
 			<blockquote>import <span>'SukuModalService'</span> from <span>'suku-webcomponents';</span></blockquote>
 			</div><div class="text-left">check show more info to know implementation.</div>`,
 			properties: this.Properties_DATA,
@@ -5460,7 +5460,7 @@ this.sukuService.openInfoModal(data);
 		},
 		{
 			title: 'suku-list-proposal-choice-widget',
-			description: `is a list of choice for a proposal.`,
+			description: `is a list of choices for a proposal.`,
 			properties: this.Properties_DATA,
 			codeSample: `<suku-list-proposal-choice-widget [choiceOptions]="insert your data here"></suku-list-proposal-choice-widget>`,
 			jsonSample: [{
@@ -5519,7 +5519,7 @@ this.sukuService.openInfoModal(data);
 		},
 		{
 			title: 'suku-doughnut-chart-widget',
-			description: `is a doughnut chart widget which represents the votes breakdown.`,
+			description: `is a doughnut chart widget that represents the breakdown of the votes.`,
 			properties: this.Properties_DATA,
 			codeSample: `<suku-doughnut-chart-widget [doughnutChartData]="insert data here"></suku-doughnut-chart-widget>`,
 			jsonSample: [
@@ -5534,7 +5534,7 @@ this.sukuService.openInfoModal(data);
 		},
 		{
 			title: 'suku-homepage-button',
-			description: `is .`,
+			description: `is used to display the available features.`,
 			properties: this.Properties_DATA,
 			codeSample: `<suku-homepage-button></suku-homepage-button>`,
 			jsonSample: ``,
@@ -5574,7 +5574,7 @@ Sample Data: {
 		},
 		{
 			title: 'suku-bid-widget',
-			description: `displays a bid details associated with products on the marketplace.`,
+			description: `displays bid details associated with products on the marketplace.`,
 			properties: this.Properties_DATA,
 			codeSample: `<suku-bid-widget></suku-bid-widget>`,
 			jsonSample: ``,
@@ -5584,7 +5584,7 @@ Sample Data: {
 		},
 		{
 			title: 'suku-date',
-			description: `displays a formated date.`,
+			description: `displays a formatted date.`,
 			properties: this.Properties_DATA,
 			codeSample: `<suku-date></suku-date>`,
 			jsonSample: ``,
@@ -5616,7 +5616,7 @@ Sample Data: {
 		},
 		{
 			title: 'suku-terms-and-conditions',
-			description: `is a used to verify and Acknowledge.`,
+			description: `is used to verify and Acknowledge.`,
 			properties: this.Properties_DATA,
 			codeSample: `<suku-terms-and-conditions></suku-terms-and-conditions>`,
 			jsonSample: ``,
@@ -5717,7 +5717,7 @@ Sample Data: {
 		},
 		{
 			title: 'suku-profile-header',
-			description: `is to display profile details .`,
+			description: `is to display profile details.`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-profile-header></suku-profile-header>',
 			jsonSample: '',
@@ -5727,7 +5727,7 @@ Sample Data: {
 		},
 		{
 			title: 'suku-funding-source',
-			description: `it is used to display and add funding source .`,
+			description: `it is used to display and add funding source.`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-funding-source></suku-funding-source>',
 			jsonSample: '',
@@ -5737,7 +5737,7 @@ Sample Data: {
 		},
 		{
 			title: 'Suku-loader',
-			description: `used as loader to try it use the bellow sample code and pass the object as input for the function 
+			description: `used as the loader. To try it use the bellow sample code and pass the object as input for the function. 
 Note: import suku-modal in .ts file`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-loader></suku-loader>',
@@ -5764,7 +5764,7 @@ Note: import suku-modal in .ts file`,
 		},
 		{
 			title: 'suku-create-customer',
-			description: `used fot the creation of customer to try this refer the properties below, create form, formcontrolname and more from below list of properties to view the screen.`,
+			description: `used for the creation of customers to try this refer the properties below, create form, formcontrolname and more from below list of properties to view the screen.`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-create-customer></suku-create-customer>',
 			jsonSample: '',
@@ -5774,7 +5774,7 @@ Note: import suku-modal in .ts file`,
 		},
 		{
 			title: 'suku-chat-widget',
-			description: `is used to chat with other user.`,
+			description: `is used to chat with another user.`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-chat-widget></suku-chat-widget>',
 			jsonSample: '',
@@ -5794,7 +5794,7 @@ Note: import suku-modal in .ts file`,
 		},
 		{
 			title: 'suku-creation-customer-fileupload',
-			description: `is used to upload documents accounding to the classification.`,
+			description: `is used to upload documents according to the classification..`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-creation-customer-fileupload classification ="business" ></suku-creation-customer-fileupload>',
 			jsonSample: '',
@@ -5804,7 +5804,7 @@ Note: import suku-modal in .ts file`,
 		},
 		{
 			title: 'suku-checkbox',
-			description: `is used to select.`,
+			description: `is used to select multiple options.`,
 			properties: this.Properties_DATA,
 			codeSample: '<suku-checkbox></suku-checkbox>',
 			jsonSample: '',

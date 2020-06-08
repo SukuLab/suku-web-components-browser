@@ -1,0 +1,380 @@
+@import "../theme/_theme";
+
+.box {
+  border-radius: 25px;
+  -webkit-box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.15);
+  height: auto;
+  font-family: $suku-primary-font;
+}
+
+@media screen and (max-width: 380px) {
+  .box {
+    border-radius: 25px;
+    box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.21);
+    height: 400;
+    margin: 5px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .btn-secondry {
+    font-size: 14px;
+    background-color: #1c1c1c00;
+    border: solid 2px;
+    border-color: $suku-sick-green;
+    border-radius: 25px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    white-space: initial;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .Voted {
+    background-color: $suku-text-info !important ;
+    border: solid 3px;
+    border-radius: $suku-sick-green;
+    border-radius: 25px;
+    color: #1c1c1c;
+  }
+  .btn-primary {
+    background-color: $suku-sick-green;
+    border: solid 3px;
+    border-radius: $suku-sick-green;
+    border-radius: 25px;
+    width: 100%;
+    text-align: center;
+    color: #1c1c1c;
+    white-space: initial;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0rem $suku-sick-green;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled):active,
+  .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: $suku-sick-green;
+    border-color: $suku-sick-green;
+  }
+
+  .btn-primary:focus {
+    box-shadow: 0 0 0 0rem $suku-sick-green;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled):active:focus,
+  .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0rem $suku-sick-green;
+  }
+}
+
+.align {
+  text-align: right !important;
+}
+
+.subTitle {
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+.btn-secondry {
+  font-size: 14px;
+  background-color: #1c1c1c00;
+  border: solid 2px $suku-sick-green;
+  border-radius: 25px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  white-space: initial;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.btn-secondry:not(:disabled):not(.disabled):active,
+.show>.btn-secondry.dropdown-toggle {
+  color: #fff;
+  background-color: #1c1c1c;
+  border-color: $suku-sick-green;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0rem $suku-sick-green;
+}
+
+.btn-primary {
+  font-size: 15px;
+  background-color: $suku-sick-green;
+  border: solid 3px;
+  border-color: $suku-sick-green;
+  border-radius: 25px;
+  width: 100%;
+  text-align: center;
+  color: #1c1c1c;
+  white-space: initial;
+  font-weight: 600;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: $suku-sick-green;
+  border-color: $suku-sick-green;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0rem $suku-sick-green;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0rem $suku-sick-green;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0rem $suku-sick-green;
+}
+
+// teams css start
+
+h1 {
+  color: $suku-text-heading;
+  font-size: 16px;
+  font-family: $suku-primary-font;
+  font-weight: 700 !important;
+}
+
+h2 {
+  color: $suku-text-info;
+  font-size: 13px;
+  font-family: $suku-primary-font;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+}
+
+.text-black {
+  color: black;
+}
+
+.img {
+  -webkit-box-shadow: 5px 8px 17px -5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 5px 8px 17px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 8px 17px -5px rgba(0, 0, 0, 0.25);
+  border-radius: $suku-default-border-radius;
+}
+
+.img-default {
+  width: 100%;
+  height: 55px;
+}
+
+/* mixin for multiline */
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount;
+  text-align: justify;
+  margin-right: -1em;
+
+  &:before {
+    content: '...';
+    position: absolute;
+    right: 7px;
+    bottom: 0;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 2em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: #fafafc;
+  }
+}
+
+.block-with-text {
+  @include multiLineEllipsis($lineHeight: 1.2em, $lineCount: 3, $bgColor: white);
+}
+
+.user-chip-shadow {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  height: 110px;
+  width: 75px;
+  background: white;
+  -webkit-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: $suku-default-border-radius;
+}
+
+.icons {
+  color: $suku-text-heading;
+  font-size: 10px;
+  padding: 3px;
+}
+
+.icons:hover {
+  color: $suku-sick-green;
+  cursor: pointer;
+}
+
+.footerbox {
+  border-radius: 20px;
+  background-image: linear-gradient(#555151, #000000);
+  // background-image: linear-gradient(to bottom, rgba(101, 102, 243, 0.06), rgba(101, 102, 243, 0.06)), radial-gradient(circle at 50% 0, #3a3a3a, #000000);
+}
+
+.text-overflow {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.choiceWidget {
+  width: 98%;
+  height: 400px;
+}
+
+/* externall--comp-css */
+#ChoiceWidget {
+  ::ng-deep .tile {
+    border-radius: 25px !important;
+    box-shadow: none !important;
+    width: 95% !important;
+    margin-left: 12px !important;
+    height: 430px !important;
+  }
+}
+
+@media only screen and (max-width:425px) {
+  #ChoiceWidget {
+    ::ng-deep .tile {
+      height: 485px !important;
+    }
+  }
+}
+
+/deep/.item {
+  padding: 5px !important;
+  box-sizing: border-box;
+}
+
+.leftRs {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  outline: none !important;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  left: -12px;
+  border: 0;
+  font-size: 40px;
+  background: none;
+  color: grey;
+
+  &:hover {
+    cursor: pointer;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    transform: translateX(-3px);
+  }
+}
+
+.rightRs {
+  position: absolute;
+  margin: auto;
+  font-size: 40px;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  right: -10px;
+  height: 50px;
+  border: 0;
+  outline: none !important;
+  background: none;
+  color: grey;
+
+  &:hover {
+    cursor: pointer;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    transform: translateX(3px);
+  }
+}
+
+[_nghost-wts-c13] {
+  padding: 5px !important;
+}
+
+.summary {
+  height: 55px;
+}
+
+.optionTitle {
+  height: 46px;
+}
+
+.voteSection {
+  height: 50px;
+}
+
+.btnSecondry {
+  height: 52px;
+}
+
+.companyLogo {
+  max-width: 115px;
+  max-height: 55px;
+}
+
+.no-memebers {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  height: 110px;
+  -webkit-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: $suku-default-border-radius;
+  display: flex !important;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  background: #ffffffa6;
+}
+
+.item {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.tile {
+  min-height: 200px;
+  background-color: #ccc;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}

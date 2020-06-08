@@ -1,0 +1,22 @@
+ <div class="col d-flex proposal-header {{customClass}} p-0">
+   <div class="col-sm-12 pt-3 pb-3">
+     <div class="align-self-center">
+       <div class="col">
+         <h1>
+           <span [class]="labelOneClass" [id]="labelOneId">{{labelOne}}</span>
+           <span class="pl-lg-2 pop-light {{labelTwoClass}}" [id]="contentOneId">{{contentOne || 'N/A'}}</span>
+         </h1>
+       </div>
+       <div class="col">
+         <h2>
+           <span class="{{contentOneClass}}" [id]="labelTwoId">{{labelTwo}}</span>
+           <span *ngIf="!(_enableTimer)" class="pl-lg-2 pop-light {{contentTwoClass}}" [id]="contentTwoId">{{contentTwo || 'N/A'}}</span>
+           <span *ngIf="(_enableTimer)" class=" pl-lg-2 pl-3 pop-light {{contentTwoClass}}" [id]="contentThreeId">{{labelThree}} {{ContentThreeStatus || 'N/A'}}</span>
+           <span class=" pop-light {{contentTwoClass}}" *ngIf="(_enableTimer == 'false')">
+            {{labelFour}} <countdown-timer [end]="_date"></countdown-timer>
+            </span>
+         </h2>
+       </div>
+     </div>
+   </div>
+ </div>

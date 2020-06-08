@@ -1,0 +1,133 @@
+<form [formGroup]="parentForm">
+  <div class="col-sm-12 bgWhite p-0 doc">
+    <div id="outerDiv" class="col-sm-12">
+      <div class="col-sm-12 text-center">
+        <img src="../../../assets/img/Suku_Logo_white.png" alt="Suku Logo" height="40%" width="40%">
+        <div class="mb-5 pb-5">
+          <suku-heading size="30" weight="500" color="white">
+            <div>SUKU Web</div>
+            <div>Component Library</div>
+          </suku-heading>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 p-5">
+      <div class="row main-div-box">
+        <div class="col-lg-2 col-md-3 col-sm-12 mt-4 pl-lg-4 p-sm-0">
+          <span class="py-3 px-2 sticky-top flex-grow-1">
+            <ul id="side">
+              <li [ngClass]="{'activeComponent': selectedTitle == title }" (click)="titleActive($event, title)"
+                *ngFor="let title of webCompTitleList;let i=index">
+                {{title.name}}
+              </li>
+            </ul>
+          </span>
+        </div>
+        <div class="col-lg-10 col-md-9 col-sm-12 p-4 pl-5 pr-5">
+          <!-- doc content inject here -->
+          <span *ngFor="let content of CompDocSource; let j=index">
+            <span *ngIf="selectedTitle?.id == content?.id">
+              <div class="col-sm-12 mt-4">
+                <strong class="borBottom">{{content.title}}</strong>
+                <p ng-bind-html class="mt-4 preserve-whitespace">
+                  <span *ngIf="j!=0" class="font-weight-bold">{{content.title}} </span>
+                  <span [innerHTML]="content.description"></span></p>
+              </div>
+              <div class="col-sm-12 p-4" *ngIf="content?.properties[j]?.data?.length > 0">
+                <table mat-table [dataSource]="content?.properties[j]?.data" class="mat-elevation-z8">
+                  <!-- Properties Column -->
+                  <ng-container matColumnDef="Properties">
+                    <th mat-header-cell *matHeaderCellDef> Properties </th>
+                    <td mat-cell *matCellDef="let element"> {{element.properties}} <mark
+                        class="m-1">{{element.type}}</mark>
+                    </td>
+                  </ng-container>
+                  <!-- Description Column -->
+                  <ng-container matColumnDef="Description">
+                    <th mat-header-cell *matHeaderCellDef> Description </th>
+                    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                  </ng-container>
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+              </div>
+              <div class="col-lg-6 col-12 mt-5 mb-3" *ngIf="selectedTitle?.id  == 42 || selectedTitle?.id  == 39">
+                <button class="btn btn-info" (click)="openSukuDialog(selectedTitle?.id)">Open {{content.title}}
+                </button>
+              </div>
+              <div class="col-sm-12 p-4" *ngIf="content?.codeSample">
+                <!-- sample webcomp code inject here -->
+                <p class="docs-markdown-p">For example:</p>
+                <p class="col text-left p-0 link">Click on the tag to copy</p>
+                <span id="copied">
+                  <input class="mockSample" id="sampleCode" (click)="copySample()" value="{{content.codeSample}}"
+                    readonly="true" />
+                </span>
+              </div>
+              <div class="col-sm-12 p-4">
+                <!-- sample json inject here -->
+                <div class="col p-0 mt-2" *ngIf="content?.jsonSample || content?.usage">
+                  <div class="links text-left mb-3 c-pointer" (click)="collapseFuc()">Click to
+                    {{ collapse ? 'hide info' : 'show info' }}</div>
+                  <div *ngIf="collapse" class="col p-0">
+                    <div [ngClass]="{'usage col': !content?.jsonSample}" *ngIf="content?.usage"
+                      [innerHTML]="content?.usage"></div>
+                    <div *ngIf="content?.jsonSample" id="jsonSample">
+                      <ngx-json-viewer [json]="content?.jsonSample"></ngx-json-viewer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- terminal code-->
+              <div class="col-sm-12 p-0" *ngIf="content?.try">
+                <div class="col-sm-12 pb-4 pt-4" id="terminal">
+                  <p class="docs-markdown-p">Try Now:</p>
+                  <div class="col-sm-12 p-0 mb-3 pb-2">
+                    <div class="bg-terminal">
+                      <span class="text-area text-white pl-2">
+                        <!-- [value]="content?.try ? content?.codeSample :''" -->
+                        ><textarea type="text" class="text-area col-sm-12" (keyup)="executeCode()" id="code"
+                          rows="3"></textarea>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 d-flex" *ngIf="dataLength > 0">
+                  <div class="col-sm-12 box-color-shadow-rect pb-4 pt-4">
+                    <p class="docs-markdown-p">Output: </p>
+                    <div class="border-top-box"></div>
+                    <br />
+                    <div class="col-sm-12 m-2" [innerHTML]="dataDom">
+                    </div>
+                    <br />
+                    <br />
+                  </div>
+                </div>
+              </div>
+              <div class="col p-0" *ngIf="content?.preview || content?.previewRadio">
+                <div class="col">
+                  <p class="links text-left">Preview:</p>
+                </div>
+                <div class="col-sm-12 d-flex mb-5" *ngIf="content?.preview">
+                  <div class="col-sm-3 p-0">
+                    <suku-governance-filter labelOne="PROPOSALS" labelTwo="Proposal Date" [form]="parentForm"
+                      [statusTypesDynamic]="statusTypesDynamic" (selectAll)="selectAll()" (deselectAll)="deselectAll()">
+                    </suku-governance-filter>
+                  </div>
+                </div>
+                <div class="col-sm-12 d-flex mb-5" *ngIf="content?.previewRadio">
+                  <div class="col-sm-3 p-0">
+                    <!-- <suku-radio-button [form]="parentForm" radioButtonId="sttThisproduct" content="using an id">
+                    </suku-radio-button> -->
+                    <suku-radio-button [form]="parentForm" ></suku-radio-button>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </span>
+          <!-- terminal code end-->
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

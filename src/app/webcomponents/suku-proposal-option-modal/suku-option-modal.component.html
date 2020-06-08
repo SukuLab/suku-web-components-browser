@@ -1,0 +1,112 @@
+ <mat-dialog-title>
+   <div class="col">
+     <div class="row justify-content-center">
+       <div class="tilebox text-center">
+         <div class="col">
+           <div class="col align-self-center">
+             <p class="text-white mb-0 p-2">
+               <span [style.font-size.px]="modalData?.titleSize" [style.color]="modalData?.titleColor"
+                 class="title {{modalData?.titleCustomClass}}"
+                 [id]="modalData?.titleId">{{modalData?.title || 'N/A'}}</span>
+               <span [style.font-size.px]="modalData?.contentOneSize" [style.color]="modalData?.contentOneColor"
+                 class="sub-title {{modalData?.contentOneCustomClass}}"
+                 [id]="modalData?.contentOneId">{{modalData?.contentOne || 'N/A'}}</span>
+             </p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </mat-dialog-title>
+ <mat-dialog-content>
+   <div class="col p-0 pt-2" id="modal">
+     <div class="col pt-2">
+       <div class="row">
+         <div class="col align-self-center">
+           <img [src]="modalData?.companyLogo" [class]="modalData?.imgClass" alt='companyLogo' width="180px"
+             height="80%">
+         </div>
+         <div class="col align-self-center">
+           <h2 [style.font-size.px]="modalData?.labelOneSize" [style.color]="modalData?.labelOneColor"
+             class="{{modalData?.labelOneCustomClass}}" [id]="modalData?.labelOneId">{{modalData?.labelOne || 'N/A'}}
+           </h2>
+           <p [style.font-size.px]="modalData?.contentTwoSize" [style.color]="modalData?.contentTwoColor"
+             class="{{modalData?.contentTwoCustomClass}} mb-0" [id]="modalData?.contentTwoId">
+             {{modalData?.contentTwo || 'N/A'}}
+           </p>
+         </div>
+       </div>
+     </div>
+     <div class="col pt-2">
+       <h2 [style.font-size.px]="modalData?.labelTwoSize" [style.color]="modalData?.labelTwoColor"
+         class="{{modalData?.labelTwoCustomClass}}" [id]="modalData?.labelTwoId">{{modalData?.labelTwo || 'N/A'}}</h2>
+       <p [style.font-size.px]="modalData?.outlineSize" [style.color]="modalData?.outlineColor"
+         class="text-capatilize text-justify {{modalData?.outlineCustomClass}}">{{modalData?.outline || 'N/A'}}</p>
+     </div>
+     <div class="col">
+       <div class="col p-0 mt-2 mb-3">
+         <h2 [style.font-size.px]="modalData?.labelThreeSize" [style.color]="modalData?.labelThreeColor"
+           class="{{modalData?.labelThreeCustomClass}}" [id]="modalData?.labelThreeId">
+           {{modalData?.labelThree || 'N/A'}}</h2>
+         <div class="col">
+           <div class="col p-1" id="user-widget">
+             <span *ngIf="false"> showing {{slideIndex}} of {{modalData?.teamMembers?.length +1}}</span>
+             <ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="modalData?.teamMembers">
+               <ngu-tile *nguCarouselDef="let user; let userIndex = index">
+                 <div class="col p-0  user-layout" id="memember{{userIndex}}">
+                   <div class="user-chip-shadow mt-1 {{modalData?.widgetCustomClass}}">
+                     <div class="col p-0">
+                       <a class="d-flex justify-content-center" id="match-chip">
+                         <img src="{{user?.userImg || ''}}" class="img-default" [id]="user?.userImgId"
+                           [alt]="user?.userName" />
+                       </a>
+                     </div>
+                     <div class="col justify-content-center p-0">
+                       <section class="text-center pt-2 p-1 user-info">
+                         <h3 [style.font-size.px]="modalData?.userNameSize" [style.color]="modalData?.userNameColor"
+                           class="mb-1 {{modalData?.userNameClass}}" [id]="user?.userNameId">{{user?.userName}}</h3>
+                         <h4 [style.font-size.px]="modalData?.userDesignationSize"
+                           [style.color]="modalData?.userDesignationColor" class="{{data?.userDesignationClass}} mb-1"
+                           [id]="user?.userDesignationId">
+                           {{user?.userDesignation}}</h4>
+                       </section>
+                       <section class="text-center socialMedia {{modalData?.iconClass}}">
+                         <span [style.font-size.px]="modalData?.iconSize" *ngFor="let media of user.socialMedia">
+                           <span class="text-black iconPad icons" (click)="soacialAction.emit(media)" [id]="media.id">
+                             <a href="{{media?.link}}" target="_blank">
+                               <i [style.color]="modalData?.iconColor" [class]="media.icon"></i>
+                             </a>
+                           </span>
+                         </span>
+                       </section>
+                     </div>
+                   </div>
+                 </div>
+               </ngu-tile>
+               {{screenWidth}}
+               <button NguCarouselPrev *ngIf="(data?.teamMembers?.length > 4 ||  screenWidth < 1024)" class='leftRs'>
+                 <span class="left-icon"><i class="fa fa-chevron-left"></i></span></button>
+               <button NguCarouselNext class='rightRs' *ngIf="(data?.teamMembers?.length > 4  ||  screenWidth < 1024)">
+                 <span class="right-icon"><i class="fa fa-chevron-right"></i></span></button>
+             </ngu-carousel>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="col mb-4">
+       <h2 [style.font-size.px]="modalData?.labelFourSize" [style.color]="modalData?.labelFourColor"
+         class="{{modalData?.labelFourCustomClass}}" [id]="modalData?.labelFourId">{{modalData?.labelFour}}</h2>
+       <div class="col p-0">
+         <span class="p-2 links" *ngFor="let link of modalData?.links">
+           <a class="link" href="{{link[data?.linksKey]}}" target="_blank">
+             {{link[data?.linksKey]}}
+           </a>
+         </span>
+         <span *ngIf="!(modalData?.links?.length > 0)">N/A</span>
+       </div>
+     </div>
+   </div>
+ </mat-dialog-content>
+ <mat-dialog-actions align="end">
+   <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Close</button>
+ </mat-dialog-actions>

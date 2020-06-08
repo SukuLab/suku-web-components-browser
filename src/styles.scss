@@ -1,0 +1,264 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~suku-webcomponents/suku-theme';
+
+@import '~@angular/material/theming';
+@include mat-core();
+$primary: mat-palette($mat-lime, 600);
+$accent: mat-palette($mat-light-blue, 600, 100, 800);
+$warn: mat-palette($mat-red, 600);
+$theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/poppins/Poppins.ttf.woff') format('woff'),
+    url('./assets/fonts/poppins/Poppins.ttf.svg#Poppins') format('svg'),
+    url('./assets/fonts/poppins/Poppins.ttf.eot'),
+    url('./assets/fonts/poppins/Poppins.ttf.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* encode-sans-regular - latin */
+@font-face {
+  font-family: 'Encode Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/encode-sans/encode-sans-v2-latin-regular.eot');
+  /* IE9 Compat Modes */
+  src: local('Encode Sans Regular'), local('EncodeSans-Regular'),
+    url('./assets/fonts/encode-sans/encode-sans-v2-latin-regular.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('./assets/fonts/encode-sans/encode-sans-v2-latin-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('./assets/fonts/encode-sans/encode-sans-v2-latin-regular.woff') format('woff'),
+    /* Modern Browsers */
+    url('./assets/fonts/encode-sans/encode-sans-v2-latin-regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('./assets/fonts/encode-sans/encode-sans-v2-latin-regular.svg#EncodeSans') format('svg');
+  /* Legacy iOS */
+}
+
+/* encode-sans-semi-condensed-regular - latin */
+@font-face {
+  font-family: 'Encode Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/encode-sans-condensed/encode-sans-semi-condensed-v3-latin-regular.eot');
+  /* IE9 Compat Modes */
+  src: local('Encode Sans Semi Condensed Regular'), local('EncodeSansSemiCondensed-Regular'),
+    url('./assets/fonts/encode-sans-condensed/encode-sans-semi-condensed-v3-latin-regular.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('./assets/fonts/encode-sans-condensed/encode-sans-semi-condensed-v3-latin-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('./assets/fonts/encode-sans-condensed/encode-sans-semi-condensed-v3-latin-regular.woff') format('woff'),
+    /* Modern Browsers */
+    url('./assets/fonts/encode-sans-condensed/encode-sans-semi-condensed-v3-latin-regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('./assets/fonts/encode-sans-condensed/encode-sans-semi-condensed-v3-latin-regular.svg#EncodeSansSemiCondensed') format('svg');
+  /* Legacy iOS */
+}
+
+/* abel-regular */
+@font-face {
+  font-family: 'abelregular';
+  src: url('./assets/fonts/abel/abel-regular-webfont.woff2') format('woff2'),
+    url('./assets/fonts/abel/abel-regular-webfont.woff') format('woff');
+  font-style: normal;
+}
+
+/* proxima_novabold */
+
+.loaderImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.justCenter {
+  justify-content: center;
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  font-family: "proxima_nova_regular", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #1d1d1d;
+  line-height: 24px;
+  letter-spacing: -0.025em;
+  background: #f1f4f5 !important;
+  margin: 0;
+  padding: 0;
+}
+
+
+.cen {
+  position: relative;
+  margin-top: 4%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.loadIcon {
+  margin-top: 5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+@keyframes do-levitation {
+  0% {
+    transform: translate(0, 0);
+
+  }
+
+  100% {
+    transform: translate(0, 0.5em);
+
+  }
+}
+
+.levitate {
+  animation: do-levitation 1s alternate ease-in-out infinite;
+}
+
+/*loading style end?*/
+
+
+.mat-tab-label,
+.mat-tab-link {
+  font-family: 'Poppins', Arial !important;
+  font-size: 17px !important;
+  font-weight: 600;
+}
+
+.mat-tab-labels {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.mat-tab-header {
+  margin-top: 12px !important;
+}
+
+.mat-badge-content {
+  color: rgba(0, 0, 0, 0.9) !important;
+  background: #a7bf2e !important;
+}
+
+.mat-tab-label,
+.mat-tab-link {
+  font-size: 14px;
+  font-weight: 600 !important;
+}
+
+
+
+// /*  */
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: #a7bf2e !important;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: #a7bf2e !important;
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 10px 5px 6px #27272f36;
+  border-radius: 10px;
+  box-shadow: inset 10px 5px 6px #27272f36;
+}
+
+
+
+::-webkit-scrollbar-thumb {
+  border-radius: 32px;
+  box-shadow: 0 0 0 #000;
+  -webkit-box-shadow: inset 28px 28px 28px 28px #2b30348f;
+}
+
+.mat-datepicker-content .mat-calendar {
+  zoom: 0.90 !important;
+}
+
+.sticky-top {
+  z-index: 0 !important;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  border-radius: 32px;
+  box-shadow: 0 0 0 #000;
+  -webkit-box-shadow: inset 28px 28px 28px 28px #2b30348f;
+}
+
+
+
+.hljs-name {
+  color: #2f52d4 !important;
+}
+
+pre {
+  color: #212529;
+  background: rgba(0, 0, 0, .01) !important;
+  padding-top: 12px;
+}
+
+.node text {
+  font-size: 16px;
+  font-family: 'Encode Sans', sans-serif !important;
+  fill: rgb(170, 170, 170);
+}
+
+.link {
+  fill: none !important;
+  stroke: rgb(194, 193, 193) !important;
+  stroke-width: 2px !important;
+}
+
+#tree {
+  width: 100%;
+  overflow-x: scroll !important;
+  direction: rtl !important;
+}
+
+svg {
+  overflow-x: scroll !important;
+}
+
+blockquote {
+  background-color: #f2f2f2 !important;
+  display: inline;
+  float: left;
+  padding: 5px 14px;
+  margin: 1.2rem 0px;
+  font-family: "Fira Mono",
+    "Andale Mono",
+    "Consolas",
+    monospace;
+  letter-spacing: -0.1px;
+  font-size: 13px;
+  border-left: 5px solid #d8f40c;
+  background: #f7f7f7;
+  border-radius: 3px;
+  color: #3c3d3c;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  span {
+    color: #989596;
+    padding: 4px;
+    font-weight: 500;
+  }
+}
